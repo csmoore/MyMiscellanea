@@ -1,3 +1,5 @@
+*.user
+
 *.py[cod]
 
 # C extensions
