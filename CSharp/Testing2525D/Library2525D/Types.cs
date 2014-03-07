@@ -1,0 +1,396 @@
+﻿/* 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at 
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Library2525D
+{
+
+    ///////////////////////////////////////////////////////////
+    // 2525D Types and Helpers 
+    ///////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////
+    // 2525D: A.5.2.1  Set A - First ten digits 
+    // Version (Digits 1 and 2) 
+    // Standard identity 1, Standard identity 2(AffiliationType) (Digits 3 and 4)
+    // Symbol set (Digits 5 and 6)
+    // Status (Digit 7)
+    // HQ/Task Force/Dummy (Digit 8)
+    // Amplifier/Descriptor (Digits 9 and 10)
+
+    public enum StandardVersionType // Digits (1 & 2)
+    {        
+        NotSet       = 0,
+        Current2525D = 10
+    }
+
+    public enum StandardIdentityRealExerciseSimType  // StandardIdentity 1 (Digit 3)
+    {
+        Reality = 0,
+        Exercise = 1,
+        Simulation = 2,
+        NotSet = 9
+    }
+
+    public enum StandardIdentityAffiliationType       // StandardIdentity 2 (Digit 4)
+    {
+        Pending = 0,
+        Unknown = 1,
+        Assumed_Friend = 2,
+        Friend = 3,
+        Neutral = 4,
+        Suspect_Joker = 5,
+        Hostile = 6,       // + Faker
+        Invalid = 7,
+        NotSet = 9
+    }
+
+    public enum SymbolSetType // (Digits 5 & 6)
+    {
+        Air = 01,
+        Air_Missile = 02,
+        Space = 05,
+        Space_Missile = 06,
+        Land_Unit = 10,
+        Land_Civilian_Unit_Organization = 11,
+        Land_Equipment = 15,
+        Land_Installation = 20,
+        Control_Measure = 25,
+        Sea_Surface = 30,
+        Sea_Subsurface = 35,
+        Mine_Warfare = 36,
+        Activities = 40,
+        Atmospheric = 45,
+        Oceanographic = 46,
+        Meteorological_Space = 47,
+        Signals_Intelligence_Space = 50,
+        Signals_Intelligence_Air = 51,
+        Signals_Intelligence_Land = 52,
+        Signals_Intelligence_Surface = 53,
+        Signals_Intelligence_Subsurface = 54,
+        Cyberspace = 60,
+        NotSet = 99
+    }
+
+    public enum StatusType // (Digit 7)
+    {
+        Present = 0,
+        Planned_Anticipated_Suspect = 1,
+        Present_Fully_Capable = 2,
+        Present_Damaged = 3,
+        Present_Destroyed = 4,
+        Present_Full_To_Capacity = 5,
+        NotSet = 9
+    }
+
+    public enum HeadquartersTaskForceDummyType // (Digit 8)
+    {
+        NoHQTFDummyModifier = 0,
+        Feint_Dummy = 1,
+        Headquarters = 2,
+        Feint_Dummy_Headquarters = 3,
+        Task_Force = 4,
+        Feint_Dummy_Task_Force = 5,
+        Task_Force_Headquarters = 6,
+        Feint_Dummy_Task_Force_Headquarters = 7
+    }
+
+    public enum EchelonMobilityGroupType // Amplifier 1 (Digit 9)
+    {
+        NoEchelonGroup = 0,
+        Echelon_At_Brigade_And_Below = 1,
+        Echelon_At_Division_And_Above = 2,
+        Equipment_Mobility_On_Land = 3,
+        Equipment_Mobility_On_Snow = 4,
+        Equipment_Mobility_On_Water = 5,
+        Naval_Towed_Array = 6
+    }
+
+    public enum EchelonMobilityType     // Amplifier 1, 2 (Digit 9 & 10)
+    {
+        NoEchelonMobility = 0,
+        Echelon_At_Brigade_And_Below = 10,
+        Team_Crew = 11,
+        Squad = 12,
+        Section = 13,
+        Platoon_Detachment = 14,
+        Company_Battery_Troop = 15,
+        Battalion_Squadron = 16,
+        Regiment_Group = 17,
+        Brigade = 18,
+
+        Echelon_At_Division_And_Above = 20,
+        Division = 21,
+        Corps_MEF = 22,
+        Army = 23,
+        Army_Group_Front = 24,
+        Region_Theater = 25,
+        Command = 26,
+
+        Equipment_Mobility_On_Land = 30,
+        Wheeled_Limited_Cross_Country = 31,
+        Wheeled_Cross_Country = 32,
+        Tracked = 33,
+        Wheeled_And_Tracked_Combination = 34,
+        Towed = 35,
+        Rail = 36,
+        Pack_Animals = 37,
+
+        Equipment_Mobility_On_Snow = 40,
+        Over_Snow_Prime_Mover = 41,
+        Sled = 42,
+
+        Equipment_Mobility_On_Water = 50,
+        Barge = 51,
+        Amphibious = 52,
+
+        Naval_Towed_Array = 60,
+        Short_Towed_Array = 61,
+        Long_Towed_Array = 62,
+    }
+    ///////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////
+    // 2525D: A.5.2.2  Set B - Second ten digits
+    // Entity (Digits 11 and 12)
+    // Entity type (Digits 13 and 14)
+    // Entity subtype (Digits 15 and 16)
+    // Sector 1 modifier (Digits 17 and 18)
+    // Sector 2 modifier (Digits 19 and 20)
+    // NOTE: These are just digits based on symbol set so no consistent types used for these
+    ///////////////////////////////////////////////////////////
+
+    public enum ShapeType
+    {
+        Unknown,
+        Point,
+        Line,
+        Area
+    };
+
+    /// <summary>
+    /// Helper class for converting Types to strings, codes, etc.
+    /// </summary>
+    public class TypeUtilities
+    {
+        public static string NameSeparator
+        {
+            get { return "~"; }
+        }
+
+        public static Dictionary<StandardIdentityAffiliationType, string> AffiliationTypeToImageName =
+            new Dictionary<StandardIdentityAffiliationType, string>()
+            {
+                { StandardIdentityAffiliationType.Pending, "pending" },
+                { StandardIdentityAffiliationType.Unknown, "unknown" },
+                { StandardIdentityAffiliationType.Assumed_Friend, "friend" },
+                { StandardIdentityAffiliationType.Friend, "friend" },
+                { StandardIdentityAffiliationType.Neutral, "neutral" },
+                { StandardIdentityAffiliationType.Suspect_Joker, "hostile" },
+                { StandardIdentityAffiliationType.Hostile, "hostile" },
+                { StandardIdentityAffiliationType.Invalid, "unknown" },
+                { StandardIdentityAffiliationType.NotSet, "unknown" }
+            };
+
+        public static Dictionary<SymbolSetType, string> SymbolSetToFolderName = new Dictionary<SymbolSetType, string>()
+        {             
+            { SymbolSetType.Air, "Air" },
+            { SymbolSetType.Air_Missile, "Air" },
+
+            { SymbolSetType.Space, "Space" },
+            { SymbolSetType.Space_Missile, "Space" },
+
+            { SymbolSetType.Land_Unit, "Land" },
+            { SymbolSetType.Land_Civilian_Unit_Organization, "Land" },
+            { SymbolSetType.Land_Equipment, "Land" },
+            { SymbolSetType.Land_Installation, "Land" },
+
+            { SymbolSetType.Control_Measure, "Control Measures" },
+
+            { SymbolSetType.Cyberspace, "Cyberspace" },
+
+            { SymbolSetType.Meteorological_Space, "METOC" },
+
+            { SymbolSetType.Sea_Surface, "SeaSurface" },
+            { SymbolSetType.Sea_Subsurface, "Subsurface" },
+
+            { SymbolSetType.Signals_Intelligence_Space, "SigInt" },
+            { SymbolSetType.Signals_Intelligence_Air, "SigInt" },
+            { SymbolSetType.Signals_Intelligence_Land, "SigInt" },
+            { SymbolSetType.Signals_Intelligence_Surface, "SigInt" },
+            { SymbolSetType.Signals_Intelligence_Subsurface, "SigInt" }
+
+            // TODO: Figure out the remaining missing/unmapped ones....
+            // Missing Folder Mapping:
+            // { SymbolSetType.XXX, "StabOps" },
+            // Missing Types Mapping:
+            // Mine_Warfare = 36,
+            // Activities = 40,
+            // Atmospheric = 45,
+            // Oceanographic = 46
+
+        }; //  end SymbolSetToFolderName dictionary declaration
+
+        public class EnumHelper
+        {
+            // TODO: This class was borrowed from a 2525C one, 
+            //       Dust the cobwebs and purge the unused
+            //       methods once 2525D work done
+
+            public static List<string> getEnumValues(System.Type type)
+            {
+                List<string> values = new List<string>();
+                Array enumValues = Enum.GetValues(type);
+                foreach (Enum en in enumValues)
+                {
+                    string enumString = en.ToString();
+                    enumString = enumString.Replace('_', ' ');
+
+                    values.Add(enumString);
+                }
+                return values;
+            }
+
+            static public int getIndexFromEnum(System.Type type, Enum en)
+            {
+                int index = 0;
+
+                System.Array enumValues = Enum.GetValues(type);
+                foreach (Enum enumValue in enumValues)
+                {
+                    if (enumValue.GetHashCode() == en.GetHashCode())
+                        break;
+
+                    index++;
+                }
+
+                // if none found, just return the first value
+                return index;
+            }
+
+            static public Enum getEnumFromIndex(System.Type type, int index)
+            {
+                System.Array enumValues = Enum.GetValues(type);
+                return (Enum)enumValues.GetValue(index);
+            }
+
+            static public string getEnumValAsString(Enum theEnum, int requiredLength = 1)
+            {
+                int hashCode = theEnum.GetHashCode();
+                string hashCodeString = Convert.ToString(hashCode);
+
+                if (hashCodeString.Length < requiredLength)
+                    hashCodeString = hashCodeString.PadLeft(requiredLength, '0');
+
+                return hashCodeString;
+            }
+
+            static public Enum getEnumFromHashCodeString(System.Type type, string hashCodeString)
+            {
+                int hashCode = Convert.ToInt32(hashCodeString);
+                int index = 0;
+
+                System.Array enumValues = Enum.GetValues(type);
+
+                foreach (Enum enumValue in enumValues)
+                {
+                    if (enumValue.GetHashCode() == hashCode)
+                        break;
+
+                    index++;
+                }
+
+                return (Enum)enumValues.GetValue(index);
+            }
+
+            static public Enum getEnumFromString(System.Type type, string enumString)
+            {
+                int index = 0;
+
+                string enumStringNoSpaces = enumString.Replace(' ', '_');
+
+                System.Array enumValues = Enum.GetValues(type);
+
+                foreach (Enum enumValue in enumValues)
+                {
+                    if (enumValue.ToString() == enumStringNoSpaces)
+                        break;
+
+                    index++;
+                }
+
+                return (Enum)enumValues.GetValue(index);
+            }
+
+            // TODO: Probably 2525C-specific
+            static public string getEnumStringFromChar(System.Type type, char enumChar)
+            {
+                int index = 0;
+
+                string enumString = "NOT FOUND";
+                bool found = false;
+
+                System.Array enumValues = Enum.GetValues(type);
+                foreach (Enum enumValue in enumValues)
+                {
+                    if (enumValue.GetHashCode() == enumChar)
+                    {
+                        found = true;
+                        enumString = enumValue.ToString();
+                        break;
+                    }
+
+                    index++;
+                }
+
+                if (found)
+                {
+                    string enumStringWithSpaces = enumString.Replace('_', ' ');
+                    return enumStringWithSpaces;
+                }
+
+                return null;
+            }
+
+            // TODO: Probably 2525C-specific
+            static public char getEnumCharFromString(System.Type type, string enumString)
+            {
+                int index = 0;
+
+                char enumChar = '-';
+                string enumStringNoSpaces = enumString.Replace(' ', '_');
+
+                System.Array enumValues = Enum.GetValues(type);
+
+                foreach (Enum enumValue in enumValues)
+                {
+                    if (enumValue.ToString() == enumStringNoSpaces)
+                    {
+                        enumChar = (char)enumValue.GetHashCode();
+                        break;
+                    }
+
+                    index++;
+                }
+
+                return enumChar;
+            }
+
+        } // Utility Class EnumHelper
+
+    } // Class TypeUtilities
+
+}
