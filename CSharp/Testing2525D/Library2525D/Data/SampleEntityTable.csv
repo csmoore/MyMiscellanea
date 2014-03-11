@@ -33,7 +33,7 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType,ImageFileName
 01,Military,Fixed Wing,Passenger,110131,Point,01110131
 01,Military,Fixed Wing,Escort,110132,Point,01110132
 01,Military,Fixed Wing,Electronic Attack (EA),110133,Point,01110133
-01,Military,Rotary Wing,Entity Type,110200,Point,01110200
+01,Military,Rotary Wing,,110200,Point,01110200
 01,Military,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,110300,Point,01110300
 01,Military,Vertical-Takeoff UAV (VT-UAV),,110400,Point,01110400
 01,Military,Lighter Than Air,,110500,Point,01110500

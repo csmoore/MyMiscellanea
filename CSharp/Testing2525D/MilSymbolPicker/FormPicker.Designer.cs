@@ -57,8 +57,10 @@
             this.button33 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
+            this.gbTags = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.gbTags.SuspendLayout();
             this.SuspendLayout();
             // 
             // labCol1
@@ -266,11 +268,11 @@
             // 
             // labTags
             // 
-            this.labTags.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labTags.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTags.Location = new System.Drawing.Point(0, 402);
+            this.labTags.Location = new System.Drawing.Point(3, 16);
             this.labTags.Name = "labTags";
-            this.labTags.Size = new System.Drawing.Size(723, 61);
+            this.labTags.Size = new System.Drawing.Size(717, 59);
             this.labTags.TabIndex = 16;
             this.labTags.Text = "Selected Symbol Properties";
             // 
@@ -354,11 +356,23 @@
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.buttonPane_Click);
             // 
+            // gbTags
+            // 
+            this.gbTags.Controls.Add(this.labTags);
+            this.gbTags.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gbTags.Location = new System.Drawing.Point(0, 385);
+            this.gbTags.Name = "gbTags";
+            this.gbTags.Size = new System.Drawing.Size(723, 78);
+            this.gbTags.TabIndex = 27;
+            this.gbTags.TabStop = false;
+            this.gbTags.Text = "Symbol Tags";
+            // 
             // FormPicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 463);
+            this.Controls.Add(this.gbTags);
             this.Controls.Add(this.butNextCol3);
             this.Controls.Add(this.labCol3);
             this.Controls.Add(this.butBackCol3);
@@ -367,7 +381,6 @@
             this.Controls.Add(this.button33);
             this.Controls.Add(this.button32);
             this.Controls.Add(this.button31);
-            this.Controls.Add(this.labTags);
             this.Controls.Add(this.butNextCol2);
             this.Controls.Add(this.cbLayers);
             this.Controls.Add(this.groupBox1);
@@ -392,6 +405,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gbTags.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,6 +442,7 @@
         private System.Windows.Forms.Button button33;
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.GroupBox gbTags;
     }
 }
 

@@ -2,6 +2,21 @@
 ## Visual Studio
 #################
 
+# Backups / zips
+*.pyt.xml
+*.zip
+*.zip
+*-old.*
+*-old
+*-sav
+*-sav.*
+*Copy.*
+*-master
+*.orig
+*.original
+*.mdb
+*.sav
+
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
 [Oo]bj/

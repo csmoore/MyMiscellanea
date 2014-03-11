@@ -46,19 +46,26 @@ namespace MilSymbolPicker
         List<string> currentColValues;
         string currentEntityName = string.Empty;
         string currentEntityTypeName = string.Empty;
+        string currentEntitySubTypeName = string.Empty;
+        string currentEntityEchelonMobilityName = string.Empty;
+        string currentModifier1Name = string.Empty;
+        string currentModifier2Name = string.Empty;
 
         MilitarySymbol currentSymbol = new MilitarySymbol();
 
         public enum PaneSequenceType  // Order of the button panes
         {
-            NotSet            = 0,
-            AffiliationPane   = 1,
-            SymbolSetPane     = 2,
-            EntityPane        = 3,
-            EntityTypePane    = 4,
-            EntitySubTypePane = 5,
+            NotSet              = 0,
+            AffiliationPane     = 1,
+            SymbolSetPane       = 2,
+            EntityPane          = 3,
+            EntityTypePane      = 4,
+            EntitySubTypePane   = 5,
+            Modifier1Pane       = 6,
+            Modifier2Pane       = 7,
+            EchelonMobilityPane = 8,
 
-            Done = 5,
+            StartOver = 9,
         }
 
         PaneSequenceType previousPane = PaneSequenceType.NotSet;
@@ -103,7 +110,8 @@ namespace MilSymbolPicker
 
             if (changedState)
             {
-                System.Diagnostics.Trace.WriteLine("New Pane State: " + currentPane);
+                System.Diagnostics.Trace.WriteLine("New Pane State: " + currentPane 
+                    + ", Old State = " + previousPane);
 
                 if (currentPane == PaneSequenceType.AffiliationPane)
                 {
@@ -139,16 +147,97 @@ namespace MilSymbolPicker
                     setVisibilityColumnButtons(3, false);
                 }
                 else if ((currentPane == PaneSequenceType.EntityPane) 
-                    || (currentPane == PaneSequenceType.EntityTypePane))
+                    || (currentPane == PaneSequenceType.EntityTypePane) 
+                    || (currentPane == PaneSequenceType.EntitySubTypePane))
                 {
-                    this.labCol3.Text = "Entity";
+                    this.labCol3.Text = currentPane.ToString().Replace("Pane", ""); //  Entity/EntityType/etc.
                     this.labCol3.Visible = true;
 
                     if (currentPane == PaneSequenceType.EntityPane)
                         currentColValues = symbolLookup.GetDistinctEntries(this.currentSymbol.Id.SymbolSet);
                     else
                         if (currentPane == PaneSequenceType.EntityTypePane)
-                            currentColValues = symbolLookup.GetDistinctEntries(this.currentSymbol.Id.SymbolSet, currentEntityName);
+                            currentColValues = symbolLookup.GetDistinctEntries(
+                                this.currentSymbol.Id.SymbolSet, 
+                                currentEntityName);
+                        else
+                            if (currentPane == PaneSequenceType.EntitySubTypePane)
+                                currentColValues = symbolLookup.GetDistinctEntries(
+                                    this.currentSymbol.Id.SymbolSet, 
+                                    currentEntityName, 
+                                    currentEntityTypeName);
+
+                    if (currentColValues.Count == 0)
+                    {
+                        // Advance to the next pane if this is empty
+                        currentPane++;
+                        button31.Visible = true;
+                        button31.Enabled = true; // just in case no values so PerformClick will work 
+                        button31.Text = string.Empty;
+                        button31.PerformClick();
+                    }
+
+                    currentColRowIndex = 0;
+
+                    currentColumn = 3;
+                    enableColumnButtons(3, true);
+                    setColumnValues();
+                    enableColumnButtons(1, false);
+                    enableColumnButtons(2, false);
+                }
+                else if ((currentPane == PaneSequenceType.Modifier1Pane)
+                      || (currentPane == PaneSequenceType.Modifier2Pane))
+                {
+                    this.labCol3.Text = currentPane.ToString().Replace("Pane", ""); 
+                    this.labCol3.Visible = true;
+
+                    if (currentPane == PaneSequenceType.Modifier1Pane)
+                        currentColValues = symbolLookup.GetDistinctModifierNames(
+                            this.currentSymbol.Id.SymbolSet, 1);
+                    else
+                        if (currentPane == PaneSequenceType.Modifier2Pane)
+                            currentColValues = symbolLookup.GetDistinctModifierNames(
+                                this.currentSymbol.Id.SymbolSet, 2);
+
+                    if (currentColValues.Count == 0)
+                    {
+                        // Advance to the next pane if this is empty
+                        currentPane++;
+                        button31.Visible = true;
+                        button31.Enabled = true; // just in case no values so PerformClick will work 
+                        button31.Text = string.Empty;
+                        button31.PerformClick();
+                    }
+
+                    currentColRowIndex = 0;
+
+                    currentColumn = 3;
+                    enableColumnButtons(3, true);
+                    setColumnValues();
+                    enableColumnButtons(1, false);
+                    enableColumnButtons(2, false);
+                }
+                else if (currentPane == PaneSequenceType.EchelonMobilityPane)
+                {
+                    this.labCol3.Text = "Echelon/Mobility";
+                    this.labCol3.Visible = true;
+
+                    currentColValues = TypeUtilities.EnumHelper.getEnumValues(typeof(EchelonMobilityType));
+
+                    currentColRowIndex = 0;
+
+                    currentColumn = 3;
+                    enableColumnButtons(3, true);
+                    setColumnValues();
+                    enableColumnButtons(1, false);
+                    enableColumnButtons(2, false);
+                }
+                else if (currentPane == PaneSequenceType.StartOver)
+                {
+                    this.labCol3.Text = "Finished";
+                    this.labCol3.Visible = true;
+
+                    currentColValues = new List<string>() { "Start Over" };
 
                     currentColRowIndex = 0;
 
@@ -165,7 +254,12 @@ namespace MilSymbolPicker
 
         void setSymbolState(string valueSelected)
         {
-            if (currentPane == PaneSequenceType.AffiliationPane)
+            if (string.IsNullOrEmpty(valueSelected))
+            {
+                // this is a special state (i.e. hack) to simulate a button press, to force 
+                // into the next state, when the previous panel is empty
+            }
+            else if (currentPane == PaneSequenceType.AffiliationPane)
             {
                 string affiliationSelectedString = valueSelected;
 
@@ -212,7 +306,72 @@ namespace MilSymbolPicker
 
                 currentSymbol.Id.FullEntityCode = entityCode;
 
-                // Go back when we are done
+                currentPane = PaneSequenceType.EntitySubTypePane; 
+            }
+            else if (currentPane == PaneSequenceType.EntitySubTypePane)
+            {
+                currentEntitySubTypeName = valueSelected;
+
+                currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator
+                    + currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName;
+
+                string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet,
+                    currentEntityName, currentEntityTypeName, currentEntitySubTypeName);
+
+                currentSymbol.Id.FullEntityCode = entityCode;
+
+                currentPane = PaneSequenceType.Modifier1Pane;
+            }
+            else if (currentPane == PaneSequenceType.Modifier1Pane)
+            {
+                currentModifier1Name = valueSelected;
+
+                currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator
+                    + currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName
+                    + TypeUtilities.NameSeparator + currentModifier1Name;
+
+                string modifier1Code = symbolLookup.GetModifierCodeFromName(
+                    currentSymbol.Id.SymbolSet, currentModifier1Name);
+
+                currentSymbol.Id.FirstModifier = modifier1Code;
+
+                currentPane = PaneSequenceType.Modifier2Pane;
+            }
+            else if (currentPane == PaneSequenceType.Modifier2Pane)
+            {
+                currentModifier2Name = valueSelected;
+
+                currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator
+                    + currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName
+                    + TypeUtilities.NameSeparator + currentModifier1Name
+                    + TypeUtilities.NameSeparator + currentModifier2Name;
+
+                string modifier2Code = symbolLookup.GetModifierCodeFromName(
+                    currentSymbol.Id.SymbolSet, currentModifier2Name);
+
+                currentSymbol.Id.SecondModifier = modifier2Code;
+
+                currentPane = PaneSequenceType.EchelonMobilityPane;
+            }
+            else if (currentPane == PaneSequenceType.EchelonMobilityPane)
+            {
+                currentEntityEchelonMobilityName = valueSelected;
+
+                EchelonMobilityType echelonMobilitySelection =
+                    (EchelonMobilityType)
+                    TypeUtilities.EnumHelper.getEnumFromString(
+                        typeof(EchelonMobilityType), currentEntityEchelonMobilityName);
+
+                currentSymbol.Id.EchelonMobility = echelonMobilitySelection;
+
+                currentPane = PaneSequenceType.StartOver;
+            }
+            else if (currentPane == PaneSequenceType.StartOver)
+            {
+                // Reset the other values
+                resetSymbolState(); 
+
+                // Go back when we are done 
                 currentPane = PaneSequenceType.SymbolSetPane;
             }
 
@@ -224,6 +383,27 @@ namespace MilSymbolPicker
             SetPaneState();
         }
 
+        void resetSymbolState()
+        {
+            currentEntityName = string.Empty;
+            currentEntityTypeName = string.Empty;
+            currentEntitySubTypeName = string.Empty;
+            currentEntityEchelonMobilityName = string.Empty;
+            currentModifier1Name = string.Empty;
+            currentModifier2Name = string.Empty;
+
+            StandardIdentityAffiliationType affil = currentSymbol.Id.Affiliation;
+
+            currentSymbol.Id = SymbolIdCode.DefaultSymbolIdCode;
+            currentSymbol.Id.Affiliation = affil;
+
+            pbPreview.Image = null;
+
+            //currentSymbol.Id.FullEntityCode = "000000";
+            //currentSymbol.Id.FirstModifier = "00";
+            //currentSymbol.Id.SecondModifier = "00";
+            //currentSymbol.Id.EchelonMobility = EchelonMobilityType.NoEchelonMobility;
+        }
 
         void setVisibilityColumnButtons(int column, bool visible = true)
         {
@@ -332,13 +512,16 @@ namespace MilSymbolPicker
 
             // Set the Combo Box with the layers
             cbLayers.Items.Clear();
+            int layerNumber = 0;
             foreach (string graphicLayer in currentSymbol.GraphicLayers)
             {
-                string simpleLayer = graphicLayer.Replace(MilitarySymbolToGraphicLayersMaker.ImageFilesHome,
+                layerNumber++;
+                string simpleLayer = layerNumber.ToString() + ":" + 
+                    graphicLayer.Replace(MilitarySymbolToGraphicLayersMaker.ImageFilesHome,
                     " ");
 
                 if (!System.IO.File.Exists(graphicLayer))
-                    simpleLayer = "[MISSING]" + simpleLayer;
+                    simpleLayer = "[MISSING]:" + simpleLayer;
 
                 cbLayers.Items.Add(simpleLayer);
             }
@@ -395,12 +578,6 @@ namespace MilSymbolPicker
             currentPane = PaneSequenceType.AffiliationPane;
 
             SetPaneState();
-
-            //if (currentPane > PaneSequenceType.AffiliationPane)
-            //{
-            //    System.Diagnostics.Trace.WriteLine("Going Back from Current Pane: " + currentPane);
-            //    currentPane--;
-            //}
         }
 
         private void butNextCol2_Click(object sender, EventArgs e)

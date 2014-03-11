@@ -42,13 +42,28 @@ namespace Library2525D
 
         // TODO: IMPORTANT: You Must Set this to the location on your machine
         // Note: PathSeparator on the end (required/assumed)
-        public static readonly string ImageFilesHome = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]\2525D_SVG_PNG_062013"
-            + System.IO.Path.DirectorySeparatorChar;
+        private static readonly string NOT_SET = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]";
+
+        public static readonly string ImageFilesHome =
+            NOT_SET                                  // <-- TODO: SET THIS
+            + System.IO.Path.DirectorySeparatorChar; // NOTE: Ends in DirectorySeparator
 
         const string ImageSuffix = ".svg";
 
         public static bool SetMilitarySymbolGraphicLayers(ref MilitarySymbol milSymbol)
         {
+            if (ImageFilesHome.Equals(NOT_SET + System.IO.Path.DirectorySeparatorChar))
+            {
+                System.Diagnostics.Trace.WriteLine("--> Images Home *NOT SET* : " + ImageFilesHome);
+                return false;
+            }
+
+            if (!System.IO.Directory.Exists(ImageFilesHome))
+            {
+                System.Diagnostics.Trace.WriteLine("--> Images Home *DOES NOT EXIST* : " + ImageFilesHome);
+                return false;
+            }
+
             if ((milSymbol == null) || (milSymbol.Id == null) ||
                 (milSymbol.GraphicLayers == null) || (!milSymbol.Id.IsValid))
                 return false;
@@ -63,8 +78,12 @@ namespace Library2525D
             sb.Append(ImageFilesHome);
             sb.Append("Frames");
             sb.Append(System.IO.Path.DirectorySeparatorChar);
-            sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.Affiliation, 2));
-            sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2));
+
+            string affiliationString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.Affiliation, 2);
+            sb.Append(affiliationString);
+
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2);
+            sb.Append(symbolSetString);
             string affilName = TypeUtilities.AffiliationTypeToImageName[milSymbol.Id.Affiliation];
             sb.Append("(" + affilName + ")");
             sb.Append(ImageSuffix);
@@ -72,11 +91,12 @@ namespace Library2525D
             milSymbol.GraphicLayers.Add(sb.ToString());
 
             // Main Icon Layer
-            // {SymbolSetTypeName}\SymbolSetType + EntityCode 
+            // Appendices\{SymbolSetTypeName}\SymbolSetType + EntityCode 
 
             sb.Clear();
             sb.Append(ImageFilesHome);
             sb.Append("Appendices");
+
             sb.Append(System.IO.Path.DirectorySeparatorChar);
 
             string symbolSetSubFolderName = string.Empty;
@@ -86,7 +106,10 @@ namespace Library2525D
             sb.Append(symbolSetSubFolderName);
             sb.Append(System.IO.Path.DirectorySeparatorChar);
 
-            sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2));
+            // Save this for later below (Modifiers)
+            string currentAppendixHome = sb.ToString();
+
+            sb.Append(symbolSetString);
             sb.Append(milSymbol.Id.FullEntityCode);
 
             sb.Append(ImageSuffix);
@@ -97,17 +120,56 @@ namespace Library2525D
             //       Figure out which of the additional layers apply for which sets
             //
 
+            // Modifiers: { # = 1 | 2 }
+            // Appendices\{SymbolSetTypeName}\Mod{#}\{SymbolSetType} + {ModifierCode} + {#}
+
             // Main Icon Modfier 1
 
-            // TODO
+            if (!string.IsNullOrEmpty(milSymbol.Id.FirstModifier))
+            {
+                sb.Clear();
+                sb.Append(currentAppendixHome);
+                sb.Append("mod1");
+                sb.Append(System.IO.Path.DirectorySeparatorChar);
+
+                string mod1 = symbolSetString + milSymbol.Id.FirstModifier + "1";
+                sb.Append(mod1);
+
+                sb.Append(ImageSuffix);
+                milSymbol.GraphicLayers.Add(sb.ToString());
+            }
 
             // Main Icon Modfier 2
 
-            // TODO
+            if (!string.IsNullOrEmpty(milSymbol.Id.SecondModifier))
+            {
+                sb.Clear();
+                sb.Append(currentAppendixHome);
+                sb.Append("mod2");
+                sb.Append(System.IO.Path.DirectorySeparatorChar);
+
+                string mod2 = symbolSetString + milSymbol.Id.SecondModifier + "2";
+                sb.Append(mod2);
+
+                sb.Append(ImageSuffix);
+                milSymbol.GraphicLayers.Add(sb.ToString());
+            }
 
             // Echelon Modifier
 
-            // TODO
+            // = StandardIdentityAffiliationType + "100" (not sure what this is) + EchelonMobilityType
+            // ex. Friend Team_Crew = 0310011
+
+            sb.Clear();
+            sb.Append(ImageFilesHome);
+            sb.Append("Echelon");
+            sb.Append(System.IO.Path.DirectorySeparatorChar);
+            sb.Append(affiliationString);
+            sb.Append("100");
+            sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.EchelonMobility, 2));
+            sb.Append(ImageSuffix);
+            milSymbol.GraphicLayers.Add(sb.ToString());
+
 
             // Headquarters/TF/FD Modifier
 

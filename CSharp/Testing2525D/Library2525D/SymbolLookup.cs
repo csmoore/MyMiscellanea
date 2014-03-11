@@ -128,6 +128,59 @@ namespace Library2525D
             return symbolList;
         }
 
+        public string GetModifierCodeFromName(SymbolSetType symbolSet, string modifierNameString)
+        {
+            string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+
+            // assmumes that the names will be unique within a symbol set
+            // if not, we will also need the modifier number as an input
+
+            var results = from row in ModifierTable.AsEnumerable()
+                           where ((row.Field<string>("SymbolSet") == symbolSetToSearch)
+                                & (row.Field<string>("Name") == modifierNameString))
+                           select row;
+
+            int resultCount = results.Count();
+            if (resultCount < 1)
+            {
+                System.Diagnostics.Trace.WriteLine("Modifier Name note found: " + modifierNameString);
+                return string.Empty;
+            }
+
+            string modifierCode = string.Empty;
+
+            foreach (DataRow row in results)
+            {
+                modifierCode = row["Code"] as string;
+
+                // We only care about the 1st result
+                break;
+            }
+
+            return modifierCode;
+        }
+
+        public List<string> GetDistinctModifierNames(SymbolSetType symbolSet, int modfierNumber = 1)
+        {
+            List<string> distinctResultStrings = new List<string>();
+
+            string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+
+            string modifierToSearch = modfierNumber.ToString();
+
+            var results = (from row in ModifierTable.AsEnumerable()
+                           where ((row.Field<string>("SymbolSet") == symbolSetToSearch)
+                                & (row.Field<string>("ModifierNumber") == modifierToSearch))
+                           select row.Field<string>("Name")).Distinct();
+
+            foreach (var result in results)
+            {
+                distinctResultStrings.Add(result);
+            }
+
+            return distinctResultStrings;
+        }
+
         public List<string> GetDistinctEntries(SymbolSetType symbolSet, string entityNameString = "",
             string entityTypeNameString = "")
         {

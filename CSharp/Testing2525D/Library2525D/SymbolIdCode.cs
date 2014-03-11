@@ -33,18 +33,10 @@ namespace Library2525D
         {
             get
             {
-                if (defaultSymbolIdCode == null)
-                {
-                    defaultSymbolIdCode = new SymbolIdCode();
-
-                    // Set any properties that you want to be the default
-                    // ex. defaultSymbolIdCode.Affiliation = StandardIdentityAffiliationType.Unknown;
-                }
-
-                return defaultSymbolIdCode;
+                // TODO/TRICKY: we have to create a new one every time (or implement equals/hashcode)
+                return new SymbolIdCode();
             }
         }
-        protected static SymbolIdCode defaultSymbolIdCode = null;
 
         /// <summary>
         /// The Full 20-digit code

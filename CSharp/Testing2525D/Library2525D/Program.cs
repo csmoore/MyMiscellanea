@@ -78,6 +78,22 @@ namespace Library2525D
                 matchCount++;
                 System.Diagnostics.Trace.WriteLine("Distinct Match: " + distinctMatch);
             }
+
+            matchingStrings = symbolLookup.GetDistinctModifierNames(SymbolSetType.Air, 1);
+
+            matchCount = 0;
+            foreach (string distinctMatch in matchingStrings)
+            {
+                matchCount++;
+                System.Diagnostics.Trace.WriteLine("Modifiers: Distinct Match: " + distinctMatch);
+            }
+
+            string modifierName = "Government";
+
+            string modifierCode = symbolLookup.GetModifierCodeFromName(SymbolSetType.Air, modifierName);
+ 
+
+
         }
     }
 }
