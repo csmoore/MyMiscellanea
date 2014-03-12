@@ -14,11 +14,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using Library2525D;
 
 namespace MilSymbolPicker
@@ -397,12 +397,13 @@ namespace MilSymbolPicker
             currentSymbol.Id = SymbolIdCode.DefaultSymbolIdCode;
             currentSymbol.Id.Affiliation = affil;
 
-            pbPreview.Image = null;
+            this.cbLayers.Text = string.Empty;
+            this.cbLayers.Items.Clear();
 
-            //currentSymbol.Id.FullEntityCode = "000000";
-            //currentSymbol.Id.FirstModifier = "00";
-            //currentSymbol.Id.SecondModifier = "00";
-            //currentSymbol.Id.EchelonMobility = EchelonMobilityType.NoEchelonMobility;
+            // blank image
+            pbPreview.Image = null;
+            // or set to "No Image" graphic:
+            // Bitmap noImage = new Bitmap(GetType(), "NoImage.png");
         }
 
         void setVisibilityColumnButtons(int column, bool visible = true)

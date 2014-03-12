@@ -1,87 +1,690 @@
-SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType,ImageFileName
-01,Military,,,110000,Point,01110000
-01,Military,Fixed Wing,,110100,Point,01110100
-01,Military,Fixed Wing,Medical Evacuation (MEDEVAC),110101,Point,01110101
-01,Military,Fixed Wing,Attack/Strike,110102,Point,01110102
-01,Military,Fixed Wing,Bomber,110103,Point,01110103
-01,Military,Fixed Wing,Fighter,110104,Point,01110104
-01,Military,Fixed Wing,Fighter/Bomber,110105,Point,01110105
-01,Military,Fixed Wing,Cargo,110107,Point,01110107
-01,Military,Fixed Wing,Electronic Combat (EC)/Jammer,110108,Point,01110108
-01,Military,Fixed Wing,Tanker,110109,Point,01110109
-01,Military,Fixed Wing,Patrol,110110,Point,01110110
-01,Military,Fixed Wing,Reconnaissance,110111,Point,01110111
-01,Military,Fixed Wing,Trainer,110112,Point,01110112
-01,Military,Fixed Wing,Utility,110113,Point,01110113
-01,Military,Fixed Wing,VSTOL,110114,Point,01110114
-01,Military,Fixed Wing,Airborne Command Post (ACP),110115,Point,01110115
-01,Military,Fixed Wing,Airborne Early Warning (AEW),110116,Point,01110116
-01,Military,Fixed Wing,Antisurface Warfare,110117,Point,01110117
-01,Military,Fixed Wing,Antisubmarine Warfare,110118,Point,01110118
-01,Military,Fixed Wing,Communications,110119,Point,01110119
-01,Military,Fixed Wing,Combat Search and Rescue (CSAR),110120,Point,01110120
-01,Military,Fixed Wing,Electronic Support (ES),110121,Point,01110121
-01,Military,Fixed Wing,Government,110122,Point,01110122
-01,Military,Fixed Wing,Mine Countermeasures (MCM),110123,Point,01110123
-01,Military,Fixed Wing,Personnel Recovery,110124,Point,01110124
-01,Military,Fixed Wing,Search and Rescue,110125,Point,01110125
-01,Military,Fixed Wing,Special Operations Forces,110126,Point,01110126
-01,Military,Fixed Wing,Ultra Light,110127,Point,01110127
-01,Military,Fixed Wing,Photographic Reconnaissance,110128,Point,01110128
-01,Military,Fixed Wing,Very Important Person (VIP),110129,Point,01110129
-01,Military,Fixed Wing,Suppression of Enemy Air Defense,110130,Point,01110130
-01,Military,Fixed Wing,Passenger,110131,Point,01110131
-01,Military,Fixed Wing,Escort,110132,Point,01110132
-01,Military,Fixed Wing,Electronic Attack (EA),110133,Point,01110133
-01,Military,Rotary Wing,,110200,Point,01110200
-01,Military,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,110300,Point,01110300
-01,Military,Vertical-Takeoff UAV (VT-UAV),,110400,Point,01110400
-01,Military,Lighter Than Air,,110500,Point,01110500
-01,Military,Airship,,110600,Point,01110600
-01,Military,Tethered Lighter than Air,,110700,Point,01110700
-01,Civilian,,,120000,Point,01120000
-01,Civilian,Fixed Wing,,120100,Point,01120100
-01,Civilian,Rotary Wing,,120200,Point,01120200
-01,Civilian,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,120300,Point,01120300
-01,Civilian,Lighter Than Air,,120400,Point,01120400
-01,Civilian,Airship,,120500,Point,01120500
-01,Civilian,Tethered Lighter than Air,,120600,Point,01120600
-01,Weapon,,,130000,Point,01130000
-01,Weapon,Bomb,,130100,Point,01130100
-01,Weapon,Decoy,,130200,Point,01130200
-01,Manual Track,,,140000,Point,01140000
-02,Missile,,,110000,Point,02110000
-05,Military,,,110000,Point,05110000
-05,Military,Space Vehicle,,110100,Point,05110100
-05,Military,Re-Entry Vehicle,,110200,Point,05110200
-05,Military,Planet Lander,,110300,Point,05110300
-05,Military,Orbiter Shuttle,,110400,Point,05110400
-05,Military,Capsule,,110500,Point,05110500
-05,Military,Satellite General,,110600,Point,05110600
-05,Military,Satellite,,110700,Point,05110700
-05,Military,Antisatellite Weapon,,110800,Point,05110800
-05,Military,Astronomical Satellite,,110900,Point,05110900
-05,Military,Biosatellite,,111000,Point,05111000
-05,Military,Communications Satellite,,111100,Point,05111100
-05,Military,Earth Observation Satellite,,111200,Point,05111200
-05,Military,Miniaturized Satellite,,111300,Point,05111300
-05,Military,Navigational Satellite,,111400,Point,05111400
-05,Military,Reconnaissance Satellite,,111500,Point,05111500
-05,Military,Space Station,,111600,Point,05111600
-05,Military,Tethered Satellite,,111700,Point,05111700
-05,Military,Weather Satellite,,111800,Point,05111800
-05,Military,Space Launched Vehicle (SLV),,111900,Point,05111900
-05,Civilian,,,120000,Point,05120000
-05,Civilian,Orbiter Shuttle,,120100,Point,05120100
-05,Civilian,Capsule,,120200,Point,05120200
-05,Civilian,Satellite,,120300,Point,05120300
-05,Civilian,Astronomical Satellite,,120400,Point,05120400
-05,Civilian,Biosatellite,,120500,Point,05120500
-05,Civilian,Communications Satellite,,120600,Point,05120600
-05,Civilian,Earth Observation Satellite,,120700,Point,05120700
-05,Civilian,Miniaturized Satellite,,120800,Point,05120800
-05,Civilian,Navigational Satellite,,120900,Point,05120900
-05,Civilian,Space Station,,121000,Point,05121000
-05,Civilian,Tethered Satellite,,121100,Point,05121100
-05,Civilian,Weather Satellite,,121200,Point,05121200
-05,Manual Track,,,130000,Point,05130000
+SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
+01,Military,,,110000,Point
+01,Military,Fixed Wing,,110100,Point
+01,Military,Fixed Wing,Medical Evacuation (MEDEVAC),110101,Point
+01,Military,Fixed Wing,Attack/Strike,110102,Point
+01,Military,Fixed Wing,Bomber,110103,Point
+01,Military,Fixed Wing,Fighter,110104,Point
+01,Military,Fixed Wing,Fighter/Bomber,110105,Point
+01,Military,Fixed Wing,Cargo,110107,Point
+01,Military,Fixed Wing,Electronic Combat (EC)/Jammer,110108,Point
+01,Military,Fixed Wing,Tanker,110109,Point
+01,Military,Fixed Wing,Patrol,110110,Point
+01,Military,Fixed Wing,Reconnaissance,110111,Point
+01,Military,Fixed Wing,Trainer,110112,Point
+01,Military,Fixed Wing,Utility,110113,Point
+01,Military,Fixed Wing,VSTOL,110114,Point
+01,Military,Fixed Wing,Airborne Command Post (ACP),110115,Point
+01,Military,Fixed Wing,Airborne Early Warning (AEW),110116,Point
+01,Military,Fixed Wing,Antisurface Warfare,110117,Point
+01,Military,Fixed Wing,Antisubmarine Warfare,110118,Point
+01,Military,Fixed Wing,Communications,110119,Point
+01,Military,Fixed Wing,Combat Search and Rescue (CSAR),110120,Point
+01,Military,Fixed Wing,Electronic Support (ES),110121,Point
+01,Military,Fixed Wing,Government,110122,Point
+01,Military,Fixed Wing,Mine Countermeasures (MCM),110123,Point
+01,Military,Fixed Wing,Personnel Recovery,110124,Point
+01,Military,Fixed Wing,Search and Rescue,110125,Point
+01,Military,Fixed Wing,Special Operations Forces,110126,Point
+01,Military,Fixed Wing,Ultra Light,110127,Point
+01,Military,Fixed Wing,Photographic Reconnaissance,110128,Point
+01,Military,Fixed Wing,Very Important Person (VIP),110129,Point
+01,Military,Fixed Wing,Suppression of Enemy Air Defense,110130,Point
+01,Military,Fixed Wing,Passenger,110131,Point
+01,Military,Fixed Wing,Escort,110132,Point
+01,Military,Fixed Wing,Electronic Attack (EA),110133,Point
+01,Military,Rotary Wing,,110200,Point
+01,Military,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,110300,Point
+01,Military,Vertical-Takeoff UAV (VT-UAV),,110400,Point
+01,Military,Lighter Than Air,,110500,Point
+01,Military,Airship,,110600,Point
+01,Military,Tethered Lighter than Air,,110700,Point
+01,Civilian,,,120000,Point
+01,Civilian,Fixed Wing,,120100,Point
+01,Civilian,Rotary Wing,,120200,Point
+01,Civilian,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,120300,Point
+01,Civilian,Lighter Than Air,,120400,Point
+01,Civilian,Airship,,120500,Point
+01,Civilian,Tethered Lighter than Air,,120600,Point
+01,Weapon,,,130000,Point
+01,Weapon,Bomb,,130100,Point
+01,Weapon,Decoy,,130200,Point
+01,Manual Track,,,140000,Point
+02,Missile,,,110000,Point
+05,Military,,,110000,Point
+05,Military,Space Vehicle,,110100,Point
+05,Military,Re-Entry Vehicle,,110200,Point
+05,Military,Planet Lander,,110300,Point
+05,Military,Orbiter Shuttle,,110400,Point
+05,Military,Capsule,,110500,Point
+05,Military,Satellite General,,110600,Point
+05,Military,Satellite,,110700,Point
+05,Military,Antisatellite Weapon,,110800,Point
+05,Military,Astronomical Satellite,,110900,Point
+05,Military,Biosatellite,,111000,Point
+05,Military,Communications Satellite,,111100,Point
+05,Military,Earth Observation Satellite,,111200,Point
+05,Military,Miniaturized Satellite,,111300,Point
+05,Military,Navigational Satellite,,111400,Point
+05,Military,Reconnaissance Satellite,,111500,Point
+05,Military,Space Station,,111600,Point
+05,Military,Tethered Satellite,,111700,Point
+05,Military,Weather Satellite,,111800,Point
+05,Military,Space Launched Vehicle (SLV),,111900,Point
+05,Civilian,,,120000,Point
+05,Civilian,Orbiter Shuttle,,120100,Point
+05,Civilian,Capsule,,120200,Point
+05,Civilian,Satellite,,120300,Point
+05,Civilian,Astronomical Satellite,,120400,Point
+05,Civilian,Biosatellite,,120500,Point
+05,Civilian,Communications Satellite,,120600,Point
+05,Civilian,Earth Observation Satellite,,120700,Point
+05,Civilian,Miniaturized Satellite,,120800,Point
+05,Civilian,Navigational Satellite,,120900,Point
+05,Civilian,Space Station,,121000,Point
+05,Civilian,Tethered Satellite,,121100,Point
+05,Civilian,Weather Satellite,,121200,Point
+05,Manual Track,,,130000,Point
+10,Command and Control,,,110000,Point
+10,Command and Control,Broadcast Transmitter Antennae,,110100,Point
+10,Command and Control,Civil Affairs ,,110200,Point
+10,Command and Control,Civil-Military Cooperation ,,110300,Point
+10,Command and Control,Information Operations,,110400,Point
+10,Command and Control,Liaison,,110500,Point
+10,Command and Control,Military Information Support Operations (MISO),,110600,Point
+10,Command and Control,Military Information Support Operations (MISO),Broadcast Transmitter Antennae,110601,Point
+10,Command and Control,Radio,,110700,Point
+10,Command and Control,Radio Relay,,110800,Point
+10,Command and Control,Radio Teletype Center,,110900,Point
+10,Command and Control,Signal,,111000,Point
+10,Command and Control,Signal,Radio,111001,Point
+10,Command and Control,Signal,Radio Relay,111002,Point
+10,Command and Control,Signal,Teletype,111003,Point
+10,Command and Control,Signal,Tactical Satellite  ,111004,Point
+10,Command and Control,Signal,Video Imagery (Combat Camera),111005,Point
+10,Command and Control,Signal,Headquarters Element,111095,Point
+10,Command and Control,Signal,Corps Support ,111097,Point
+10,Command and Control,Signal,Theatre/Echelons Above Corps Support,111098,Point
+10,Command and Control,Tactical Satellite,,111100,Point
+10,Command and Control,Video Imagery (Combat Camera),,111200,Point
+10,Movement and Maneuver,,,120000,Point
+10,Movement and Maneuver,Air Assault with Organic Lift,,120100,Point
+10,Movement and Maneuver,Air Traffic Services/Airfield Operations,,120200,Point
+10,Movement and Maneuver,Amphibious,,120300,Point
+10,Movement and Maneuver,Antitank/Antiarmor,,120400,Point
+10,Movement and Maneuver,Antitank/Antiarmor,Armored,120401,Point
+10,Movement and Maneuver,Antitank/Antiarmor,Motorized,120402,Point
+10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/ Tracked,,120500,Point
+10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/ Tracked,Reconnaissance/Cavalry/Scout,120501,Point
+10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/ Tracked,Amphibious,120502,Point
+10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/ Tracked,Headquarters Element,120595,Point
+10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,,120600,Point
+10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,Reconnaissance,120601,Point
+10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,Headquarters Element,120695,Point
+10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,Corps Support,120697,Point
+10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,Theatre/Echelons Above Corps Support,120698,Point
+10,Movement and Maneuver,Aviation Composite,,120700,Point
+10,Movement and Maneuver,Aviation Composite,Headquarters Element,120795,Point
+10,Movement and Maneuver,Aviation Fixed Wing,,120800,Point
+10,Movement and Maneuver,Aviation Fixed Wing,Reconnaissance,120801,Point
+10,Movement and Maneuver,Aviation Fixed Wing,Headquarters Element,120895,Point
+10,Movement and Maneuver,Combat,,120900,Point
+10,Movement and Maneuver,Combined Arms,,121000,Point
+10,Movement and Maneuver,Combined Arms,Headquarters Element,121095,Point
+10,Movement and Maneuver,Infantry,,121100,Point
+10,Movement and Maneuver,Infantry,Amphibious,121101,Point
+10,Movement and Maneuver,Infantry,Armored/Mechanized/Tracked,121102,Point
+10,Movement and Maneuver,Infantry,Main Gun System ,121103,Point
+10,Movement and Maneuver,Infantry,Motorized ,121104,Point
+10,Movement and Maneuver,Infantry,Infantry Fighting Vehicle,121105,Point
+10,Movement and Maneuver,Infantry,Headquarters Element ,121195,Point
+10,Movement and Maneuver,Observer,,121200,Point
+10,Movement and Maneuver,Reconnaissance/Cavalry/Scout,,121300,Point
+10,Movement and Maneuver,Reconnaissance/Cavalry/Scout,Reconnaissance and Surveillance,121301,Point
+10,Movement and Maneuver,Reconnaissance/Cavalry/Scout,Marine,121302,Point
+10,Movement and Maneuver,Reconnaissance/Cavalry/Scout,Motorized,121303,Point
+10,Movement and Maneuver,Reconnaissance/Cavalry/Scout,Headquarters Element,121395,Point
+10,Movement and Maneuver,Sea Air Land (SEAL),,121400,Point
+10,Movement and Maneuver,Sniper,,121500,Point
+10,Movement and Maneuver,Surveillance,,121600,Point
+10,Movement and Maneuver,Special Forces,,121700,Point
+10,Movement and Maneuver,Special Forces,Headquarters Element,121795,Point
+10,Movement and Maneuver,Special Operations Forces (SOF),,121800,Point
+10,Movement and Maneuver,Special Operations Forces (SOF),Fixed Wing MISO,121801,Point
+10,Movement and Maneuver,Special Operations Forces (SOF),Ground,121802,Point
+10,Movement and Maneuver,Special Operations Forces (SOF),Special Boat,121803,Point
+10,Movement and Maneuver,Special Operations Forces (SOF),Special SSNR,121804,Point
+10,Movement and Maneuver,Special Operations Forces (SOF),Underwater Demolition Team,121805,Point
+10,Movement and Maneuver,Unmanned Aerial Systems,,121900,Point
+10,Fires,,,130000,Point
+10,Fires,Air Defense,,130100,Point
+10,Fires,Air Defense,Main Gun System,130101,Point
+10,Fires,Air Defense,Missile,130102,Point
+10,Fires,Air Defense,Headquarters Element,130195,Point
+10,Fires,Air/Land Naval Gunfire Liaison,,130200,Point
+10,Fires,Field Artillery,,130300,Point
+10,Fires,Field Artillery,Self-propelled,130301,Point
+10,Fires,Field Artillery,Target Acquition,130302,Point
+10,Fires,Field Artillery,Headquarters Element,130395,Point
+10,Fires,Field Artillery Observer,,130400,Point
+10,Fires,Joint Fire Support,,130500,Point
+10,Fires,Meteorological,,130600,Point
+10,Fires,Missile,,130700,Point
+10,Fires,Mortar,,130800,Point
+10,Fires,Mortar,Armored/Mechanized/Tracked,130801,Point
+10,Fires,Mortar,Self-Propelled Wheeled,130802,Point
+10,Fires,Mortar,Towed,130803,Point
+10,Fires,Survey,,130900,Point
+10,Protection,,,140000,Point
+10,Protection,Chemical Biological Radiological Nuclear Defense,,140100,Point
+10,Protection,Chemical Biological Radiological Nuclear Defense,Mechanized,140101,Point
+10,Protection,Chemical Biological Radiological Nuclear Defense,Motorized,140102,Point
+10,Protection,Chemical Biological Radiological Nuclear Defense,Reconnaissance,140103,Point
+10,Protection,Chemical Biological Radiological Nuclear Defense,Reconnaissance Armored,140104,Point
+10,Protection,Chemical Biological Radiological Nuclear Defense,Reconnaissance Equiped,140105,Point
+10,Protection,Chemical Biological Radiological Nuclear Defense,Headquarters Element,140195,Point
+10,Protection,Combat Support (Maneuver Enhancement),,140200,Point
+10,Protection,Combat Support (Maneuver Enhancement),Headquarters Element,140295,Point
+10,Protection,Criminal Investigation Division,,140300,Point
+10,Protection,Diving,,140400,Point
+10,Protection,Dog,,140500,Point
+10,Protection,Drilling,,140600,Point
+10,Protection,Engineer,,140700,Point
+10,Protection,Engineer,Mechanized,140701,Point
+10,Protection,Engineer,Motorized,140702,Point
+10,Protection,Engineer,Reconnaissance,140703,Point
+10,Protection,Engineer,Headquarters Element,140795,Point
+10,Protection,Explosive Ordnance Disposal (EOD),,140800,Point
+10,Protection,Field Camp Construction,,140900,Point
+10,Protection,Fire Fighting/Fire Protection,,141000,Point
+10,Protection,Geospatial Support/Geospatial Information Support,,141100,Point
+10,Protection,Military Police,,141200,Point
+10,Protection,Military Police,Headquarters Element,141295,Point
+10,Protection,Mine,,141300,Point
+10,Protection,Mine Clearing,,141400,Point
+10,Protection,Mine Launching,,141500,Point
+10,Protection,Mine Laying,,141600,Point
+10,Protection,Security,,141700,Point
+10,Protection,Security,Mechanized,141701,Point
+10,Protection,Security,Motorized,141702,Point
+10,Protection,Search and Rescue,,141800,Point
+10,Protection,Security Police (Air),,141900,Point
+10,Protection,Shore Patrol,,142000,Point
+10,Protection,Topographic,,142100,Point
+10,Intelligence,,,150000,Point
+10,Intelligence,Analysis,,150100,Point
+10,Intelligence,Counterintelligence,,150200,Point
+10,Intelligence,Direction Finding,,150300,Point
+10,Intelligence,Electronic Ranging,,150400,Point
+10,Intelligence,Electronic Warfare,,150500,Point
+10,Intelligence,Electronic Warfare,Analysis,150501,Point
+10,Intelligence,Electronic Warfare,Direction Finding,150502,Point
+10,Intelligence,Electronic Warfare,Intercept,150503,Point
+10,Intelligence,Electronic Warfare,Jamming,150504,Point
+10,Intelligence,Electronic Warfare,Search,150505,Point
+10,Intelligence,Intercept (Search and Recording),,150600,Point
+10,Intelligence,Interrogation,,150700,Point
+10,Intelligence,Jamming,,150800,Point
+10,Intelligence,Joint Intelligence Center,,150900,Point
+10,Intelligence,Military Intelligence,,151000,Point
+10,Intelligence,Military Intelligence,Headquarters Element,151095,Point
+10,Intelligence,Search,,151100,Point
+10,Intelligence,Sensor,,151200,Point
+10,Sustainment,Sensor,,160000,Point
+10,Sustainment,Sensor,Headquarters Element ,160095,Point
+10,Sustainment,Sensor,Corps Support ,160097,Point
+10,Sustainment,Sensor,Theatre/Echelons Above Corps Support,160098,Point
+10,Sustainment,Administrative,,160100,Point
+10,Sustainment,Administrative,Corps Support,160197,Point
+10,Sustainment,Administrative,Theatre/Echelons Above Corps Support,160198,Point
+10,Sustainment,All Classes of Supply,,160200,Point
+10,Sustainment,Airport of Debarkation/Airport of Embarkation ,,160300,Point
+10,Sustainment,Ammunition,,160400,Point
+10,Sustainment,Band,,160500,Point
+10,Sustainment,Combat Service Support,,160600,Point
+10,Sustainment,Finance,,160700,Point
+10,Sustainment,Finance,Corps Support,160797,Point
+10,Sustainment,Finance,Theatre/Echelons Above Corps Support,160798,Point
+10,Sustainment,Judge Advocate General,,160800,Point
+10,Sustainment,Labor,,160900,Point
+10,Sustainment,Laundry/Bath,,161000,Point
+10,Sustainment,Maintenance,,161100,Point
+10,Sustainment,Maintenance,Headquarters Element ,161195,Point
+10,Sustainment,Maintenance,Corps Support ,161197,Point
+10,Sustainment,Maintenance,Theatre/Echelons Above Corps Support,161198,Point
+10,Sustainment,Material,,161200,Point
+10,Sustainment,Medical,,161300,Point
+10,Sustainment,Medical,Headquarters Element ,161395,Point
+10,Sustainment,Medical,Corps Support ,161397,Point
+10,Sustainment,Medical,Theatre/Echelons Above Corps Support,161398,Point
+10,Sustainment,Medical Treatment Facility,,161400,Point
+10,Sustainment,Morale Welfare and Recreation,,161500,Point
+10,Sustainment,Mortuary Affairs/Graves Registration,,161600,Point
+10,Sustainment,Multiple Classes of Supply,,161700,Point
+10,Sustainment,NATO Supply Class I,,161800,Point
+10,Sustainment,NATO Supply Class II,,161900,Point
+10,Sustainment,NATO Supply Class III,,162000,Point
+10,Sustainment,NATO Supply Class IV,,162100,Point
+10,Sustainment,NATO Supply Class V,,162200,Point
+10,Sustainment,Ordnance,,162300,Point
+10,Sustainment,Ordnance,Headquarters Element ,162395,Point
+10,Sustainment,Ordnance,Corps Support ,162397,Point
+10,Sustainment,Ordnance,Theatre/Echelons Above Corps Support,162398,Point
+10,Sustainment,Personnel Services,,162400,Point
+10,Sustainment,Personnel Services,Headquarters Element,162495,Point
+10,Sustainment,Petroleum Oil and Lubricants,,162500,Point
+10,Sustainment,Pipeline,,162600,Point
+10,Sustainment,Postal,,162700,Point
+10,Sustainment,Public Affairs/Public Information,,162800,Point
+10,Sustainment,Quartermaster,,162900,Point
+10,Sustainment,Quartermaster,Headquarters Element ,162995,Point
+10,Sustainment,Quartermaster,Corps Support ,162997,Point
+10,Sustainment,Quartermaster,Theatre/Echelons Above Corps Support,162998,Point
+10,Sustainment,Railhead,,163000,Point
+10,Sustainment,Religious Support,,163100,Point
+10,Sustainment,Replacement Holding Unit,,163200,Point
+10,Sustainment,Sea Port of Debarkation/Sea Port of Embarkation ,,163300,Point
+10,Sustainment,Supply,,163400,Point
+10,Sustainment,Joint Information Bureau,,163500,Point
+10,Sustainment,Joint Information Bureau,Corps Support ,163597,Point
+10,Sustainment,Joint Information Bureau,Theatre/Echelons Above Corps Support,163598,Point
+10,Sustainment,Transportation,,163600,Point
+10,Sustainment,Transportation,Headquarters Element ,163695,Point
+10,Sustainment,Transportation,Corps Support ,163697,Point
+10,Sustainment,Transportation,Theatre/Echelons Above Corps Support,163698,Point
+10,Sustainment,US Supply Class I,,163700,Point
+10,Sustainment,US Supply Class II,,163800,Point
+10,Sustainment,US Supply Class III,,163900,Point
+10,Sustainment,US Supply Class IV,,164000,Point
+10,Sustainment,US Supply Class V,,164100,Point
+10,Sustainment,US Supply Class VI,,164200,Point
+10,Sustainment,US Supply Class VII,,164300,Point
+10,Sustainment,US Supply Class VIII,,164400,Point
+10,Sustainment,US Supply Class IX,,164500,Point
+10,Sustainment,US Supply Class X,,164600,Point
+10,Sustainment,Water,,164700,Point
+10,Sustainment,Water Purification,,164800,Point
+10,Sustainment,Broadcast,,164900,Point
+10,Naval ,,,170000,Point
+10,Naval ,Naval,,170100,Point
+10,Named Headquarters,Named Headquarters,,180000,Point
+10,Named Headquarters,Allied Command Europe Rapid Reaction Corps (ARRC),,180100,Point
+10,Named Headquarters,Allied Command Operations,,180200,Point
+10,Named Headquarters,International Security Assistance Force (ISAF),,180300,Point
+10,Named Headquarters,Multinational (MN),,180400,Point
+10,Emergency Operation,Multinational (MN),,190000,Point
+10,Law Enforcement,,,200000,Point
+10,Law Enforcement,Bureau of Alcohol Tobacco Firearms and Explosives (ATF) (Department of Justice),,200100,Point
+10,Law Enforcement,Border Patrol,,200200,Point
+10,Law Enforcement,Customs Service,,200300,Point
+10,Law Enforcement,Drug Enforcement Administration (DEA),,200400,Point
+10,Law Enforcement,Department of Justice (DOJ),,200500,Point
+10,Law Enforcement,Federal Bureau of Investigation (FBI),,200600,Point
+10,Law Enforcement,Police,,200700,Point
+10,Law Enforcement,Prison,,200800,Point
+10,Law Enforcement,United States Secret Service (USSS),,200900,Point
+10,Law Enforcement,Transportation Security Administration (TSA),,201000,Point
+10,Law Enforcement,Coast Guard,,201100,Point
+10,Law Enforcement,US Marshals Service,,201200,Point
+10,Law Enforcement,Internal Security Force,,201300,Point
+11,Civilian,,,110000,Point
+11,Civilian,Environmental Protection,,110100,Point
+11,Civilian,Governmental Organization,,110200,Point
+11,Civilian,Individual,,110300,Point
+11,Civilian,Organization or Group,,110400,Point
+11,Civilian,Killing Victim,,110500,Point
+11,Civilian,Killing Victims,,110600,Point
+11,Civilian,Victim of an Attempted Crime,,110700,Point
+11,Civilian,Spy,,110800,Point
+11,Civilian,Composite Loss,,110900,Point
+11,Civilian,Emergency Medical Operation,,111000,Point
+15,Weapons/Weapons System,,,110000,Point
+15,Weapons/Weapons System,Rifle,,110100,Point
+15,Weapons/Weapons System,Rifle,Single Shot Rifle,110101,Point
+15,Weapons/Weapons System,Rifle,Semiautomatic Rifle,110102,Point
+15,Weapons/Weapons System,Rifle,Automatic Rifle,110103,Point
+15,Weapons/Weapons System,Machine Gun,,110200,Point
+15,Weapons/Weapons System,Machine Gun,Light ,110201,Point
+15,Weapons/Weapons System,Machine Gun,Medium ,110202,Point
+15,Weapons/Weapons System,Machine Gun,Heavy,110203,Point
+15,Weapons/Weapons System,Grenade Launcher,,110300,Point
+15,Weapons/Weapons System,Grenade Launcher,Light,110301,Point
+15,Weapons/Weapons System,Grenade Launcher,Medium,110302,Point
+15,Weapons/Weapons System,Grenade Launcher,Heavy,110303,Point
+15,Weapons/Weapons System,Flame Thrower,,110400,Point
+15,Weapons/Weapons System,Air Defense Gun,,110500,Point
+15,Weapons/Weapons System,Air Defense Gun,Light,110501,Point
+15,Weapons/Weapons System,Air Defense Gun,Medium,110502,Point
+15,Weapons/Weapons System,Air Defense Gun,Heavy,110503,Point
+15,Weapons/Weapons System,Antitank Gun,,110600,Point
+15,Weapons/Weapons System,Antitank Gun,Light,110601,Point
+15,Weapons/Weapons System,Antitank Gun,Medium,110602,Point
+15,Weapons/Weapons System,Antitank Gun,Heavy,110603,Point
+15,Weapons/Weapons System,Direct Fire Gun,,110700,Point
+15,Weapons/Weapons System,Direct Fire Gun,Light,110701,Point
+15,Weapons/Weapons System,Direct Fire Gun,Medium,110702,Point
+15,Weapons/Weapons System,Direct Fire Gun,Heavy,110703,Point
+15,Weapons/Weapons System,Recoilless Gun,,110800,Point
+15,Weapons/Weapons System,Recoilless Gun,Light,110801,Point
+15,Weapons/Weapons System,Recoilless Gun,Medium,110802,Point
+15,Weapons/Weapons System,Recoilless Gun,Heavy,110803,Point
+15,Weapons/Weapons System,Howitzer,,110900,Point
+15,Weapons/Weapons System,Howitzer,Light,110901,Point
+15,Weapons/Weapons System,Howitzer,Medium,110902,Point
+15,Weapons/Weapons System,Howitzer,Heavy,110903,Point
+15,Weapons/Weapons System,Missile Launcher,,111000,Point
+15,Weapons/Weapons System,Missile Launcher,Light,111001,Point
+15,Weapons/Weapons System,Missile Launcher,Medium,111002,Point
+15,Weapons/Weapons System,Missile Launcher,Heavy,111003,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,,111100,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,Light,111101,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,"Light, TLAR",111102,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,"Light, TELAR",111103,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,Medium,111104,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,"Medium, TLAR",111105,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,"Medium, TELAR",111106,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,Heavy,111107,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,"Heavy, TLAR",111108,Point
+15,Weapons/Weapons System,Air Defense Missile Launcher,"Heavy, TELAR",111109,Point
+15,Weapons/Weapons System,Antitank Missile Launcher,,111200,Point
+15,Weapons/Weapons System,Antitank Missile Launcher,Light,111201,Point
+15,Weapons/Weapons System,Antitank Missile Launcher,Medium,111202,Point
+15,Weapons/Weapons System,Antitank Missile Launcher,Heavy,111203,Point
+15,Weapons/Weapons System,Surface-to-Surface Missile Launcher,,111300,Point
+15,Weapons/Weapons System,Surface-to-Surface Missile Launcher,Light,111301,Point
+15,Weapons/Weapons System,Surface-to-Surface Missile Launcher,Medium,111302,Point
+15,Weapons/Weapons System,Surface-to-Surface Missile Launcher,Heavy,111303,Point
+15,Weapons/Weapons System,Mortar,,111400,Point
+15,Weapons/Weapons System,Mortar,Light,111401,Point
+15,Weapons/Weapons System,Mortar,Medium,111402,Point
+15,Weapons/Weapons System,Mortar,Heavy,111403,Point
+15,Weapons/Weapons System,Single Rocket Launcher,,111500,Point
+15,Weapons/Weapons System,Single Rocket Launcher,Light,111501,Point
+15,Weapons/Weapons System,Single Rocket Launcher,Medium,111502,Point
+15,Weapons/Weapons System,Single Rocket Launcher,Heavy,111503,Point
+15,Weapons/Weapons System,Multiple Rocket Launcher,,111600,Point
+15,Weapons/Weapons System,Multiple Rocket Launcher,Light,111601,Point
+15,Weapons/Weapons System,Multiple Rocket Launcher,Medium,111602,Point
+15,Weapons/Weapons System,Multiple Rocket Launcher,Heavy,111603,Point
+15,Weapons/Weapons System,Antitank Rocket Launcher,,111701,Point
+15,Weapons/Weapons System,Antitank Rocket Launcher,Light,111701,Point
+15,Weapons/Weapons System,Antitank Rocket Launcher,Medium,111702,Point
+15,Weapons/Weapons System,Antitank Rocket Launcher,Heavy,111703,Point
+15,Weapons/Weapons System,Nonlethal Weapon,,111800,Point
+15,Weapons/Weapons System,Taser,,111900,Point
+15,Weapons/Weapons System,Water Cannon,,112000,Point
+15,Vehicle,,,120000,Point
+15,Vehicle,Armored,,120100,Point
+15,Vehicle,Armored,Armored Fighting Vehicle,120101,Point
+15,Vehicle,Armored,Armored Fighting Vehicle Command and Control,120102,Point
+15,Vehicle,Armored,Armored Personnel Carrier,120103,Point
+15,Vehicle,Armored,Armored Personnel Carrier Ambulance,120104,Point
+15,Vehicle,Armored,Armored Protected Vehicle,120105,Point
+15,Vehicle,Armored,Armored Protected Vehicle Recovery,120106,Point
+15,Vehicle,Armored,Armored Protected Vehicle Medical Evacuation,120107,Point
+15,Vehicle,Armored,"Armored Personnel Carrier, Recovery",120108,Point
+15,Vehicle,Armored,Combat Service Support Vehicle,120109,Point
+15,Vehicle,Armored,Light Wheeled Armored Vehicle,120110,Point
+15,Vehicle,Tank,,120200,Point
+15,Vehicle,Tank,Light,120201,Point
+15,Vehicle,Tank,Medium,120202,Point
+15,Vehicle,Tank,Heavy,120203,Point
+15,Vehicle,Tank Recovery Vehicle,,120300,Point
+15,Vehicle,Tank Recovery Vehicle,Light,120301,Point
+15,Vehicle,Tank Recovery Vehicle,Medium,120302,Point
+15,Vehicle,Tank Recovery Vehicle,Heavy,120303,Point
+15,Engineer Vehicles and Equipment,,,130000,Point
+15,Engineer Vehicles and Equipment,Bridge,,130100,Point
+15,Engineer Vehicles and Equipment,Bridge Mounted on Utility Vehicle,,130200,Point
+15,Engineer Vehicles and Equipment,Fixed Bridge,,130300,Point
+15,Engineer Vehicles and Equipment,Floating Bridge,,130400,Point
+15,Engineer Vehicles and Equipment,Folding Girder Bridge,,130500,Point
+15,Engineer Vehicles and Equipment,Hollow Deck Bridge,,130600,Point
+15,Engineer Vehicles and Equipment,Drill,,130700,Point
+15,Engineer Vehicles and Equipment,Drill,Drill Mounted on Utility Vehicle,130701,Point
+15,Engineer Vehicles and Equipment,Earthmover,,130800,Point
+15,Engineer Vehicles and Equipment,Earthmover,Multifunctional Earthmover/Digger,130801,Point
+15,Engineer Vehicles and Equipment,Mine Clearing Equipment,,130900,Point
+15,Engineer Vehicles and Equipment,Mine Clearing Equipment,Trailer Mounted,130901,Point
+15,Engineer Vehicles and Equipment,Mine Clearing Equipment,Mine Clearing Equipment on Tank Chassis,130902,Point
+15,Engineer Vehicles and Equipment,Mine Laying Equipment,,131000,Point
+15,Engineer Vehicles and Equipment,,Mine Laying Equipment on Utility Vehicle,131001,Point
+15,Engineer Vehicles and Equipment,,Armored Carrier with Volcano,131002,Point
+15,Engineer Vehicles and Equipment,,Truck Mounted with Volcano,131003,Point
+15,Engineer Vehicles and Equipment,Dozer,,131100,Point
+15,Engineer Vehicles and Equipment,Dozer,"Dozer , Armored",131101,Point
+15,Engineer Vehicles and Equipment,Armored Assault,,131200,Point
+15,Engineer Vehicles and Equipment,Armored Engineer Recon Vehicle (AERV),,131300,Point
+15,Engineer Vehicles and Equipment,Backhoe,,131400,Point
+15,Engineer Vehicles and Equipment,Construction Vehicle,,131500,Point
+15,Engineer Vehicles and Equipment,Ferry Transporter,,131600,Point
+15,Utility Vehicles,,,140000,Point
+15,Utility Vehicles,Utility Vehicle,,140100,Point
+15,Utility Vehicles,Medical,,140200,Point
+15,Utility Vehicles,Medical Evacuation,,140300,Point
+15,Utility Vehicles,Mobile Emergency Physician,,140400,Point
+15,Utility Vehicles,Bus,,140500,Point
+15,Utility Vehicles,Semi-Trailer and Truck,,140600,Point
+15,Utility Vehicles,Semi-Trailer and Truck,Light,140601,Point
+15,Utility Vehicles,Semi-Trailer and Truck,Medium,140602,Point
+15,Utility Vehicles,Semi-Trailer and Truck,Heavy,140603,Point
+15,Utility Vehicles,Limited Cross Country Truck,,140700,Point
+15,Utility Vehicles,Cross Country Truck,,140800,Point
+15,Utility Vehicles,"Petroleum, Oil and Lubricant",,140900,Point
+15,Utility Vehicles,Water,,141000,Point
+15,Utility Vehicles,Amphibious Utility Wheeled Vehicle,,141100,Point
+15,Utility Vehicles,Tow Truck,,141200,Point
+15,Utility Vehicles,Tow Truck,Light,141201,Point
+15,Utility Vehicles,Tow Truck,Heavy,141202,Point
+15,Train,,,150000,Point
+15,Train,Locomotive,,150100,Point
+15,Train,Railcar,,150200,Point
+15,Civilian Vehicle,,,160000,Point
+15,Civilian Vehicle,Automobile,,160100,Point
+15,Civilian Vehicle,Automobile,Compact,160101,Point
+15,Civilian Vehicle,Automobile,Midsize,160102,Point
+15,Civilian Vehicle,Automobile,Sedan,160103,Point
+15,Civilian Vehicle,Open-Bed Truck,,160200,Point
+15,Civilian Vehicle,Open-Bed Truck,Pickup,160201,Point
+15,Civilian Vehicle,Open-Bed Truck,Small,160202,Point
+15,Civilian Vehicle,Open-Bed Truck,Large,160203,Point
+15,Civilian Vehicle,Multiple Passenger Vehicle,,160300,Point
+15,Civilian Vehicle,Multiple Passenger Vehicle,Van,160301,Point
+15,Civilian Vehicle,Multiple Passenger Vehicle,Small Bus,160302,Point
+15,Civilian Vehicle,Multiple Passenger Vehicle,Large Bus,160303,Point
+15,Civilian Vehicle,Utility Vehicle,,160400,Point
+15,Civilian Vehicle,Utility Vehicle,Sport Utility Vehicle (SUV),160401,Point
+15,Civilian Vehicle,Utility Vehicle,Small Box Truck,160402,Point
+15,Civilian Vehicle,Utility Vehicle,Large Box Truck,160403,Point
+15,Civilian Vehicle,Jeep Type Vehicle,,160500,Point
+15,Civilian Vehicle,Jeep Type Vehicle,Small/Light,160501,Point
+15,Civilian Vehicle,Jeep Type Vehicle,Medium,160502,Point
+15,Civilian Vehicle,Jeep Type Vehicle,Large/Heavy,160503,Point
+15,Civilian Vehicle,Tractor Trailer Truck with Box,,160600,Point
+15,Civilian Vehicle,Tractor Trailer Truck with Box,Small/Light,160601,Point
+15,Civilian Vehicle,Tractor Trailer Truck with Box,Medium,160602,Point
+15,Civilian Vehicle,Tractor Trailer Truck with Box,Large/Heavy,160603,Point
+15,Civilian Vehicle,Tractor Trailer Truck with Flatbed Trailer,,160700,Point
+15,Civilian Vehicle,Tractor Trailer Truck with Flatbed Trailer,Small/Light,160701,Point
+15,Civilian Vehicle,Tractor Trailer Truck with Flatbed Trailer,Medium,160702,Point
+15,Civilian Vehicle,Tractor Trailer Truck with Flatbed Trailer,Large/Heavy,160703,Point
+15,Civilian Vehicle,Known Insurgent Vehicle,,160800,Point
+15,Civilian Vehicle,Drug Vehicle,,160900,Point
+15,Law Enforcement,,,170000,Point
+15,Law Enforcement,"Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice)",,170100,Point
+15,Law Enforcement,Border Patrol,,170200,Point
+15,Law Enforcement,Customs Service,,170300,Point
+15,Law Enforcement,Drug Enforcement Administration (DEA),,170400,Point
+15,Law Enforcement,Department of Justice (DOJ),,170500,Point
+15,Law Enforcement,Federal Bureau of Investigation (FBI),,170600,Point
+15,Law Enforcement,Police,,170700,Point
+15,Law Enforcement,United States Secret Service (USSS),,170800,Point
+15,Law Enforcement,Transportation Security Administration (TSA),,170900,Point
+15,Law Enforcement,Coast Guard,,171000,Point
+15,Law Enforcement,US Marshals Service,,171100,Point
+15,Pack Animals,,,180000,Point
+15,Missile Support,,,190000,Point
+15,Missile Support,Transloader,,190100,Point
+15,Missile Support,Transporter,,190200,Point
+15,Missile Support,Crane/Loading Device,,190300,Point
+15,Missile Support,Propellant Transporter,,190400,Point
+15,Missile Support,Warhead Transporter,,190500,Point
+15,Other Equipment,,,200000,Point
+15,Other Equipment,Antennae,,200100,Point
+15,Other Equipment,Bomb,,200200,Point
+15,Other Equipment,Booby Trap,,200300,Point
+15,Other Equipment,CBRN Equipment,,200400,Point
+15,Other Equipment,Computer System,,200500,Point
+15,Other Equipment,Command Launch Equipment (CLE),,200600,Point
+15,Other Equipment,Generator Set,,200700,Point
+15,Other Equipment,Ground-based Midcourse Defense (GMD) Fire Control (GFC) Center,,200800,Point
+15,Other Equipment,In-Flight Interceptor Communications System (IFICS) Data Terminal (IDT),,200900,Point
+15,Other Equipment,Laser,,201000,Point
+15,Other Equipment,Military Information Support Operations (MISO),,201100,Point
+15,Other Equipment,Sustainment Shipments,,201200,Point
+15,Other Equipment,Tent,,201300,Point
+15,Other Equipment,Unit Deployment Shipments,,201400,Point
+15,Other Equipment,Emergency Medical Operation,,201500,Point
+15,Other Equipment,Emergency Medical Operation,Medical Evacuation Helicopter,201501,Point
+15,Land Mines,,,210000,Point
+15,Land Mines,Land Mine,,210100,Point
+15,Land Mines,Antipersonnel Land mine (APL),,210200,Point
+15,Land Mines,Antitank Mine,,210300,Point
+15,Land Mines,Improvised Explosives Device (IED),,210400,Point
+15,Land Mines,Less than lethal,,210500,Point
+15,Sensors,,,220000,Point
+15,Sensors,Sensor,,220100,Point
+15,Sensors,Sensor Emplaced,,220200,Point
+15,Sensors,Radar,,220300,Point
+15,Emergency Operation,,,230000,Point
+15,Emergency Operation,Ambulance,,230100,Point
+15,Emergency Operation,Fire Fighting/Fire Protection,,230200,Point
+15,Manual Track,,,240000,Point
+20,Military/Civilian,,,110000,Point
+20,Military/Civilian,Aircraft Production/Assembly,,110100,Point
+20,Military/Civilian,Ammunition and Explosives/Assembly,,110200,Point
+20,Military/Civilian,Ammunition Cache,,110300,Point
+20,Military/Civilian,Armament Production,,110400,Point
+20,Military/Civilian,Black List Location,,110500,Point
+20,Military/Civilian,"Chemical, Biological, Radiological and Nuclear (CBRN)",,110600,Point
+20,Military/Civilian,Engineering Equipment Production,,110700,Point
+20,Military/Civilian,Engineering Equipment Production,Bridge,110701,Point
+20,Military/Civilian,Equipment Manufacture,,110800,Point
+20,Military/Civilian,Government Leadership,,110900,Point
+20,Military/Civilian,Gray List Location,,111000,Point
+20,Military/Civilian,Mass Grave Site,,111100,Point
+20,Military/Civilian,Materiel,,111200,Point
+20,Military/Civilian,Mine,,111300,Point
+20,Military/Civilian,Missile and Space System Production,,111400,Point
+20,Military/Civilian,Nuclear (Non CBRN Defense),,111500,Point
+20,Military/Civilian,Printed Media,,111600,Point
+20,Military/Civilian,Safe House,,111700,Point
+20,Military/Civilian,White List Location,,111800,Point
+20,Military/Civilian,Tented Camp,,111900,Point
+20,Military/Civilian,Tented Camp,Displaced Persons/ Refugee/Evacuees Camp,111901,Point
+20,Military/Civilian,Tented Camp,Training Camp,111902,Point
+20,Military/Civilian,Warehouse/Storage Facility,,112000,Point
+20,Military/Civilian,Law  Enforcement,,112100,Point
+20,Military/Civilian,Law  Enforcement,"Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice)",112101,Point
+20,Military/Civilian,Law  Enforcement,Border Patrol,112102,Point
+20,Military/Civilian,Law  Enforcement,Customs Service,112103,Point
+20,Military/Civilian,Law  Enforcement,Drug Enforcement Administration (DEA),112104,Point
+20,Military/Civilian,Law  Enforcement,Department of Justice (DOJ),112105,Point
+20,Military/Civilian,Law  Enforcement,Federal Bureau of Investigation (FBI),112106,Point
+20,Military/Civilian,Law  Enforcement,Police,112107,Point
+20,Military/Civilian,Law  Enforcement,Prison,112108,Point
+20,Military/Civilian,Law  Enforcement,United States Secret Service (USSS),112109,Point
+20,Military/Civilian,Law  Enforcement,Transportation Security Administration (TSA),112110,Point
+20,Military/Civilian,Law  Enforcement,Coast Guard,112111,Point
+20,Military/Civilian,Law  Enforcement,US Marshals Service,112112,Point
+20,Military/Civilian,Emergency Operation,,112200,Point
+20,Military/Civilian,Emergency Operation,Fire Station,112201,Point
+20,Military/Civilian,Emergency Operation,Emergency Medical Operation,112202,Point
+20,Infrastructure,Emergency Operation,,120000,Point
+20,Infrastructure,Agriculture and Food Infrastructure,,120100,Point
+20,Infrastructure,Agriculture and Food Infrastructure,Agriculture Laboratory,120101,Point
+20,Infrastructure,Agriculture and Food Infrastructure,Animal Feedlot,120102,Point
+20,Infrastructure,Agriculture and Food Infrastructure,Commercial Food Distribution Center,120103,Point
+20,Infrastructure,Agriculture and Food Infrastructure,Farm/Ranch,120104,Point
+20,Infrastructure,Agriculture and Food Infrastructure,Food Distribution,120105,Point
+20,Infrastructure,Agriculture and Food Infrastructure,Food Production Center,120106,Point
+20,Infrastructure,Agriculture and Food Infrastructure,Food Retail,120107,Point
+20,Infrastructure,Agriculture and Food Infrastructure,Grain Storage,120108,Point
+20,Infrastructure,Banking Finance and Insurance  Infrastructure,,120200,Point
+20,Infrastructure,Banking Finance and Insurance  Infrastructure,ATM,120201,Point
+20,Infrastructure,Banking Finance and Insurance  Infrastructure,Bank,120202,Point
+20,Infrastructure,Banking Finance and Insurance  Infrastructure,Bullion Storage,120203,Point
+20,Infrastructure,Banking Finance and Insurance  Infrastructure,Economic Infrastructure Asset,120204,Point
+20,Infrastructure,Banking Finance and Insurance  Infrastructure,Federal Reserve Bank,120205,Point
+20,Infrastructure,Banking Finance and Insurance  Infrastructure,Financial Exchange,120206,Point
+20,Infrastructure,Banking Finance and Insurance  Infrastructure,"Financial Services, Other",120207,Point
+20,Infrastructure,Commercial Infrastructure,,120300,Point
+20,Infrastructure,Commercial Infrastructure,Chemical Plant,120301,Point
+20,Infrastructure,Commercial Infrastructure,Firearms Manufacturer,120302,Point
+20,Infrastructure,Commercial Infrastructure,Firearms Retailer,120303,Point
+20,Infrastructure,Commercial Infrastructure,Hazardous Material Production,120304,Point
+20,Infrastructure,Commercial Infrastructure,Hazardous Material Storage,120305,Point
+20,Infrastructure,Commercial Infrastructure,Industrial Site,120306,Point
+20,Infrastructure,Commercial Infrastructure,Landfill,120307,Point
+20,Infrastructure,Commercial Infrastructure,Pharmaceutical Manufacturer,120308,Point
+20,Infrastructure,Commercial Infrastructure,Contaminated Hazardous Waste Site,120309,Point
+20,Infrastructure,Commercial Infrastructure,Toxic Release Inventory,120310,Point
+20,Infrastructure,Educational Facilities Infrastructure,,120400,Point
+20,Infrastructure,Educational Facilities Infrastructure,College/University,120401,Point
+20,Infrastructure,Educational Facilities Infrastructure,School,120402,Point
+20,Infrastructure,Energy Facility Infrastructure,,120500,Point
+20,Infrastructure,Energy Facility Infrastructure,Electric Power,120501,Point
+20,Infrastructure,Energy Facility Infrastructure,Generation Station,120502,Point
+20,Infrastructure,Energy Facility Infrastructure,Natural Gas Facility,120503,Point
+20,Infrastructure,Energy Facility Infrastructure,Petroleum Facility,120504,Point
+20,Infrastructure,Energy Facility Infrastructure,Petroleum/Gas/Oil,120505,Point
+20,Infrastructure,Energy Facility Infrastructure,Propane Facility,120506,Point
+20,Infrastructure,Government Site Infrastructure,,120600,Point
+20,Infrastructure,Medical Infrastructure,,120700,Point
+20,Infrastructure,Medical Infrastructure,Medical,120701,Point
+20,Infrastructure,Medical Infrastructure,Medical Treatment Facility (Hospital),120702,Point
+20,Infrastructure,Military Infrastructure,,120800,Point
+20,Infrastructure,Military Infrastructure,Military Armory,120801,Point
+20,Infrastructure,Military Infrastructure,Military Base,120802,Point
+20,Infrastructure,Postal Services Infrastructure,,120900,Point
+20,Infrastructure,Postal Services Infrastructure,Postal Distribution Center,120901,Point
+20,Infrastructure,Postal Services Infrastructure,Post Office,120902,Point
+20,Infrastructure,Public Venues Infrastructure,,121000,Point
+20,Infrastructure,Public Venues Infrastructure,Enclosed Facility,121001,Point
+20,Infrastructure,Public Venues Infrastructure,Open Facility,121002,Point
+20,Infrastructure,Public Venues Infrastructure,Recreational Area,121003,Point
+20,Infrastructure,Public Venues Infrastructure,Religious Institution,121004,Point
+20,Infrastructure,Special Needs Infrastructure,,121100,Point
+20,Infrastructure,Special Needs Infrastructure,Adult Day Care,121101,Point
+20,Infrastructure,Special Needs Infrastructure,Child Day Care,121102,Point
+20,Infrastructure,Special Needs Infrastructure,Elder Care,121103,Point
+20,Infrastructure,Telecommunications Infrastructure,,121200,Point
+20,Infrastructure,Telecommunications Infrastructure,Broadcast Transmitter Antennae,121201,Point
+20,Infrastructure,Telecommunications Infrastructure,Telecommunications,121202,Point
+20,Infrastructure,Telecommunications Infrastructure,Telecommunications Tower,121203,Point
+20,Infrastructure,Transportation Infrastructure,,121300,Point
+20,Infrastructure,Transportation Infrastructure,Airport/Air Base,121301,Point
+20,Infrastructure,Transportation Infrastructure,Air Traffic Control Facility,121302,Point
+20,Infrastructure,Transportation Infrastructure,Bus Station,121303,Point
+20,Infrastructure,Transportation Infrastructure,Ferry Terminal,121304,Point
+20,Infrastructure,Transportation Infrastructure,Helicopter Landing Site,121305,Point
+20,Infrastructure,Transportation Infrastructure,Maintenance Facility,121306,Point
+20,Infrastructure,Transportation Infrastructure,Railhead/Railroad Station,121307,Point
+20,Infrastructure,Transportation Infrastructure,Rest Stop,121308,Point
+20,Infrastructure,Transportation Infrastructure,Sea Port/Naval Base,121309,Point
+20,Infrastructure,Transportation Infrastructure,Ship Yard,121310,Point
+20,Infrastructure,Transportation Infrastructure,Toll Facility,121311,Point
+20,Infrastructure,Transportation Infrastructure,Traffic Inspection Facility,121312,Point
+20,Infrastructure,Transportation Infrastructure,Tunnel,121313,Point
+20,Infrastructure,Water Supply Infrastructure,,121400,Point
+20,Infrastructure,Water Supply Infrastructure,Control Valve,121401,Point
+20,Infrastructure,Water Supply Infrastructure,Dam,121402,Point
+20,Infrastructure,Water Supply Infrastructure,Discharge Outfall,121403,Point
+20,Infrastructure,Water Supply Infrastructure,Ground Water Well,121404,Point
+20,Infrastructure,Water Supply Infrastructure,Pumping Station,121405,Point
+20,Infrastructure,Water Supply Infrastructure,Reservoir,121406,Point
+20,Infrastructure,Water Supply Infrastructure,Storage Tower,121407,Point
+20,Infrastructure,Water Supply Infrastructure,Surface Water Intake,121408,Point
+20,Infrastructure,Water Supply Infrastructure,Wastewater Treatment Facility,121409,Point
+20,Infrastructure,Water Supply Infrastructure,Water,121410,Point
+20,Infrastructure,Water Supply Infrastructure,Water Treatment,121411,Point

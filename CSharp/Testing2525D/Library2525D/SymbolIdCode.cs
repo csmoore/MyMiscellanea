@@ -205,8 +205,7 @@ namespace Library2525D
             set
             {
                 string checkString = value;
-                if (Validates(checkString, 2))
-                    entity = checkString;
+                entity = validateAndPad(checkString, 2);
             }
         }
         protected string entity = "00";
@@ -220,8 +219,7 @@ namespace Library2525D
             set
             {
                 string checkString = value;
-                if (Validates(checkString, 2))
-                    entityType = checkString;
+                entityType = validateAndPad(checkString, 2);
             }
         }
         protected string entityType = "00";
@@ -235,8 +233,7 @@ namespace Library2525D
             set
             {
                 string checkString = value;
-                if (Validates(checkString, 2))
-                    entitySubType = checkString;
+                entitySubType = validateAndPad(checkString, 2);
             }
         }
         protected string entitySubType = "00";
@@ -250,12 +247,10 @@ namespace Library2525D
             set
             {
                 string checkString = value;
-                if (Validates(checkString, 6))
-                {
-                    Entity = checkString.Substring(0, 2);
-                    EntityType = checkString.Substring(2, 2);
-                    EntitySubType = checkString.Substring(4, 2);
-                }
+                string fullCode = validateAndPad(checkString, 6);
+                Entity        = fullCode.Substring(0, 2);
+                EntityType    = fullCode.Substring(2, 2);
+                EntitySubType = fullCode.Substring(4, 2);
             }
         }
 
@@ -268,8 +263,7 @@ namespace Library2525D
             set
             {
                 string checkString = value;
-                if (Validates(checkString, 2))
-                    firstModifier = checkString;
+                firstModifier = validateAndPad(checkString, 2);
             }
         }
         protected string firstModifier = "00";
@@ -283,8 +277,7 @@ namespace Library2525D
             set
             {
                 string checkString = value;
-                if (Validates(checkString, 2))
-                    secondModifier = checkString;
+                secondModifier = validateAndPad(checkString, 2);
             }
         }
         protected string secondModifier = "00";
@@ -456,13 +449,19 @@ namespace Library2525D
             throw new System.NotImplementedException();
         }
 
-        private bool Validates(string checkString, int requiredLength)
+        private string validateAndPad(string checkString, int requiredLength)
         {
             bool pass = !(string.IsNullOrEmpty(checkString) ||
                     (checkString.Length != requiredLength));
 
-            return pass;
+            if (pass)
+                return checkString;
+
+            string betterString = checkString.PadLeft(requiredLength, '0');
+
+            return betterString;
         }
+
     }
 
 }

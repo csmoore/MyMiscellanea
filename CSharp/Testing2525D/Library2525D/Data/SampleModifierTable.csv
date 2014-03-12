@@ -1,97 +1,293 @@
-Name,SymbolSet,ModifierNumber,Code,ImageFileName,
-Not Applicable,01,1,00,01001,
-Attack/Strike,01,1,01,01011,01 01 1
-Bomber,01,1,02,01021,
-Cargo,01,1,03,01031,
-Fighter,01,1,04,01041,
-Interceptor,01,1,05,01051,
-Tanker,01,1,06,01061,
-Utility,01,1,07,01071,
-VSTOL/VTOL,01,1,08,01081,
-Passenger,01,1,09,01091,
-Ultra Light,01,1,10,01101,
-Airborne Command Post (ACP),01,1,11,01111,01 11 1
-Airborne Early Warning (AEW),01,1,12,01121,
-Government,01,1,13,01131,
-Medical Evacuation (MEDEVAC),01,1,14,01141,
-Escort,01,1,15,01151,
-Electronic Combat (EC)/Jammer,01,1,16,01161,
-Patrol,01,1,17,01171,
-Reconnaissance,01,1,18,01181,
-Trainer,01,1,19,01191,
-Photographic (Reconnaissance),01,1,20,01201,
-Personnel Recovery,01,1,21,01211,
-Antisubmarine Warfare,01,1,22,01221,
-Communications,01,1,23,01231,
-Electronic Support (ES),01,1,24,01241,
-Mine Countermeasures (MCM),01,1,25,01251,
-Search and Rescue,01,1,26,01261,
-Special Operations Forces,01,1,27,01271,
-Surface Warfare,01,1,28,01281,
-Very Important Person (VIP) Transport,01,1,29,01291,
-Combat Search and Rescue (CSAR),01,1,30,01301,
-Suppression of Enemy Air Defenses,01,1,31,01311,
-Antisurface Warfare,01,1,32,01321,
-Fighter/Bomber,01,1,33,01331,
-Intensive Care,01,1,34,01341,
-Electronic Attack (EA),01,1,35,01351,
-Multimission,01,1,36,01361,
-Hijacking,01,1,37,01371,
-ASW Helo - LAMPS,01,1,38,01381,
-ASW Helo - SH-60R,01,1,39,01391,
-Not Applicable,01,2,00,01002,
-Heavy,01,2,01,01012,
-Medium,01,2,02,01022,
-Light,01,2,03,01032,
-Boom-Only,01,2,04,01042,
-Drogue-Only,01,2,05,01052,
-Boom and Drogue,01,2,06,01062,
-Close Range,01,2,07,01072,
-Short Range,01,2,08,01082,
-Medium Range,01,2,09,01092,
-Long Range,01,2,10,01102,
-Downlinked,01,2,11,01112,
-Reserved for Future Use,01,2,12,01122,
-Version Extension Flag,01,2,99,01992,
-Unspecified,02,1,00,02001,
-Air,02,1,01,02011,
-Surface,02,1,02,02021,
-Subsurface,02,1,03,02031,
-Space,02,1,04,02041,
-Anti-Ballistic,02,1,05,02051,
-Ballistic,02,1,06,02061,
-Cruise,02,1,07,02071,
-Interceptor,02,1,08,02081,02 08 1
-Reserved for Future Use,02,1,09,02091,
-Version Extension Flag,02,1,99,02991,
-Unspecified,02,2,00,02002,
-Air,02,2,01,02012,
-Surface,02,2,02,02022,
-Subsurface,02,2,03,02032,
-Space,02,2,04,02042,
-Launched,02,2,05,02052,
-Missile,02,2,06,02062,
-Patriot,02,2,07,02072,
-Standard Missile-2 (SM-2),02,2,08,02082,
-Standard Missile-6 (SM-6),02,2,09,02092,
-Evolved Sea Sparrow Missile (ESSM),02,2,10,02102,
-Rolling Airframe Missile (RAM),02,2,11,02112,
-Short Range,02,2,12,02122,
-Medium Range,02,2,13,02132,
-Intermediate Range,02,2,14,02142,
-Long Range,02,2,15,02152,
-Intercontinental,02,2,16,02162,02 16 2
-Reserved for Future Use,02,2,17,02172,
-Version Extension Flag,02,2,99,02992,
-Unspecified,05,1,00,05001,
-Low Earth Orbit (LEO),05,1,01,05011,
-Medium Earth Orbit  (MEO),05,1,02,05021,
-High Earth Orbit  (HEO),05,1,03,05031,
-Geosynchronous Orbit (GSO),05,1,04,05041,
-Geostationary Orbit (GO),05,1,05,05051,
-Molniya Orbit (MO),05,1,06,05061,
-Unspecified,05,2,00,05002,
-Optical,05,2,01,05012,
-Infrared,05,2,02,05022,
-Radar,05,2,03,05032,
-Signal Intelligence (SIGINT),05,2,04,05042,
+Name,SymbolSet,ModifierNumber,Code
+Not Applicable,01,1,0
+Attack/Strike,01,1,1
+Bomber,01,1,2
+Cargo,01,1,3
+Fighter,01,1,4
+Interceptor,01,1,5
+Tanker,01,1,6
+Utility,01,1,7
+VSTOL/VTOL,01,1,8
+Passenger,01,1,9
+Ultra Light,01,1,10
+Airborne Command Post (ACP),01,1,11
+Airborne Early Warning (AEW),01,1,12
+Government,01,1,13
+Medical Evacuation (MEDEVAC),01,1,14
+Escort,01,1,15
+Electronic Combat (EC)/Jammer,01,1,16
+Patrol,01,1,17
+Reconnaissance,01,1,18
+Trainer,01,1,19
+Photographic (Reconnaissance),01,1,20
+Personnel Recovery,01,1,21
+Antisubmarine Warfare,01,1,22
+Communications,01,1,23
+Electronic Support (ES),01,1,24
+Mine Countermeasures (MCM),01,1,25
+Search and Rescue,01,1,26
+Special Operations Forces,01,1,27
+Surface Warfare,01,1,28
+Very Important Person (VIP) Transport,01,1,29
+Combat Search and Rescue (CSAR),01,1,30
+Suppression of Enemy Air Defenses,01,1,31
+Antisurface Warfare,01,1,32
+Fighter/Bomber,01,1,33
+Intensive Care,01,1,34
+Electronic Attack (EA),01,1,35
+Multimission,01,1,36
+Hijacking,01,1,37
+ASW Helo - LAMPS,01,1,38
+ASW Helo - SH-60R,01,1,39
+Not Applicable,01,2,0
+Heavy,01,2,1
+Medium,01,2,2
+Light,01,2,3
+Boom-Only,01,2,4
+Drogue-Only,01,2,5
+Boom and Drogue,01,2,6
+Close Range,01,2,7
+Short Range,01,2,8
+Medium Range,01,2,9
+Long Range,01,2,10
+Downlinked,01,2,11
+Reserved for Future Use,01,2,12
+Version Extension Flag,01,2,99
+Unspecified,02,1,0
+Air,02,1,1
+Surface,02,1,2
+Subsurface,02,1,3
+Space,02,1,4
+Anti-Ballistic,02,1,5
+Ballistic,02,1,6
+Cruise,02,1,7
+Interceptor,02,1,8
+Reserved for Future Use,02,1,9
+Version Extension Flag,02,1,99
+Unspecified,02,2,0
+Air,02,2,1
+Surface,02,2,2
+Subsurface,02,2,3
+Space,02,2,4
+Launched,02,2,5
+Missile,02,2,6
+Patriot,02,2,7
+Standard Missile-2 (SM-2),02,2,8
+Standard Missile-6 (SM-6),02,2,9
+Evolved Sea Sparrow Missile (ESSM),02,2,10
+Rolling Airframe Missile (RAM),02,2,11
+Short Range,02,2,12
+Medium Range,02,2,13
+Intermediate Range,02,2,14
+Long Range,02,2,15
+Intercontinental,02,2,16
+Reserved for Future Use,02,2,17
+Version Extension Flag,02,2,99
+Unspecified,05,1,0
+Low Earth Orbit (LEO),05,1,1
+Medium Earth Orbit  (MEO),05,1,2
+High Earth Orbit  (HEO),05,1,3
+Geosynchronous Orbit (GSO),05,1,4
+Geostationary Orbit (GO),05,1,5
+Molniya Orbit (MO),05,1,6
+Unspecified,05,2,0
+Optical,05,2,1
+Infrared,05,2,2
+Radar,05,2,3
+Signal Intelligence (SIGINT),05,2,4
+Air Mobile/Air Assault (US only),10,1,1
+Area,10,1,2
+Attack,10,1,3
+Biological,10,1,4
+Border,10,1,5
+Bridging,10,1,6
+Chemical,10,1,7
+Close Protection,10,1,8
+Combat,10,1,9
+Command and Control,10,1,10
+Communications Contingency Package,10,1,11
+Construction,10,1,12
+Cross Cultural Communication,10,1,13
+Crowd and Riot Control,10,1,14
+Decontamination,10,1,15
+Detention,10,1,16
+Direct Communications,10,1,17
+Diving,10,1,18
+Division,10,1,19
+Dog,10,1,20
+Drilling,10,1,21
+Electro-Optical,10,1,22
+Enhanced,10,1,23
+Explosive Ordnance Disposal (EOD),10,1,24
+Fire Direction Center,10,1,25
+Force,10,1,26
+Forward,10,1,27
+Ground Station Module,10,1,28
+Landing Support,10,1,29
+Large Extension Node,10,1,30
+Maintenance,10,1,31
+Meteorological,10,1,32
+Mine Countermeasure,10,1,33
+Missile,10,1,34
+Mobile Advisor and Support,10,1,35
+Mobile Subscriber Equipment,10,1,36
+Mobility Support,10,1,37
+Movement Control Center,10,1,38
+Multinational,10,1,39
+Multinational Specialized Unit,10,1,40
+Multiple Rocket Launcher,10,1,41
+NATO Medical Role 1 ,10,1,42
+NATO Medical Role 2,10,1,43
+NATO Medical Role 3,10,1,44
+NATO Medical Role 4,10,1,45
+Naval,10,1,46
+Node Center,10,1,47
+Nuclear,10,1,48
+Operations,10,1,49
+Radar,10,1,50
+Radio Frequency Identification (RFID) Interrogator / Sensor,10,1,51
+Radiological,10,1,52
+Search and Rescue,10,1,53
+Security,10,1,54
+Sensor,10,1,55
+Sensor Control Module (SCM),10,1,56
+Signals Intelligence,10,1,57
+Single Shelter Switch,10,1,58
+Single Rocket Launcher,10,1,59
+Smoke,10,1,60
+Sniper,10,1,61
+Sound Ranging,10,1,62
+Special Operations Forces (SOF),10,1,63
+Special Weapons and Tactics,10,1,64
+Survey,10,1,65
+Tactical Exploitation,10,1,66
+Target Acquisition,10,1,67
+Topographic,10,1,68
+Utility,10,1,69
+Video Imagery (Combat Camera),10,1,70
+Accident,10,1,71
+Other,10,1,72
+Civilian,10,1,73
+Antisubmarine Warfare,10,1,74
+Medevac,10,1,75
+Ranger,10,1,76
+Support,10,1,77
+Aviation,10,1,78
+Airborne,10,2,1
+Arctic,10,2,2
+Battle Damage Repair,10,2,3
+Bicycle Equipped,10,2,4
+Casualty Staging,10,2,5
+Clearing,10,2,6
+Close Range,10,2,7
+Control,10,2,8
+Decontamination,10,2,9
+Demolition,10,2,10
+Dental,10,2,11
+Digital,10,2,12
+Enhanced Position Location Reporting System (EPLRS),10,2,13
+Equipment,10,2,14
+Heavy,10,2,15
+High Altitude,10,2,16
+Intermodal,10,2,17
+Intensive Care,10,2,18
+Light,10,2,19
+Laboratory,10,2,20
+Launcher,10,2,21
+Long Range,10,2,22
+Low Altitude,10,2,23
+Medium,10,2,24
+Medium Altitude,10,2,25
+Medium Range,10,2,26
+Mountain,10,2,27
+High to Medium Altitude,10,2,28
+Multi-Channel,10,2,29
+Optical (Flash),10,2,30
+Pack Animal,10,2,31
+Patient Evacuation Coordination,10,2,32
+Preventive Maintenance,10,2,33
+Psychological,10,2,34
+Radio Relay Line of Sight,10,2,35
+Railroad,10,2,36
+Recovery (Unmanned Systems),10,2,37
+Recovery (Maintenance),10,2,38
+Rescue Coordination Center,10,2,39
+Riverine,10,2,40
+Single Channel,10,2,41
+Ski,10,2,42
+Short Range,10,2,43
+Strategic,10,2,44
+Support,10,2,45
+Tactical,10,2,46
+Towed,10,2,47
+Troop,10,2,48
+Vertical or Short Take-Off and Landing (VTOL/VSTOL),10,2,49
+Veterinary,10,2,50
+Wheeled,10,2,51
+High to Low Altitude,10,2,52
+Medium to Low Altitude,10,2,53
+Attack,10,2,54
+Refuel,10,2,55
+Utility,10,2,56
+Comobat Search and Rescue,10,2,57
+Unspecified,11,1,0
+Assassination,11,1,1
+Execution (Wrongful Killing),11,1,2
+Murder Victims,11,1,3
+Hijacking,11,1,4
+Kidnapping,11,1,5
+Piracy,11,1,6
+Rape,11,1,7
+Civilian,11,1,8
+"Displaced Person(s), Refugee(s) and Evacuee(s)",11,1,9
+Foreign Fighter(s),11,1,10
+Gang Member or Gang,11,1,11
+Government Organization,11,1,12
+Leader or Leadership,11,1,13
+Nongovernmental Organization Member or Nongovernmental Organization,11,1,14
+Coerced/Impressed Recruit,11,1,15
+Willing Recruit,11,1,16
+Religious or Religious Organization,11,1,17
+Targeted Individual or Organization,11,1,18
+Terrorist or Terrorist Organization,11,1,19
+Speaker,11,1,20
+Accident,11,1,21
+Combat,11,1,22
+Other,11,1,23
+Loot,11,1,24
+Unspecified,11,2,0
+Leader or Leadership,11,2,1
+Unspecified,15,1,0
+Biological,15,1,1
+Chemical,15,1,2
+Early Warning Radar,15,1,3
+Intrusion,15,1,4
+Nuclear,15,1,5
+Radiological,15,1,6
+Upgraded Early Warning Radar,15,1,7
+Hijacking,15,1,8
+Civilian,15,1,9
+Unspecified,15,2,0
+Unspecified,20,1,0
+Biological,20,1,1
+Chemical ,20,1,2
+Nuclear,20,1,3
+Radiological,20,1,4
+Decontamination,20,1,5
+Coal,20,1,6
+Geothermal,20,1,7
+Hydroelectric,20,1,8
+Natural Gas,20,1,9
+Petroleum,20,1,10
+Civilian ,20,1,11
+Civilian Telephone,20,1,12
+Civilian Television,20,1,13
+Unspecified,20,2,0
+Biological,20,2,1
+Chemical ,20,2,2
+Nuclear,20,2,3
+Radiological,20,2,4
+Atomic Energy Reactor,20,2,5
+Nuclear Material Production,20,2,6
+Nuclear Material Storage,20,2,7
+Weapons Grade,20,2,8
