@@ -40,24 +40,22 @@ namespace Library2525D
         //     |- Land
         // (etc.)
 
-        // TODO: IMPORTANT: You Must Set this to the location on your machine
-        // Note: PathSeparator on the end (required/assumed)
-        private static readonly string NOT_SET = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]";
+        // IMPORTANT: defaults to {exe folder}\Data\2525D_SVG_Images
+        private static readonly string DEFAULT_PATH = 
+            System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\2525D_SVG_Images");
+
+        // TODO/IMPORTANT: 
+        // You must uncomment & set this to the location on your machine if you don't want to use the default
+        // private static readonly string ALTERNATE_PATH = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]";
 
         public static readonly string ImageFilesHome =
-            NOT_SET                                  // <-- TODO: SET THIS
+            DEFAULT_PATH // <-- TODO: SET THIS to ALTERNATE_PATH if you don't want to use default
             + System.IO.Path.DirectorySeparatorChar; // NOTE: Ends in DirectorySeparator
 
         const string ImageSuffix = ".svg";
 
         public static bool SetMilitarySymbolGraphicLayers(ref MilitarySymbol milSymbol)
         {
-            if (ImageFilesHome.Equals(NOT_SET + System.IO.Path.DirectorySeparatorChar))
-            {
-                System.Diagnostics.Trace.WriteLine("--> Images Home *NOT SET* : " + ImageFilesHome);
-                return false;
-            }
-
             if (!System.IO.Directory.Exists(ImageFilesHome))
             {
                 System.Diagnostics.Trace.WriteLine("--> Images Home *DOES NOT EXIST* : " + ImageFilesHome);

@@ -131,6 +131,8 @@ namespace MilSymbolPicker
                 }
                 else if (currentPane == PaneSequenceType.SymbolSetPane)
                 {
+                    this.resetSymbolState();
+
                     this.labCol2.Text = "Symbol Set";
                     this.labCol2.Visible = true;
                     this.labCol3.Visible = false;
