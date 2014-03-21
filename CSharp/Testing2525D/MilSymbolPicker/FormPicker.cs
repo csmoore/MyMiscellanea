@@ -119,7 +119,7 @@ namespace MilSymbolPicker
                     this.labCol2.Visible = false;
                     this.labCol3.Visible = false;
 
-                    currentColValues = TypeUtilities.EnumHelper.getEnumValues(typeof(StandardIdentityAffiliationType));
+                    currentColValues = TypeUtilities.EnumHelper.getEnumValuesAsStrings(typeof(StandardIdentityAffiliationType));
 
                     currentColRowIndex = 0;
 
@@ -137,7 +137,7 @@ namespace MilSymbolPicker
                     this.labCol2.Visible = true;
                     this.labCol3.Visible = false;
 
-                    currentColValues = TypeUtilities.EnumHelper.getEnumValues(typeof(SymbolSetType));
+                    currentColValues = TypeUtilities.EnumHelper.getEnumValuesAsStrings(typeof(SymbolSetType));
 
                     currentColRowIndex = 0;
 
@@ -224,7 +224,7 @@ namespace MilSymbolPicker
                     this.labCol3.Text = "Echelon/Mobility";
                     this.labCol3.Visible = true;
 
-                    currentColValues = TypeUtilities.EnumHelper.getEnumValues(typeof(EchelonMobilityType));
+                    currentColValues = TypeUtilities.EnumHelper.getEnumValuesAsStrings(typeof(EchelonMobilityType));
 
                     currentColRowIndex = 0;
 

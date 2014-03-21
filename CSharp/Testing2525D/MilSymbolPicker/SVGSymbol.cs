@@ -61,7 +61,7 @@ namespace MilSymbolPicker
         {
             if (document.Height > ImageSize.Height)
             {
-                document.Width = (int)((document.Width / (double)document.Height) * ImageSize.Height);
+                document.Width = (int)(((double)document.Width / (double)document.Height) * (double) ImageSize.Height);
                 document.Height = ImageSize.Height;
             }
             return document;

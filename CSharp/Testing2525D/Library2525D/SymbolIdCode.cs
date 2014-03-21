@@ -317,11 +317,24 @@ namespace Library2525D
         }
         List<string> tags = new List<string>();
 
+        public static bool FormatCode
+        {
+            get
+            {
+                return formatCode;
+            }
+            set
+            {
+                formatCode = value;
+            }
+        }
+        private static bool formatCode = true;
+
         public string CodeFirstTen
         {
             get
             {
-                return convertToStringFirst10(true); ;
+                return convertToStringFirst10(formatCode); ;
             }
         }
 
@@ -329,7 +342,7 @@ namespace Library2525D
         {
             get
             {
-                return convertToStringSecond10(true); 
+                return convertToStringSecond10(formatCode); 
             }
         }
 

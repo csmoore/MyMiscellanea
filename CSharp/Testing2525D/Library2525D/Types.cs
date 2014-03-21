@@ -250,7 +250,7 @@ namespace Library2525D
             //       Dust the cobwebs and purge the unused
             //       methods once 2525D work done
 
-            public static List<string> getEnumValues(System.Type type)
+            public static List<string> getEnumValuesAsStrings(System.Type type)
             {
                 List<string> values = new List<string>();
                 Array enumValues = Enum.GetValues(type);
@@ -260,6 +260,17 @@ namespace Library2525D
                     enumString = enumString.Replace('_', ' ');
 
                     values.Add(enumString);
+                }
+                return values;
+            }
+
+            public static List<Enum> getEnumValues(System.Type type)
+            {
+                List<Enum> values = new List<Enum>();
+                Array enumValues = Enum.GetValues(type);
+                foreach (Enum en in enumValues)
+                {
+                    values.Add(en);
                 }
                 return values;
             }
