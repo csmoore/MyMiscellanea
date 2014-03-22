@@ -1408,3 +1408,701 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 35,Echo Tracker Classifier (ETC) / Possible Contact (POSCON),,,140000,Point
 35,Fused Track,,,150000,Point
 35,Manual Track,,,160000,Point
+36,Sea Mine-General,,,110000,Point
+36,Sea Mine-General,Sea Mine-Bottom,,110100,Point
+36,Sea Mine-General,Sea Mine-Moored,,110200,Point
+36,Sea Mine-General,Sea Mine-Floating,,110300,Point
+36,Sea Mine-General,Sea Mine-Rising,,110400,Point
+36,Sea Mine-General,Sea Mine-Other Position,,110500,Point
+36,Sea Mine-General,Kingfisher,,110600,Point
+36,Sea Mine-General,Small Object-Mine-Like,,110700,Point
+36,Sea Mine-General,Exercise Mine-General,,110800,Point
+36,Sea Mine-General,Exercise Mine-General,Exercise Mine-Bottom,110801,Point
+36,Sea Mine-General,Exercise Mine-General,Exercise Mine-Moored,110802,Point
+36,Sea Mine-General,Exercise Mine-General,Exercise Mine-Floating,110803,Point
+36,Sea Mine-General,Exercise Mine-General,Exercise Mine-Rising,110804,Point
+36,Sea Mine-General,Neutralized Mine-General,,110900,Point
+36,Sea Mine-General,Neutralized Mine-General,Neutralized Mine-Bottom,110901,Point
+36,Sea Mine-General,Neutralized Mine-General,Neutralized Mine-Moored,110902,Point
+36,Sea Mine-General,Neutralized Mine-General,Neutralized Mine-Floating,110903,Point
+36,Sea Mine-General,Neutralized Mine-General,Neutralized Mine-Rising,110904,Point
+36,Sea Mine-General,Neutralized Mine-General,Neutralized Mine-Other Position,110905,Point
+36,Unexploded Ordnance,,,120000,Point
+36,Sea Mine Decoy,,,130000,Point
+36,Sea Mine Decoy,Sea Mine Decoy-Bottom,,130100,Point
+36,Sea Mine Decoy,Sea Mine Decoy-Moored,,130200,Point
+36,Mine-Like Contact (MILCO),,,140000,Point
+36,Mine-Like Contact (MILCO),MILCO - General,,140100,Point
+36,Mine-Like Contact (MILCO),MILCO - General,MILCO - General-Confidence-Level 1,140101,Point
+36,Mine-Like Contact (MILCO),MILCO - General,MILCO - General-Confidence-Level 2,140102,Point
+36,Mine-Like Contact (MILCO),MILCO - General,MILCO - General-Confidence-Level 3,140103,Point
+36,Mine-Like Contact (MILCO),MILCO - General,MILCO - General-Confidence-Level 4,140104,Point
+36,Mine-Like Contact (MILCO),MILCO - General,MILCO - General-Confidence-Level 5,140105,Point
+36,Mine-Like Contact (MILCO),MILCO - Bottom,,140200,Point
+36,Mine-Like Contact (MILCO),MILCO - Bottom,MILCO - Bottom-Confidence-Level 1,140201,Point
+36,Mine-Like Contact (MILCO),MILCO - Bottom,MILCO - Bottom-Confidence-Level 2,140202,Point
+36,Mine-Like Contact (MILCO),MILCO - Bottom,MILCO - Bottom-Confidence-Level 3,140203,Point
+36,Mine-Like Contact (MILCO),MILCO - Bottom,MILCO - Bottom-Confidence-Level 4,140204,Point
+36,Mine-Like Contact (MILCO),MILCO - Bottom,MILCO - Bottom-Confidence-Level 5,140205,Point
+36,Mine-Like Contact (MILCO),MILCO - Moored,,140300,Point
+36,Mine-Like Contact (MILCO),MILCO - Moored,MILCO - Moored-Confidence-Level 1,140301,Point
+36,Mine-Like Contact (MILCO),MILCO - Moored,MILCO - Moored-Confidence-Level 2,140302,Point
+36,Mine-Like Contact (MILCO),MILCO - Moored,MILCO - Moored-Confidence-Level 3,140303,Point
+36,Mine-Like Contact (MILCO),MILCO - Moored,MILCO - Moored-Confidence-Level 4,140304,Point
+36,Mine-Like Contact (MILCO),MILCO - Moored,MILCO - Moored-Confidence-Level 5,140305,Point
+36,Mine-Like Contact (MILCO),MILCO - Floating,,140400,Point
+36,Mine-Like Contact (MILCO),MILCO - Floating,MILCO - Floating-Confidence-Level 1,140401,Point
+36,Mine-Like Contact (MILCO),MILCO - Floating,MILCO - Floating-Confidence-Level 2,140402,Point
+36,Mine-Like Contact (MILCO),MILCO - Floating,MILCO - Floating-Confidence-Level 3,140403,Point
+36,Mine-Like Contact (MILCO),MILCO - Floating,MILCO - Floating-Confidence-Level 4,140404,Point
+36,Mine-Like Contact (MILCO),MILCO - Floating,MILCO - Floating-Confidence-Level 5,140405,Point
+36,Mine-Like Echo (MILEC)-General,,,150000,Point
+36,Mine-Like Echo (MILEC)-General,Mine-Like Echo-Bottom,,150100,Point
+36,Mine-Like Echo (MILEC)-General,Mine-Like Echo-Moored,,150200,Point
+36,Mine-Like Echo (MILEC)-General,Mine-Like Echo-Floating,,150300,Point
+36,Negative Reacquisition-General,,,160000,Point
+36,Negative Reacquisition-General,Negative Reacquisition-Bottom,,160100,Point
+36,Negative Reacquisition-General,Negative Reacquisition-Moored,,160200,Point
+36,Negative Reacquisition-General,Negative Reacquisition-Floating,,160300,Point
+36,Obstructor,,,170000,Point
+36,Obstructor,Neutralized Obstructor,,170100,Point
+36,General Mine Anchor,,,180000,Point
+36,Non-Mine Mine-Like Object (NMLO)-General,,,190000,Point
+36,Non-Mine Mine-Like Object (NMLO)-General,Non-Mine Mine-Like Object-Bottom,,190100,Point
+36,Non-Mine Mine-Like Object (NMLO)-General,Non-Mine Mine-Like Object-Moored,,190200,Point
+36,Non-Mine Mine-Like Object (NMLO)-General,Non-Mine Mine-Like Object-Floating,,190300,Point
+36,Environmental Report Location,,,200000,Point
+36,Dive Report Location,,,210000,Point
+40,Incident,,,110000,Point
+40,Incident,Criminal Activity Incident,,110100,Point
+40,Incident,Criminal Activity Incident,Arrest,110101,Point
+40,Incident,Criminal Activity Incident,Arson,110102,Point
+40,Incident,Criminal Activity Incident,Attempted Criminal Activity,110103,Point
+40,Incident,Criminal Activity Incident,Drive by Shooting,110104,Point
+40,Incident,Criminal Activity Incident,Drug Related,110105,Point
+40,Incident,Criminal Activity Incident,Extortion,110106,Point
+40,Incident,Criminal Activity Incident,Graffiti,110107,Point
+40,Incident,Criminal Activity Incident,Killing,110108,Point
+40,Incident,Criminal Activity Incident,Poisoning,110109,Point
+40,Incident,Criminal Activity Incident,Civil Rioting,110110,Point
+40,Incident,Criminal Activity Incident,Booby Trap,110111,Point
+40,Incident,Criminal Activity Incident,Home Eviction,110112,Point
+40,Incident,Criminal Activity Incident,Black Marketing,110113,Point
+40,Incident,Criminal Activity Incident,Vandalism/Loot/Ransack/Plunder,110114,Point
+40,Incident,Criminal Activity Incident,Jail Break,110115,Point
+40,Incident,Criminal Activity Incident,Robbery,110116,Point
+40,Incident,Criminal Activity Incident,Theft,110117,Point
+40,Incident,Criminal Activity Incident,Burglary,110118,Point
+40,Incident,Criminal Activity Incident,Smuggling,110119,Point
+40,Incident,Criminal Activity Incident,Rock Throwing,110120,Point
+40,Incident,Criminal Activity Incident,Dead Body,110121,Point
+40,Incident,Criminal Activity Incident,Sabotage,110122,Point
+40,Incident,Criminal Activity Incident,Suspicious Activity,110123,Point
+40,Incident,Bomb/Bombing,,110200,Point
+40,Incident,Bomb/Bombing,Bomb Threat,110201,Point
+40,Incident,IED Event,,110300,Point
+40,Incident,IED Event,IED Explosion,110301,Point
+40,Incident,IED Event,Premature IED Explosion,110302,Point
+40,Incident,IED Event,IED Cache,110303,Point
+40,Incident,IED Event,IED Suicide Bomber,110304,Point
+40,Incident,Shooting,,110400,Point
+40,Incident,Shooting,Sniping,110401,Point
+40,Incident,Illegal Drug Operation,,110500,Point
+40,Incident,Illegal Drug Operation,Trafficking,110501,Point
+40,Incident,Illegal Drug Operation,Illegal Drug Lab,110502,Point
+40,Incident,Explosion,,110600,Point
+40,Incident,Explosion,Grenade Explosion,110601,Point
+40,Incident,Explosion,Incendiary Explosion,110602,Point
+40,Incident,Explosion,Mine Explosion,110603,Point
+40,Incident,Explosion,Mortar Fire Explosion,110604,Point
+40,Incident,Explosion,Rocket Explosion,110605,Point
+40,Incident,Explosion,Bomb Explosion,110606,Point
+40,Civil Disturbance,,,120000,Point
+40,Civil Disturbance,Demonstration,,120100,Point
+40,Operation,,,130000,Point
+40,Operation,Patrolling,,130100,Point
+40,Operation,Military Information Support Operation (MISO),,130200,Point
+40,Operation,Military Information Support Operation (MISO),TV and Radio Propaganda,130201,Point
+40,Operation,Foraging/Searching,,130300,Point
+40,Operation,Recruitment,,130400,Point
+40,Operation,Recruitment,Willing,130401,Point
+40,Operation,Recruitment,Coerced/Impressed,130402,Point
+40,Operation,Mine Laying,,130500,Point
+40,Operation,Spy,,130600,Point
+40,Operation,Warrant Served,,130700,Point
+40,Operation,Exfiltration,,130800,Point
+40,Operation,Infiltration,,130900,Point
+40,Operation,Meeting,,131000,Point
+40,Operation,Meeting,Polling Place/Election,131001,Point
+40,Operation,Raid on House,,131100,Point
+40,Operation,Emergency Operation,,131200,Point
+40,Operation,Emergency Operation,Emergency Collection Evacuation Point,131201,Point
+40,Operation,Emergency Operation,Emergency Food Distribution,131202,Point
+40,Operation,Emergency Operation,Emergency Incident Command Center,131203,Point
+40,Operation,Emergency Operation,Emergency Operations Center,131204,Point
+40,Operation,Emergency Operation,Emergency Public Information Center,131205,Point
+40,Operation,Emergency Operation,Emergency Shelter,131206,Point
+40,Operation,Emergency Operation,Emergency Staging Area,131207,Point
+40,Operation,Emergency Operation,Emergency Water Distribution Center,131208,Point
+40,Operation,Emergency Medical Operation,,131300,Point
+40,Operation,Emergency Medical Operation,EMT Station Location,131301,Point
+40,Operation,Emergency Medical Operation,Health Department Facility,131302,Point
+40,Operation,Emergency Medical Operation,Medical Facilities Outpatient,131303,Point
+40,Operation,Emergency Medical Operation,Morgue,131304,Point
+40,Operation,Emergency Medical Operation,Pharmacy,131305,Point
+40,Operation,Emergency Medical Operation,Triage,131306,Point
+40,Operation,Fire Fighting Operation,,131400,Point
+40,Operation,Fire Fighting Operation,Fire Hydrant,131401,Point
+40,Operation,Fire Fighting Operation,Fire Station,131402,Point
+40,Operation,Fire Fighting Operation,Other Water Supply Location,131403,Point
+40,Operation,Law Enforcement Operation,,131500,Point
+40,Operation,Law Enforcement Operation,Bureau of Alcohol-Tobacco-Firearms and Explosives (ATF) (Department of Justice),131501,Point
+40,Operation,Law Enforcement Operation,Border Patrol,131502,Point
+40,Operation,Law Enforcement Operation,Custom Service,131503,Point
+40,Operation,Law Enforcement Operation,Drug Enforcement Administration (DEA),131504,Point
+40,Operation,Law Enforcement Operation,Department of Justice (DOJ),131505,Point
+40,Operation,Law Enforcement Operation,Federal Bureau of Investigation (FBI),131506,Point
+40,Operation,Law Enforcement Operation,Police,131507,Point
+40,Operation,Law Enforcement Operation,Prison,131508,Point
+40,Operation,Law Enforcement Operation,United States Secret Service(Treas) (USSS),131509,Point
+40,Operation,Law Enforcement Operation,Transportation Security Administration (TSA),131510,Point
+40,Operation,Law Enforcement Operation,Coast Guard,131511,Point
+40,Operation,Law Enforcement Operation,US Marshals Service,131512,Point
+40,Operation,Law Enforcement Operation,Internal Security Force,131513,Point
+40,Fire Event,,,140000,Point
+40,Fire Event,Fire Origin,,140100,Point
+40,Fire Event,Smoke,,140200,Point
+40,Fire Event,Hot Spot,,140300,Point
+40,Fire Event,Non-Residential Fire,,140400,Point
+40,Fire Event,Residential Fire,,140500,Point
+40,Fire Event,School Fire,,140600,Point
+40,Fire Event,Special Needs Fire,,140700,Point
+40,Fire Event,Wild Fire,,140800,Point
+40,Hazard Materials,,,150000,Point
+40,Hazard Materials,Hazard Materials Incident,,150100,Point
+40,Hazard Materials,Hazard Materials Incident,Chemical Agent,150101,Point
+40,Hazard Materials,Hazard Materials Incident,Corrosive Material,150102,Point
+40,Hazard Materials,Hazard Materials Incident,Hazardous when Wet,150103,Point
+40,Hazard Materials,Hazard Materials Incident,Explosive Material,150104,Point
+40,Hazard Materials,Hazard Materials Incident,Flammable Gas,150105,Point
+40,Hazard Materials,Hazard Materials Incident,Flammable Liquid,150106,Point
+40,Hazard Materials,Hazard Materials Incident,Flammable Solid,150107,Point
+40,Hazard Materials,Hazard Materials Incident,Non-Flammable Gas,150108,Point
+40,Hazard Materials,Hazard Materials Incident,Organic Peroxide,150109,Point
+40,Hazard Materials,Hazard Materials Incident,Oxidizer,150110,Point
+40,Hazard Materials,Hazard Materials Incident,Radioactive Material,150111,Point
+40,Hazard Materials,Hazard Materials Incident,Spontaneously Combustible Material,150112,Point
+40,Hazard Materials,Hazard Materials Incident,Toxic Gas,150113,Point
+40,Hazard Materials,Hazard Materials Incident,Toxic Infectious Material,150114,Point
+40,Hazard Materials,Hazard Materials Incident,Unexploded Ordnance,150115,Point
+40,Transportation Incident,,,160000,Point
+40,Transportation Incident,Air,,160100,Point
+40,Transportation Incident,Marine,,160200,Point
+40,Transportation Incident,Rail,,160300,Point
+40,Transportation Incident,Vehicle,,160400,Point
+40,Transportation Incident,Wheeled Vehicle Explosion,,160500,Point
+40,Natural Event,,,170000,Point
+40,Natural Event,Geologic,,170100,Point
+40,Natural Event,Geologic,Aftershock,170101,Point
+40,Natural Event,Geologic,Avalanche,170102,Point
+40,Natural Event,Geologic,Earthquake Epicenter,170103,Point
+40,Natural Event,Geologic,Landslide,170104,Point
+40,Natural Event,Geologic,Subsidence,170105,Point
+40,Natural Event,Geologic,Volcanic Eruption,170106,Point
+40,Natural Event,Geologic,Volcanic Threat,170107,Point
+40,Natural Event,Geologic,Cave Entrance,170108,Point
+40,Natural Event,Hydro-Meteorological,,170200,Point
+40,Natural Event,Hydro-Meteorological,Drought,170201,Point
+40,Natural Event,Hydro-Meteorological,Flood,170202,Point
+40,Natural Event,Hydro-Meteorological,Tsunami,170203,Point
+40,Natural Event,Infestation,,170300,Point
+40,Natural Event,Infestation,Bird,170301,Point
+40,Natural Event,Infestation,Insect,170302,Point
+40,Natural Event,Infestation,Microbial,170303,Point
+40,Natural Event,Infestation,Reptile,170304,Point
+40,Natural Event,Infestation,Rodent,170305,Point
+40,Individual,,,180000,Point
+40,Individual,Religious Leader,,180100,Point
+40,Individual,Speaker,,180200,Point
+45,Pressure Systems,,,110000,Point
+45,Pressure Systems,Low Pressure Center,,110100,Point
+45,Pressure Systems,Low Pressure Center,Cyclone Center,110101,Point
+45,Pressure Systems,Low Pressure Center,Tropopause Low,110102,Point
+45,Pressure Systems,High Pressure Center,,110200,Point
+45,Pressure Systems,High Pressure Center,Anticyclone Center,110201,Point
+45,Pressure Systems,High Pressure Center,Tropopause High,110102,Point
+45,Pressure Systems,Frontal Systems,,110300,Line
+45,Pressure Systems,Frontal Systems,Cold Front,110301,Line
+45,Pressure Systems,Frontal Systems,Upper Cold Front,110302,Line
+45,Pressure Systems,Frontal Systems,Cold Frontogenesis,110203,Line
+45,Pressure Systems,Frontal Systems,Cold Frontolysis,110104,Line
+45,Pressure Systems,Frontal Systems,Warm Front,110305,Line
+45,Pressure Systems,Frontal Systems,Upper Warm Front,110306,Line
+45,Pressure Systems,Frontal Systems,Warm Frontogenesis,110307,Line
+45,Pressure Systems,Frontal Systems,Warm Frontolysis,110308,Line
+45,Pressure Systems,Frontal Systems,Occluded Front,110309,Line
+45,Pressure Systems,Frontal Systems,Upper Occluded Front,110310,Line
+45,Pressure Systems,Frontal Systems,Occluded Frontolysis,110311,Line
+45,Pressure Systems,Frontal Systems,Stationary Front,110312,Line
+45,Pressure Systems,Frontal Systems,Upper Stationary Front,110313,Line
+45,Pressure Systems,Frontal Systems,Stationary Frontogenesis,110314,Line
+45,Pressure Systems,Frontal Systems,Stationary Frontolysis,110315,Line
+45,Pressure Systems,Lines,,110400,Line
+45,Pressure Systems,Lines,Trough Axis,110401,Line
+45,Pressure Systems,Lines,Upper Trough Axis,110402,Line
+45,Pressure Systems,Lines,Ridge Axis,110403,Line
+45,Pressure Systems,Lines,Severe Squall Line,110404,Line
+45,Pressure Systems,Lines,Instability Line,110405,Line
+45,Pressure Systems,Lines,Shear Line,110406,Line
+45,Pressure Systems,Lines,Inter-Tropical Convergence Zone,110407,Line
+45,Pressure Systems,Lines,Convergence Line,110408,Line
+45,Pressure Systems,Lines,Inter-Tropical Discontinuity,110409,Line
+45,Pressure Systems,Pressure Tendency,,110500,Point
+45,Pressure Systems,Pressure Tendency,Rise Then Fall Higher,110501,Point
+45,Pressure Systems,Pressure Tendency,Rise Then Steady,110502,Point
+45,Pressure Systems,Pressure Tendency,Rise,110503,Point
+45,Pressure Systems,Pressure Tendency,Rise Then Rise Higher,110504,Point
+45,Pressure Systems,Pressure Tendency,Steady,110505,Point
+45,Pressure Systems,Pressure Tendency,Fall Then Rise Lower,110506,Point
+45,Pressure Systems,Pressure Tendency,Fall Then Steady,110507,Point
+45,Pressure Systems,Pressure Tendency,Fall,110508,Point
+45,Pressure Systems,Pressure Tendency,Rise Then Fall Lower,110509,Point
+45,Turbulence,,,120000,Unknown
+45,Turbulence,Light,,120100,Unknown
+45,Turbulence,Moderate,,120200,Unknown
+45,Turbulence,Severe,,120300,Unknown
+45,Turbulence,Extreme,,120400,Unknown
+45,Turbulence,Mountain Waves,,120500,Unknown
+45,Icing,,,130000,Unknown
+45,Icing,Clear Icing,,130100,Unknown
+45,Icing,Clear Icing,Light,130101,Unknown
+45,Icing,Clear Icing,Moderate,130102,Unknown
+45,Icing,Clear Icing,Severe,130103,Unknown
+45,Icing,Rime Icing,,130200,Unknown
+45,Icing,Rime Icing,Light,130201,Unknown
+45,Icing,Rime Icing,Moderate,130202,Unknown
+45,Icing,Rime Icing,Severe,130203,Unknown
+45,Icing,Mixed Icing,,130300,Unknown
+45,Icing,Mixed Icing,Light,130301,Unknown
+45,Icing,Mixed Icing,Moderate,130302,Unknown
+45,Icing,Mixed Icing,Severe,130303,Unknown
+45,Winds,,,140000,Unknown
+45,Winds,Calm Winds,,140100,Unknown
+45,Winds,Wind Plot,,140200,Unknown
+45,Winds,Jet Stream,,140300,Unknown
+45,Winds,Stream Line,,140400,Unknown
+45,Cloud Cover,,,150000,Unknown
+45,Cloud Cover,Cloud Coverage Symbols,,150100,Unknown
+45,Cloud Cover,Cloud Coverage Symbols,Clear Sky,150101,Unknown
+45,Cloud Cover,Cloud Coverage Symbols,Few Coverage,150102,Unknown
+45,Cloud Cover,Cloud Coverage Symbols,Scattered Coverage,150103,Unknown
+45,Cloud Cover,Cloud Coverage Symbols,Broken Coverage,150104,Unknown
+45,Cloud Cover,Cloud Coverage Symbols,Overcast Coverage,150105,Unknown
+45,Cloud Cover,Cloud Coverage Symbols,Sky Totally or Partially Obscured,150106,Unknown
+45,Weather Symbols,,,160000,Unknown
+45,Weather Symbols,Rain,,160100,Unknown
+45,Weather Symbols,Rain,Intermittent Light,160101,Unknown
+45,Weather Symbols,Rain,Continuous Light,160102,Unknown
+45,Weather Symbols,Rain,Intermittent Moderate,160103,Unknown
+45,Weather Symbols,Rain,Intermittent Moderate/Continuous Moderate,160104,Unknown
+45,Weather Symbols,Rain,Intermittent Heavy,160105,Unknown
+45,Weather Symbols,Rain,Intermittent Heavy/Continuous Heavy,160106,Unknown
+45,Weather Symbols,Freezing Rain,,160200,Unknown
+45,Weather Symbols,Freezing Rain,Light,160201,Unknown
+45,Weather Symbols,Freezing Rain,Moderate/Heavy,160202,Unknown
+45,Weather Symbols,Rain Showers,,160300,Unknown
+45,Weather Symbols,Rain Showers,Light,160301,Unknown
+45,Weather Symbols,Rain Showers,Moderate/Heavy,160302,Unknown
+45,Weather Symbols,Rain Showers,Torrential,160303,Unknown
+45,Weather Symbols,Drizzle,,160400,Unknown
+45,Weather Symbols,Drizzle,Intermittent Light,160401,Unknown
+45,Weather Symbols,Drizzle,Intermittent Light/ Continuous Light,160402,Unknown
+45,Weather Symbols,Drizzle,Intermittent Moderate,160403,Unknown
+45,Weather Symbols,Drizzle,Intermittent Moderate /Continuous Moderate,160404,Unknown
+45,Weather Symbols,Drizzle,Intermittent Heavy,160405,Unknown
+45,Weather Symbols,Drizzle,Intermittent Heavy /Continuous Heavy,160406,Unknown
+45,Weather Symbols,Freezing Drizzle,,160500,Unknown
+45,Weather Symbols,Freezing Drizzle,Light,160501,Unknown
+45,Weather Symbols,Freezing Drizzle,Moderate/Heavy,160502,Unknown
+45,Weather Symbols,Rain and Snow Mixed,,160600,Unknown
+45,Weather Symbols,Rain and Snow Mixed,Rain or Drizzle and Snow - Light,160601,Unknown
+45,Weather Symbols,Rain and Snow Mixed,Rain or Drizzle and Snow - Moderate/Heavy,160502,Unknown
+45,Weather Symbols,Rain and Snow Mixed,Rain and Snow Showers - Light,160503,Unknown
+45,Weather Symbols,Rain and Snow Mixed,Rain and Snow Showers - Moderate/Heavy,160504,Unknown
+45,Weather Symbols,Snow,,160700,Unknown
+45,Weather Symbols,Snow,Intermittent Light,160701,Unknown
+45,Weather Symbols,Snow,Intermittent Light/Continuous Light,160702,Unknown
+45,Weather Symbols,Snow,Intermittent Moderate,160703,Unknown
+45,Weather Symbols,Snow,Intermittent Moderate /Continuous Moderate,160704,Unknown
+45,Weather Symbols,Snow,Intermittent Heavy,160705,Unknown
+45,Weather Symbols,Snow,Intermittent Heavy /Continuous Heavy,160706,Unknown
+45,Weather Symbols,Snow,Blowing Snow - Light/Moderate,160707,Unknown
+45,Weather Symbols,Snow,Blowing Snow - Heavy,160708,Unknown
+45,Weather Symbols,Snow Grains,,160800,Unknown
+45,Weather Symbols,Snow Showers,,160900,Unknown
+45,Weather Symbols,Snow Showers,Light,160901,Unknown
+45,Weather Symbols,Snow Showers,Moderate/Heavy,160902,Unknown
+45,Weather Symbols,Hail,,161000,Unknown
+45,Weather Symbols,Hail,Light not Associated with Thunder,161001,Unknown
+45,Weather Symbols,Hail,Moderate/Heavy not Associated with Thunder,161002,Unknown
+45,Weather Symbols,Ice Crystals (Diamond Dust),,161100,Unknown
+45,Weather Symbols,Ice Pellets (Sleet),,161200,Unknown
+45,Weather Symbols,Ice Pellets (Sleet),Light,161201,Unknown
+45,Weather Symbols,Ice Pellets (Sleet),Moderate,161202,Unknown
+45,Weather Symbols,Ice Pellets (Sleet),Heavy,161203,Unknown
+45,Weather Symbols,Inversion,,161300,Unknown
+45,Weather Symbols,Storms,,161400,Unknown
+45,Weather Symbols,Storms,Thunderstorm - No Precipitation,161401,Unknown
+45,Weather Symbols,Storms,Thunderstorm Light to Moderate with Rain/Snow - No Hail,161402,Unknown
+45,Weather Symbols,Storms,Thunderstorm Heavy with Rain/Snow -  No Hail,161403,Unknown
+45,Weather Symbols,Storms,Thunderstorm Light to Moderate - With Hail,161404,Unknown
+45,Weather Symbols,Storms,Thunderstorm Heavy - With Hail,161405,Unknown
+45,Weather Symbols,Storms,Funnel Cloud (Tornado/Waterspout),161406,Unknown
+45,Weather Symbols,Storms,Squall,161407,Unknown
+45,Weather Symbols,Storms,Lightning,161408,Unknown
+45,Weather Symbols,Fog,,161500,Unknown
+45,Weather Symbols,Fog,Shallow Patches,161501,Unknown
+45,Weather Symbols,Fog,Shallow Continuous,161502,Unknown
+45,Weather Symbols,Fog,Patchy,161503,Unknown
+45,Weather Symbols,Fog,Sky Visible,161504,Unknown
+45,Weather Symbols,Fog,Sky Obscured,161505,Unknown
+45,Weather Symbols,Fog,Freezing-Sky Visible,161506,Unknown
+45,Weather Symbols,Fog,Freezing-Sky Obscured,161507,Unknown
+45,Weather Symbols,Mist,,161600,Unknown
+45,Weather Symbols,Smoke,,161700,Unknown
+45,Weather Symbols,Haze,,161800,Unknown
+45,Weather Symbols,Dust or Sand,,161900,Unknown
+45,Weather Symbols,Dust or Sand,Light to Moderate,161901,Unknown
+45,Weather Symbols,Dust or Sand,Severe,161902,Unknown
+45,Weather Symbols,Dust or Sand,Dust Devil,161903,Unknown
+45,Weather Symbols,Dust or Sand,Blowing Dust or Sand,161904,Unknown
+45,Weather Symbols,Tropical Storm Systems,,162000,Unknown
+45,Weather Symbols,Tropical Storm Systems,Tropical Depression,162001,Unknown
+45,Weather Symbols,Tropical Storm Systems,Tropical Storm,162002,Unknown
+45,Weather Symbols,Tropical Storm Systems,Hurricane/Typhoon,162003,Unknown
+45,Weather Symbols,Tropical Storm Systems,Tropical Storm Wind Areas and Date/Time Labels,162004,Unknown
+45,Weather Symbols,Volcanic Eruption,,162100,Unknown
+45,Weather Symbols,Volcanic Eruption,Volcanic Ash,162101,Unknown
+45,Weather Symbols,Tropopause Level,,162200,Unknown
+45,Weather Symbols,Freezing Level,,162300,Unknown
+45,Weather Symbols,Precipitation of Unknown Type and Intensity,,162400,Unknown
+45,Bounded Areas of Weather,,,170000,Area
+45,Bounded Areas of Weather,Instrument Flight Rule (IFR),,170100,Area
+45,Bounded Areas of Weather,Marginal Visual Flight Rule (MVFR),,170200,Area
+45,Bounded Areas of Weather,Turbulence,,170300,Area
+45,Bounded Areas of Weather,Icing,,170400,Area
+45,Bounded Areas of Weather,Liquid Precipitation - Non-Convective Continuous or Intermittent,,170500,Area
+45,Bounded Areas of Weather,Liquid Precipitation - Non-Convective Continuous or Intermittent,Liquid Precipitation - Convective,170501,Area
+45,Bounded Areas of Weather,Freezing /Frozen Precipitation,,170600,Area
+45,Bounded Areas of Weather,Thunderstorm,,170700,Area
+45,Bounded Areas of Weather,Fog,,170800,Area
+45,Bounded Areas of Weather,Dust or Sand,,170900,Area
+45,Bounded Areas of Weather,Operator-Defined Freeform,,171000,Area
+45,Isopleths,,,180000,Unknown
+45,Isopleths,Isobar - Surface,,180100,Unknown
+45,Isopleths,Contour - Upper Air,,180200,Unknown
+45,Isopleths,Isotherm,,180300,Unknown
+45,Isopleths,Isotach,,180400,Unknown
+45,Isopleths,Isodrosotherm,,180500,Unknown
+45,Isopleths,Thickness,,180600,Unknown
+45,Isopleths,Operator-Defined Freeform,,180700,Unknown
+45,State of the Ground,,,190000,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,,190100,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Dry Without Cracks or Appreciable Dust or Loose Sand,190101,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Moist,190102,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Wet-Standing Water in Small or Large Pools,190103,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Flooded,190104,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Frozen,190105,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Glaze (Thin Ice) on Ground,190106,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Loose Dry Dust or Sand not Covering Ground Completely,190107,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Thin Loose Dry Dust or Sand not Covering Ground Completely,190108,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Moderate/Thick Loose Dry Dust or Sand not Covering Ground Completely,190109,Unknown
+45,State of the Ground,Without Snow or Measurable Ice Cover,Extremely Dry with Cracks,190110,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,,190200,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Predominately Ice Covered,190201,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Compact or Wet Snow (with or without Ice) Covering Less Than One-Half of Ground,190202,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Compact or Wet Snow (with or without Ice) Covering  at Least One-Half of Ground-but Ground not Completely Covered,190203,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Even Layer of Compact or Wet Snow Covering Ground Completely,190204,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Uneven Layer of Compact or Wet Snow Covering Ground Completely,190205,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Loose Dry Snow Covering Less Than One-Half of Ground,190206,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Loose Dry Snow Covering at Least One-Half of Ground-but Ground not Completely Covered,190207,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Even Layer of Loose Dry Snow Covering Ground Completely,190208,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Uneven Layer of Loose Dry Snow Covering Ground Completely,190209,Unknown
+45,State of the Ground,With Snow or Measurable Ice Cover,Snow Covering Ground Completely-Deep Drifts,190210,Unknown
+46,Ice Systems,,,110000,Unknown
+46,Ice Systems,Icebergs,,110100,Unknown
+46,Ice Systems,Icebergs,Many Icebergs,110101,Unknown
+46,Ice Systems,Icebergs,Belts and Strips,110102,Unknown
+46,Ice Systems,Icebergs,General,110103,Unknown
+46,Ice Systems,Icebergs,Many Icebergs - General,110104,Unknown
+46,Ice Systems,Icebergs,Bergy Bit,110105,Unknown
+46,Ice Systems,Icebergs,Many Bergy Bits,110106,Unknown
+46,Ice Systems,Icebergs,Growler,110107,Unknown
+46,Ice Systems,Icebergs,Many Growlers,110108,Unknown
+46,Ice Systems,Icebergs,Floeberg,110109,Unknown
+46,Ice Systems,Icebergs,Ice Island,110110,Unknown
+46,Ice Systems,Ice Concentration,,110200,Unknown
+46,Ice Systems,Ice Concentration,Bergy Water,110201,Unknown
+46,Ice Systems,Ice Concentration,Water with Radar Targets,110202,Unknown
+46,Ice Systems,Ice Concentration,Ice Free,110203,Unknown
+46,Ice Systems,Dynamic Processes,,110300,Unknown
+46,Ice Systems,Dynamic Processes,Convergence,110301,Unknown
+46,Ice Systems,Dynamic Processes,Divergence,110302,Unknown
+46,Ice Systems,Dynamic Processes,Shearing or Shear Zone,110303,Unknown
+46,Ice Systems,Dynamic Processes,Ice Drift (Direction),110304,Unknown
+46,Ice Systems,Sea Ice,,110400,Unknown
+46,Ice Systems,Sea Ice,Ice Thickness (Observed),110401,Unknown
+46,Ice Systems,Sea Ice,Ice Thickness (Estimated),110402,Unknown
+46,Ice Systems,Sea Ice,Melt Puddles or Flooded Ice,110403,Unknown
+46,Ice Systems,Limits,,110500,Unknown
+46,Ice Systems,Limits,Limits of Visual Observation,110501,Unknown
+46,Ice Systems,Limits,Limits of Under Cast,110502,Unknown
+46,Ice Systems,Limits,Limits of Radar Observation,110503,Unknown
+46,Ice Systems,Limits,Observed Ice Edge or Boundary,110504,Unknown
+46,Ice Systems,Limits,Estimated Ice Edge or Boundary,110505,Unknown
+46,Ice Systems,Limits,Ice Edge or Boundary From Radar,110506,Unknown
+46,Ice Systems,Openings in the Ice,,110600,Unknown
+46,Ice Systems,Openings in the Ice,Cracks,110601,Unknown
+46,Ice Systems,Openings in the Ice,Cracks at a Specific Location,110602,Unknown
+46,Ice Systems,Openings in the Ice,Lead,110603,Unknown
+46,Ice Systems,Openings in the Ice,Frozen Lead,110604,Unknown
+46,Ice Systems,Snow Cover,,110700,Unknown
+46,Ice Systems,Snow Cover,Sastrugi (with Orientation),110701,Unknown
+46,Ice Systems,Topographical Features,,110800,Unknown
+46,Ice Systems,Topographical Features,Ridges or Hummocks,110801,Unknown
+46,Ice Systems,Topographical Features,Rafting,110802,Unknown
+46,Ice Systems,Topographical Features,Jammed Brash Barrier,110803,Unknown
+46,Hydrography,,,120000,Unknown
+46,Hydrography,Depth,,120100,Unknown
+46,Hydrography,Depth,Soundings,120101,Unknown
+46,Hydrography,Depth,Depth Curve,120102,Unknown
+46,Hydrography,Depth,Depth Contour,120103,Unknown
+46,Hydrography,Depth,Depth Area,120104,Unknown
+46,Hydrography,Coastal Hydrography,,120200,Unknown
+46,Hydrography,Coastal Hydrography,Coastline,120201,Unknown
+46,Hydrography,Coastal Hydrography,Island,120202,Unknown
+46,Hydrography,Coastal Hydrography,Beach,120203,Unknown
+46,Hydrography,Coastal Hydrography,Water,120204,Unknown
+46,Hydrography,Coastal Hydrography,Foreshore - Line,120205,Unknown
+46,Hydrography,Coastal Hydrography,Foreshore - Area,120206,Unknown
+46,Hydrography,Ports and Harbors,,120300,Unknown
+46,Hydrography,Ports and Harbors,Ports,120301,Unknown
+46,Hydrography,Ports and Harbors,Berths (Onshore),120302,Unknown
+46,Hydrography,Ports and Harbors,Berths (Anchor),120303,Unknown
+46,Hydrography,Ports and Harbors,Anchorage - Point,120304,Unknown
+46,Hydrography,Ports and Harbors,Anchorage - Line,120305,Unknown
+46,Hydrography,Ports and Harbors,Anchorage - Area,120306,Unknown
+46,Hydrography,Ports and Harbors,Call in Point,120307,Unknown
+46,Hydrography,Ports and Harbors,Pier/Wharf/Quay,120308,Unknown
+46,Hydrography,Ports and Harbors,Fishing Harbor - Point,120309,Unknown
+46,Hydrography,Ports and Harbors,Fish Weirs - Point,120310,Unknown
+46,Hydrography,Ports and Harbors,Fish Stakes - Point,120311,Unknown
+46,Hydrography,Ports and Harbors,Fish Traps - Area,120312,Unknown
+46,Hydrography,Ports and Harbors,Facilities,120313,Unknown
+46,Hydrography,Ports and Harbors,Drydock,120314,Unknown
+46,Hydrography,Ports and Harbors,Landing Place,120315,Unknown
+46,Hydrography,Ports and Harbors,Offshore Loading Facility - Point,120316,Unknown
+46,Hydrography,Ports and Harbors,Offshore Loading Facility - Line,120317,Unknown
+46,Hydrography,Ports and Harbors,Offshore Loading Facility - Area,120318,Unknown
+46,Hydrography,Ports and Harbors,Ramp - Above Water,120319,Unknown
+46,Hydrography,Ports and Harbors,Ramp - Below Water,120320,Unknown
+46,Hydrography,Ports and Harbors,Landing Ring,120321,Unknown
+46,Hydrography,Ports and Harbors,Ferry Crossing,120322,Unknown
+46,Hydrography,Ports and Harbors,Cable Ferry Crossing,120323,Unknown
+46,Hydrography,Ports and Harbors,Dolphin,120324,Unknown
+46,Hydrography,Ports and Harbors,Shoreline Protection,120325,Unknown
+46,Hydrography,Ports and Harbors,Breakwater/Groin/Jetty - Above Water,120326,Unknown
+46,Hydrography,Ports and Harbors,Breakwater/Groin/Jetty - Below Water,120327,Unknown
+46,Hydrography,Ports and Harbors,Seawall,120328,Unknown
+46,Hydrography,Aids to Navigation,,120400,Unknown
+46,Hydrography,Aids to Navigation,Beacon,120401,Unknown
+46,Hydrography,Aids to Navigation,Buoy Default,120402,Unknown
+46,Hydrography,Aids to Navigation,Marker,120403,Unknown
+46,Hydrography,Aids to Navigation,Perches/Stakes - Point,120404,Unknown
+46,Hydrography,Aids to Navigation,Perches/Stakes - Area,120405,Unknown
+46,Hydrography,Aids to Navigation,Light,120406,Unknown
+46,Hydrography,Aids to Navigation,Leading Line,120407,Unknown
+46,Hydrography,Aids to Navigation,Light Vessel/Light Ship,120408,Unknown
+46,Hydrography,Aids to Navigation,Lighthouse,120409,Unknown
+46,Hydrography,Dangers/Hazards,,120500,Unknown
+46,Hydrography,Dangers/Hazards,Rock Submerged,120501,Unknown
+46,Hydrography,Dangers/Hazards,Rock Awashed,120502,Unknown
+46,Hydrography,Dangers/Hazards,Underwater Danger/Hazard,120503,Unknown
+46,Hydrography,Dangers/Hazards,Foul Ground - Point,120504,Unknown
+46,Hydrography,Dangers/Hazards,Foul Ground - Area,120505,Unknown
+46,Hydrography,Dangers/Hazards,Kelp/Seaweed - Point,120506,Unknown
+46,Hydrography,Dangers/Hazards,Kelp/Seaweed - Area,120507,Unknown
+46,Hydrography,Dangers/Hazards,Snags/Stumps,120508,Unknown
+46,Hydrography,Dangers/Hazards,Wreck (Uncovers),120509,Unknown
+46,Hydrography,Dangers/Hazards,Wreck (Submerged),120510,Unknown
+46,Hydrography,Dangers/Hazards,Breakers,120511,Unknown
+46,Hydrography,Dangers/Hazards,Reef,120512,Unknown
+46,Hydrography,Dangers/Hazards,Eddies/Overfalls/Tide Rips,120513,Unknown
+46,Hydrography,Dangers/Hazards,Discolored Water,120514,Unknown
+46,Hydrography,Bottom Features,,120600,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Sand,120601,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Mud,120602,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Clay,120603,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Silt,120604,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Stones,120605,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Gravel,120606,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Pebbles,120607,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Cobbles,120608,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Rock,120609,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Coral,120610,Unknown
+46,Hydrography,Bottom Features,Bottom Characteristics  - Shell,120611,Unknown
+46,Hydrography,Bottom Features,Qualifying Terms - Fine,120612,Unknown
+46,Hydrography,Bottom Features,Qualifying Terms - Medium,120613,Unknown
+46,Hydrography,Bottom Features,Qualifying Terms - Coarse,120614,Unknown
+46,Hydrography,Tide and Current,,120700,Unknown
+46,Hydrography,Tide and Current,Water Turbulence,120701,Unknown
+46,Hydrography,Tide and Current,Current Flow - Ebb,120702,Unknown
+46,Hydrography,Tide and Current,Current Flow - Flood,120703,Unknown
+46,Hydrography,Tide and Current,Tide Data Point,120704,Unknown
+46,Hydrography,Tide and Current,Tide Gauge,120705,Unknown
+46,Oceanography,,,130000,Unknown
+46,Oceanography,Bioluminescence,,130100,Unknown
+46,Oceanography,Bioluminescence,Visual Detection Ratio (VDR) Level 1-2,130101,Unknown
+46,Oceanography,Bioluminescence,VDR Level 2-3,130102,Unknown
+46,Oceanography,Bioluminescence,VDR Level 3-4,130103,Unknown
+46,Oceanography,Bioluminescence,VDR Level 4-5,130104,Unknown
+46,Oceanography,Bioluminescence,VDR Level 5-6,130105,Unknown
+46,Oceanography,Bioluminescence,VDR Level 6-7,130106,Unknown
+46,Oceanography,Bioluminescence,VDR Level 7-8,130107,Unknown
+46,Oceanography,Bioluminescence,VDR Level 8-9,130108,Unknown
+46,Oceanography,Bioluminescence,VDR Level 9-10,130109,Unknown
+46,Oceanography,Beach Slope,,130200,Unknown
+46,Oceanography,Beach Slope,Flat,130201,Unknown
+46,Oceanography,Beach Slope,Gentle,130202,Unknown
+46,Oceanography,Beach Slope,Moderate,130203,Unknown
+46,Oceanography,Beach Slope,Steep,130204,Unknown
+46,Geophysics/Acoustics,,,140000,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,,140100,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Solid Rock,140101,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Clay,140102,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Coarse Sand,140103,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Coarse Sand,140104,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Medium Sand,140105,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Fine Sand,140106,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Fine Sand,140107,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Fine Silt,140108,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Fine Silt,140109,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Medium Silt,140110,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Coarse Silt,140111,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Boulders,140112,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Cobbles-Oyster Shells,140113,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Pebbles-Shells,140114,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Sand and Shells,140115,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediment - Land,140116,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediment - No Data,140117,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Smooth,140118,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Moderate,140119,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Rough,140120,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - Low,140121,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - Medium,140122,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - High,140123,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - 0%,140124,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - 0-10%,140125,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - 10-20%,140126,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - 20-75%,140127,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - >75%,140128,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category A,140129,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category B,140130,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category C,140131,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A1,140132,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A2,140133,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A3,140134,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B1,140135,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B2,140136,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B3,140137,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C1,140138,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C2,140139,Unknown
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C3,140140,Unknown
+46,Limits,,,150000,Unknown
+46,Limits,Maritime Limit Boundary,,150100,Unknown
+46,Limits,Maritime Area,,150200,Unknown
+46,Limits,Restricted Area,,150300,Unknown
+46,Limits,Swept Area,,150400,Unknown
+46,Limits,Training Area,,150500,Unknown
+46,Limits,Operator-Defined,,150600,Unknown
+46,Man-Made Structures,,,160000,Unknown
+46,Man-Made Structures,Submarine Cable,,160100,Unknown
+46,Man-Made Structures,Submerged Crib,,160200,Unknown
+46,Man-Made Structures,Canal,,160300,Unknown
+46,Man-Made Structures,Ford,,160400,Unknown
+46,Man-Made Structures,Lock,,160500,Unknown
+46,Man-Made Structures,Oil/Gas Rig,,160600,Unknown
+46,Man-Made Structures,Oil/Gas Rig Field,,160700,Unknown
+46,Man-Made Structures,Pipelines/Pipe,,160800,Unknown
+46,Man-Made Structures,Pile/Piling/Post,,160900,Unknown
+47,Space,,,110000,Point
+50,Signal Intercept,,,110000,Point
+50,Signal Intercept,Communications,,110100,Point
+50,Signal Intercept,Jammer,,110200,Point
+50,Signal Intercept,Radar,,110300,Point
+51,Signal Intercept,,,110000,Point
+51,Signal Intercept,Communications,,110100,Point
+51,Signal Intercept,Jammer,,110200,Point
+51,Signal Intercept,Radar,,110300,Point
+52,Signal Intercept,,,110000,Point
+52,Signal Intercept,Communications,,110100,Point
+52,Signal Intercept,Jammer,,110200,Point
+52,Signal Intercept,Radar,,110300,Point
+53,Signal Intercept,,,110000,Point
+53,Signal Intercept,Communications,,110100,Point
+53,Signal Intercept,Jammer,,110200,Point
+53,Signal Intercept,Radar,,110300,Point
+54,Signal Intercept,,,110000,Point
+54,Signal Intercept,Communications,,110100,Point
+54,Signal Intercept,Jammer,,110200,Point
+54,Signal Intercept,Radar,,110300,Point
+60,Botnet,,,110000,Point
+60,Botnet,Command and Control (C2),,110100,Point
+60,Botnet,Herder,,110200,Point
+60,Botnet,Callback Domain,,110300,Point
+60,Botnet,Zombie,,110400,Point
+60,Infection,,,120000,Point
+60,Infection,Advanced Persistent Threat (APT),,120100,Point
+60,Infection,Advanced Persistent Threat (APT),APT with C2,120101,Point
+60,Infection,Advanced Persistent Threat (APT),APT with Self Propagation,120102,Point
+60,Infection,Advanced Persistent Threat (APT),APT with C2 and Self Propagation,120103,Point
+60,Infection,Advanced Persistent Threat (APT),APT Other,120104,Point
+60,Infection,Non-Advanced Persistent Threat (NAPT),,120200,Point
+60,Infection,Non-Advanced Persistent Threat (NAPT),NAPT with C2,120201,Point
+60,Infection,Non-Advanced Persistent Threat (NAPT),NAPT with Self Propagation,120202,Point
+60,Infection,Non-Advanced Persistent Threat (NAPT),NAPT with C2 and Self Propagation,120203,Point
+60,Infection,Non-Advanced Persistent Threat (NAPT),NAPT Other,120204,Point
+60,Health and Status,,,130000,Point
+60,Health and Status,Normal,,130100,Point
+60,Health and Status,Network Outage,,130200,Point
+60,Health and Status,Unknown,,130300,Point
+60,Health and Status,Impaired,,130400,Point
+60,Device Type,,,140000,Point
+60,Device Type,Core Router,,140100,Point
+60,Device Type,Router,,140200,Point
+60,Device Type,Cross Domain Solution,,140300,Point
+60,Device Type,Mail Server,,140400,Point
+60,Device Type,Web Server,,140500,Point
+60,Device Type,Domain Server,,140600,Point
+60,Device Type,File Server,,140700,Point
+60,Device Type,Peer-to-Peer Node,,140800,Point
+60,Device Type,Firewall,,140900,Point
+60,Device Type,Switch,,141000,Point
+60,Device Type,Host,,141100,Point
+60,Device Type,Virtual Private Network (VPN),,141200,Point
+60,Device Domain,,,150000,Point
+60,Device Domain,Department of Defense (DoD),,150100,Point
+60,Device Domain,Government,,150200,Point
+60,Device Domain,Contractor,,150300,Point
+60,Device Domain,Supervisory Control and Data Acquisition (SCADA),,150400,Point
+60,Device Domain,Non-Government,,150500,Point
+60,Effect,,,160000,Point
+60,Effect,Infection,,160100,Point
+60,Effect,Degradation,,160200,Point
+60,Effect,Data Spoofing,,160300,Point
+60,Effect,Data Manipulation,,160400,Point
+60,Effect,Exfiltration,,160500,Point
+60,Effect,Power Outage,,160600,Point
+60,Effect,Network Outage,,160700,Point
+60,Effect,Service Outage,,160800,Point
+60,Effect,Device Outage,,160900,Point

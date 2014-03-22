@@ -302,15 +302,15 @@ Mine Countermeasures,30,1,7
 Missile Defense,30,1,8
 Medical,30,1,9
 Mine Warfare,30,1,10
-Remote Multi–Mission Vehicle (USV–only),30,1,11
+Remote Multi-Mission Vehicle (USV-only),30,1,11
 Special Operations Force (SOF),30,1,12
 Surface Warfare,30,1,13
 Ballistic Missile ,30,1,14
 Guided Missile ,30,1,15
 Other Guided Missile ,30,1,16
 Torpedo,30,1,17
-Drone–Equipped,30,1,18
-Helicopter–Equipped/VSTOL,30,1,19
+Drone-Equipped,30,1,18
+Helicopter-Equipped/VSTOL,30,1,19
 "Ballistic Missile Defense, Shooter ",30,1,20
 "Ballistic Missile Defense, Long-Range Surveillance and Track (LRS&T)",30,1,21
 Sea-Base X-Band,30,1,22
@@ -325,8 +325,8 @@ Logistics,30,2,6
 Tank,30,2,7
 Vehicle,30,2,8
 Fast,30,2,9
-Air–Cushioned (US),30,2,10
-Air–Cushioned (NATO),30,2,11
+Air-Cushioned (US),30,2,10
+Air-Cushioned (NATO),30,2,11
 Hydrofoil,30,2,12
 Autonomous Control,30,2,13
 Remotely Piloted,30,2,14
@@ -355,17 +355,296 @@ Hijacking/Highjacked,35,1,20
 Unspecified,35,2,0
 Air Independent Propulsion,35,2,1
 "Diesel Electric, General",35,2,2
-Diesel – Type 1,35,2,3
-Diesel – Type 2,35,2,4
-Diesel – Type 3,35,2,5
+Diesel - Type 1,35,2,3
+Diesel - Type 2,35,2,4
+Diesel - Type 3,35,2,5
 "Nuclear Powered, General",35,2,6
-Nuclear – Type 1,35,2,7
-Nuclear – Type 2,35,2,8
-Nuclear – Type 3,35,2,9
-Nuclear – Type 4,35,2,10
-Nuclear – Type 5,35,2,11
-Nuclear – Type 6,35,2,12
-Nuclear – Type 7,35,2,13
+Nuclear - Type 1,35,2,7
+Nuclear - Type 2,35,2,8
+Nuclear - Type 3,35,2,9
+Nuclear - Type 4,35,2,10
+Nuclear - Type 5,35,2,11
+Nuclear - Type 6,35,2,12
+Nuclear - Type 7,35,2,13
 Autonomous Control,35,2,14
 Remotely Piloted,35,2,15
 Expendable,35,2,16
+Unspecified,40,1,0
+Assassination,40,1,1
+Execution (Wrongful Killing),40,1,2
+Hijacking/Hijacked,40,1,3
+House-to-House,40,1,4
+Kidnapping,40,1,5
+Murder,40,1,6
+Piracy,40,1,7
+Rape,40,1,8
+Written Psychological Operations,40,1,9
+Pirate,40,1,10
+False,40,1,11
+Find,40,1,12
+Found and Cleared,40,1,13
+Hoax (Decoy),40,1,14
+Attempted,40,1,15
+Accident,40,1,16
+Incident,40,1,17
+Theft,40,1,18
+Unspecified,51,1,0
+Anti-Aircraft Fire Control,51,1,1
+Airborne Search and Bombing,51,1,2
+Airborne Intercept,51,1,3
+Altimeter,51,1,4
+Airborne Reconnaissance and Mapping,51,1,5
+Air Traffic Control,51,1,6
+Beacon Transponder (not IFF),51,1,7
+Battlefield Surveillance,51,1,8
+Controlled Approach,51,1,9
+Controlled Intercept,51,1,10
+Cellular/Mobile,51,1,11
+Coastal Surveillance,51,1,12
+Decoy/Mimic,51,1,13
+Data Transmission,51,1,14
+Earth Surveillance,51,1,15
+Early Warning,51,1,16
+Fire Control,51,1,17
+Ground Mapping,51,1,18
+Height Finding,51,1,19
+Harbor Surveillance,51,1,20
+"Identification, Friend or Foe (Interrogator)",51,1,21
+Instrument Landing System,51,1,22
+Ionospheric Sounding,51,1,23
+"Identification, Friend or Foe (Transponder)",51,1,24
+Barrage Jammer,51,1,25
+Click Jammer,51,1,26
+Deceptive Jammer,51,1,27
+Frequency Swept Jammer,51,1,28
+Jammer (general),51,1,29
+Noise Jammer,51,1,30
+Pulsed Jammer,51,1,31
+Repeater Jammer,51,1,32
+Spot Noise Jammer,51,1,33
+Transponder Jammer,51,1,34
+Missile Acquisition,51,1,35
+Missile Control,51,1,36
+Missile Downlink,51,1,37
+Meteorological,51,1,38
+Multi-Function,51,1,39
+Missile Guidance,51,1,40
+Missile Homing,51,1,41
+Missile Tracking,51,1,42
+Navigational/General,51,1,43
+Navigational/Distance Measuring Equipment,51,1,44
+Navigation/Terrain Following,51,1,45
+Navigational/Weather Avoidance,51,1,46
+Omni-Line of Sight (LOS),51,1,47
+Proximity Use,51,1,48
+Point-to-Point Line of Sight (LOS),51,1,49
+Instrumentation,51,1,50
+Range Only,51,1,51
+Sonobuoy,51,1,52
+Satellite Downlink,51,1,53
+Space,51,1,54
+Surface Search,51,1,55
+Shell Tracking,51,1,56
+Satellite Uplink,51,1,57
+Target Acquisition,51,1,58
+Target Illumination,51,1,59
+Tropospheric Scatter,51,1,60
+Target Tracking,51,1,61
+Unknown,51,1,62
+Video Remoting,51,1,63
+Experimental,51,1,64
+Unspecified,52,1,0
+Anti-Aircraft Fire Control,52,1,1
+Airborne Search and Bombing,52,1,2
+Airborne Intercept,52,1,3
+Altimeter,52,1,4
+Airborne Reconnaissance and Mapping,52,1,5
+Air Traffic Control,52,1,6
+Beacon Transponder (not IFF),52,1,7
+Battlefield Surveillance,52,1,8
+Controlled Approach,52,1,9
+Controlled Intercept,52,1,10
+Cellular/Mobile,52,1,11
+Coastal Surveillance,52,1,12
+Decoy/Mimic,52,1,13
+Data Transmission,52,1,14
+Earth Surveillance,52,1,15
+Early Warning,52,1,16
+Fire Control,52,1,17
+Ground Mapping,52,1,18
+Height Finding,52,1,19
+Harbor Surveillance,52,1,20
+"Identification, Friend or Foe (Interrogator)",52,1,21
+Instrument Landing System,52,1,22
+Ionospheric Sounding,52,1,23
+"Identification, Friend or Foe (Transponder)",52,1,24
+Barrage Jammer,52,1,25
+Click Jammer,52,1,26
+Deceptive Jammer,52,1,27
+Frequency Swept Jammer,52,1,28
+Jammer (general),52,1,29
+Noise Jammer,52,1,30
+Pulsed Jammer,52,1,31
+Repeater Jammer,52,1,32
+Spot Noise Jammer,52,1,33
+Transponder Jammer,52,1,34
+Missile Acquisition,52,1,35
+Missile Control,52,1,36
+Missile Downlink,52,1,37
+Meteorological,52,1,38
+Multi-Function,52,1,39
+Missile Guidance,52,1,40
+Missile Homing,52,1,41
+Missile Tracking,52,1,42
+Navigational/General,52,1,43
+Navigational/Distance Measuring Equipment,52,1,44
+Navigation/Terrain Following,52,1,45
+Navigational/Weather Avoidance,52,1,46
+Omni-Line of Sight (LOS),52,1,47
+Proximity Use,52,1,48
+Point-to-Point Line of Sight (LOS),52,1,49
+Instrumentation,52,1,50
+Range Only,52,1,51
+Sonobuoy,52,1,52
+Satellite Downlink,52,1,53
+Space,52,1,54
+Surface Search,52,1,55
+Shell Tracking,52,1,56
+Satellite Uplink,52,1,57
+Target Acquisition,52,1,58
+Target Illumination,52,1,59
+Tropospheric Scatter,52,1,60
+Target Tracking,52,1,61
+Unknown,52,1,62
+Video Remoting,52,1,63
+Experimental,52,1,64
+Unspecified,53,1,0
+Anti-Aircraft Fire Control,53,1,1
+Airborne Search and Bombing,53,1,2
+Airborne Intercept,53,1,3
+Altimeter,53,1,4
+Airborne Reconnaissance and Mapping,53,1,5
+Air Traffic Control,53,1,6
+Beacon Transponder (not IFF),53,1,7
+Battlefield Surveillance,53,1,8
+Controlled Approach,53,1,9
+Controlled Intercept,53,1,10
+Cellular/Mobile,53,1,11
+Coastal Surveillance,53,1,12
+Decoy/Mimic,53,1,13
+Data Transmission,53,1,14
+Earth Surveillance,53,1,15
+Early Warning,53,1,16
+Fire Control,53,1,17
+Ground Mapping,53,1,18
+Height Finding,53,1,19
+Harbor Surveillance,53,1,20
+"Identification, Friend or Foe (Interrogator)",53,1,21
+Instrument Landing System,53,1,22
+Ionospheric Sounding,53,1,23
+"Identification, Friend or Foe (Transponder)",53,1,24
+Barrage Jammer,53,1,25
+Click Jammer,53,1,26
+Deceptive Jammer,53,1,27
+Frequency Swept Jammer,53,1,28
+Jammer (general),53,1,29
+Noise Jammer,53,1,30
+Pulsed Jammer,53,1,31
+Repeater Jammer,53,1,32
+Spot Noise Jammer,53,1,33
+Transponder Jammer,53,1,34
+Missile Acquisition,53,1,35
+Missile Control,53,1,36
+Missile Downlink,53,1,37
+Meteorological,53,1,38
+Multi-Function,53,1,39
+Missile Guidance,53,1,40
+Missile Homing,53,1,41
+Missile Tracking,53,1,42
+Navigational/General,53,1,43
+Navigational/Distance Measuring Equipment,53,1,44
+Navigation/Terrain Following,53,1,45
+Navigational/Weather Avoidance,53,1,46
+Omni-Line of Sight (LOS),53,1,47
+Proximity Use,53,1,48
+Point-to-Point Line of Sight (LOS),53,1,49
+Instrumentation,53,1,50
+Range Only,53,1,51
+Sonobuoy,53,1,52
+Satellite Downlink,53,1,53
+Space,53,1,54
+Surface Search,53,1,55
+Shell Tracking,53,1,56
+Satellite Uplink,53,1,57
+Target Acquisition,53,1,58
+Target Illumination,53,1,59
+Tropospheric Scatter,53,1,60
+Target Tracking,53,1,61
+Unknown,53,1,62
+Video Remoting,53,1,63
+Experimental,53,1,64
+Unspecified,54,1,0
+Anti-Aircraft Fire Control,54,1,1
+Airborne Search and Bombing,54,1,2
+Airborne Intercept,54,1,3
+Altimeter,54,1,4
+Airborne Reconnaissance and Mapping,54,1,5
+Air Traffic Control,54,1,6
+Beacon Transponder (not IFF),54,1,7
+Battlefield Surveillance,54,1,8
+Controlled Approach,54,1,9
+Controlled Intercept,54,1,10
+Cellular/Mobile,54,1,11
+Coastal Surveillance,54,1,12
+Decoy/Mimic,54,1,13
+Data Transmission,54,1,14
+Earth Surveillance,54,1,15
+Early Warning,54,1,16
+Fire Control,54,1,17
+Ground Mapping,54,1,18
+Height Finding,54,1,19
+Harbor Surveillance,54,1,20
+"Identification, Friend or Foe (Interrogator)",54,1,21
+Instrument Landing System,54,1,22
+Ionospheric Sounding,54,1,23
+"Identification, Friend or Foe (Transponder)",54,1,24
+Barrage Jammer,54,1,25
+Click Jammer,54,1,26
+Deceptive Jammer,54,1,27
+Frequency Swept Jammer,54,1,28
+Jammer (general),54,1,29
+Noise Jammer,54,1,30
+Pulsed Jammer,54,1,31
+Repeater Jammer,54,1,32
+Spot Noise Jammer,54,1,33
+Transponder Jammer,54,1,34
+Missile Acquisition,54,1,35
+Missile Control,54,1,36
+Missile Downlink,54,1,37
+Meteorological,54,1,38
+Multi-Function,54,1,39
+Missile Guidance,54,1,40
+Missile Homing,54,1,41
+Missile Tracking,54,1,42
+Navigational/General,54,1,43
+Navigational/Distance Measuring Equipment,54,1,44
+Navigation/Terrain Following,54,1,45
+Navigational/Weather Avoidance,54,1,46
+Omni-Line of Sight (LOS),54,1,47
+Proximity Use,54,1,48
+Point-to-Point Line of Sight (LOS),54,1,49
+Instrumentation,54,1,50
+Range Only,54,1,51
+Sonobuoy,54,1,52
+Satellite Downlink,54,1,53
+Space,54,1,54
+Surface Search,54,1,55
+Shell Tracking,54,1,56
+Satellite Uplink,54,1,57
+Target Acquisition,54,1,58
+Target Illumination,54,1,59
+Tropospheric Scatter,54,1,60
+Target Tracking,54,1,61
+Unknown,54,1,62
+Video Remoting,54,1,63
+Experimental,54,1,64

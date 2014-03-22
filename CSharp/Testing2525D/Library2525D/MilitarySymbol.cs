@@ -71,18 +71,41 @@ namespace Library2525D
                 if (this.id != null)
                     tags.AddRange(this.id.Tags);
 
-                if (this.Id.IsValid)
-                    tags.Add(this.Id.ToString());
-
                 if (this.Shape != ShapeType.Unknown)
                     tags.Add(this.Shape.ToString());
 
+
                 // TODO: Add Other Desired Tags
+
+
+                // TRICKY: the old Tag format assumed that the SIDC was always last, 
+                //         not sure if that is still the convention (but putting last just in case)
+                if (this.Id.IsValid)
+                    tags.Add(this.Id.ToString());
 
                 return tags;
             }
         }
         protected List<string> tags = new List<string>();
+
+        public string TagsAsString 
+        {
+            get
+            {
+                StringBuilder tagBuilder = new StringBuilder();
+
+                foreach (string tag in Tags)
+                {
+                    // Not sure if we need to do this:
+                    // tagBuilder.Append(tag.Replace('_', ' '));
+                    tagBuilder.Append(tag);
+                    // TODO: ";" was the old tag delimitter (check that this is still true)
+                    tagBuilder.Append(";"); 
+                }
+
+                return tagBuilder.ToString();
+            }
+        }
 
         public override string ToString()
         {

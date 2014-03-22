@@ -285,7 +285,7 @@ namespace Library2525D
 
         public override string ToString()
         {
-            return convertToString(true);
+            return convertToString(formatCode);
         }
 
         public List<string> Tags
@@ -317,7 +317,7 @@ namespace Library2525D
         }
         List<string> tags = new List<string>();
 
-        public static bool FormatCode
+        public static bool FormatCodeStringWithCommas
         {
             get
             {

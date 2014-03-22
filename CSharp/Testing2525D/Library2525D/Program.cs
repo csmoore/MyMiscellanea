@@ -136,7 +136,7 @@ namespace Library2525D
 
             List<MilitarySymbol> matchingSymbols = symbolLookup.GetMilitarySymbols(symbolSet);
 
-            SymbolIdCode.FormatCode = false;
+            SymbolIdCode.FormatCodeStringWithCommas = false;
 
             int matchCount = 0;
             foreach (MilitarySymbol matchSymbol in matchingSymbols)
@@ -144,7 +144,9 @@ namespace Library2525D
                 matchCount++;
 
                 Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
-                    + "," + matchSymbol.Id.Name + "," + matchSymbol.Id.CodeFirstTen + "," + matchSymbol.Id.CodeSecondTen);
+                    + "," + matchSymbol.Id.Name + ","
+                    + matchSymbol.Id.CodeFirstTen + "," + matchSymbol.Id.CodeSecondTen + ","
+                    + matchSymbol.TagsAsString);
             }
 
             Console.WriteLine("Modifier 1:");
