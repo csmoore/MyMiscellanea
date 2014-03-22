@@ -30,7 +30,7 @@ namespace Library2525D
         {
 
             // if command line arguments, run as Consolse App
-            Console.WriteLine("Usage: ConsoleApp2525D.exe [Type -or- \"List\"]");
+            Console.WriteLine("Usage: ConsoleApp2525D.exe [Type -or- \"List\" -or- \"ALL\"]");
             Console.WriteLine("       ConsoleApp2525D.exe [SymbolSet (Name or Code)]");
 
             string typeToExportUpper = "LIST";
@@ -54,17 +54,19 @@ namespace Library2525D
             Assembly myAssembly = Assembly.GetExecutingAssembly();
             foreach (Type type in myAssembly.GetTypes())
             {
+                if (!type.IsEnum)
+                    continue;
+
                 string typeName = type.Name;
                 string typeNameUpper = typeName.ToUpper();
 
                 if (typeToExportUpper == "LIST")
                 {
-                    if (type.IsEnum)
-                        Console.WriteLine("Type: " + typeName);
+                    Console.WriteLine("Type: " + typeName);
                     found = true;
                 }
 
-                if (typeNameUpper.Contains(typeToExportUpper))
+                if (typeToExportUpper.Equals("ALL") || typeNameUpper.Contains(typeToExportUpper))
                 {
                     Console.WriteLine("Found Type: " + typeNameUpper);
 
@@ -82,12 +84,21 @@ namespace Library2525D
             } // end foreach
 
             // if found, we are done, if not check for a symbol set query 
-            if (found)
+            if (found && (!typeToExportUpper.Equals("ALL")))
                 return;
 
             string symbolSetUpper = typeToExportUpper;
 
             Console.WriteLine("Type not found, looking for SymbolSet: " + symbolSetUpper);
+
+            SymbolLookup symbolLookup = new SymbolLookup();
+            symbolLookup.Initialize();
+
+            if (!symbolLookup.Initialized) // should not happy, but you never know
+            {
+                System.Diagnostics.Trace.WriteLine("Failed to initialize symbol list, exiting...");
+                return;
+            }
 
             SymbolSetType symbolSet = SymbolSetType.NotSet;
 
@@ -104,28 +115,23 @@ namespace Library2525D
                     hashCodeString = hashCodeString.PadLeft(2, '0');
 
                 // Mildly confusing but allow either the name or the Number
-                if (enumStringUpper.Contains(symbolSetUpper) || hashCodeString.Equals(symbolSetUpper))
+                if (symbolSetUpper.Equals("ALL") || enumStringUpper.Contains(symbolSetUpper) 
+                    || hashCodeString.Equals(symbolSetUpper))
                 {
                     symbolSet = (SymbolSetType)en;
-                    break;
+                    ListSymbolSet(symbolLookup, symbolSet);                  
                 }
             }
 
             if (symbolSet == SymbolSetType.NotSet)
-            {
-                Console.WriteLine("SymbolSet not found, exiting..." + symbolSetUpper);
-                return;
-            }
+                Console.WriteLine("Warning: SymbolSet not found: " + symbolSetUpper);
 
-            SymbolLookup symbolLookup = new SymbolLookup();
-            symbolLookup.Initialize();
+        }
 
-            if (!symbolLookup.Initialized) // should not happy, but you never know
-            {
-                System.Diagnostics.Trace.WriteLine("Failed to initialize symbol list, exiting...");
-                return;
-            }
-
+        private static void ListSymbolSet(SymbolLookup symbolLookup, SymbolSetType symbolSet)
+        {
+            Console.WriteLine("SymbolSet: " + symbolSet);
+            
             Console.WriteLine("Entities:");
 
             List<MilitarySymbol> matchingSymbols = symbolLookup.GetMilitarySymbols(symbolSet);
@@ -139,7 +145,6 @@ namespace Library2525D
 
                 Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
                     + "," + matchSymbol.Id.Name + "," + matchSymbol.Id.CodeFirstTen + "," + matchSymbol.Id.CodeSecondTen);
-                // System.Diagnostics.Trace.WriteLine("Match: " + matchCount + ", MilitarySymbol: " + matchSymbol); ;
             }
 
             Console.WriteLine("Modifier 1:");

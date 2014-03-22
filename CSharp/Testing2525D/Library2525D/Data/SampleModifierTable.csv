@@ -1,100 +1,100 @@
 Name,SymbolSet,ModifierNumber,Code
-Not Applicable,01,1,0
-Attack/Strike,01,1,1
-Bomber,01,1,2
-Cargo,01,1,3
-Fighter,01,1,4
-Interceptor,01,1,5
-Tanker,01,1,6
-Utility,01,1,7
-VSTOL/VTOL,01,1,8
-Passenger,01,1,9
-Ultra Light,01,1,10
-Airborne Command Post (ACP),01,1,11
-Airborne Early Warning (AEW),01,1,12
-Government,01,1,13
-Medical Evacuation (MEDEVAC),01,1,14
-Escort,01,1,15
-Electronic Combat (EC)/Jammer,01,1,16
-Patrol,01,1,17
-Reconnaissance,01,1,18
-Trainer,01,1,19
-Photographic (Reconnaissance),01,1,20
-Personnel Recovery,01,1,21
-Antisubmarine Warfare,01,1,22
-Communications,01,1,23
-Electronic Support (ES),01,1,24
-Mine Countermeasures (MCM),01,1,25
-Search and Rescue,01,1,26
-Special Operations Forces,01,1,27
-Surface Warfare,01,1,28
-Very Important Person (VIP) Transport,01,1,29
-Combat Search and Rescue (CSAR),01,1,30
-Suppression of Enemy Air Defenses,01,1,31
-Antisurface Warfare,01,1,32
-Fighter/Bomber,01,1,33
-Intensive Care,01,1,34
-Electronic Attack (EA),01,1,35
-Multimission,01,1,36
-Hijacking,01,1,37
-ASW Helo - LAMPS,01,1,38
-ASW Helo - SH-60R,01,1,39
-Not Applicable,01,2,0
-Heavy,01,2,1
-Medium,01,2,2
-Light,01,2,3
-Boom-Only,01,2,4
-Drogue-Only,01,2,5
-Boom and Drogue,01,2,6
-Close Range,01,2,7
-Short Range,01,2,8
-Medium Range,01,2,9
-Long Range,01,2,10
-Downlinked,01,2,11
-Reserved for Future Use,01,2,12
-Version Extension Flag,01,2,99
-Unspecified,02,1,0
-Air,02,1,1
-Surface,02,1,2
-Subsurface,02,1,3
-Space,02,1,4
-Anti-Ballistic,02,1,5
-Ballistic,02,1,6
-Cruise,02,1,7
-Interceptor,02,1,8
-Reserved for Future Use,02,1,9
-Version Extension Flag,02,1,99
-Unspecified,02,2,0
-Air,02,2,1
-Surface,02,2,2
-Subsurface,02,2,3
-Space,02,2,4
-Launched,02,2,5
-Missile,02,2,6
-Patriot,02,2,7
-Standard Missile-2 (SM-2),02,2,8
-Standard Missile-6 (SM-6),02,2,9
-Evolved Sea Sparrow Missile (ESSM),02,2,10
-Rolling Airframe Missile (RAM),02,2,11
-Short Range,02,2,12
-Medium Range,02,2,13
-Intermediate Range,02,2,14
-Long Range,02,2,15
-Intercontinental,02,2,16
-Reserved for Future Use,02,2,17
-Version Extension Flag,02,2,99
-Unspecified,05,1,0
-Low Earth Orbit (LEO),05,1,1
-Medium Earth Orbit  (MEO),05,1,2
-High Earth Orbit  (HEO),05,1,3
-Geosynchronous Orbit (GSO),05,1,4
-Geostationary Orbit (GO),05,1,5
-Molniya Orbit (MO),05,1,6
-Unspecified,05,2,0
-Optical,05,2,1
-Infrared,05,2,2
-Radar,05,2,3
-Signal Intelligence (SIGINT),05,2,4
+Not Applicable,1,1,0
+Attack/Strike,1,1,1
+Bomber,1,1,2
+Cargo,1,1,3
+Fighter,1,1,4
+Interceptor,1,1,5
+Tanker,1,1,6
+Utility,1,1,7
+VSTOL/VTOL,1,1,8
+Passenger,1,1,9
+Ultra Light,1,1,10
+Airborne Command Post (ACP),1,1,11
+Airborne Early Warning (AEW),1,1,12
+Government,1,1,13
+Medical Evacuation (MEDEVAC),1,1,14
+Escort,1,1,15
+Electronic Combat (EC)/Jammer,1,1,16
+Patrol,1,1,17
+Reconnaissance,1,1,18
+Trainer,1,1,19
+Photographic (Reconnaissance),1,1,20
+Personnel Recovery,1,1,21
+Antisubmarine Warfare,1,1,22
+Communications,1,1,23
+Electronic Support (ES),1,1,24
+Mine Countermeasures (MCM),1,1,25
+Search and Rescue,1,1,26
+Special Operations Forces,1,1,27
+Surface Warfare,1,1,28
+Very Important Person (VIP) Transport,1,1,29
+Combat Search and Rescue (CSAR),1,1,30
+Suppression of Enemy Air Defenses,1,1,31
+Antisurface Warfare,1,1,32
+Fighter/Bomber,1,1,33
+Intensive Care,1,1,34
+Electronic Attack (EA),1,1,35
+Multimission,1,1,36
+Hijacking,1,1,37
+ASW Helo - LAMPS,1,1,38
+ASW Helo - SH-60R,1,1,39
+Not Applicable,1,2,0
+Heavy,1,2,1
+Medium,1,2,2
+Light,1,2,3
+Boom-Only,1,2,4
+Drogue-Only,1,2,5
+Boom and Drogue,1,2,6
+Close Range,1,2,7
+Short Range,1,2,8
+Medium Range,1,2,9
+Long Range,1,2,10
+Downlinked,1,2,11
+Reserved for Future Use,1,2,12
+Version Extension Flag,1,2,99
+Unspecified,2,1,0
+Air,2,1,1
+Surface,2,1,2
+Subsurface,2,1,3
+Space,2,1,4
+Anti-Ballistic,2,1,5
+Ballistic,2,1,6
+Cruise,2,1,7
+Interceptor,2,1,8
+Reserved for Future Use,2,1,9
+Version Extension Flag,2,1,99
+Unspecified,2,2,0
+Air,2,2,1
+Surface,2,2,2
+Subsurface,2,2,3
+Space,2,2,4
+Launched,2,2,5
+Missile,2,2,6
+Patriot,2,2,7
+Standard Missile-2 (SM-2),2,2,8
+Standard Missile-6 (SM-6),2,2,9
+Evolved Sea Sparrow Missile (ESSM),2,2,10
+Rolling Airframe Missile (RAM),2,2,11
+Short Range,2,2,12
+Medium Range,2,2,13
+Intermediate Range,2,2,14
+Long Range,2,2,15
+Intercontinental,2,2,16
+Reserved for Future Use,2,2,17
+Version Extension Flag,2,2,99
+Unspecified,5,1,0
+Low Earth Orbit (LEO),5,1,1
+Medium Earth Orbit  (MEO),5,1,2
+High Earth Orbit  (HEO),5,1,3
+Geosynchronous Orbit (GSO),5,1,4
+Geostationary Orbit (GO),5,1,5
+Molniya Orbit (MO),5,1,6
+Unspecified,5,2,0
+Optical,5,2,1
+Infrared,5,2,2
+Radar,5,2,3
+Signal Intelligence (SIGINT),5,2,4
 Air Mobile/Air Assault (US only),10,1,1
 Area,10,1,2
 Attack,10,1,3
@@ -291,3 +291,81 @@ Atomic Energy Reactor,20,2,5
 Nuclear Material Production,20,2,6
 Nuclear Material Storage,20,2,7
 Weapons Grade,20,2,8
+Unspecified,30,1,0
+Own Ship,30,1,1
+Antiair Warfare,30,1,2
+Antisubmarine Warfare,30,1,3
+Escort,30,1,4
+Electronic Warfare,30,1,5
+"Intelligence, Surveillance, Reconnaissance",30,1,6
+Mine Countermeasures,30,1,7
+Missile Defense,30,1,8
+Medical,30,1,9
+Mine Warfare,30,1,10
+Remote Multi–Mission Vehicle (USV–only),30,1,11
+Special Operations Force (SOF),30,1,12
+Surface Warfare,30,1,13
+Ballistic Missile ,30,1,14
+Guided Missile ,30,1,15
+Other Guided Missile ,30,1,16
+Torpedo,30,1,17
+Drone–Equipped,30,1,18
+Helicopter–Equipped/VSTOL,30,1,19
+"Ballistic Missile Defense, Shooter ",30,1,20
+"Ballistic Missile Defense, Long-Range Surveillance and Track (LRS&T)",30,1,21
+Sea-Base X-Band,30,1,22
+Hijacking,30,1,23
+Unspecified,30,2,0
+Nuclear Powered,30,2,1
+Heavy,30,2,2
+Light,30,2,3
+Medium,30,2,4
+Dock,30,2,5
+Logistics,30,2,6
+Tank,30,2,7
+Vehicle,30,2,8
+Fast,30,2,9
+Air–Cushioned (US),30,2,10
+Air–Cushioned (NATO),30,2,11
+Hydrofoil,30,2,12
+Autonomous Control,30,2,13
+Remotely Piloted,30,2,14
+Expendable,30,2,15
+Unspecified,35,1,0
+Antisubmarine Warfare,35,1,1
+Auxiliary,35,1,2
+Command and Control,35,1,3
+"Intelligence, Surveillance, Reconnaissance",35,1,4
+Mine Countermeasures,35,1,5
+Mine Warfare,35,1,6
+Surface Warfare,35,1,7
+Attack,35,1,8
+Ballistic Missile ,35,1,9
+Guided Missile ,35,1,10
+Other Guided Missile,35,1,11
+Special Operations Forces (SOF),35,1,12
+Possible Submarine Low 1 ,35,1,13
+Possible Submarine Low 2,35,1,14
+Possible Submarine High 3,35,1,15
+Possible Submarine High 4,35,1,16
+Probable Submarine,35,1,17
+Certain Submarine,35,1,18
+Anti-torpedo Torpedo,35,1,19
+Hijacking/Highjacked,35,1,20
+Unspecified,35,2,0
+Air Independent Propulsion,35,2,1
+"Diesel Electric, General",35,2,2
+Diesel – Type 1,35,2,3
+Diesel – Type 2,35,2,4
+Diesel – Type 3,35,2,5
+"Nuclear Powered, General",35,2,6
+Nuclear – Type 1,35,2,7
+Nuclear – Type 2,35,2,8
+Nuclear – Type 3,35,2,9
+Nuclear – Type 4,35,2,10
+Nuclear – Type 5,35,2,11
+Nuclear – Type 6,35,2,12
+Nuclear – Type 7,35,2,13
+Autonomous Control,35,2,14
+Remotely Piloted,35,2,15
+Expendable,35,2,16
