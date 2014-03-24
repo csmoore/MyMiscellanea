@@ -68,7 +68,7 @@ namespace Library2525D
 
                 if (typeToExportUpper.Equals("ALL") || typeNameUpper.Contains(typeToExportUpper))
                 {
-                    Console.WriteLine("Found Type: " + typeNameUpper);
+                    Console.WriteLine(Environment.NewLine + "Found Type: " + typeNameUpper);
 
                     found = true;
                     List<Enum> enums = TypeUtilities.EnumHelper.getEnumValues(type);
@@ -130,7 +130,7 @@ namespace Library2525D
 
         private static void ListSymbolSet(SymbolLookup symbolLookup, SymbolSetType symbolSet)
         {
-            Console.WriteLine("SymbolSet: " + symbolSet);
+            Console.WriteLine(Environment.NewLine + "SymbolSet: " + symbolSet);
             
             Console.WriteLine("Entities:");
 
@@ -149,28 +149,33 @@ namespace Library2525D
                     + matchSymbol.TagsAsString);
             }
 
-            Console.WriteLine("Modifier 1:");
-
             List<string> matchingModifiers = symbolLookup.GetDistinctModifierNames(symbolSet, 1);
 
-            matchCount = 0;
-            foreach (string match in matchingModifiers)
+            if (matchingModifiers.Count > 0)
             {
-                matchCount++;
-                Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
-                    + ",1," + match);
+                Console.WriteLine(Environment.NewLine + "Modifier 1:");
+
+                matchCount = 0;
+                foreach (string match in matchingModifiers)
+                {
+                    matchCount++;
+                    Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
+                        + ",1," + match);
+                }
             }
 
-            Console.WriteLine("Modifier 2:");
-
             matchingModifiers = symbolLookup.GetDistinctModifierNames(symbolSet, 2);
-
-            matchCount = 0;
-            foreach (string match in matchingModifiers)
+            if (matchingModifiers.Count > 0)
             {
-                matchCount++;
-                Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
-                    + ",2," + match);
+                Console.WriteLine(Environment.NewLine + "Modifier 2:");
+
+                matchCount = 0;
+                foreach (string match in matchingModifiers)
+                {
+                    matchCount++;
+                    Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
+                        + ",2," + match);
+                }
             }
 
         }

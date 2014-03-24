@@ -82,6 +82,8 @@ namespace Library2525D
         Signals_Intelligence_Surface = 53,
         Signals_Intelligence_Subsurface = 54,
         Cyberspace = 60,
+        // Andy said this one, 98, got added here: https://github.com/Esri/joint-military-symbology-xml/issues/7 
+        Special_Cases = 98,       
         NotSet = 99
     }
 

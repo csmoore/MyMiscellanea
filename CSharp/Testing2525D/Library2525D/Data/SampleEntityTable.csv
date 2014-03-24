@@ -1,90 +1,90 @@
 SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
-1,Military,,,110000,Point
-1,Military,Fixed Wing,,110100,Point
-1,Military,Fixed Wing,Medical Evacuation (MEDEVAC),110101,Point
-1,Military,Fixed Wing,Attack/Strike,110102,Point
-1,Military,Fixed Wing,Bomber,110103,Point
-1,Military,Fixed Wing,Fighter,110104,Point
-1,Military,Fixed Wing,Fighter/Bomber,110105,Point
-1,Military,Fixed Wing,Cargo,110107,Point
-1,Military,Fixed Wing,Electronic Combat (EC)/Jammer,110108,Point
-1,Military,Fixed Wing,Tanker,110109,Point
-1,Military,Fixed Wing,Patrol,110110,Point
-1,Military,Fixed Wing,Reconnaissance,110111,Point
-1,Military,Fixed Wing,Trainer,110112,Point
-1,Military,Fixed Wing,Utility,110113,Point
-1,Military,Fixed Wing,VSTOL,110114,Point
-1,Military,Fixed Wing,Airborne Command Post (ACP),110115,Point
-1,Military,Fixed Wing,Airborne Early Warning (AEW),110116,Point
-1,Military,Fixed Wing,Antisurface Warfare,110117,Point
-1,Military,Fixed Wing,Antisubmarine Warfare,110118,Point
-1,Military,Fixed Wing,Communications,110119,Point
-1,Military,Fixed Wing,Combat Search and Rescue (CSAR),110120,Point
-1,Military,Fixed Wing,Electronic Support (ES),110121,Point
-1,Military,Fixed Wing,Government,110122,Point
-1,Military,Fixed Wing,Mine Countermeasures (MCM),110123,Point
-1,Military,Fixed Wing,Personnel Recovery,110124,Point
-1,Military,Fixed Wing,Search and Rescue,110125,Point
-1,Military,Fixed Wing,Special Operations Forces,110126,Point
-1,Military,Fixed Wing,Ultra Light,110127,Point
-1,Military,Fixed Wing,Photographic Reconnaissance,110128,Point
-1,Military,Fixed Wing,Very Important Person (VIP),110129,Point
-1,Military,Fixed Wing,Suppression of Enemy Air Defense,110130,Point
-1,Military,Fixed Wing,Passenger,110131,Point
-1,Military,Fixed Wing,Escort,110132,Point
-1,Military,Fixed Wing,Electronic Attack (EA),110133,Point
-1,Military,Rotary Wing,,110200,Point
-1,Military,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,110300,Point
-1,Military,Vertical-Takeoff UAV (VT-UAV),,110400,Point
-1,Military,Lighter Than Air,,110500,Point
-1,Military,Airship,,110600,Point
-1,Military,Tethered Lighter than Air,,110700,Point
-1,Civilian,,,120000,Point
-1,Civilian,Fixed Wing,,120100,Point
-1,Civilian,Rotary Wing,,120200,Point
-1,Civilian,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,120300,Point
-1,Civilian,Lighter Than Air,,120400,Point
-1,Civilian,Airship,,120500,Point
-1,Civilian,Tethered Lighter than Air,,120600,Point
-1,Weapon,,,130000,Point
-1,Weapon,Bomb,,130100,Point
-1,Weapon,Decoy,,130200,Point
-1,Manual Track,,,140000,Point
-2,Missile,,,110000,Point
-5,Military,,,110000,Point
-5,Military,Space Vehicle,,110100,Point
-5,Military,Re-Entry Vehicle,,110200,Point
-5,Military,Planet Lander,,110300,Point
-5,Military,Orbiter Shuttle,,110400,Point
-5,Military,Capsule,,110500,Point
-5,Military,Satellite General,,110600,Point
-5,Military,Satellite,,110700,Point
-5,Military,Antisatellite Weapon,,110800,Point
-5,Military,Astronomical Satellite,,110900,Point
-5,Military,Biosatellite,,111000,Point
-5,Military,Communications Satellite,,111100,Point
-5,Military,Earth Observation Satellite,,111200,Point
-5,Military,Miniaturized Satellite,,111300,Point
-5,Military,Navigational Satellite,,111400,Point
-5,Military,Reconnaissance Satellite,,111500,Point
-5,Military,Space Station,,111600,Point
-5,Military,Tethered Satellite,,111700,Point
-5,Military,Weather Satellite,,111800,Point
-5,Military,Space Launched Vehicle (SLV),,111900,Point
-5,Civilian,,,120000,Point
-5,Civilian,Orbiter Shuttle,,120100,Point
-5,Civilian,Capsule,,120200,Point
-5,Civilian,Satellite,,120300,Point
-5,Civilian,Astronomical Satellite,,120400,Point
-5,Civilian,Biosatellite,,120500,Point
-5,Civilian,Communications Satellite,,120600,Point
-5,Civilian,Earth Observation Satellite,,120700,Point
-5,Civilian,Miniaturized Satellite,,120800,Point
-5,Civilian,Navigational Satellite,,120900,Point
-5,Civilian,Space Station,,121000,Point
-5,Civilian,Tethered Satellite,,121100,Point
-5,Civilian,Weather Satellite,,121200,Point
-5,Manual Track,,,130000,Point
+01,Military,,,110000,Point
+01,Military,Fixed Wing,,110100,Point
+01,Military,Fixed Wing,Medical Evacuation (MEDEVAC),110101,Point
+01,Military,Fixed Wing,Attack/Strike,110102,Point
+01,Military,Fixed Wing,Bomber,110103,Point
+01,Military,Fixed Wing,Fighter,110104,Point
+01,Military,Fixed Wing,Fighter/Bomber,110105,Point
+01,Military,Fixed Wing,Cargo,110107,Point
+01,Military,Fixed Wing,Electronic Combat (EC)/Jammer,110108,Point
+01,Military,Fixed Wing,Tanker,110109,Point
+01,Military,Fixed Wing,Patrol,110110,Point
+01,Military,Fixed Wing,Reconnaissance,110111,Point
+01,Military,Fixed Wing,Trainer,110112,Point
+01,Military,Fixed Wing,Utility,110113,Point
+01,Military,Fixed Wing,VSTOL,110114,Point
+01,Military,Fixed Wing,Airborne Command Post (ACP),110115,Point
+01,Military,Fixed Wing,Airborne Early Warning (AEW),110116,Point
+01,Military,Fixed Wing,Antisurface Warfare,110117,Point
+01,Military,Fixed Wing,Antisubmarine Warfare,110118,Point
+01,Military,Fixed Wing,Communications,110119,Point
+01,Military,Fixed Wing,Combat Search and Rescue (CSAR),110120,Point
+01,Military,Fixed Wing,Electronic Support (ES),110121,Point
+01,Military,Fixed Wing,Government,110122,Point
+01,Military,Fixed Wing,Mine Countermeasures (MCM),110123,Point
+01,Military,Fixed Wing,Personnel Recovery,110124,Point
+01,Military,Fixed Wing,Search and Rescue,110125,Point
+01,Military,Fixed Wing,Special Operations Forces,110126,Point
+01,Military,Fixed Wing,Ultra Light,110127,Point
+01,Military,Fixed Wing,Photographic Reconnaissance,110128,Point
+01,Military,Fixed Wing,Very Important Person (VIP),110129,Point
+01,Military,Fixed Wing,Suppression of Enemy Air Defense,110130,Point
+01,Military,Fixed Wing,Passenger,110131,Point
+01,Military,Fixed Wing,Escort,110132,Point
+01,Military,Fixed Wing,Electronic Attack (EA),110133,Point
+01,Military,Rotary Wing,,110200,Point
+01,Military,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,110300,Point
+01,Military,Vertical-Takeoff UAV (VT-UAV),,110400,Point
+01,Military,Lighter Than Air,,110500,Point
+01,Military,Airship,,110600,Point
+01,Military,Tethered Lighter than Air,,110700,Point
+01,Civilian,,,120000,Point
+01,Civilian,Fixed Wing,,120100,Point
+01,Civilian,Rotary Wing,,120200,Point
+01,Civilian,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,120300,Point
+01,Civilian,Lighter Than Air,,120400,Point
+01,Civilian,Airship,,120500,Point
+01,Civilian,Tethered Lighter than Air,,120600,Point
+01,Weapon,,,130000,Point
+01,Weapon,Bomb,,130100,Point
+01,Weapon,Decoy,,130200,Point
+01,Manual Track,,,140000,Point
+02,Missile,,,110000,Point
+05,Military,,,110000,Point
+05,Military,Space Vehicle,,110100,Point
+05,Military,Re-Entry Vehicle,,110200,Point
+05,Military,Planet Lander,,110300,Point
+05,Military,Orbiter Shuttle,,110400,Point
+05,Military,Capsule,,110500,Point
+05,Military,Satellite General,,110600,Point
+05,Military,Satellite,,110700,Point
+05,Military,Antisatellite Weapon,,110800,Point
+05,Military,Astronomical Satellite,,110900,Point
+05,Military,Biosatellite,,111000,Point
+05,Military,Communications Satellite,,111100,Point
+05,Military,Earth Observation Satellite,,111200,Point
+05,Military,Miniaturized Satellite,,111300,Point
+05,Military,Navigational Satellite,,111400,Point
+05,Military,Reconnaissance Satellite,,111500,Point
+05,Military,Space Station,,111600,Point
+05,Military,Tethered Satellite,,111700,Point
+05,Military,Weather Satellite,,111800,Point
+05,Military,Space Launched Vehicle (SLV),,111900,Point
+05,Civilian,,,120000,Point
+05,Civilian,Orbiter Shuttle,,120100,Point
+05,Civilian,Capsule,,120200,Point
+05,Civilian,Satellite,,120300,Point
+05,Civilian,Astronomical Satellite,,120400,Point
+05,Civilian,Biosatellite,,120500,Point
+05,Civilian,Communications Satellite,,120600,Point
+05,Civilian,Earth Observation Satellite,,120700,Point
+05,Civilian,Miniaturized Satellite,,120800,Point
+05,Civilian,Navigational Satellite,,120900,Point
+05,Civilian,Space Station,,121000,Point
+05,Civilian,Tethered Satellite,,121100,Point
+05,Civilian,Weather Satellite,,121200,Point
+05,Manual Track,,,130000,Point
 10,Command and Control,,,110000,Point
 10,Command and Control,Broadcast Transmitter Antennae,,110100,Point
 10,Command and Control,Civil Affairs ,,110200,Point
