@@ -68,6 +68,11 @@ namespace Library2525D
         }
         protected string code = null;
 
+        // HACK: Having this "Name" Attribute here is somewhat of a hack
+        // It just allows a readable form of this to be set like:
+        // "SymbolSet : Entity : EntityType : EntitySubType : Modifier1 : Modifier2"
+        // "Air : Military : Fixed Wing : Bomber : Light"
+        // TODO: Find a better way to have this set automatically (maybe by moving to MilitarySymbol)
         public string Name
         {
             get
@@ -77,6 +82,10 @@ namespace Library2525D
             set
             {
                 name = value;
+
+                // HACK: TODO: fix - remove any empy " : "
+                if (!string.IsNullOrEmpty(name))
+                    name = name.Replace(" :  : ", " : ");
             }
         }
         protected string name = null;
@@ -294,14 +303,18 @@ namespace Library2525D
             {
                 tags.Clear();
 
-                if (this.Affiliation != StandardIdentityAffiliationType.NotSet)
-                    tags.Add(this.Affiliation.ToString());
+                // TOTAL HACK: TODO: FIX
+                if (!MilitarySymbol.FormatTagsForStyleFiles)
+                    if (this.Affiliation != StandardIdentityAffiliationType.NotSet)
+                        tags.Add(this.Affiliation.ToString());
 
                 if (this.SymbolSet != SymbolSetType.NotSet)
                     tags.Add(this.SymbolSet.ToString());
 
-                if (this.Status != StatusType.NotSet)
-                    tags.Add(this.Status.ToString());
+                // TOTAL HACK: TODO: FIX
+                if (!MilitarySymbol.FormatTagsForStyleFiles)
+                    if (this.Status != StatusType.NotSet)
+                        tags.Add(this.Status.ToString());
 
                 if (this.HeadquartersTaskForceDummy != HeadquartersTaskForceDummyType.NoHQTFDummyModifier)
                     tags.Add(this.HeadquartersTaskForceDummy.ToString());

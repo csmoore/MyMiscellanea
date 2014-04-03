@@ -190,7 +190,7 @@ namespace Library2525D
     {
         public static string NameSeparator
         {
-            get { return "~"; }
+            get { return " : "; }
         }
 
         public static Dictionary<StandardIdentityAffiliationType, string> AffiliationTypeToImageName =

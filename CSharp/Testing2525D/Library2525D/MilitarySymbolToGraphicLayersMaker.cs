@@ -46,13 +46,141 @@ namespace Library2525D
 
         // TODO/IMPORTANT: 
         // You must uncomment & set this to the location on your machine if you don't want to use the default
-        // private static readonly string ALTERNATE_PATH = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]";
+        private static readonly string ALTERNATE_PATH = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]";
 
         public static readonly string ImageFilesHome =
-            DEFAULT_PATH // <-- TODO: SET THIS to ALTERNATE_PATH if you don't want to use default
+            // ALTERNATE_PATH // <-- TODO: SET THIS to ALTERNATE_PATH if you don't want to use default
+            DEFAULT_PATH      // (and comment out this) 
             + System.IO.Path.DirectorySeparatorChar; // NOTE: Ends in DirectorySeparator
 
         const string ImageSuffix = ".svg";
+
+        public static string GetIconFolderName(SymbolSetType symbolSet)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("Appendices");
+            sb.Append(System.IO.Path.DirectorySeparatorChar);
+
+            string symbolSetSubFolderName = string.Empty;
+            if (TypeUtilities.SymbolSetToFolderName.ContainsKey(symbolSet))
+                symbolSetSubFolderName = TypeUtilities.SymbolSetToFolderName[symbolSet];
+
+            sb.Append(symbolSetSubFolderName);
+            sb.Append(System.IO.Path.DirectorySeparatorChar);
+
+            return sb.ToString();
+        }
+
+        public static string GetMainIconName(ref MilitarySymbol milSymbol)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2);
+            sb.Append(symbolSetString);
+            sb.Append(milSymbol.Id.FullEntityCode);
+
+            return sb.ToString();
+        }
+
+        public static string GetMainIconNameWithFolder(ref MilitarySymbol milSymbol)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            string currentAppendixHome = GetIconFolderName(milSymbol.Id.SymbolSet);
+            sb.Append(currentAppendixHome);
+
+            string mainIconName = GetMainIconName(ref milSymbol);
+
+            sb.Append(mainIconName);
+            sb.Append(ImageSuffix);
+
+            return sb.ToString();
+        }
+
+        public static string GetModfierIconName(SymbolSetType symbolSet, int modifierNumber, int modifierCodeInt)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            if (!((modifierNumber == 1) || (modifierNumber == 2)))
+                return string.Empty;
+
+            string sModifierNumber = modifierNumber.ToString();
+
+            string modifierCode = modifierCodeInt.ToString();
+            // this one has to be 2 chars:
+            if (modifierCode.Length < 2)
+                modifierCode = modifierCode.PadLeft(2, '0');
+
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+
+            string modifierIcon = symbolSetString + modifierCode + sModifierNumber;
+            sb.Append(modifierIcon);
+
+            return sb.ToString();
+        }
+
+        public static string GetModfierIconName(ref MilitarySymbol milSymbol, int modifierNumber)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            if (!((modifierNumber == 1) || (modifierNumber == 2)))
+                return string.Empty;
+
+            string sModifierNumber = "1";
+            string sModifier = milSymbol.Id.FirstModifier;
+
+            if (modifierNumber == 2)
+            {
+                sModifierNumber = "2";
+                sModifier = milSymbol.Id.SecondModifier;
+            }
+
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2);
+
+            string modifierIcon = symbolSetString + sModifier + sModifierNumber;
+            sb.Append(modifierIcon);
+
+            return sb.ToString();
+        }
+
+        public static string GetModfierIconNameWithFolder(SymbolSetType symbolSet, int modifierNumber, int modifierCodeInt)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            if (!((modifierNumber == 1) || (modifierNumber == 2)))
+                return string.Empty;
+
+            string sSubFolderName = "mod" + modifierNumber.ToString();
+
+            string currentAppendixHome = GetIconFolderName(symbolSet);
+            sb.Append(currentAppendixHome);
+
+            sb.Append(sSubFolderName);
+            sb.Append(System.IO.Path.DirectorySeparatorChar);
+
+            string modifierIcon = GetModfierIconName(symbolSet, modifierNumber, modifierCodeInt);
+            sb.Append(modifierIcon);
+
+            sb.Append(ImageSuffix);
+
+            return sb.ToString();
+        }
+
+        public static string GetModfierIconNameWithFolder(ref MilitarySymbol milSymbol, int modifierNumber)
+        {
+            if (!((modifierNumber == 1) || (modifierNumber == 2)))
+                return string.Empty;
+
+            string sModifierCode = (modifierNumber == 1) ? milSymbol.Id.FirstModifier : milSymbol.Id.SecondModifier;
+
+            int modifierCodeInt = Convert.ToInt32(sModifierCode);
+
+            string modifierIconNameWithFolder = GetModfierIconNameWithFolder(
+                milSymbol.Id.SymbolSet, modifierNumber, modifierCodeInt);
+
+            return modifierIconNameWithFolder;
+        }
 
         public static bool SetMilitarySymbolGraphicLayers(ref MilitarySymbol milSymbol)
         {
@@ -82,8 +210,11 @@ namespace Library2525D
 
             string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2);
             sb.Append(symbolSetString);
-            string affilName = TypeUtilities.AffiliationTypeToImageName[milSymbol.Id.Affiliation];
-            sb.Append("(" + affilName + ")");
+
+            //no longer there as of 3/14 - (but exercise/sim is)
+            //string affilName = TypeUtilities.AffiliationTypeToImageName[milSymbol.Id.Affiliation];
+            //sb.Append("(" + affilName + ")");
+
             sb.Append(ImageSuffix);
 
             milSymbol.GraphicLayers.Add(sb.ToString());
@@ -93,63 +224,46 @@ namespace Library2525D
 
             sb.Clear();
             sb.Append(ImageFilesHome);
-            sb.Append("Appendices");
 
-            sb.Append(System.IO.Path.DirectorySeparatorChar);
-
-            string symbolSetSubFolderName = string.Empty;
-            if (TypeUtilities.SymbolSetToFolderName.ContainsKey(milSymbol.Id.SymbolSet))
-                symbolSetSubFolderName = TypeUtilities.SymbolSetToFolderName[milSymbol.Id.SymbolSet];
-
-            sb.Append(symbolSetSubFolderName);
-            sb.Append(System.IO.Path.DirectorySeparatorChar);
-
-            // Save this for later below (Modifiers)
-            string currentAppendixHome = sb.ToString();
-
-            sb.Append(symbolSetString);
-            sb.Append(milSymbol.Id.FullEntityCode);
-
-            sb.Append(ImageSuffix);
+            string mainIconNameWithFolder = GetMainIconNameWithFolder(ref milSymbol);
+            sb.Append(mainIconNameWithFolder);
             milSymbol.GraphicLayers.Add(sb.ToString());
 
             // 
-            // TODO: Stop here for Control Measures & 
+            // TODO: Stop here for Control Measures (Lines/Areas for now) & 
             //       Figure out which of the additional layers apply for which sets
             //
+            if ((milSymbol.Shape == ShapeType.Line) || (milSymbol.Shape == ShapeType.Area))
+                return true;
 
-            // Modifiers: { # = 1 | 2 }
+            // Center/Main Icon Modifiers: { # = 1 | 2 }
             // Appendices\{SymbolSetTypeName}\Mod{#}\{SymbolSetType} + {ModifierCode} + {#}
 
             // Main Icon Modfier 1
-
             if (!string.IsNullOrEmpty(milSymbol.Id.FirstModifier))
             {
                 sb.Clear();
-                sb.Append(currentAppendixHome);
-                sb.Append("mod1");
-                sb.Append(System.IO.Path.DirectorySeparatorChar);
+                sb.Append(ImageFilesHome);
 
-                string mod1 = symbolSetString + milSymbol.Id.FirstModifier + "1";
-                sb.Append(mod1);
+                string modifierIconNameWithFolder = 
+                    MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
+                        ref milSymbol, 1);
 
-                sb.Append(ImageSuffix);
+                sb.Append(modifierIconNameWithFolder);
                 milSymbol.GraphicLayers.Add(sb.ToString());
             }
 
             // Main Icon Modfier 2
-
             if (!string.IsNullOrEmpty(milSymbol.Id.SecondModifier))
             {
                 sb.Clear();
-                sb.Append(currentAppendixHome);
-                sb.Append("mod2");
-                sb.Append(System.IO.Path.DirectorySeparatorChar);
+                sb.Append(ImageFilesHome);
 
-                string mod2 = symbolSetString + milSymbol.Id.SecondModifier + "2";
-                sb.Append(mod2);
+                string modifierIconNameWithFolder =
+                    MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
+                        ref milSymbol, 2);
 
-                sb.Append(ImageSuffix);
+                sb.Append(modifierIconNameWithFolder);
                 milSymbol.GraphicLayers.Add(sb.ToString());
             }
 
@@ -168,7 +282,6 @@ namespace Library2525D
             sb.Append(ImageSuffix);
             milSymbol.GraphicLayers.Add(sb.ToString());
 
-
             // Headquarters/TF/FD Modifier
 
             // TODO
@@ -181,7 +294,6 @@ namespace Library2525D
                 return true;
 
         }
-
 
     }
 }

@@ -51,6 +51,8 @@ namespace MilSymbolPicker
         string currentModifier1Name = string.Empty;
         string currentModifier2Name = string.Empty;
 
+        string NOT_SET = "NONE/NOT SET";
+
         MilitarySymbol currentSymbol = new MilitarySymbol();
 
         public enum PaneSequenceType  // Order of the button panes
@@ -178,6 +180,10 @@ namespace MilSymbolPicker
                         button31.Text = string.Empty;
                         button31.PerformClick();
                     }
+                    else
+                    {
+                        currentColValues.Add(NOT_SET);
+                    }
 
                     currentColRowIndex = 0;
 
@@ -288,41 +294,62 @@ namespace MilSymbolPicker
             }
             else if (currentPane == PaneSequenceType.EntityPane)
             {
-                currentEntityName = valueSelected;
+                if (valueSelected == NOT_SET)
+                {
+                    currentPane = PaneSequenceType.Modifier1Pane;
+                }
+                else
+                {
+                    currentEntityName = valueSelected;
 
-                currentSymbol.Id.Name = currentEntityName;
-                string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet, currentEntityName);
+                    currentSymbol.Id.Name = currentEntityName;
+                    string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet, currentEntityName);
 
-                currentSymbol.Id.FullEntityCode = entityCode;
+                    currentSymbol.Id.FullEntityCode = entityCode;
 
-                currentPane = PaneSequenceType.EntityTypePane;
+                    currentPane = PaneSequenceType.EntityTypePane;
+                }
             }
             else if (currentPane == PaneSequenceType.EntityTypePane)
             {
-                currentEntityTypeName = valueSelected;
+                if (valueSelected == NOT_SET)
+                {
+                    currentPane = PaneSequenceType.Modifier1Pane;
+                }
+                else
+                {
+                    currentEntityTypeName = valueSelected;
 
-                currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator + currentEntityTypeName;
+                    currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator + currentEntityTypeName;
 
-                string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet,
-                    currentEntityName, currentEntityTypeName);
+                    string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet,
+                        currentEntityName, currentEntityTypeName);
 
-                currentSymbol.Id.FullEntityCode = entityCode;
+                    currentSymbol.Id.FullEntityCode = entityCode;
 
-                currentPane = PaneSequenceType.EntitySubTypePane; 
+                    currentPane = PaneSequenceType.EntitySubTypePane;
+                }
             }
             else if (currentPane == PaneSequenceType.EntitySubTypePane)
             {
-                currentEntitySubTypeName = valueSelected;
+                if (valueSelected == NOT_SET)
+                {
+                    currentPane = PaneSequenceType.Modifier1Pane;
+                }
+                else
+                {
+                    currentEntitySubTypeName = valueSelected;
 
-                currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator
-                    + currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName;
+                    currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator
+                        + currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName;
 
-                string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet,
-                    currentEntityName, currentEntityTypeName, currentEntitySubTypeName);
+                    string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet,
+                        currentEntityName, currentEntityTypeName, currentEntitySubTypeName);
 
-                currentSymbol.Id.FullEntityCode = entityCode;
+                    currentSymbol.Id.FullEntityCode = entityCode;
 
-                currentPane = PaneSequenceType.Modifier1Pane;
+                    currentPane = PaneSequenceType.Modifier1Pane;
+                }
             }
             else if (currentPane == PaneSequenceType.Modifier1Pane)
             {

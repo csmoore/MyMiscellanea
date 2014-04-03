@@ -118,7 +118,7 @@ namespace Library2525D
                 string entityTypePart = row["EntityType"] as string;
                 string entitySubTypePart = row["EntitySubType"] as string;
 
-                MilitarySymbol createSymbol = CreateSymbolFromStringProperties(
+                MilitarySymbol createSymbol = CreateSymbolFromStringProperties(symbolSet, 
                     affiliation, symbolSetString, entityCode, geoType,
                     entityPart, entityTypePart, entitySubTypePart);
 
@@ -330,10 +330,10 @@ namespace Library2525D
             if (symbolSet != SymbolSetType.NotSet)
             {
                 // filter results if this is set
-                string symbolSetToSeach = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+                string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
                 results = from row in results
-                          where (row.Field<string>("SymbolSet") == symbolSetToSeach)
+                          where (row.Field<string>("SymbolSet") == symbolSetToSearch)
                               select row;
             }
 
@@ -341,7 +341,7 @@ namespace Library2525D
 
             if (resultCount < 1)
             {
-                System.Diagnostics.Trace.WriteLine("Entity Name note found: " + entityName +
+                System.Diagnostics.Trace.WriteLine("Entity Name not found: " + entityName +
                     " in SymbolSet: " + symbolSet);
                 return null;
             }
@@ -358,7 +358,7 @@ namespace Library2525D
                 string entityTypePart    = row["EntityType"] as string;
                 string entitySubTypePart = row["EntitySubType"] as string;
 
-                retSymbol = CreateSymbolFromStringProperties(
+                retSymbol = CreateSymbolFromStringProperties(symbolSet, 
                     affiliation, symbolSetString, entityCode, geoType,
                     entityPart, entityTypePart, entitySubTypePart);
 
@@ -370,6 +370,7 @@ namespace Library2525D
         }
 
         public MilitarySymbol CreateSymbolFromStringProperties(
+            SymbolSetType symbolSet,
             StandardIdentityAffiliationType affiliation,
             string symbolSetString, string entityCode, string geoType,
             string entityPart, string entityTypePart, string entitySubTypePart)
@@ -381,14 +382,25 @@ namespace Library2525D
             sidc.SymbolSetAsString = symbolSetString;
             sidc.FullEntityCode = entityCode;
 
+            string symbolSetName = symbolSet.ToString().Replace("_", " ");
+
             StringBuilder nameBuilder = new StringBuilder();
+
+            if (!string.IsNullOrEmpty(symbolSetString) && symbolSetString.Length > 0)
+                nameBuilder.Append(symbolSetName);
+
             if (!string.IsNullOrEmpty(entityPart) && entityPart.Length > 0)
+            {
+                nameBuilder.Append(TypeUtilities.NameSeparator);
                 nameBuilder.Append(entityPart);
+            }
+
             if (!string.IsNullOrEmpty(entityTypePart) && entityTypePart.Length > 0)
             {
                 nameBuilder.Append(TypeUtilities.NameSeparator);
                 nameBuilder.Append(entityTypePart);
             }
+
             if (!string.IsNullOrEmpty(entitySubTypePart) && entitySubTypePart.Length > 0)
             {
                 nameBuilder.Append(TypeUtilities.NameSeparator);

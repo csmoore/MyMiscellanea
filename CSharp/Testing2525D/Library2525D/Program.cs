@@ -49,6 +49,9 @@ namespace Library2525D
 
             Console.WriteLine("Looking for Type: " + typeToExportUpper);
 
+            // HACK:
+            MilitarySymbol.FormatTagsForStyleFiles = true;
+
             bool found = false;
 
             Assembly myAssembly = Assembly.GetExecutingAssembly();
@@ -94,7 +97,7 @@ namespace Library2525D
             SymbolLookup symbolLookup = new SymbolLookup();
             symbolLookup.Initialize();
 
-            if (!symbolLookup.Initialized) // should not happy, but you never know
+            if (!symbolLookup.Initialized) // should not happen, but you never know
             {
                 System.Diagnostics.Trace.WriteLine("Failed to initialize symbol list, exiting...");
                 return;
@@ -128,9 +131,43 @@ namespace Library2525D
 
         }
 
+        private static void PrintModifier(SymbolSetType symbolSet, int modifierNumber, int modifierCode, string modifierName)
+        {
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+
+            string sModifierCode = modifierCode.ToString();
+            // this one has to be 2 chars:
+            if (sModifierCode.Length < 2)
+                sModifierCode = sModifierCode.PadLeft(2, '0');
+
+            string fullModifierName = symbolSet.ToString() + TypeUtilities.NameSeparator +
+                "Modifier " + modifierNumber.ToString() + TypeUtilities.NameSeparator +
+                modifierName;
+
+            string modifierIconName = MilitarySymbolToGraphicLayersMaker.GetModfierIconName(
+                symbolSet, modifierNumber, modifierCode);
+
+            string modifierIconNameWithFolder = MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
+                symbolSet, modifierNumber, modifierCode);
+
+            string nameAsTags = fullModifierName.Replace(TypeUtilities.NameSeparator, ";");
+
+            string tags = nameAsTags + ";" + modifierIconNameWithFolder + ";" +
+                          fullModifierName + ";" + modifierIconName;
+
+            Console.WriteLine(modifierCode + "," + symbolSet + "," + symbolSetString 
+                + "," + modifierNumber.ToString() + "," + sModifierCode
+                + "," + modifierIconNameWithFolder
+                + "," + fullModifierName
+                + "," + modifierIconName 
+                + "," + tags);
+        }
+
         private static void ListSymbolSet(SymbolLookup symbolLookup, SymbolSetType symbolSet)
         {
-            Console.WriteLine(Environment.NewLine + "SymbolSet: " + symbolSet);
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+
+            Console.WriteLine(Environment.NewLine + "SymbolSet: " + symbolSet + " : " + symbolSetString);
             
             Console.WriteLine("Entities:");
 
@@ -143,10 +180,22 @@ namespace Library2525D
             {
                 matchCount++;
 
-                Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
+                // Copying so making ref below useless, but had to do this because of use of iterator/ref
+                MilitarySymbol currentMilSymbol = matchSymbol; 
+                string svgTag = MilitarySymbolToGraphicLayersMaker.GetMainIconNameWithFolder(ref currentMilSymbol);
+                string idTag = MilitarySymbolToGraphicLayersMaker.GetMainIconName(ref currentMilSymbol);
+
+                string nameAsTags = matchSymbol.Id.Name.Replace(TypeUtilities.NameSeparator, ";");
+
+                Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSetString
                     + "," + matchSymbol.Id.Name + ","
-                    + matchSymbol.Id.CodeFirstTen + "," + matchSymbol.Id.CodeSecondTen + ","
-                    + matchSymbol.TagsAsString);
+//                    + matchSymbol.Id.CodeFirstTen + "," + matchSymbol.Id.CodeSecondTen + ","
+                    + nameAsTags + ";"
+                    + matchSymbol.TagsAsString + svgTag + ";"
+                    + matchSymbol.Id.Name + ";"
+                    + idTag
+
+                    + "," + svgTag);
             }
 
             List<string> matchingModifiers = symbolLookup.GetDistinctModifierNames(symbolSet, 1);
@@ -158,9 +207,8 @@ namespace Library2525D
                 matchCount = 0;
                 foreach (string match in matchingModifiers)
                 {
+                    PrintModifier(symbolSet, 1, matchCount, match);
                     matchCount++;
-                    Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
-                        + ",1," + match);
                 }
             }
 
@@ -172,9 +220,9 @@ namespace Library2525D
                 matchCount = 0;
                 foreach (string match in matchingModifiers)
                 {
+                    PrintModifier(symbolSet, 2, matchCount, match);
+
                     matchCount++;
-                    Console.WriteLine(matchCount + "," + symbolSet + "," + symbolSet.GetHashCode()
-                        + ",2," + match);
                 }
             }
 

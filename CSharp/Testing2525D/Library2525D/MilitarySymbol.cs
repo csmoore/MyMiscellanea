@@ -18,7 +18,8 @@ using System.Threading.Tasks;
 namespace Library2525D
 {
     /// <summary>
-    /// Container for attributes of a 2525D Military Symbol (Code, Tags, ShapeType, etc.)
+    /// Container/aggregator for all of the attributes of a 2525D Military Symbol 
+    /// Ex: SymbolIdCode, GraphicLayer, Tags, ShapeType, etc.
     /// </summary>
     public class MilitarySymbol
     {
@@ -62,26 +63,40 @@ namespace Library2525D
         }
         protected List<string> graphicLayers = new List<string>();
 
+        public static bool FormatTagsForStyleFiles
+        {
+            get
+            {
+                return formatTagsForStyleFiles;
+            }
+            set
+            {
+                formatTagsForStyleFiles = value;
+            }
+        }
+        private static bool formatTagsForStyleFiles = false;
+
         public List<string> Tags
         {
             get
             {
                 tags.Clear();
 
-                if (this.id != null)
-                    tags.AddRange(this.id.Tags);
+                if (!formatTagsForStyleFiles)
+                    if (this.id != null)
+                        tags.AddRange(this.id.Tags);
 
                 if (this.Shape != ShapeType.Unknown)
                     tags.Add(this.Shape.ToString());
-
 
                 // TODO: Add Other Desired Tags
 
 
                 // TRICKY: the old Tag format assumed that the SIDC was always last, 
                 //         not sure if that is still the convention (but putting last just in case)
-                if (this.Id.IsValid)
-                    tags.Add(this.Id.ToString());
+                if (!formatTagsForStyleFiles)
+                    if (this.Id.IsValid)
+                        tags.Add(this.Id.ToString());
 
                 return tags;
             }
