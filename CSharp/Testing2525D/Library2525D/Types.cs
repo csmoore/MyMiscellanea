@@ -193,6 +193,7 @@ namespace Library2525D
             get { return " : "; }
         }
 
+//TODO: remove - probably no longer needed:
         public static Dictionary<StandardIdentityAffiliationType, string> AffiliationTypeToImageName =
             new Dictionary<StandardIdentityAffiliationType, string>()
             {
@@ -220,29 +221,28 @@ namespace Library2525D
             { SymbolSetType.Land_Equipment, "Land" },
             { SymbolSetType.Land_Installation, "Land" },
 
-            { SymbolSetType.Control_Measure, "Control Measures" },
+            { SymbolSetType.Control_Measure, "ControlMeasures" },
 
             { SymbolSetType.Cyberspace, "Cyberspace" },
 
-            { SymbolSetType.Meteorological_Space, "METOC" },
+            { SymbolSetType.Atmospheric, @"METOC\Atmospheric" },
+            { SymbolSetType.Oceanographic, @"METOC\Oceanographic" },
+            { SymbolSetType.Meteorological_Space, @"METOC\Space" },
 
             { SymbolSetType.Sea_Surface, "SeaSurface" },
             { SymbolSetType.Sea_Subsurface, "Subsurface" },
+
+            // TODO: Figure out the remaining missing/unmapped ones....
+            // Missing Types Mapping:
+            // Mine_Warfare = 36
+
+            { SymbolSetType.Activities, "Activities" }, 
 
             { SymbolSetType.Signals_Intelligence_Space, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Air, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Land, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Surface, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Subsurface, "SigInt" }
-
-            // TODO: Figure out the remaining missing/unmapped ones....
-            // Missing Folder Mapping:
-            // { SymbolSetType.XXX, "StabOps" },
-            // Missing Types Mapping:
-            // Mine_Warfare = 36,
-            // Activities = 40,
-            // Atmospheric = 45,
-            // Oceanographic = 46
 
         }; //  end SymbolSetToFolderName dictionary declaration
 
