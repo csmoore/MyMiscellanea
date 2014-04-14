@@ -51,7 +51,7 @@ namespace Library2525D
         public static readonly string ImageFilesHome =
             // ALTERNATE_PATH // <-- TODO: SET THIS to ALTERNATE_PATH if you don't want to use default
             DEFAULT_PATH      // (and comment out this) 
-            + System.IO.Path.DirectorySeparatorChar; // NOTE: Ends in DirectorySeparator
+            + System.IO.Path.DirectorySeparatorChar; // IMPORTANT/NOTE: Ends in DirectorySeparator
 
         const string ImageSuffix = ".svg";
 
@@ -196,97 +196,135 @@ namespace Library2525D
 
             milSymbol.GraphicLayers.Clear();
 
+            //////////////////////////////////////////////////////////////////////////
             // Frame Layer 
             // = StandardIdentityAffiliationType + SymbolSetType + "(affiliation)"
             // ex. 0520(hostile)
             StringBuilder sb = new StringBuilder();
 
-            sb.Append(ImageFilesHome);
-            sb.Append("Frames");
-            sb.Append(System.IO.Path.DirectorySeparatorChar);
-
+            // Note: affiliationString reused below
             string affiliationString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.Affiliation, 2);
-            sb.Append(affiliationString);
 
-            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2);
-            sb.Append(symbolSetString);
+            if (TypeUtilities.HasFrame(milSymbol.Id.SymbolSet))
+            {
+                sb.Append(ImageFilesHome);
+                sb.Append("Frames");
+                sb.Append(System.IO.Path.DirectorySeparatorChar);
 
-            //no longer there as of 3/14 - (but exercise/sim is)
-            //string affilName = TypeUtilities.AffiliationTypeToImageName[milSymbol.Id.Affiliation];
-            //sb.Append("(" + affilName + ")");
+                sb.Append(affiliationString);
 
-            sb.Append(ImageSuffix);
+                string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2);
+                sb.Append(symbolSetString);
 
-            milSymbol.GraphicLayers.Add(sb.ToString());
+                // TODO: exercise/sim frames
 
+                sb.Append(ImageSuffix);
+
+                milSymbol.GraphicLayers.Add(sb.ToString());
+            }
+            //////////////////////////////////////////////////////////////////////////
+
+            //////////////////////////////////////////////////////////////////////////
             // Main Icon Layer
             // Appendices\{SymbolSetTypeName}\SymbolSetType + EntityCode 
 
             sb.Clear();
             sb.Append(ImageFilesHome);
 
-            string mainIconNameWithFolder = GetMainIconNameWithFolder(ref milSymbol);
-            sb.Append(mainIconNameWithFolder);
-            milSymbol.GraphicLayers.Add(sb.ToString());
+            string mainIconNameWithoutFolder = GetMainIconNameWithFolder(ref milSymbol);
+            sb.Append(mainIconNameWithoutFolder);
 
-            // 
-            // TODO: Stop here for Control Measures (Lines/Areas for now) & 
-            //       Figure out which of the additional layers apply for which sets
+            string mainIconNameWithFolder = sb.ToString();
+            // WORKAROUND/TRICKY: some symbols have wacky _0, _1, _2, _3 thing instead of base version
+            if (!System.IO.File.Exists(mainIconNameWithFolder))
+            {
+                string subMainIconName = mainIconNameWithFolder;
+                subMainIconName = subMainIconName.Replace(@".svg", @"_0.svg");
+                if (System.IO.File.Exists(subMainIconName)) // if the other file exists, use that one
+                    mainIconNameWithFolder = subMainIconName;
+            }
+
+            milSymbol.GraphicLayers.Add(mainIconNameWithFolder);
+            //////////////////////////////////////////////////////////////////////////
+
+            //////////////////////////////////////////////////////////////////////////
+            // Skip the remaining if no more layers needed
             //
-            if ((milSymbol.Shape == ShapeType.Line) || (milSymbol.Shape == ShapeType.Area))
-                return true;
+            // TODO: Verify this logic
+            //       Stop here for Control Measures (Lines/Areas for now) & 
+            //       Symbols *without* frames
+            //
+            bool skipRemainingLayers = false;
+            if ((milSymbol.Shape == ShapeType.Line) || (milSymbol.Shape == ShapeType.Area) || 
+                (!TypeUtilities.HasFrame(milSymbol.Id.SymbolSet)))
+                skipRemainingLayers = true;
 
-            // Center/Main Icon Modifiers: { # = 1 | 2 }
-            // Appendices\{SymbolSetTypeName}\Mod{#}\{SymbolSetType} + {ModifierCode} + {#}
-
-            // Main Icon Modfier 1
-            if (!string.IsNullOrEmpty(milSymbol.Id.FirstModifier))
+            if (!skipRemainingLayers)
             {
-                sb.Clear();
-                sb.Append(ImageFilesHome);
+                // Center/Main Icon Modifiers: { # = 1 | 2 }
+                // Appendices\{SymbolSetTypeName}\Mod{#}\{SymbolSetType} + {ModifierCode} + {#}
 
-                string modifierIconNameWithFolder = 
-                    MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
-                        ref milSymbol, 1);
+                // Main Icon Modfier 1
+                if (!string.IsNullOrEmpty(milSymbol.Id.FirstModifier)
+                    && (milSymbol.Id.FirstModifier != "00")) // TODO: find better way of checking that this isn't set/valid
+                {
+                    sb.Clear();
+                    sb.Append(ImageFilesHome);
 
-                sb.Append(modifierIconNameWithFolder);
-                milSymbol.GraphicLayers.Add(sb.ToString());
-            }
+                    string modifierIconNameWithFolder =
+                        MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
+                            ref milSymbol, 1);
 
-            // Main Icon Modfier 2
-            if (!string.IsNullOrEmpty(milSymbol.Id.SecondModifier))
+                    sb.Append(modifierIconNameWithFolder);
+                    milSymbol.GraphicLayers.Add(sb.ToString());
+                }
+
+                // Main Icon Modfier 2
+                if (!string.IsNullOrEmpty(milSymbol.Id.SecondModifier)
+                    && (milSymbol.Id.SecondModifier != "00")) // TODO: find better way of checking that this isn't set/valid
+                {
+                    sb.Clear();
+                    sb.Append(ImageFilesHome);
+
+                    string modifierIconNameWithFolder =
+                        MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
+                            ref milSymbol, 2);
+
+                    sb.Append(modifierIconNameWithFolder);
+                    milSymbol.GraphicLayers.Add(sb.ToString());
+                }
+
+                // Echelon Modifier
+
+                // = StandardIdentityAffiliationType + "100" (not sure what this is) + EchelonMobilityType
+                // ex. Friend Team_Crew = 0310011
+
+                if (milSymbol.Id.EchelonMobility != EchelonMobilityType.NoEchelonMobility)
+                {
+                    sb.Clear();
+                    sb.Append(ImageFilesHome);
+                    sb.Append("Echelon");
+                    sb.Append(System.IO.Path.DirectorySeparatorChar);
+                    sb.Append(affiliationString);
+                    sb.Append("100");
+                    sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.EchelonMobility, 2));
+                    sb.Append(ImageSuffix);
+                    milSymbol.GraphicLayers.Add(sb.ToString());
+                }
+
+                // Headquarters/TF/FD Modifier
+
+                // TODO
+
+                // Other?
+            } // end skipRemainingLayers
+
+            //TODO: look at the layers to see if any do not exist:
+            foreach (string graphicLayer in milSymbol.GraphicLayers)
             {
-                sb.Clear();
-                sb.Append(ImageFilesHome);
-
-                string modifierIconNameWithFolder =
-                    MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
-                        ref milSymbol, 2);
-
-                sb.Append(modifierIconNameWithFolder);
-                milSymbol.GraphicLayers.Add(sb.ToString());
+                if (!System.IO.File.Exists(graphicLayer))
+                    System.Diagnostics.Trace.WriteLine("SetMilitarySymbolGraphicLayers: Could not find layer: " + graphicLayer);
             }
-
-            // Echelon Modifier
-
-            // = StandardIdentityAffiliationType + "100" (not sure what this is) + EchelonMobilityType
-            // ex. Friend Team_Crew = 0310011
-
-            sb.Clear();
-            sb.Append(ImageFilesHome);
-            sb.Append("Echelon");
-            sb.Append(System.IO.Path.DirectorySeparatorChar);
-            sb.Append(affiliationString);
-            sb.Append("100");
-            sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.EchelonMobility, 2));
-            sb.Append(ImageSuffix);
-            milSymbol.GraphicLayers.Add(sb.ToString());
-
-            // Headquarters/TF/FD Modifier
-
-            // TODO
-
-            // Other?
 
             if (milSymbol.GraphicLayers.Count == 0)
                 return false;

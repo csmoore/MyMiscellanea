@@ -124,7 +124,7 @@ namespace Library2525D
     public enum EchelonMobilityType     // Amplifier 1, 2 (Digit 9 & 10)
     {
         NoEchelonMobility = 0,
-        Echelon_At_Brigade_And_Below = 10,
+        // Echelon_At_Brigade_And_Below = 10,
         Team_Crew = 11,
         Squad = 12,
         Section = 13,
@@ -134,7 +134,7 @@ namespace Library2525D
         Regiment_Group = 17,
         Brigade = 18,
 
-        Echelon_At_Division_And_Above = 20,
+        // Echelon_At_Division_And_Above = 20,
         Division = 21,
         Corps_MEF = 22,
         Army = 23,
@@ -142,7 +142,7 @@ namespace Library2525D
         Region_Theater = 25,
         Command = 26,
 
-        Equipment_Mobility_On_Land = 30,
+        // Equipment_Mobility_On_Land = 30,
         Wheeled_Limited_Cross_Country = 31,
         Wheeled_Cross_Country = 32,
         Tracked = 33,
@@ -151,15 +151,15 @@ namespace Library2525D
         Rail = 36,
         Pack_Animals = 37,
 
-        Equipment_Mobility_On_Snow = 40,
+        // Equipment_Mobility_On_Snow = 40,
         Over_Snow_Prime_Mover = 41,
         Sled = 42,
 
-        Equipment_Mobility_On_Water = 50,
+        // Equipment_Mobility_On_Water = 50,
         Barge = 51,
         Amphibious = 52,
 
-        Naval_Towed_Array = 60,
+        // Naval_Towed_Array = 60,
         Short_Towed_Array = 61,
         Long_Towed_Array = 62,
     }
@@ -191,6 +191,27 @@ namespace Library2525D
         public static string NameSeparator
         {
             get { return " : "; }
+        }
+
+        public static bool HasFrame(SymbolSetType symbolSet)
+        {
+            bool hasFrame = false;
+
+            switch (symbolSet)
+            {
+                case SymbolSetType.Control_Measure : 
+                case SymbolSetType.Atmospheric :
+                case SymbolSetType.Oceanographic :
+                case SymbolSetType.Meteorological_Space:
+                    hasFrame = false;
+                    break;
+
+                default :
+                    hasFrame = true;
+                    break;
+            }
+
+            return hasFrame;
         }
 
 //TODO: remove - probably no longer needed:

@@ -426,6 +426,8 @@ namespace MilSymbolPicker
             currentSymbol.Id = SymbolIdCode.DefaultSymbolIdCode;
             currentSymbol.Id.Affiliation = affil;
 
+            currentSymbol.GraphicLayers.Clear();
+
             this.cbLayers.Text = string.Empty;
             this.cbLayers.Items.Clear();
 
