@@ -20,6 +20,15 @@ namespace Library2525D
 {
     class Program
     {
+        // TODO: SET THESE TO DESIRED VALUES IF USING STYLE EXPORT
+        const bool FORMAT_IS_STYLE_CSV = true;
+        const string POINT_SIZE_STRING = "32";
+        const int MAX_STYLE_LENGTH = 255;
+        const bool IMAGE_FORMAT_IS_EMF = false;
+        const string IMAGES_HOME = 
+            @"{Symbols_Root}";
+
+        const bool INCLUDE_NOTES = false;
 
         /// <summary>
         /// This command line app, just returns types and values that it knows about
@@ -28,11 +37,6 @@ namespace Library2525D
         /// </summary>
         static void Main(string[] args)
         {
-
-            // if command line arguments, run as Consolse App
-            Console.WriteLine("Usage: ConsoleApp2525D.exe [Type -or- \"List\" -or- \"ALL\"]");
-            Console.WriteLine("       ConsoleApp2525D.exe [SymbolSet (Name or Code)]");
-
             string typeToExportUpper = "LIST";
 
             int argLength = args.Length;
@@ -41,58 +45,67 @@ namespace Library2525D
                 // TODO: if you just want to wire in a quick test uncomment:
                 // MyAdHocTest();
                 // return;
+
+                // Help:
+                Console.WriteLine("Usage: ConsoleApp2525D.exe [Type -or- \"List\" -or- \"ALL\"]");
+                Console.WriteLine("       ConsoleApp2525D.exe [SymbolSet (Name or Code)]");
             }
             else
             {
                 typeToExportUpper = args[0].ToUpper();
-            }
 
-            Console.WriteLine("Looking for Type: " + typeToExportUpper);
+                if (!FORMAT_IS_STYLE_CSV)
+                    Console.WriteLine("Looking for Type: " + typeToExportUpper);
+            }
 
             // HACK:
             MilitarySymbol.FormatTagsForStyleFiles = true;
 
             bool found = false;
 
-            Assembly myAssembly = Assembly.GetExecutingAssembly();
-            foreach (Type type in myAssembly.GetTypes())
+            if (!FORMAT_IS_STYLE_CSV) // don't do for Style Export
             {
-                if (!type.IsEnum)
-                    continue;
-
-                string typeName = type.Name;
-                string typeNameUpper = typeName.ToUpper();
-
-                if (typeToExportUpper == "LIST")
+                Assembly myAssembly = Assembly.GetExecutingAssembly();
+                foreach (Type type in myAssembly.GetTypes())
                 {
-                    Console.WriteLine("Type: " + typeName);
-                    found = true;
-                }
+                    if (!type.IsEnum)
+                        continue;
 
-                if (typeToExportUpper.Equals("ALL") || typeNameUpper.Contains(typeToExportUpper))
-                {
-                    Console.WriteLine(Environment.NewLine + "Found Type: " + typeNameUpper);
+                    string typeName = type.Name;
+                    string typeNameUpper = typeName.ToUpper();
 
-                    found = true;
-                    List<Enum> enums = TypeUtilities.EnumHelper.getEnumValues(type);
-
-                    foreach (Enum en in enums)
+                    if (typeToExportUpper == "LIST")
                     {
-                        string enumString = en.ToString();
-                        int hashCode = en.GetHashCode();
-
-                        Console.WriteLine(enumString + "," + hashCode);
+                        Console.WriteLine("Type: " + typeName);
+                        found = true;
                     }
-                } // end if              
-            } // end foreach
 
-            // if found, we are done, if not check for a symbol set query 
-            if (found && (!typeToExportUpper.Equals("ALL")))
-                return;
+                    if (typeToExportUpper.Equals("ALL") || typeNameUpper.Contains(typeToExportUpper))
+                    {
+                        Console.WriteLine(Environment.NewLine + "Found Type: " + typeNameUpper);
+
+                        found = true;
+                        List<Enum> enums = TypeUtilities.EnumHelper.getEnumValues(type);
+
+                        foreach (Enum en in enums)
+                        {
+                            string enumString = en.ToString();
+                            int hashCode = en.GetHashCode();
+
+                            Console.WriteLine(enumString + "," + hashCode);
+                        }
+                    } // end if              
+                } // end foreach
+
+                // if found, we are done, if not check for a symbol set query 
+                if (found && (!typeToExportUpper.Equals("ALL")))
+                    return;
+            }
 
             string symbolSetUpper = typeToExportUpper;
 
-            Console.WriteLine("Type not found, looking for SymbolSet: " + symbolSetUpper);
+            if (!FORMAT_IS_STYLE_CSV) 
+                Console.WriteLine("Type not found, looking for SymbolSet: " + symbolSetUpper);
 
             SymbolLookup symbolLookup = new SymbolLookup();
             symbolLookup.Initialize();
@@ -122,16 +135,171 @@ namespace Library2525D
                     || hashCodeString.Equals(symbolSetUpper))
                 {
                     symbolSet = (SymbolSetType)en;
-                    ListSymbolSet(symbolLookup, symbolSet);                  
+
+                    if (FORMAT_IS_STYLE_CSV)
+                        ListSymbolSetAsStyleCsv(symbolLookup, symbolSet);
+                    else
+                        ListSymbolSetSimple(symbolLookup, symbolSet);
                 }
             }
 
             if (symbolSet == SymbolSetType.NotSet)
                 Console.WriteLine("Warning: SymbolSet not found: " + symbolSetUpper);
-
         }
 
-        private static void PrintModifier(SymbolSetType symbolSet, int modifierNumber, int modifierCode, string modifierName)
+        private static void PrintModifierAsStyleCsv(SymbolLookup symbolLookup, SymbolSetType symbolSet, 
+            int modifierNumber, int modifierCode, string modifierName)
+        {
+            string symbolSetName = symbolSet.ToString().Replace('_', ' ');
+
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+
+            string modifierCategory = symbolLookup.GetModifierCategoryFromName(symbolSet,
+                modifierName, modifierNumber);
+
+            string sModifierCode = modifierCode.ToString();
+            // this one has to be 2 chars:
+            if (sModifierCode.Length < 2)
+                sModifierCode = sModifierCode.PadLeft(2, '0');
+
+            string modifierIconName = MilitarySymbolToGraphicLayersMaker.GetModfierIconName(
+                symbolSet, modifierNumber, modifierCode);
+
+            string modifierIconNameWithFolder = MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
+                symbolSet, modifierNumber, modifierCode);
+
+            StringBuilder sbNotes = new StringBuilder(); 
+
+            string imageFile = MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFullPath(
+                symbolSet, modifierNumber, modifierCode);
+            if (IMAGE_FORMAT_IS_EMF)
+                imageFile = imageFile.Replace(".svg", ".emf");
+
+            // WORKAROUND: check that files exists & it is not one of the _0,_1,_2,_3,xxxx ones
+            if (!System.IO.File.Exists(imageFile))
+                sbNotes.Append("ImageFile not found: " + modifierIconNameWithFolder);
+
+            string styleItemName = symbolSetName + TypeUtilities.NameSeparator +
+                "Modifier " + modifierNumber.ToString() + TypeUtilities.NameSeparator +
+                modifierCategory + TypeUtilities.NameSeparator +
+                modifierName;
+
+            string nameAsTags = styleItemName.Replace(TypeUtilities.NameSeparator, ";");
+
+            string styleItemTags = nameAsTags + ";" + modifierIconNameWithFolder + ";" +
+                          styleItemName + ";" + modifierIconName;
+
+            string styleItemCategory = symbolSetName + TypeUtilities.NameSeparator + "Modifier " + modifierNumber.ToString();
+
+            if (styleItemName.Length > MAX_STYLE_LENGTH)
+                sbNotes.Append(" Name > " + MAX_STYLE_LENGTH);
+            if (styleItemTags.Length > MAX_STYLE_LENGTH)
+                sbNotes.Append(" Tags > " + MAX_STYLE_LENGTH);
+
+            if (!INCLUDE_NOTES)
+                sbNotes.Clear();
+
+            // filePath, pointSize, styleItemName, styleItemCategory, styleItemTags
+            // modifierCode + "," + 
+            Console.WriteLine(imageFile + "," + POINT_SIZE_STRING + "," +
+                styleItemName + "," + styleItemCategory + "," + styleItemTags + "," + sbNotes.ToString());     
+        }
+
+        private static void ListSymbolSetAsStyleCsv(SymbolLookup symbolLookup, SymbolSetType symbolSet)
+        {
+            MilitarySymbolToGraphicLayersMaker.ImageFilesHome = IMAGES_HOME;
+
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+            string symbolSetName   = symbolSet.ToString().Replace('_', ' ');
+
+            //Console.WriteLine(Environment.NewLine + "SymbolSet : " + symbolSetName + " : " + symbolSetString);
+            //Console.WriteLine(symbolSetName + " : Entities :");
+
+            // filePath, pointSize, styleItemName, styleItemCategory, styleItemTags
+            Console.WriteLine("filePath,pointSize,styleItemName,styleItemCategory,styleItemTags,notes");
+
+            List<MilitarySymbol> matchingSymbols = symbolLookup.GetMilitarySymbols(symbolSet);
+
+            SymbolIdCode.FormatCodeStringWithCommas = false;
+
+            StringBuilder sbNotes = new StringBuilder();
+
+            int matchCount = 0;
+            foreach (MilitarySymbol matchSymbol in matchingSymbols)
+            {
+                matchCount++;
+
+                // Copying so making ref below useless, but had to do this because of use of iterator/ref
+                MilitarySymbol currentMilSymbol = matchSymbol;
+
+                sbNotes.Clear();
+
+                string imageFile = MilitarySymbolToGraphicLayersMaker.GetMainIconNameWithFullPath(ref currentMilSymbol);
+                if (IMAGE_FORMAT_IS_EMF)
+                    imageFile = imageFile.Replace(".svg", ".emf");
+
+                string svgTag = MilitarySymbolToGraphicLayersMaker.GetMainIconNameWithFolder(ref currentMilSymbol);
+                string idTag = MilitarySymbolToGraphicLayersMaker.GetMainIconName(ref currentMilSymbol);
+                string nameAsTags = matchSymbol.Id.Name.Replace(TypeUtilities.NameSeparator, ";");
+
+                // WORKAROUND: check that files exists & it is not one of the _0,_1,_2,_3,xxxx ones
+                if (!System.IO.File.Exists(imageFile))
+                {
+                    string subIconName = imageFile;
+                    subIconName = subIconName.Replace(@".svg", @"_0.svg");
+                    if (System.IO.File.Exists(subIconName)) // if the other file exists, use that one
+                        imageFile = subIconName;
+                    else
+                        sbNotes.Append("ImageFile not found: " + svgTag);
+                }
+
+                string styleItemCategory = symbolSetName + TypeUtilities.NameSeparator + "Main Icon";
+
+                string styleItemName = matchSymbol.Id.Name;
+
+                string styleItemTags = nameAsTags + ";" + matchSymbol.TagsAsString + svgTag + ";"
+                    + matchSymbol.Id.Name + ";" + idTag;
+
+                if (styleItemName.Length > MAX_STYLE_LENGTH)
+                    sbNotes.Append(" Name > " + MAX_STYLE_LENGTH);
+                if (styleItemTags.Length > MAX_STYLE_LENGTH)
+                    sbNotes.Append(" Tags > " + MAX_STYLE_LENGTH);
+
+                if (!INCLUDE_NOTES)
+                    sbNotes.Clear();
+
+                // filePath, pointSize, styleItemName, styleItemCategory, styleItemTags
+                // matchCount + "," + 
+                Console.WriteLine(imageFile + "," + POINT_SIZE_STRING + "," +
+                    styleItemName + "," + styleItemCategory + "," + styleItemTags + "," + sbNotes.ToString());                    
+            }
+
+            List<string> matchingModifiers = symbolLookup.GetDistinctModifierNames(symbolSet, 1);
+
+            if (matchingModifiers.Count > 0)
+            {
+                matchCount = 0;
+                foreach (string match in matchingModifiers)
+                {
+                    PrintModifierAsStyleCsv(symbolLookup, symbolSet, 1, matchCount, match);
+                    matchCount++;
+                }
+            }
+
+            matchingModifiers = symbolLookup.GetDistinctModifierNames(symbolSet, 2);
+            if (matchingModifiers.Count > 0)
+            {
+                matchCount = 0;
+                foreach (string match in matchingModifiers)
+                {
+                    PrintModifierAsStyleCsv(symbolLookup, symbolSet, 2, matchCount, match);
+
+                    matchCount++;
+                }
+            }
+        }
+
+        private static void PrintModifierSimple(SymbolSetType symbolSet, int modifierNumber, int modifierCode, string modifierName)
         {
             string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
@@ -163,7 +331,7 @@ namespace Library2525D
                 + "," + tags);
         }
 
-        private static void ListSymbolSet(SymbolLookup symbolLookup, SymbolSetType symbolSet)
+        private static void ListSymbolSetSimple(SymbolLookup symbolLookup, SymbolSetType symbolSet)
         {
             string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
@@ -207,7 +375,7 @@ namespace Library2525D
                 matchCount = 0;
                 foreach (string match in matchingModifiers)
                 {
-                    PrintModifier(symbolSet, 1, matchCount, match);
+                    PrintModifierSimple(symbolSet, 1, matchCount, match);
                     matchCount++;
                 }
             }
@@ -220,7 +388,7 @@ namespace Library2525D
                 matchCount = 0;
                 foreach (string match in matchingModifiers)
                 {
-                    PrintModifier(symbolSet, 2, matchCount, match);
+                    PrintModifierSimple(symbolSet, 2, matchCount, match);
 
                     matchCount++;
                 }

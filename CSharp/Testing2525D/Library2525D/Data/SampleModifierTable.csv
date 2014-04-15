@@ -51,600 +51,609 @@ Short Range,01,2,8,Range
 Medium Range,01,2,9,Range
 Long Range,01,2,10,Range
 Downlinked,01,2,11,Track Link Availability
-Reserved for Future Use,01,2,12,Unknown
-Version Extension Flag,01,2,99,Unknown
-Unspecified,02,1,0,Unknown
-Air,02,1,1,Unknown
-Surface,02,1,2,Unknown
-Subsurface,02,1,3,Unknown
-Space,02,1,4,Unknown
-Anti-Ballistic,02,1,5,Unknown
-Ballistic,02,1,6,Unknown
-Cruise,02,1,7,Unknown
-Interceptor,02,1,8,Unknown
-Reserved for Future Use,02,1,9,Unknown
-Version Extension Flag,02,1,99,Unknown
-Unspecified,02,2,0,Unknown
-Air,02,2,1,Unknown
-Surface,02,2,2,Unknown
-Subsurface,02,2,3,Unknown
-Space,02,2,4,Unknown
-Launched,02,2,5,Unknown
-Missile,02,2,6,Unknown
-Patriot,02,2,7,Unknown
-Standard Missile-2 (SM-2),02,2,8,Unknown
-Standard Missile-6 (SM-6),02,2,9,Unknown
-Evolved Sea Sparrow Missile (ESSM),02,2,10,Unknown
-Rolling Airframe Missile (RAM),02,2,11,Unknown
-Short Range,02,2,12,Unknown
-Medium Range,02,2,13,Unknown
-Intermediate Range,02,2,14,Unknown
-Long Range,02,2,15,Unknown
-Intercontinental,02,2,16,Unknown
-Reserved for Future Use,02,2,17,Unknown
-Version Extension Flag,02,2,99,Unknown
-Unspecified,05,1,0,Unknown
-Low Earth Orbit (LEO),05,1,1,Unknown
-Medium Earth Orbit  (MEO),05,1,2,Unknown
-High Earth Orbit  (HEO),05,1,3,Unknown
-Geosynchronous Orbit (GSO),05,1,4,Unknown
-Geostationary Orbit (GO),05,1,5,Unknown
-Molniya Orbit (MO),05,1,6,Unknown
-Unspecified,05,2,0,Unknown
-Optical,05,2,1,Unknown
-Infrared,05,2,2,Unknown
-Radar,05,2,3,Unknown
-Signal Intelligence (SIGINT),05,2,4,Unknown
-Air Mobile/Air Assault (US only),10,1,1,Unknown
-Area,10,1,2,Unknown
-Attack,10,1,3,Unknown
-Biological,10,1,4,Unknown
-Border,10,1,5,Unknown
-Bridging,10,1,6,Unknown
-Chemical,10,1,7,Unknown
-Close Protection,10,1,8,Unknown
-Combat,10,1,9,Unknown
-Command and Control,10,1,10,Unknown
-Communications Contingency Package,10,1,11,Unknown
-Construction,10,1,12,Unknown
-Cross Cultural Communication,10,1,13,Unknown
-Crowd and Riot Control,10,1,14,Unknown
-Decontamination,10,1,15,Unknown
-Detention,10,1,16,Unknown
-Direct Communications,10,1,17,Unknown
-Diving,10,1,18,Unknown
-Division,10,1,19,Unknown
-Dog,10,1,20,Unknown
-Drilling,10,1,21,Unknown
-Electro-Optical,10,1,22,Unknown
-Enhanced,10,1,23,Unknown
-Explosive Ordnance Disposal (EOD),10,1,24,Unknown
-Fire Direction Center,10,1,25,Unknown
-Force,10,1,26,Unknown
-Forward,10,1,27,Unknown
-Ground Station Module,10,1,28,Unknown
-Landing Support,10,1,29,Unknown
-Large Extension Node,10,1,30,Unknown
-Maintenance,10,1,31,Unknown
-Meteorological,10,1,32,Unknown
-Mine Countermeasure,10,1,33,Unknown
-Missile,10,1,34,Unknown
-Mobile Advisor and Support,10,1,35,Unknown
-Mobile Subscriber Equipment,10,1,36,Unknown
-Mobility Support,10,1,37,Unknown
-Movement Control Center,10,1,38,Unknown
-Multinational,10,1,39,Unknown
-Multinational Specialized Unit,10,1,40,Unknown
-Multiple Rocket Launcher,10,1,41,Unknown
-NATO Medical Role 1 ,10,1,42,Unknown
-NATO Medical Role 2,10,1,43,Unknown
-NATO Medical Role 3,10,1,44,Unknown
-NATO Medical Role 4,10,1,45,Unknown
-Naval,10,1,46,Unknown
-Node Center,10,1,47,Unknown
-Nuclear,10,1,48,Unknown
-Operations,10,1,49,Unknown
-Radar,10,1,50,Unknown
-Radio Frequency Identification (RFID) Interrogator / Sensor,10,1,51,Unknown
-Radiological,10,1,52,Unknown
-Search and Rescue,10,1,53,Unknown
-Security,10,1,54,Unknown
-Sensor,10,1,55,Unknown
-Sensor Control Module (SCM),10,1,56,Unknown
-Signals Intelligence,10,1,57,Unknown
-Single Shelter Switch,10,1,58,Unknown
-Single Rocket Launcher,10,1,59,Unknown
-Smoke,10,1,60,Unknown
-Sniper,10,1,61,Unknown
-Sound Ranging,10,1,62,Unknown
-Special Operations Forces (SOF),10,1,63,Unknown
-Special Weapons and Tactics,10,1,64,Unknown
-Survey,10,1,65,Unknown
-Tactical Exploitation,10,1,66,Unknown
-Target Acquisition,10,1,67,Unknown
-Topographic,10,1,68,Unknown
-Utility,10,1,69,Unknown
-Video Imagery (Combat Camera),10,1,70,Unknown
-Accident,10,1,71,Unknown
-Other,10,1,72,Unknown
-Civilian,10,1,73,Unknown
-Antisubmarine Warfare,10,1,74,Unknown
-Medevac,10,1,75,Unknown
-Ranger,10,1,76,Unknown
-Support,10,1,77,Unknown
-Aviation,10,1,78,Unknown
-Airborne,10,2,1,Unknown
-Arctic,10,2,2,Unknown
-Battle Damage Repair,10,2,3,Unknown
-Bicycle Equipped,10,2,4,Unknown
-Casualty Staging,10,2,5,Unknown
-Clearing,10,2,6,Unknown
-Close Range,10,2,7,Unknown
-Control,10,2,8,Unknown
-Decontamination,10,2,9,Unknown
-Demolition,10,2,10,Unknown
-Dental,10,2,11,Unknown
-Digital,10,2,12,Unknown
-Enhanced Position Location Reporting System (EPLRS),10,2,13,Unknown
-Equipment,10,2,14,Unknown
-Heavy,10,2,15,Unknown
-High Altitude,10,2,16,Unknown
-Intermodal,10,2,17,Unknown
-Intensive Care,10,2,18,Unknown
-Light,10,2,19,Unknown
-Laboratory,10,2,20,Unknown
-Launcher,10,2,21,Unknown
-Long Range,10,2,22,Unknown
-Low Altitude,10,2,23,Unknown
-Medium,10,2,24,Unknown
-Medium Altitude,10,2,25,Unknown
-Medium Range,10,2,26,Unknown
-Mountain,10,2,27,Unknown
-High to Medium Altitude,10,2,28,Unknown
-Multi-Channel,10,2,29,Unknown
-Optical (Flash),10,2,30,Unknown
-Pack Animal,10,2,31,Unknown
-Patient Evacuation Coordination,10,2,32,Unknown
-Preventive Maintenance,10,2,33,Unknown
-Psychological,10,2,34,Unknown
-Radio Relay Line of Sight,10,2,35,Unknown
-Railroad,10,2,36,Unknown
-Recovery (Unmanned Systems),10,2,37,Unknown
-Recovery (Maintenance),10,2,38,Unknown
-Rescue Coordination Center,10,2,39,Unknown
-Riverine,10,2,40,Unknown
-Single Channel,10,2,41,Unknown
-Ski,10,2,42,Unknown
-Short Range,10,2,43,Unknown
-Strategic,10,2,44,Unknown
-Support,10,2,45,Unknown
-Tactical,10,2,46,Unknown
-Towed,10,2,47,Unknown
-Troop,10,2,48,Unknown
-Vertical or Short Take-Off and Landing (VTOL/VSTOL),10,2,49,Unknown
-Veterinary,10,2,50,Unknown
-Wheeled,10,2,51,Unknown
-High to Low Altitude,10,2,52,Unknown
-Medium to Low Altitude,10,2,53,Unknown
-Attack,10,2,54,Unknown
-Refuel,10,2,55,Unknown
-Utility,10,2,56,Unknown
-Comobat Search and Rescue,10,2,57,Unknown
-Unspecified,11,1,0,Unknown
-Assassination,11,1,1,Unknown
-Execution (Wrongful Killing),11,1,2,Unknown
-Murder Victims,11,1,3,Unknown
-Hijacking,11,1,4,Unknown
-Kidnapping,11,1,5,Unknown
-Piracy,11,1,6,Unknown
-Rape,11,1,7,Unknown
-Civilian,11,1,8,Unknown
-Displaced Person(s)-Refugee(s) and Evacuee(s),11,1,9,Unknown
-Foreign Fighter(s),11,1,10,Unknown
-Gang Member or Gang,11,1,11,Unknown
-Government Organization,11,1,12,Unknown
-Leader or Leadership,11,1,13,Unknown
-Nongovernmental Organization Member or Nongovernmental Organization,11,1,14,Unknown
-Coerced/Impressed Recruit,11,1,15,Unknown
-Willing Recruit,11,1,16,Unknown
-Religious or Religious Organization,11,1,17,Unknown
-Targeted Individual or Organization,11,1,18,Unknown
-Terrorist or Terrorist Organization,11,1,19,Unknown
-Speaker,11,1,20,Unknown
-Accident,11,1,21,Unknown
-Combat,11,1,22,Unknown
-Other,11,1,23,Unknown
-Loot,11,1,24,Unknown
-Unspecified,11,2,0,Unknown
-Leader or Leadership,11,2,1,Unknown
-Unspecified,15,1,0,Unknown
-Biological,15,1,1,Unknown
-Chemical,15,1,2,Unknown
-Early Warning Radar,15,1,3,Unknown
-Intrusion,15,1,4,Unknown
-Nuclear,15,1,5,Unknown
-Radiological,15,1,6,Unknown
-Upgraded Early Warning Radar,15,1,7,Unknown
-Hijacking,15,1,8,Unknown
-Civilian,15,1,9,Unknown
-Unspecified,15,2,0,Unknown
-Unspecified,20,1,0,Unknown
-Biological,20,1,1,Unknown
-Chemical ,20,1,2,Unknown
-Nuclear,20,1,3,Unknown
-Radiological,20,1,4,Unknown
-Decontamination,20,1,5,Unknown
-Coal,20,1,6,Unknown
-Geothermal,20,1,7,Unknown
-Hydroelectric,20,1,8,Unknown
-Natural Gas,20,1,9,Unknown
-Petroleum,20,1,10,Unknown
-Civilian ,20,1,11,Unknown
-Civilian Telephone,20,1,12,Unknown
-Civilian Television,20,1,13,Unknown
-Unspecified,20,2,0,Unknown
-Biological,20,2,1,Unknown
-Chemical ,20,2,2,Unknown
-Nuclear,20,2,3,Unknown
-Radiological,20,2,4,Unknown
-Atomic Energy Reactor,20,2,5,Unknown
-Nuclear Material Production,20,2,6,Unknown
-Nuclear Material Storage,20,2,7,Unknown
-Weapons Grade,20,2,8,Unknown
-Unspecified,30,1,0,Unknown
-Own Ship,30,1,1,Unknown
-Antiair Warfare,30,1,2,Unknown
-Antisubmarine Warfare,30,1,3,Unknown
-Escort,30,1,4,Unknown
-Electronic Warfare,30,1,5,Unknown
-Intelligence Surveillance Reconnaissance,30,1,6,Unknown
-Mine Countermeasures,30,1,7,Unknown
-Missile Defense,30,1,8,Unknown
-Medical,30,1,9,Unknown
-Mine Warfare,30,1,10,Unknown
-Remote Multi-Mission Vehicle (USV-only),30,1,11,Unknown
-Special Operations Force (SOF),30,1,12,Unknown
-Surface Warfare,30,1,13,Unknown
-Ballistic Missile ,30,1,14,Unknown
-Guided Missile ,30,1,15,Unknown
-Other Guided Missile ,30,1,16,Unknown
-Torpedo,30,1,17,Unknown
-Drone-Equipped,30,1,18,Unknown
-Helicopter-Equipped/VSTOL,30,1,19,Unknown
-Ballistic Missile Defense-Shooter,30,1,20,Unknown
-Ballistic Missile Defense Long-Range Surveillance and Track (LRS&T),30,1,21,Unknown
-Sea-Base X-Band,30,1,22,Unknown
-Hijacking,30,1,23,Unknown
-Unspecified,30,2,0,Unknown
-Nuclear Powered,30,2,1,Unknown
-Heavy,30,2,2,Unknown
-Light,30,2,3,Unknown
-Medium,30,2,4,Unknown
-Dock,30,2,5,Unknown
-Logistics,30,2,6,Unknown
-Tank,30,2,7,Unknown
-Vehicle,30,2,8,Unknown
-Fast,30,2,9,Unknown
-Air-Cushioned (US),30,2,10,Unknown
-Air-Cushioned (NATO),30,2,11,Unknown
-Hydrofoil,30,2,12,Unknown
-Autonomous Control,30,2,13,Unknown
-Remotely Piloted,30,2,14,Unknown
-Expendable,30,2,15,Unknown
-Unspecified,35,1,0,Unknown
-Antisubmarine Warfare,35,1,1,Unknown
-Auxiliary,35,1,2,Unknown
-Command and Control,35,1,3,Unknown
-Intelligence Surveillance Reconnaissance,35,1,4,Unknown
-Mine Countermeasures,35,1,5,Unknown
-Mine Warfare,35,1,6,Unknown
-Surface Warfare,35,1,7,Unknown
-Attack,35,1,8,Unknown
-Ballistic Missile ,35,1,9,Unknown
-Guided Missile ,35,1,10,Unknown
-Other Guided Missile,35,1,11,Unknown
-Special Operations Forces (SOF),35,1,12,Unknown
-Possible Submarine Low 1 ,35,1,13,Unknown
-Possible Submarine Low 2,35,1,14,Unknown
-Possible Submarine High 3,35,1,15,Unknown
-Possible Submarine High 4,35,1,16,Unknown
-Probable Submarine,35,1,17,Unknown
-Certain Submarine,35,1,18,Unknown
-Anti-torpedo Torpedo,35,1,19,Unknown
-Hijacking/Highjacked,35,1,20,Unknown
-Unspecified,35,2,0,Unknown
-Air Independent Propulsion,35,2,1,Unknown
-Diesel Electric General,35,2,2,Unknown
-Diesel - Type 1,35,2,3,Unknown
-Diesel - Type 2,35,2,4,Unknown
-Diesel - Type 3,35,2,5,Unknown
-Nuclear Powered General,35,2,6,Unknown
-Nuclear - Type 1,35,2,7,Unknown
-Nuclear - Type 2,35,2,8,Unknown
-Nuclear - Type 3,35,2,9,Unknown
-Nuclear - Type 4,35,2,10,Unknown
-Nuclear - Type 5,35,2,11,Unknown
-Nuclear - Type 6,35,2,12,Unknown
-Nuclear - Type 7,35,2,13,Unknown
-Autonomous Control,35,2,14,Unknown
-Remotely Piloted,35,2,15,Unknown
-Expendable,35,2,16,Unknown
-Unspecified,40,1,0,Unknown
-Assassination,40,1,1,Unknown
-Execution (Wrongful Killing),40,1,2,Unknown
-Hijacking/Hijacked,40,1,3,Unknown
-House-to-House,40,1,4,Unknown
-Kidnapping,40,1,5,Unknown
-Murder,40,1,6,Unknown
-Piracy,40,1,7,Unknown
-Rape,40,1,8,Unknown
-Written Psychological Operations,40,1,9,Unknown
-Pirate,40,1,10,Unknown
-FALSE,40,1,11,Unknown
-Find,40,1,12,Unknown
-Found and Cleared,40,1,13,Unknown
-Hoax (Decoy),40,1,14,Unknown
-Attempted,40,1,15,Unknown
-Accident,40,1,16,Unknown
-Incident,40,1,17,Unknown
-Theft,40,1,18,Unknown
-Unspecified,51,1,0,Unknown
-Anti-Aircraft Fire Control,51,1,1,Unknown
-Airborne Search and Bombing,51,1,2,Unknown
-Airborne Intercept,51,1,3,Unknown
-Altimeter,51,1,4,Unknown
-Airborne Reconnaissance and Mapping,51,1,5,Unknown
-Air Traffic Control,51,1,6,Unknown
-Beacon Transponder (not IFF),51,1,7,Unknown
-Battlefield Surveillance,51,1,8,Unknown
-Controlled Approach,51,1,9,Unknown
-Controlled Intercept,51,1,10,Unknown
-Cellular/Mobile,51,1,11,Unknown
-Coastal Surveillance,51,1,12,Unknown
-Decoy/Mimic,51,1,13,Unknown
-Data Transmission,51,1,14,Unknown
-Earth Surveillance,51,1,15,Unknown
-Early Warning,51,1,16,Unknown
-Fire Control,51,1,17,Unknown
-Ground Mapping,51,1,18,Unknown
-Height Finding,51,1,19,Unknown
-Harbor Surveillance,51,1,20,Unknown
-Identification Friend or Foe (Interrogator),51,1,21,Unknown
-Instrument Landing System,51,1,22,Unknown
-Ionospheric Sounding,51,1,23,Unknown
-Identification Friend or Foe (Transponder),51,1,24,Unknown
-Barrage Jammer,51,1,25,Unknown
-Click Jammer,51,1,26,Unknown
-Deceptive Jammer,51,1,27,Unknown
-Frequency Swept Jammer,51,1,28,Unknown
-Jammer (general),51,1,29,Unknown
-Noise Jammer,51,1,30,Unknown
-Pulsed Jammer,51,1,31,Unknown
-Repeater Jammer,51,1,32,Unknown
-Spot Noise Jammer,51,1,33,Unknown
-Transponder Jammer,51,1,34,Unknown
-Missile Acquisition,51,1,35,Unknown
-Missile Control,51,1,36,Unknown
-Missile Downlink,51,1,37,Unknown
-Meteorological,51,1,38,Unknown
-Multi-Function,51,1,39,Unknown
-Missile Guidance,51,1,40,Unknown
-Missile Homing,51,1,41,Unknown
-Missile Tracking,51,1,42,Unknown
-Navigational/General,51,1,43,Unknown
-Navigational/Distance Measuring Equipment,51,1,44,Unknown
-Navigation/Terrain Following,51,1,45,Unknown
-Navigational/Weather Avoidance,51,1,46,Unknown
-Omni-Line of Sight (LOS),51,1,47,Unknown
-Proximity Use,51,1,48,Unknown
-Point-to-Point Line of Sight (LOS),51,1,49,Unknown
-Instrumentation,51,1,50,Unknown
-Range Only,51,1,51,Unknown
-Sonobuoy,51,1,52,Unknown
-Satellite Downlink,51,1,53,Unknown
-Space,51,1,54,Unknown
-Surface Search,51,1,55,Unknown
-Shell Tracking,51,1,56,Unknown
-Satellite Uplink,51,1,57,Unknown
-Target Acquisition,51,1,58,Unknown
-Target Illumination,51,1,59,Unknown
-Tropospheric Scatter,51,1,60,Unknown
-Target Tracking,51,1,61,Unknown
-Unknown,51,1,62,Unknown
-Video Remoting,51,1,63,Unknown
-Experimental,51,1,64,Unknown
-Unspecified,52,1,0,Unknown
-Anti-Aircraft Fire Control,52,1,1,Unknown
-Airborne Search and Bombing,52,1,2,Unknown
-Airborne Intercept,52,1,3,Unknown
-Altimeter,52,1,4,Unknown
-Airborne Reconnaissance and Mapping,52,1,5,Unknown
-Air Traffic Control,52,1,6,Unknown
-Beacon Transponder (not IFF),52,1,7,Unknown
-Battlefield Surveillance,52,1,8,Unknown
-Controlled Approach,52,1,9,Unknown
-Controlled Intercept,52,1,10,Unknown
-Cellular/Mobile,52,1,11,Unknown
-Coastal Surveillance,52,1,12,Unknown
-Decoy/Mimic,52,1,13,Unknown
-Data Transmission,52,1,14,Unknown
-Earth Surveillance,52,1,15,Unknown
-Early Warning,52,1,16,Unknown
-Fire Control,52,1,17,Unknown
-Ground Mapping,52,1,18,Unknown
-Height Finding,52,1,19,Unknown
-Harbor Surveillance,52,1,20,Unknown
-Identification Friend or Foe (Interrogator),52,1,21,Unknown
-Instrument Landing System,52,1,22,Unknown
-Ionospheric Sounding,52,1,23,Unknown
-Identification Friend or Foe (Transponder),52,1,24,Unknown
-Barrage Jammer,52,1,25,Unknown
-Click Jammer,52,1,26,Unknown
-Deceptive Jammer,52,1,27,Unknown
-Frequency Swept Jammer,52,1,28,Unknown
-Jammer (general),52,1,29,Unknown
-Noise Jammer,52,1,30,Unknown
-Pulsed Jammer,52,1,31,Unknown
-Repeater Jammer,52,1,32,Unknown
-Spot Noise Jammer,52,1,33,Unknown
-Transponder Jammer,52,1,34,Unknown
-Missile Acquisition,52,1,35,Unknown
-Missile Control,52,1,36,Unknown
-Missile Downlink,52,1,37,Unknown
-Meteorological,52,1,38,Unknown
-Multi-Function,52,1,39,Unknown
-Missile Guidance,52,1,40,Unknown
-Missile Homing,52,1,41,Unknown
-Missile Tracking,52,1,42,Unknown
-Navigational/General,52,1,43,Unknown
-Navigational/Distance Measuring Equipment,52,1,44,Unknown
-Navigation/Terrain Following,52,1,45,Unknown
-Navigational/Weather Avoidance,52,1,46,Unknown
-Omni-Line of Sight (LOS),52,1,47,Unknown
-Proximity Use,52,1,48,Unknown
-Point-to-Point Line of Sight (LOS),52,1,49,Unknown
-Instrumentation,52,1,50,Unknown
-Range Only,52,1,51,Unknown
-Sonobuoy,52,1,52,Unknown
-Satellite Downlink,52,1,53,Unknown
-Space,52,1,54,Unknown
-Surface Search,52,1,55,Unknown
-Shell Tracking,52,1,56,Unknown
-Satellite Uplink,52,1,57,Unknown
-Target Acquisition,52,1,58,Unknown
-Target Illumination,52,1,59,Unknown
-Tropospheric Scatter,52,1,60,Unknown
-Target Tracking,52,1,61,Unknown
-Unknown,52,1,62,Unknown
-Video Remoting,52,1,63,Unknown
-Experimental,52,1,64,Unknown
-Unspecified,53,1,0,Unknown
-Anti-Aircraft Fire Control,53,1,1,Unknown
-Airborne Search and Bombing,53,1,2,Unknown
-Airborne Intercept,53,1,3,Unknown
-Altimeter,53,1,4,Unknown
-Airborne Reconnaissance and Mapping,53,1,5,Unknown
-Air Traffic Control,53,1,6,Unknown
-Beacon Transponder (not IFF),53,1,7,Unknown
-Battlefield Surveillance,53,1,8,Unknown
-Controlled Approach,53,1,9,Unknown
-Controlled Intercept,53,1,10,Unknown
-Cellular/Mobile,53,1,11,Unknown
-Coastal Surveillance,53,1,12,Unknown
-Decoy/Mimic,53,1,13,Unknown
-Data Transmission,53,1,14,Unknown
-Earth Surveillance,53,1,15,Unknown
-Early Warning,53,1,16,Unknown
-Fire Control,53,1,17,Unknown
-Ground Mapping,53,1,18,Unknown
-Height Finding,53,1,19,Unknown
-Harbor Surveillance,53,1,20,Unknown
-Identification Friend or Foe (Interrogator),53,1,21,Unknown
-Instrument Landing System,53,1,22,Unknown
-Ionospheric Sounding,53,1,23,Unknown
-Identification Friend or Foe (Transponder),53,1,24,Unknown
-Barrage Jammer,53,1,25,Unknown
-Click Jammer,53,1,26,Unknown
-Deceptive Jammer,53,1,27,Unknown
-Frequency Swept Jammer,53,1,28,Unknown
-Jammer (general),53,1,29,Unknown
-Noise Jammer,53,1,30,Unknown
-Pulsed Jammer,53,1,31,Unknown
-Repeater Jammer,53,1,32,Unknown
-Spot Noise Jammer,53,1,33,Unknown
-Transponder Jammer,53,1,34,Unknown
-Missile Acquisition,53,1,35,Unknown
-Missile Control,53,1,36,Unknown
-Missile Downlink,53,1,37,Unknown
-Meteorological,53,1,38,Unknown
-Multi-Function,53,1,39,Unknown
-Missile Guidance,53,1,40,Unknown
-Missile Homing,53,1,41,Unknown
-Missile Tracking,53,1,42,Unknown
-Navigational/General,53,1,43,Unknown
-Navigational/Distance Measuring Equipment,53,1,44,Unknown
-Navigation/Terrain Following,53,1,45,Unknown
-Navigational/Weather Avoidance,53,1,46,Unknown
-Omni-Line of Sight (LOS),53,1,47,Unknown
-Proximity Use,53,1,48,Unknown
-Point-to-Point Line of Sight (LOS),53,1,49,Unknown
-Instrumentation,53,1,50,Unknown
-Range Only,53,1,51,Unknown
-Sonobuoy,53,1,52,Unknown
-Satellite Downlink,53,1,53,Unknown
-Space,53,1,54,Unknown
-Surface Search,53,1,55,Unknown
-Shell Tracking,53,1,56,Unknown
-Satellite Uplink,53,1,57,Unknown
-Target Acquisition,53,1,58,Unknown
-Target Illumination,53,1,59,Unknown
-Tropospheric Scatter,53,1,60,Unknown
-Target Tracking,53,1,61,Unknown
-Unknown,53,1,62,Unknown
-Video Remoting,53,1,63,Unknown
-Experimental,53,1,64,Unknown
-Unspecified,54,1,0,Unknown
-Anti-Aircraft Fire Control,54,1,1,Unknown
-Airborne Search and Bombing,54,1,2,Unknown
-Airborne Intercept,54,1,3,Unknown
-Altimeter,54,1,4,Unknown
-Airborne Reconnaissance and Mapping,54,1,5,Unknown
-Air Traffic Control,54,1,6,Unknown
-Beacon Transponder (not IFF),54,1,7,Unknown
-Battlefield Surveillance,54,1,8,Unknown
-Controlled Approach,54,1,9,Unknown
-Controlled Intercept,54,1,10,Unknown
-Cellular/Mobile,54,1,11,Unknown
-Coastal Surveillance,54,1,12,Unknown
-Decoy/Mimic,54,1,13,Unknown
-Data Transmission,54,1,14,Unknown
-Earth Surveillance,54,1,15,Unknown
-Early Warning,54,1,16,Unknown
-Fire Control,54,1,17,Unknown
-Ground Mapping,54,1,18,Unknown
-Height Finding,54,1,19,Unknown
-Harbor Surveillance,54,1,20,Unknown
-Identification Friend or Foe (Interrogator),54,1,21,Unknown
-Instrument Landing System,54,1,22,Unknown
-Ionospheric Sounding,54,1,23,Unknown
-Identification Friend or Foe (Transponder),54,1,24,Unknown
-Barrage Jammer,54,1,25,Unknown
-Click Jammer,54,1,26,Unknown
-Deceptive Jammer,54,1,27,Unknown
-Frequency Swept Jammer,54,1,28,Unknown
-Jammer (general),54,1,29,Unknown
-Noise Jammer,54,1,30,Unknown
-Pulsed Jammer,54,1,31,Unknown
-Repeater Jammer,54,1,32,Unknown
-Spot Noise Jammer,54,1,33,Unknown
-Transponder Jammer,54,1,34,Unknown
-Missile Acquisition,54,1,35,Unknown
-Missile Control,54,1,36,Unknown
-Missile Downlink,54,1,37,Unknown
-Meteorological,54,1,38,Unknown
-Multi-Function,54,1,39,Unknown
-Missile Guidance,54,1,40,Unknown
-Missile Homing,54,1,41,Unknown
-Missile Tracking,54,1,42,Unknown
-Navigational/General,54,1,43,Unknown
-Navigational/Distance Measuring Equipment,54,1,44,Unknown
-Navigation/Terrain Following,54,1,45,Unknown
-Navigational/Weather Avoidance,54,1,46,Unknown
-Omni-Line of Sight (LOS),54,1,47,Unknown
-Proximity Use,54,1,48,Unknown
-Point-to-Point Line of Sight (LOS),54,1,49,Unknown
-Instrumentation,54,1,50,Unknown
-Range Only,54,1,51,Unknown
-Sonobuoy,54,1,52,Unknown
-Satellite Downlink,54,1,53,Unknown
-Space,54,1,54,Unknown
-Surface Search,54,1,55,Unknown
-Shell Tracking,54,1,56,Unknown
-Satellite Uplink,54,1,57,Unknown
-Target Acquisition,54,1,58,Unknown
-Target Illumination,54,1,59,Unknown
-Tropospheric Scatter,54,1,60,Unknown
-Target Tracking,54,1,61,Unknown
-Unknown,54,1,62,Unknown
-Video Remoting,54,1,63,Unknown
-Experimental,54,1,64,Unknown
+Unspecified,02,1,0,{TODO_SET_CATEGORY}
+Air,02,1,1,{TODO_SET_CATEGORY}
+Surface,02,1,2,{TODO_SET_CATEGORY}
+Subsurface,02,1,3,{TODO_SET_CATEGORY}
+Space,02,1,4,{TODO_SET_CATEGORY}
+Anti-Ballistic,02,1,5,{TODO_SET_CATEGORY}
+Ballistic,02,1,6,{TODO_SET_CATEGORY}
+Cruise,02,1,7,{TODO_SET_CATEGORY}
+Interceptor,02,1,8,{TODO_SET_CATEGORY}
+Unspecified,02,2,0,{TODO_SET_CATEGORY}
+Air,02,2,1,{TODO_SET_CATEGORY}
+Surface,02,2,2,{TODO_SET_CATEGORY}
+Subsurface,02,2,3,{TODO_SET_CATEGORY}
+Space,02,2,4,{TODO_SET_CATEGORY}
+Launched,02,2,5,{TODO_SET_CATEGORY}
+Missile,02,2,6,{TODO_SET_CATEGORY}
+Patriot,02,2,7,{TODO_SET_CATEGORY}
+Standard Missile-2 (SM-2),02,2,8,{TODO_SET_CATEGORY}
+Standard Missile-6 (SM-6),02,2,9,{TODO_SET_CATEGORY}
+Evolved Sea Sparrow Missile (ESSM),02,2,10,{TODO_SET_CATEGORY}
+Rolling Airframe Missile (RAM),02,2,11,{TODO_SET_CATEGORY}
+Short Range,02,2,12,{TODO_SET_CATEGORY}
+Medium Range,02,2,13,{TODO_SET_CATEGORY}
+Intermediate Range,02,2,14,{TODO_SET_CATEGORY}
+Long Range,02,2,15,{TODO_SET_CATEGORY}
+Intercontinental,02,2,16,{TODO_SET_CATEGORY}
+Unspecified,05,1,0,{TODO_SET_CATEGORY}
+Low Earth Orbit (LEO),05,1,1,{TODO_SET_CATEGORY}
+Medium Earth Orbit  (MEO),05,1,2,{TODO_SET_CATEGORY}
+High Earth Orbit  (HEO),05,1,3,{TODO_SET_CATEGORY}
+Geosynchronous Orbit (GSO),05,1,4,{TODO_SET_CATEGORY}
+Geostationary Orbit (GO),05,1,5,{TODO_SET_CATEGORY}
+Molniya Orbit (MO),05,1,6,{TODO_SET_CATEGORY}
+Unspecified,05,2,0,{TODO_SET_CATEGORY}
+Optical,05,2,1,{TODO_SET_CATEGORY}
+Infrared,05,2,2,{TODO_SET_CATEGORY}
+Radar,05,2,3,{TODO_SET_CATEGORY}
+Signal Intelligence (SIGINT),05,2,4,{TODO_SET_CATEGORY}
+Ballistic,06,1,1,Missile Class
+Space,06,1,2,Launch Origin
+Interceptor,06,1,3,Missile Class
+Short Range,06,2,1,Missile Range
+Medium Range,06,2,2,Missile Range
+Intermediate Range,06,2,3,Missile Range
+Long Range,06,2,4,Missile Range
+Intercontinental,06,2,5,Missile Range
+Arrow,06,2,6,Missile Type - BMD
+Ground-Based Interceptor (GBI),06,2,7,Missile Type - BMD
+Patriot,06,2,8,Missile Type - BMD
+Standard Missile - Terminal Phase (SM-T),06,2,9,Missile Type - BMD
+Standard Missile - 3 (SM-3),06,2,10,Missile Type - BMD
+Terminal High-Altitude Area Defense (THAAD),06,2,11,Missile Type - BMD
+Space,06,2,12,Launch Origin
+Air Mobile/Air Assault (US only),10,1,1,{TODO_SET_CATEGORY}
+Area,10,1,2,{TODO_SET_CATEGORY}
+Attack,10,1,3,{TODO_SET_CATEGORY}
+Biological,10,1,4,{TODO_SET_CATEGORY}
+Border,10,1,5,{TODO_SET_CATEGORY}
+Bridging,10,1,6,{TODO_SET_CATEGORY}
+Chemical,10,1,7,{TODO_SET_CATEGORY}
+Close Protection,10,1,8,{TODO_SET_CATEGORY}
+Combat,10,1,9,{TODO_SET_CATEGORY}
+Command and Control,10,1,10,{TODO_SET_CATEGORY}
+Communications Contingency Package,10,1,11,{TODO_SET_CATEGORY}
+Construction,10,1,12,{TODO_SET_CATEGORY}
+Cross Cultural Communication,10,1,13,{TODO_SET_CATEGORY}
+Crowd and Riot Control,10,1,14,{TODO_SET_CATEGORY}
+Decontamination,10,1,15,{TODO_SET_CATEGORY}
+Detention,10,1,16,{TODO_SET_CATEGORY}
+Direct Communications,10,1,17,{TODO_SET_CATEGORY}
+Diving,10,1,18,{TODO_SET_CATEGORY}
+Division,10,1,19,{TODO_SET_CATEGORY}
+Dog,10,1,20,{TODO_SET_CATEGORY}
+Drilling,10,1,21,{TODO_SET_CATEGORY}
+Electro-Optical,10,1,22,{TODO_SET_CATEGORY}
+Enhanced,10,1,23,{TODO_SET_CATEGORY}
+Explosive Ordnance Disposal (EOD),10,1,24,{TODO_SET_CATEGORY}
+Fire Direction Center,10,1,25,{TODO_SET_CATEGORY}
+Force,10,1,26,{TODO_SET_CATEGORY}
+Forward,10,1,27,{TODO_SET_CATEGORY}
+Ground Station Module,10,1,28,{TODO_SET_CATEGORY}
+Landing Support,10,1,29,{TODO_SET_CATEGORY}
+Large Extension Node,10,1,30,{TODO_SET_CATEGORY}
+Maintenance,10,1,31,{TODO_SET_CATEGORY}
+Meteorological,10,1,32,{TODO_SET_CATEGORY}
+Mine Countermeasure,10,1,33,{TODO_SET_CATEGORY}
+Missile,10,1,34,{TODO_SET_CATEGORY}
+Mobile Advisor and Support,10,1,35,{TODO_SET_CATEGORY}
+Mobile Subscriber Equipment,10,1,36,{TODO_SET_CATEGORY}
+Mobility Support,10,1,37,{TODO_SET_CATEGORY}
+Movement Control Center,10,1,38,{TODO_SET_CATEGORY}
+Multinational,10,1,39,{TODO_SET_CATEGORY}
+Multinational Specialized Unit,10,1,40,{TODO_SET_CATEGORY}
+Multiple Rocket Launcher,10,1,41,{TODO_SET_CATEGORY}
+NATO Medical Role 1 ,10,1,42,{TODO_SET_CATEGORY}
+NATO Medical Role 2,10,1,43,{TODO_SET_CATEGORY}
+NATO Medical Role 3,10,1,44,{TODO_SET_CATEGORY}
+NATO Medical Role 4,10,1,45,{TODO_SET_CATEGORY}
+Naval,10,1,46,{TODO_SET_CATEGORY}
+Node Center,10,1,47,{TODO_SET_CATEGORY}
+Nuclear,10,1,48,{TODO_SET_CATEGORY}
+Operations,10,1,49,{TODO_SET_CATEGORY}
+Radar,10,1,50,{TODO_SET_CATEGORY}
+Radio Frequency Identification (RFID) Interrogator / Sensor,10,1,51,{TODO_SET_CATEGORY}
+Radiological,10,1,52,{TODO_SET_CATEGORY}
+Search and Rescue,10,1,53,{TODO_SET_CATEGORY}
+Security,10,1,54,{TODO_SET_CATEGORY}
+Sensor,10,1,55,{TODO_SET_CATEGORY}
+Sensor Control Module (SCM),10,1,56,{TODO_SET_CATEGORY}
+Signals Intelligence,10,1,57,{TODO_SET_CATEGORY}
+Single Shelter Switch,10,1,58,{TODO_SET_CATEGORY}
+Single Rocket Launcher,10,1,59,{TODO_SET_CATEGORY}
+Smoke,10,1,60,{TODO_SET_CATEGORY}
+Sniper,10,1,61,{TODO_SET_CATEGORY}
+Sound Ranging,10,1,62,{TODO_SET_CATEGORY}
+Special Operations Forces (SOF),10,1,63,{TODO_SET_CATEGORY}
+Special Weapons and Tactics,10,1,64,{TODO_SET_CATEGORY}
+Survey,10,1,65,{TODO_SET_CATEGORY}
+Tactical Exploitation,10,1,66,{TODO_SET_CATEGORY}
+Target Acquisition,10,1,67,{TODO_SET_CATEGORY}
+Topographic,10,1,68,{TODO_SET_CATEGORY}
+Utility,10,1,69,{TODO_SET_CATEGORY}
+Video Imagery (Combat Camera),10,1,70,{TODO_SET_CATEGORY}
+Accident,10,1,71,{TODO_SET_CATEGORY}
+Other,10,1,72,{TODO_SET_CATEGORY}
+Civilian,10,1,73,{TODO_SET_CATEGORY}
+Antisubmarine Warfare,10,1,74,{TODO_SET_CATEGORY}
+Medevac,10,1,75,{TODO_SET_CATEGORY}
+Ranger,10,1,76,{TODO_SET_CATEGORY}
+Support,10,1,77,{TODO_SET_CATEGORY}
+Aviation,10,1,78,{TODO_SET_CATEGORY}
+Airborne,10,2,1,{TODO_SET_CATEGORY}
+Arctic,10,2,2,{TODO_SET_CATEGORY}
+Battle Damage Repair,10,2,3,{TODO_SET_CATEGORY}
+Bicycle Equipped,10,2,4,{TODO_SET_CATEGORY}
+Casualty Staging,10,2,5,{TODO_SET_CATEGORY}
+Clearing,10,2,6,{TODO_SET_CATEGORY}
+Close Range,10,2,7,{TODO_SET_CATEGORY}
+Control,10,2,8,{TODO_SET_CATEGORY}
+Decontamination,10,2,9,{TODO_SET_CATEGORY}
+Demolition,10,2,10,{TODO_SET_CATEGORY}
+Dental,10,2,11,{TODO_SET_CATEGORY}
+Digital,10,2,12,{TODO_SET_CATEGORY}
+Enhanced Position Location Reporting System (EPLRS),10,2,13,{TODO_SET_CATEGORY}
+Equipment,10,2,14,{TODO_SET_CATEGORY}
+Heavy,10,2,15,{TODO_SET_CATEGORY}
+High Altitude,10,2,16,{TODO_SET_CATEGORY}
+Intermodal,10,2,17,{TODO_SET_CATEGORY}
+Intensive Care,10,2,18,{TODO_SET_CATEGORY}
+Light,10,2,19,{TODO_SET_CATEGORY}
+Laboratory,10,2,20,{TODO_SET_CATEGORY}
+Launcher,10,2,21,{TODO_SET_CATEGORY}
+Long Range,10,2,22,{TODO_SET_CATEGORY}
+Low Altitude,10,2,23,{TODO_SET_CATEGORY}
+Medium,10,2,24,{TODO_SET_CATEGORY}
+Medium Altitude,10,2,25,{TODO_SET_CATEGORY}
+Medium Range,10,2,26,{TODO_SET_CATEGORY}
+Mountain,10,2,27,{TODO_SET_CATEGORY}
+High to Medium Altitude,10,2,28,{TODO_SET_CATEGORY}
+Multi-Channel,10,2,29,{TODO_SET_CATEGORY}
+Optical (Flash),10,2,30,{TODO_SET_CATEGORY}
+Pack Animal,10,2,31,{TODO_SET_CATEGORY}
+Patient Evacuation Coordination,10,2,32,{TODO_SET_CATEGORY}
+Preventive Maintenance,10,2,33,{TODO_SET_CATEGORY}
+Psychological,10,2,34,{TODO_SET_CATEGORY}
+Radio Relay Line of Sight,10,2,35,{TODO_SET_CATEGORY}
+Railroad,10,2,36,{TODO_SET_CATEGORY}
+Recovery (Unmanned Systems),10,2,37,{TODO_SET_CATEGORY}
+Recovery (Maintenance),10,2,38,{TODO_SET_CATEGORY}
+Rescue Coordination Center,10,2,39,{TODO_SET_CATEGORY}
+Riverine,10,2,40,{TODO_SET_CATEGORY}
+Single Channel,10,2,41,{TODO_SET_CATEGORY}
+Ski,10,2,42,{TODO_SET_CATEGORY}
+Short Range,10,2,43,{TODO_SET_CATEGORY}
+Strategic,10,2,44,{TODO_SET_CATEGORY}
+Support,10,2,45,{TODO_SET_CATEGORY}
+Tactical,10,2,46,{TODO_SET_CATEGORY}
+Towed,10,2,47,{TODO_SET_CATEGORY}
+Troop,10,2,48,{TODO_SET_CATEGORY}
+Vertical or Short Take-Off and Landing (VTOL/VSTOL),10,2,49,{TODO_SET_CATEGORY}
+Veterinary,10,2,50,{TODO_SET_CATEGORY}
+Wheeled,10,2,51,{TODO_SET_CATEGORY}
+High to Low Altitude,10,2,52,{TODO_SET_CATEGORY}
+Medium to Low Altitude,10,2,53,{TODO_SET_CATEGORY}
+Attack,10,2,54,{TODO_SET_CATEGORY}
+Refuel,10,2,55,{TODO_SET_CATEGORY}
+Utility,10,2,56,{TODO_SET_CATEGORY}
+Comobat Search and Rescue,10,2,57,{TODO_SET_CATEGORY}
+Unspecified,11,1,0,{TODO_SET_CATEGORY}
+Assassination,11,1,1,{TODO_SET_CATEGORY}
+Execution (Wrongful Killing),11,1,2,{TODO_SET_CATEGORY}
+Murder Victims,11,1,3,{TODO_SET_CATEGORY}
+Hijacking,11,1,4,{TODO_SET_CATEGORY}
+Kidnapping,11,1,5,{TODO_SET_CATEGORY}
+Piracy,11,1,6,{TODO_SET_CATEGORY}
+Rape,11,1,7,{TODO_SET_CATEGORY}
+Civilian,11,1,8,{TODO_SET_CATEGORY}
+Displaced Person(s)-Refugee(s) and Evacuee(s),11,1,9,{TODO_SET_CATEGORY}
+Foreign Fighter(s),11,1,10,{TODO_SET_CATEGORY}
+Gang Member or Gang,11,1,11,{TODO_SET_CATEGORY}
+Government Organization,11,1,12,{TODO_SET_CATEGORY}
+Leader or Leadership,11,1,13,{TODO_SET_CATEGORY}
+Nongovernmental Organization Member or Nongovernmental Organization,11,1,14,{TODO_SET_CATEGORY}
+Coerced/Impressed Recruit,11,1,15,{TODO_SET_CATEGORY}
+Willing Recruit,11,1,16,{TODO_SET_CATEGORY}
+Religious or Religious Organization,11,1,17,{TODO_SET_CATEGORY}
+Targeted Individual or Organization,11,1,18,{TODO_SET_CATEGORY}
+Terrorist or Terrorist Organization,11,1,19,{TODO_SET_CATEGORY}
+Speaker,11,1,20,{TODO_SET_CATEGORY}
+Accident,11,1,21,{TODO_SET_CATEGORY}
+Combat,11,1,22,{TODO_SET_CATEGORY}
+Other,11,1,23,{TODO_SET_CATEGORY}
+Loot,11,1,24,{TODO_SET_CATEGORY}
+Unspecified,11,2,0,{TODO_SET_CATEGORY}
+Leader or Leadership,11,2,1,{TODO_SET_CATEGORY}
+Unspecified,15,1,0,{TODO_SET_CATEGORY}
+Biological,15,1,1,{TODO_SET_CATEGORY}
+Chemical,15,1,2,{TODO_SET_CATEGORY}
+Early Warning Radar,15,1,3,{TODO_SET_CATEGORY}
+Intrusion,15,1,4,{TODO_SET_CATEGORY}
+Nuclear,15,1,5,{TODO_SET_CATEGORY}
+Radiological,15,1,6,{TODO_SET_CATEGORY}
+Upgraded Early Warning Radar,15,1,7,{TODO_SET_CATEGORY}
+Hijacking,15,1,8,{TODO_SET_CATEGORY}
+Civilian,15,1,9,{TODO_SET_CATEGORY}
+Unspecified,15,2,0,{TODO_SET_CATEGORY}
+Unspecified,20,1,0,{TODO_SET_CATEGORY}
+Biological,20,1,1,{TODO_SET_CATEGORY}
+Chemical ,20,1,2,{TODO_SET_CATEGORY}
+Nuclear,20,1,3,{TODO_SET_CATEGORY}
+Radiological,20,1,4,{TODO_SET_CATEGORY}
+Decontamination,20,1,5,{TODO_SET_CATEGORY}
+Coal,20,1,6,{TODO_SET_CATEGORY}
+Geothermal,20,1,7,{TODO_SET_CATEGORY}
+Hydroelectric,20,1,8,{TODO_SET_CATEGORY}
+Natural Gas,20,1,9,{TODO_SET_CATEGORY}
+Petroleum,20,1,10,{TODO_SET_CATEGORY}
+Civilian ,20,1,11,{TODO_SET_CATEGORY}
+Civilian Telephone,20,1,12,{TODO_SET_CATEGORY}
+Civilian Television,20,1,13,{TODO_SET_CATEGORY}
+Unspecified,20,2,0,{TODO_SET_CATEGORY}
+Biological,20,2,1,{TODO_SET_CATEGORY}
+Chemical ,20,2,2,{TODO_SET_CATEGORY}
+Nuclear,20,2,3,{TODO_SET_CATEGORY}
+Radiological,20,2,4,{TODO_SET_CATEGORY}
+Atomic Energy Reactor,20,2,5,{TODO_SET_CATEGORY}
+Nuclear Material Production,20,2,6,{TODO_SET_CATEGORY}
+Nuclear Material Storage,20,2,7,{TODO_SET_CATEGORY}
+Weapons Grade,20,2,8,{TODO_SET_CATEGORY}
+Unspecified,30,1,0,{TODO_SET_CATEGORY}
+Own Ship,30,1,1,{TODO_SET_CATEGORY}
+Antiair Warfare,30,1,2,{TODO_SET_CATEGORY}
+Antisubmarine Warfare,30,1,3,{TODO_SET_CATEGORY}
+Escort,30,1,4,{TODO_SET_CATEGORY}
+Electronic Warfare,30,1,5,{TODO_SET_CATEGORY}
+Intelligence Surveillance Reconnaissance,30,1,6,{TODO_SET_CATEGORY}
+Mine Countermeasures,30,1,7,{TODO_SET_CATEGORY}
+Missile Defense,30,1,8,{TODO_SET_CATEGORY}
+Medical,30,1,9,{TODO_SET_CATEGORY}
+Mine Warfare,30,1,10,{TODO_SET_CATEGORY}
+Remote Multi-Mission Vehicle (USV-only),30,1,11,{TODO_SET_CATEGORY}
+Special Operations Force (SOF),30,1,12,{TODO_SET_CATEGORY}
+Surface Warfare,30,1,13,{TODO_SET_CATEGORY}
+Ballistic Missile ,30,1,14,{TODO_SET_CATEGORY}
+Guided Missile ,30,1,15,{TODO_SET_CATEGORY}
+Other Guided Missile ,30,1,16,{TODO_SET_CATEGORY}
+Torpedo,30,1,17,{TODO_SET_CATEGORY}
+Drone-Equipped,30,1,18,{TODO_SET_CATEGORY}
+Helicopter-Equipped/VSTOL,30,1,19,{TODO_SET_CATEGORY}
+Ballistic Missile Defense-Shooter,30,1,20,{TODO_SET_CATEGORY}
+Ballistic Missile Defense Long-Range Surveillance and Track (LRS&T),30,1,21,{TODO_SET_CATEGORY}
+Sea-Base X-Band,30,1,22,{TODO_SET_CATEGORY}
+Hijacking,30,1,23,{TODO_SET_CATEGORY}
+Unspecified,30,2,0,{TODO_SET_CATEGORY}
+Nuclear Powered,30,2,1,{TODO_SET_CATEGORY}
+Heavy,30,2,2,{TODO_SET_CATEGORY}
+Light,30,2,3,{TODO_SET_CATEGORY}
+Medium,30,2,4,{TODO_SET_CATEGORY}
+Dock,30,2,5,{TODO_SET_CATEGORY}
+Logistics,30,2,6,{TODO_SET_CATEGORY}
+Tank,30,2,7,{TODO_SET_CATEGORY}
+Vehicle,30,2,8,{TODO_SET_CATEGORY}
+Fast,30,2,9,{TODO_SET_CATEGORY}
+Air-Cushioned (US),30,2,10,{TODO_SET_CATEGORY}
+Air-Cushioned (NATO),30,2,11,{TODO_SET_CATEGORY}
+Hydrofoil,30,2,12,{TODO_SET_CATEGORY}
+Autonomous Control,30,2,13,{TODO_SET_CATEGORY}
+Remotely Piloted,30,2,14,{TODO_SET_CATEGORY}
+Expendable,30,2,15,{TODO_SET_CATEGORY}
+Unspecified,35,1,0,{TODO_SET_CATEGORY}
+Antisubmarine Warfare,35,1,1,{TODO_SET_CATEGORY}
+Auxiliary,35,1,2,{TODO_SET_CATEGORY}
+Command and Control,35,1,3,{TODO_SET_CATEGORY}
+Intelligence Surveillance Reconnaissance,35,1,4,{TODO_SET_CATEGORY}
+Mine Countermeasures,35,1,5,{TODO_SET_CATEGORY}
+Mine Warfare,35,1,6,{TODO_SET_CATEGORY}
+Surface Warfare,35,1,7,{TODO_SET_CATEGORY}
+Attack,35,1,8,{TODO_SET_CATEGORY}
+Ballistic Missile ,35,1,9,{TODO_SET_CATEGORY}
+Guided Missile ,35,1,10,{TODO_SET_CATEGORY}
+Other Guided Missile,35,1,11,{TODO_SET_CATEGORY}
+Special Operations Forces (SOF),35,1,12,{TODO_SET_CATEGORY}
+Possible Submarine Low 1 ,35,1,13,{TODO_SET_CATEGORY}
+Possible Submarine Low 2,35,1,14,{TODO_SET_CATEGORY}
+Possible Submarine High 3,35,1,15,{TODO_SET_CATEGORY}
+Possible Submarine High 4,35,1,16,{TODO_SET_CATEGORY}
+Probable Submarine,35,1,17,{TODO_SET_CATEGORY}
+Certain Submarine,35,1,18,{TODO_SET_CATEGORY}
+Anti-torpedo Torpedo,35,1,19,{TODO_SET_CATEGORY}
+Hijacking/Highjacked,35,1,20,{TODO_SET_CATEGORY}
+Unspecified,35,2,0,{TODO_SET_CATEGORY}
+Air Independent Propulsion,35,2,1,{TODO_SET_CATEGORY}
+Diesel Electric General,35,2,2,{TODO_SET_CATEGORY}
+Diesel - Type 1,35,2,3,{TODO_SET_CATEGORY}
+Diesel - Type 2,35,2,4,{TODO_SET_CATEGORY}
+Diesel - Type 3,35,2,5,{TODO_SET_CATEGORY}
+Nuclear Powered General,35,2,6,{TODO_SET_CATEGORY}
+Nuclear - Type 1,35,2,7,{TODO_SET_CATEGORY}
+Nuclear - Type 2,35,2,8,{TODO_SET_CATEGORY}
+Nuclear - Type 3,35,2,9,{TODO_SET_CATEGORY}
+Nuclear - Type 4,35,2,10,{TODO_SET_CATEGORY}
+Nuclear - Type 5,35,2,11,{TODO_SET_CATEGORY}
+Nuclear - Type 6,35,2,12,{TODO_SET_CATEGORY}
+Nuclear - Type 7,35,2,13,{TODO_SET_CATEGORY}
+Autonomous Control,35,2,14,{TODO_SET_CATEGORY}
+Remotely Piloted,35,2,15,{TODO_SET_CATEGORY}
+Expendable,35,2,16,{TODO_SET_CATEGORY}
+Unspecified,40,1,0,{TODO_SET_CATEGORY}
+Assassination,40,1,1,{TODO_SET_CATEGORY}
+Execution (Wrongful Killing),40,1,2,{TODO_SET_CATEGORY}
+Hijacking/Hijacked,40,1,3,{TODO_SET_CATEGORY}
+House-to-House,40,1,4,{TODO_SET_CATEGORY}
+Kidnapping,40,1,5,{TODO_SET_CATEGORY}
+Murder,40,1,6,{TODO_SET_CATEGORY}
+Piracy,40,1,7,{TODO_SET_CATEGORY}
+Rape,40,1,8,{TODO_SET_CATEGORY}
+Written Psychological Operations,40,1,9,{TODO_SET_CATEGORY}
+Pirate,40,1,10,{TODO_SET_CATEGORY}
+FALSE,40,1,11,{TODO_SET_CATEGORY}
+Find,40,1,12,{TODO_SET_CATEGORY}
+Found and Cleared,40,1,13,{TODO_SET_CATEGORY}
+Hoax (Decoy),40,1,14,{TODO_SET_CATEGORY}
+Attempted,40,1,15,{TODO_SET_CATEGORY}
+Accident,40,1,16,{TODO_SET_CATEGORY}
+Incident,40,1,17,{TODO_SET_CATEGORY}
+Theft,40,1,18,{TODO_SET_CATEGORY}
+Unspecified,51,1,0,{TODO_SET_CATEGORY}
+Anti-Aircraft Fire Control,51,1,1,{TODO_SET_CATEGORY}
+Airborne Search and Bombing,51,1,2,{TODO_SET_CATEGORY}
+Airborne Intercept,51,1,3,{TODO_SET_CATEGORY}
+Altimeter,51,1,4,{TODO_SET_CATEGORY}
+Airborne Reconnaissance and Mapping,51,1,5,{TODO_SET_CATEGORY}
+Air Traffic Control,51,1,6,{TODO_SET_CATEGORY}
+Beacon Transponder (not IFF),51,1,7,{TODO_SET_CATEGORY}
+Battlefield Surveillance,51,1,8,{TODO_SET_CATEGORY}
+Controlled Approach,51,1,9,{TODO_SET_CATEGORY}
+Controlled Intercept,51,1,10,{TODO_SET_CATEGORY}
+Cellular/Mobile,51,1,11,{TODO_SET_CATEGORY}
+Coastal Surveillance,51,1,12,{TODO_SET_CATEGORY}
+Decoy/Mimic,51,1,13,{TODO_SET_CATEGORY}
+Data Transmission,51,1,14,{TODO_SET_CATEGORY}
+Earth Surveillance,51,1,15,{TODO_SET_CATEGORY}
+Early Warning,51,1,16,{TODO_SET_CATEGORY}
+Fire Control,51,1,17,{TODO_SET_CATEGORY}
+Ground Mapping,51,1,18,{TODO_SET_CATEGORY}
+Height Finding,51,1,19,{TODO_SET_CATEGORY}
+Harbor Surveillance,51,1,20,{TODO_SET_CATEGORY}
+Identification Friend or Foe (Interrogator),51,1,21,{TODO_SET_CATEGORY}
+Instrument Landing System,51,1,22,{TODO_SET_CATEGORY}
+Ionospheric Sounding,51,1,23,{TODO_SET_CATEGORY}
+Identification Friend or Foe (Transponder),51,1,24,{TODO_SET_CATEGORY}
+Barrage Jammer,51,1,25,{TODO_SET_CATEGORY}
+Click Jammer,51,1,26,{TODO_SET_CATEGORY}
+Deceptive Jammer,51,1,27,{TODO_SET_CATEGORY}
+Frequency Swept Jammer,51,1,28,{TODO_SET_CATEGORY}
+Jammer (general),51,1,29,{TODO_SET_CATEGORY}
+Noise Jammer,51,1,30,{TODO_SET_CATEGORY}
+Pulsed Jammer,51,1,31,{TODO_SET_CATEGORY}
+Repeater Jammer,51,1,32,{TODO_SET_CATEGORY}
+Spot Noise Jammer,51,1,33,{TODO_SET_CATEGORY}
+Transponder Jammer,51,1,34,{TODO_SET_CATEGORY}
+Missile Acquisition,51,1,35,{TODO_SET_CATEGORY}
+Missile Control,51,1,36,{TODO_SET_CATEGORY}
+Missile Downlink,51,1,37,{TODO_SET_CATEGORY}
+Meteorological,51,1,38,{TODO_SET_CATEGORY}
+Multi-Function,51,1,39,{TODO_SET_CATEGORY}
+Missile Guidance,51,1,40,{TODO_SET_CATEGORY}
+Missile Homing,51,1,41,{TODO_SET_CATEGORY}
+Missile Tracking,51,1,42,{TODO_SET_CATEGORY}
+Navigational/General,51,1,43,{TODO_SET_CATEGORY}
+Navigational/Distance Measuring Equipment,51,1,44,{TODO_SET_CATEGORY}
+Navigation/Terrain Following,51,1,45,{TODO_SET_CATEGORY}
+Navigational/Weather Avoidance,51,1,46,{TODO_SET_CATEGORY}
+Omni-Line of Sight (LOS),51,1,47,{TODO_SET_CATEGORY}
+Proximity Use,51,1,48,{TODO_SET_CATEGORY}
+Point-to-Point Line of Sight (LOS),51,1,49,{TODO_SET_CATEGORY}
+Instrumentation,51,1,50,{TODO_SET_CATEGORY}
+Range Only,51,1,51,{TODO_SET_CATEGORY}
+Sonobuoy,51,1,52,{TODO_SET_CATEGORY}
+Satellite Downlink,51,1,53,{TODO_SET_CATEGORY}
+Space,51,1,54,{TODO_SET_CATEGORY}
+Surface Search,51,1,55,{TODO_SET_CATEGORY}
+Shell Tracking,51,1,56,{TODO_SET_CATEGORY}
+Satellite Uplink,51,1,57,{TODO_SET_CATEGORY}
+Target Acquisition,51,1,58,{TODO_SET_CATEGORY}
+Target Illumination,51,1,59,{TODO_SET_CATEGORY}
+Tropospheric Scatter,51,1,60,{TODO_SET_CATEGORY}
+Target Tracking,51,1,61,{TODO_SET_CATEGORY}
+Unknown,51,1,62,{TODO_SET_CATEGORY}
+Video Remoting,51,1,63,{TODO_SET_CATEGORY}
+Experimental,51,1,64,{TODO_SET_CATEGORY}
+Unspecified,52,1,0,{TODO_SET_CATEGORY}
+Anti-Aircraft Fire Control,52,1,1,{TODO_SET_CATEGORY}
+Airborne Search and Bombing,52,1,2,{TODO_SET_CATEGORY}
+Airborne Intercept,52,1,3,{TODO_SET_CATEGORY}
+Altimeter,52,1,4,{TODO_SET_CATEGORY}
+Airborne Reconnaissance and Mapping,52,1,5,{TODO_SET_CATEGORY}
+Air Traffic Control,52,1,6,{TODO_SET_CATEGORY}
+Beacon Transponder (not IFF),52,1,7,{TODO_SET_CATEGORY}
+Battlefield Surveillance,52,1,8,{TODO_SET_CATEGORY}
+Controlled Approach,52,1,9,{TODO_SET_CATEGORY}
+Controlled Intercept,52,1,10,{TODO_SET_CATEGORY}
+Cellular/Mobile,52,1,11,{TODO_SET_CATEGORY}
+Coastal Surveillance,52,1,12,{TODO_SET_CATEGORY}
+Decoy/Mimic,52,1,13,{TODO_SET_CATEGORY}
+Data Transmission,52,1,14,{TODO_SET_CATEGORY}
+Earth Surveillance,52,1,15,{TODO_SET_CATEGORY}
+Early Warning,52,1,16,{TODO_SET_CATEGORY}
+Fire Control,52,1,17,{TODO_SET_CATEGORY}
+Ground Mapping,52,1,18,{TODO_SET_CATEGORY}
+Height Finding,52,1,19,{TODO_SET_CATEGORY}
+Harbor Surveillance,52,1,20,{TODO_SET_CATEGORY}
+Identification Friend or Foe (Interrogator),52,1,21,{TODO_SET_CATEGORY}
+Instrument Landing System,52,1,22,{TODO_SET_CATEGORY}
+Ionospheric Sounding,52,1,23,{TODO_SET_CATEGORY}
+Identification Friend or Foe (Transponder),52,1,24,{TODO_SET_CATEGORY}
+Barrage Jammer,52,1,25,{TODO_SET_CATEGORY}
+Click Jammer,52,1,26,{TODO_SET_CATEGORY}
+Deceptive Jammer,52,1,27,{TODO_SET_CATEGORY}
+Frequency Swept Jammer,52,1,28,{TODO_SET_CATEGORY}
+Jammer (general),52,1,29,{TODO_SET_CATEGORY}
+Noise Jammer,52,1,30,{TODO_SET_CATEGORY}
+Pulsed Jammer,52,1,31,{TODO_SET_CATEGORY}
+Repeater Jammer,52,1,32,{TODO_SET_CATEGORY}
+Spot Noise Jammer,52,1,33,{TODO_SET_CATEGORY}
+Transponder Jammer,52,1,34,{TODO_SET_CATEGORY}
+Missile Acquisition,52,1,35,{TODO_SET_CATEGORY}
+Missile Control,52,1,36,{TODO_SET_CATEGORY}
+Missile Downlink,52,1,37,{TODO_SET_CATEGORY}
+Meteorological,52,1,38,{TODO_SET_CATEGORY}
+Multi-Function,52,1,39,{TODO_SET_CATEGORY}
+Missile Guidance,52,1,40,{TODO_SET_CATEGORY}
+Missile Homing,52,1,41,{TODO_SET_CATEGORY}
+Missile Tracking,52,1,42,{TODO_SET_CATEGORY}
+Navigational/General,52,1,43,{TODO_SET_CATEGORY}
+Navigational/Distance Measuring Equipment,52,1,44,{TODO_SET_CATEGORY}
+Navigation/Terrain Following,52,1,45,{TODO_SET_CATEGORY}
+Navigational/Weather Avoidance,52,1,46,{TODO_SET_CATEGORY}
+Omni-Line of Sight (LOS),52,1,47,{TODO_SET_CATEGORY}
+Proximity Use,52,1,48,{TODO_SET_CATEGORY}
+Point-to-Point Line of Sight (LOS),52,1,49,{TODO_SET_CATEGORY}
+Instrumentation,52,1,50,{TODO_SET_CATEGORY}
+Range Only,52,1,51,{TODO_SET_CATEGORY}
+Sonobuoy,52,1,52,{TODO_SET_CATEGORY}
+Satellite Downlink,52,1,53,{TODO_SET_CATEGORY}
+Space,52,1,54,{TODO_SET_CATEGORY}
+Surface Search,52,1,55,{TODO_SET_CATEGORY}
+Shell Tracking,52,1,56,{TODO_SET_CATEGORY}
+Satellite Uplink,52,1,57,{TODO_SET_CATEGORY}
+Target Acquisition,52,1,58,{TODO_SET_CATEGORY}
+Target Illumination,52,1,59,{TODO_SET_CATEGORY}
+Tropospheric Scatter,52,1,60,{TODO_SET_CATEGORY}
+Target Tracking,52,1,61,{TODO_SET_CATEGORY}
+Unknown,52,1,62,{TODO_SET_CATEGORY}
+Video Remoting,52,1,63,{TODO_SET_CATEGORY}
+Experimental,52,1,64,{TODO_SET_CATEGORY}
+Unspecified,53,1,0,{TODO_SET_CATEGORY}
+Anti-Aircraft Fire Control,53,1,1,{TODO_SET_CATEGORY}
+Airborne Search and Bombing,53,1,2,{TODO_SET_CATEGORY}
+Airborne Intercept,53,1,3,{TODO_SET_CATEGORY}
+Altimeter,53,1,4,{TODO_SET_CATEGORY}
+Airborne Reconnaissance and Mapping,53,1,5,{TODO_SET_CATEGORY}
+Air Traffic Control,53,1,6,{TODO_SET_CATEGORY}
+Beacon Transponder (not IFF),53,1,7,{TODO_SET_CATEGORY}
+Battlefield Surveillance,53,1,8,{TODO_SET_CATEGORY}
+Controlled Approach,53,1,9,{TODO_SET_CATEGORY}
+Controlled Intercept,53,1,10,{TODO_SET_CATEGORY}
+Cellular/Mobile,53,1,11,{TODO_SET_CATEGORY}
+Coastal Surveillance,53,1,12,{TODO_SET_CATEGORY}
+Decoy/Mimic,53,1,13,{TODO_SET_CATEGORY}
+Data Transmission,53,1,14,{TODO_SET_CATEGORY}
+Earth Surveillance,53,1,15,{TODO_SET_CATEGORY}
+Early Warning,53,1,16,{TODO_SET_CATEGORY}
+Fire Control,53,1,17,{TODO_SET_CATEGORY}
+Ground Mapping,53,1,18,{TODO_SET_CATEGORY}
+Height Finding,53,1,19,{TODO_SET_CATEGORY}
+Harbor Surveillance,53,1,20,{TODO_SET_CATEGORY}
+Identification Friend or Foe (Interrogator),53,1,21,{TODO_SET_CATEGORY}
+Instrument Landing System,53,1,22,{TODO_SET_CATEGORY}
+Ionospheric Sounding,53,1,23,{TODO_SET_CATEGORY}
+Identification Friend or Foe (Transponder),53,1,24,{TODO_SET_CATEGORY}
+Barrage Jammer,53,1,25,{TODO_SET_CATEGORY}
+Click Jammer,53,1,26,{TODO_SET_CATEGORY}
+Deceptive Jammer,53,1,27,{TODO_SET_CATEGORY}
+Frequency Swept Jammer,53,1,28,{TODO_SET_CATEGORY}
+Jammer (general),53,1,29,{TODO_SET_CATEGORY}
+Noise Jammer,53,1,30,{TODO_SET_CATEGORY}
+Pulsed Jammer,53,1,31,{TODO_SET_CATEGORY}
+Repeater Jammer,53,1,32,{TODO_SET_CATEGORY}
+Spot Noise Jammer,53,1,33,{TODO_SET_CATEGORY}
+Transponder Jammer,53,1,34,{TODO_SET_CATEGORY}
+Missile Acquisition,53,1,35,{TODO_SET_CATEGORY}
+Missile Control,53,1,36,{TODO_SET_CATEGORY}
+Missile Downlink,53,1,37,{TODO_SET_CATEGORY}
+Meteorological,53,1,38,{TODO_SET_CATEGORY}
+Multi-Function,53,1,39,{TODO_SET_CATEGORY}
+Missile Guidance,53,1,40,{TODO_SET_CATEGORY}
+Missile Homing,53,1,41,{TODO_SET_CATEGORY}
+Missile Tracking,53,1,42,{TODO_SET_CATEGORY}
+Navigational/General,53,1,43,{TODO_SET_CATEGORY}
+Navigational/Distance Measuring Equipment,53,1,44,{TODO_SET_CATEGORY}
+Navigation/Terrain Following,53,1,45,{TODO_SET_CATEGORY}
+Navigational/Weather Avoidance,53,1,46,{TODO_SET_CATEGORY}
+Omni-Line of Sight (LOS),53,1,47,{TODO_SET_CATEGORY}
+Proximity Use,53,1,48,{TODO_SET_CATEGORY}
+Point-to-Point Line of Sight (LOS),53,1,49,{TODO_SET_CATEGORY}
+Instrumentation,53,1,50,{TODO_SET_CATEGORY}
+Range Only,53,1,51,{TODO_SET_CATEGORY}
+Sonobuoy,53,1,52,{TODO_SET_CATEGORY}
+Satellite Downlink,53,1,53,{TODO_SET_CATEGORY}
+Space,53,1,54,{TODO_SET_CATEGORY}
+Surface Search,53,1,55,{TODO_SET_CATEGORY}
+Shell Tracking,53,1,56,{TODO_SET_CATEGORY}
+Satellite Uplink,53,1,57,{TODO_SET_CATEGORY}
+Target Acquisition,53,1,58,{TODO_SET_CATEGORY}
+Target Illumination,53,1,59,{TODO_SET_CATEGORY}
+Tropospheric Scatter,53,1,60,{TODO_SET_CATEGORY}
+Target Tracking,53,1,61,{TODO_SET_CATEGORY}
+Unknown,53,1,62,{TODO_SET_CATEGORY}
+Video Remoting,53,1,63,{TODO_SET_CATEGORY}
+Experimental,53,1,64,{TODO_SET_CATEGORY}
+Unspecified,54,1,0,{TODO_SET_CATEGORY}
+Anti-Aircraft Fire Control,54,1,1,{TODO_SET_CATEGORY}
+Airborne Search and Bombing,54,1,2,{TODO_SET_CATEGORY}
+Airborne Intercept,54,1,3,{TODO_SET_CATEGORY}
+Altimeter,54,1,4,{TODO_SET_CATEGORY}
+Airborne Reconnaissance and Mapping,54,1,5,{TODO_SET_CATEGORY}
+Air Traffic Control,54,1,6,{TODO_SET_CATEGORY}
+Beacon Transponder (not IFF),54,1,7,{TODO_SET_CATEGORY}
+Battlefield Surveillance,54,1,8,{TODO_SET_CATEGORY}
+Controlled Approach,54,1,9,{TODO_SET_CATEGORY}
+Controlled Intercept,54,1,10,{TODO_SET_CATEGORY}
+Cellular/Mobile,54,1,11,{TODO_SET_CATEGORY}
+Coastal Surveillance,54,1,12,{TODO_SET_CATEGORY}
+Decoy/Mimic,54,1,13,{TODO_SET_CATEGORY}
+Data Transmission,54,1,14,{TODO_SET_CATEGORY}
+Earth Surveillance,54,1,15,{TODO_SET_CATEGORY}
+Early Warning,54,1,16,{TODO_SET_CATEGORY}
+Fire Control,54,1,17,{TODO_SET_CATEGORY}
+Ground Mapping,54,1,18,{TODO_SET_CATEGORY}
+Height Finding,54,1,19,{TODO_SET_CATEGORY}
+Harbor Surveillance,54,1,20,{TODO_SET_CATEGORY}
+Identification Friend or Foe (Interrogator),54,1,21,{TODO_SET_CATEGORY}
+Instrument Landing System,54,1,22,{TODO_SET_CATEGORY}
+Ionospheric Sounding,54,1,23,{TODO_SET_CATEGORY}
+Identification Friend or Foe (Transponder),54,1,24,{TODO_SET_CATEGORY}
+Barrage Jammer,54,1,25,{TODO_SET_CATEGORY}
+Click Jammer,54,1,26,{TODO_SET_CATEGORY}
+Deceptive Jammer,54,1,27,{TODO_SET_CATEGORY}
+Frequency Swept Jammer,54,1,28,{TODO_SET_CATEGORY}
+Jammer (general),54,1,29,{TODO_SET_CATEGORY}
+Noise Jammer,54,1,30,{TODO_SET_CATEGORY}
+Pulsed Jammer,54,1,31,{TODO_SET_CATEGORY}
+Repeater Jammer,54,1,32,{TODO_SET_CATEGORY}
+Spot Noise Jammer,54,1,33,{TODO_SET_CATEGORY}
+Transponder Jammer,54,1,34,{TODO_SET_CATEGORY}
+Missile Acquisition,54,1,35,{TODO_SET_CATEGORY}
+Missile Control,54,1,36,{TODO_SET_CATEGORY}
+Missile Downlink,54,1,37,{TODO_SET_CATEGORY}
+Meteorological,54,1,38,{TODO_SET_CATEGORY}
+Multi-Function,54,1,39,{TODO_SET_CATEGORY}
+Missile Guidance,54,1,40,{TODO_SET_CATEGORY}
+Missile Homing,54,1,41,{TODO_SET_CATEGORY}
+Missile Tracking,54,1,42,{TODO_SET_CATEGORY}
+Navigational/General,54,1,43,{TODO_SET_CATEGORY}
+Navigational/Distance Measuring Equipment,54,1,44,{TODO_SET_CATEGORY}
+Navigation/Terrain Following,54,1,45,{TODO_SET_CATEGORY}
+Navigational/Weather Avoidance,54,1,46,{TODO_SET_CATEGORY}
+Omni-Line of Sight (LOS),54,1,47,{TODO_SET_CATEGORY}
+Proximity Use,54,1,48,{TODO_SET_CATEGORY}
+Point-to-Point Line of Sight (LOS),54,1,49,{TODO_SET_CATEGORY}
+Instrumentation,54,1,50,{TODO_SET_CATEGORY}
+Range Only,54,1,51,{TODO_SET_CATEGORY}
+Sonobuoy,54,1,52,{TODO_SET_CATEGORY}
+Satellite Downlink,54,1,53,{TODO_SET_CATEGORY}
+Space,54,1,54,{TODO_SET_CATEGORY}
+Surface Search,54,1,55,{TODO_SET_CATEGORY}
+Shell Tracking,54,1,56,{TODO_SET_CATEGORY}
+Satellite Uplink,54,1,57,{TODO_SET_CATEGORY}
+Target Acquisition,54,1,58,{TODO_SET_CATEGORY}
+Target Illumination,54,1,59,{TODO_SET_CATEGORY}
+Tropospheric Scatter,54,1,60,{TODO_SET_CATEGORY}
+Target Tracking,54,1,61,{TODO_SET_CATEGORY}
+Unknown,54,1,62,{TODO_SET_CATEGORY}
+Video Remoting,54,1,63,{TODO_SET_CATEGORY}
+Experimental,54,1,64,{TODO_SET_CATEGORY}

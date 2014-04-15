@@ -48,7 +48,23 @@ namespace Library2525D
         // You must uncomment & set this to the location on your machine if you don't want to use the default
         private static readonly string ALTERNATE_PATH = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]";
 
-        public static readonly string ImageFilesHome =
+        // Allow this property to be set externally
+        public static string ImageFilesHome
+        {
+            get { return imageFilesHome; }
+            set
+            {
+                string checkForDirectorySeparator = value;
+
+                // but make sure it ends in a DirectorySeparatorChar
+                checkForDirectorySeparator = 
+                    checkForDirectorySeparator.TrimEnd(System.IO.Path.DirectorySeparatorChar) + 
+                    System.IO.Path.DirectorySeparatorChar;
+
+                imageFilesHome = checkForDirectorySeparator;
+            }
+        }
+        private static string imageFilesHome =
             // ALTERNATE_PATH // <-- TODO: SET THIS to ALTERNATE_PATH if you don't want to use default
             DEFAULT_PATH      // (and comment out this) 
             + System.IO.Path.DirectorySeparatorChar; // IMPORTANT/NOTE: Ends in DirectorySeparator
@@ -83,6 +99,7 @@ namespace Library2525D
             return sb.ToString();
         }
 
+        // e.g. MainIconNameWithFolder = Appendices\Air\01110000.svg
         public static string GetMainIconNameWithFolder(ref MilitarySymbol milSymbol)
         {
             StringBuilder sb = new StringBuilder();
@@ -94,6 +111,19 @@ namespace Library2525D
 
             sb.Append(mainIconName);
             sb.Append(ImageSuffix);
+
+            return sb.ToString();
+        }
+
+        // same as ImageFilesHome + GetMainIconNameWithFolder
+        public static string GetMainIconNameWithFullPath(ref MilitarySymbol milSymbol)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(ImageFilesHome);
+
+            string mainIconNameWithoutImageFilesHome = GetMainIconNameWithFolder(ref milSymbol);
+            sb.Append(mainIconNameWithoutImageFilesHome);
 
             return sb.ToString();
         }
@@ -167,6 +197,21 @@ namespace Library2525D
             return sb.ToString();
         }
 
+        // same as ImageFilesHome + GetModfierIconNameWithFolder
+        public static string GetModfierIconNameWithFullPath(SymbolSetType symbolSet, int modifierNumber, int modifierCodeInt)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(ImageFilesHome);
+
+            string modifierIconNameWithoutImageFilesHome = GetModfierIconNameWithFolder(
+                symbolSet, modifierNumber, modifierCodeInt);
+
+            sb.Append(modifierIconNameWithoutImageFilesHome);
+
+            return sb.ToString();
+        }
+
         public static string GetModfierIconNameWithFolder(ref MilitarySymbol milSymbol, int modifierNumber)
         {
             if (!((modifierNumber == 1) || (modifierNumber == 2)))
@@ -198,8 +243,8 @@ namespace Library2525D
 
             //////////////////////////////////////////////////////////////////////////
             // Frame Layer 
-            // = StandardIdentityAffiliationType + SymbolSetType + "(affiliation)"
-            // ex. 0520(hostile)
+            // = StandardIdentityAffiliationType + SymbolSetType
+            // ex. 0520
             StringBuilder sb = new StringBuilder();
 
             // Note: affiliationString reused below
@@ -231,8 +276,8 @@ namespace Library2525D
             sb.Clear();
             sb.Append(ImageFilesHome);
 
-            string mainIconNameWithoutFolder = GetMainIconNameWithFolder(ref milSymbol);
-            sb.Append(mainIconNameWithoutFolder);
+            string mainIconNameWithoutImageFilesHome = GetMainIconNameWithFolder(ref milSymbol);
+            sb.Append(mainIconNameWithoutImageFilesHome);
 
             string mainIconNameWithFolder = sb.ToString();
             // WORKAROUND/TRICKY: some symbols have wacky _0, _1, _2, _3 thing instead of base version

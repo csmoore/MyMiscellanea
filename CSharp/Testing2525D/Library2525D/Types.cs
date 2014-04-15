@@ -17,7 +17,6 @@ using System.Threading.Tasks;
 
 namespace Library2525D
 {
-
     ///////////////////////////////////////////////////////////
     // 2525D Types and Helpers 
     ///////////////////////////////////////////////////////////
@@ -68,7 +67,7 @@ namespace Library2525D
         Land_Civilian_Unit_Organization = 11,
         Land_Equipment = 15,
         Land_Installation = 20,
-        Control_Measure = 25,
+        Control_Measures = 25,
         Sea_Surface = 30,
         Sea_Subsurface = 35,
         Mine_Warfare = 36,
@@ -199,7 +198,7 @@ namespace Library2525D
 
             switch (symbolSet)
             {
-                case SymbolSetType.Control_Measure : 
+                case SymbolSetType.Control_Measures : 
                 case SymbolSetType.Atmospheric :
                 case SymbolSetType.Oceanographic :
                 case SymbolSetType.Meteorological_Space:
@@ -214,21 +213,6 @@ namespace Library2525D
             return hasFrame;
         }
 
-//TODO: remove - probably no longer needed:
-        public static Dictionary<StandardIdentityAffiliationType, string> AffiliationTypeToImageName =
-            new Dictionary<StandardIdentityAffiliationType, string>()
-            {
-                { StandardIdentityAffiliationType.Pending, "pending" },
-                { StandardIdentityAffiliationType.Unknown, "unknown" },
-                { StandardIdentityAffiliationType.Assumed_Friend, "friend" },
-                { StandardIdentityAffiliationType.Friend, "friend" },
-                { StandardIdentityAffiliationType.Neutral, "neutral" },
-                { StandardIdentityAffiliationType.Suspect_Joker, "hostile" },
-                { StandardIdentityAffiliationType.Hostile, "hostile" },
-                { StandardIdentityAffiliationType.Invalid, "unknown" },
-                { StandardIdentityAffiliationType.NotSet, "unknown" }
-            };
-
         public static Dictionary<SymbolSetType, string> SymbolSetToFolderName = new Dictionary<SymbolSetType, string>()
         {             
             { SymbolSetType.Air, "Air" },
@@ -242,7 +226,7 @@ namespace Library2525D
             { SymbolSetType.Land_Equipment, "Land" },
             { SymbolSetType.Land_Installation, "Land" },
 
-            { SymbolSetType.Control_Measure, "ControlMeasures" },
+            { SymbolSetType.Control_Measures, "ControlMeasures" },
 
             { SymbolSetType.Cyberspace, "Cyberspace" },
 
@@ -252,10 +236,7 @@ namespace Library2525D
 
             { SymbolSetType.Sea_Surface, "SeaSurface" },
             { SymbolSetType.Sea_Subsurface, "Subsurface" },
-
-            // TODO: Figure out the remaining missing/unmapped ones....
-            // Missing Types Mapping:
-            // Mine_Warfare = 36
+            { SymbolSetType.Mine_Warfare, "Subsurface" },
 
             { SymbolSetType.Activities, "Activities" }, 
 
@@ -264,7 +245,6 @@ namespace Library2525D
             { SymbolSetType.Signals_Intelligence_Land, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Surface, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Subsurface, "SigInt" }
-
         }; //  end SymbolSetToFolderName dictionary declaration
 
         public class EnumHelper

@@ -85,6 +85,7 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 05,Civilian,Tethered Satellite,,121100,Point
 05,Civilian,Weather Satellite,,121200,Point
 05,Manual Track,,,130000,Point
+06,Space Missile,,,110000,Point
 10,Command and Control,,,110000,Point
 10,Command and Control,Broadcast Transmitter Antennae,,110100,Point
 10,Command and Control,Civil Affairs ,,110200,Point

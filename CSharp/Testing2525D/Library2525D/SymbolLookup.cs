@@ -23,14 +23,17 @@ namespace Library2525D
     ///                        search/query capabilities
     /// Tables: (1) EntityTable (2) Modifier Table (3) Legacy Id Codes
     /// 
-    /// WARNING: This class is highly dependent on the column names for its queries
-    ///          If you change the format/columns of the dependend data tables,
-    ///          these queries/code will also need to be changed.
+    /// WARNING: This class is highly dependent on the *column names* for its queries
+    ///          If you change the format/columns(mainly the names) of the dependent
+    ///          data tables, these queries/code may also need to be changed.
     /// </summary>
     public class SymbolLookup
     {
         // TODO: this class is a bit of a mess, this was just quick prototyping,
-        //       refactor/cleanse later
+        //       refactor/cleanse later - I know that this is just a big, complicated ball
+        //       of query/lookup code, but hopefully some of the methods make sense for the
+        //       the types of things you need to query about mil-symbols i.e.:
+        //       get{Distinct}Modifiers, get{Distinct}Modifiers, etc.
 
         public SymbolLookup()
         {
@@ -158,6 +161,39 @@ namespace Library2525D
             }
 
             return modifierCode;
+        }
+
+        public string GetModifierCategoryFromName(SymbolSetType symbolSet, string modifierNameString,
+            int modfierNumber = 1)
+        {
+            string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
+
+            string modifierToSearch = modfierNumber.ToString();
+
+            var results = from row in ModifierTable.AsEnumerable()
+                          where ((row.Field<string>("SymbolSet") == symbolSetToSearch)
+                               & (row.Field<string>("Name") == modifierNameString)
+                                & (row.Field<string>("ModifierNumber") == modifierToSearch))
+                          select row;
+
+            int resultCount = results.Count();
+            if (resultCount < 1)
+            {
+                System.Diagnostics.Trace.WriteLine("Modifier Name note found: " + modifierNameString);
+                return string.Empty;
+            }
+
+            string modifierCategory = string.Empty;
+
+            foreach (DataRow row in results)
+            {
+                modifierCategory = row["Category"] as string;
+
+                // We only care about the 1st result
+                break;
+            }
+
+            return modifierCategory;
         }
 
         public List<string> GetDistinctModifierNames(SymbolSetType symbolSet, int modfierNumber = 1)

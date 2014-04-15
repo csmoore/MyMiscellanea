@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 
 namespace Library2525D
 {
+    // TODO/IMPORTANT NOTE: This class never actually got used 
 
     /// <summary>
     /// Container for the attributes of a *single* layer/icon of a 2525D Military Symbol 
