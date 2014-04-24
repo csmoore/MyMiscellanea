@@ -216,6 +216,10 @@ namespace MilSymbolPicker
                         button31.Text = string.Empty;
                         button31.PerformClick();
                     }
+                    else
+                    {
+                        currentColValues.Add(NOT_SET);
+                    }
 
                     currentColRowIndex = 0;
 

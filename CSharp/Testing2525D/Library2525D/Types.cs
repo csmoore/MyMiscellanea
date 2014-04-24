@@ -214,7 +214,8 @@ namespace Library2525D
             return hasFrame;
         }
 
-        public static Dictionary<SymbolSetType, SymbolSetType> SymbolSetToFrameType = new Dictionary<SymbolSetType, SymbolSetType>()
+        public static Dictionary<SymbolSetType, SymbolSetType> SymbolSetToFrameMapping 
+            = new Dictionary<SymbolSetType, SymbolSetType>()
         {  
             { SymbolSetType.Unknown, SymbolSetType.Unknown },
             { SymbolSetType.NotSet, SymbolSetType.Unknown },
@@ -286,6 +287,35 @@ namespace Library2525D
             { SymbolSetType.Signals_Intelligence_Surface, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Subsurface, "SigInt" }
         }; //  end SymbolSetToFolderName dictionary declaration
+
+        public static Dictionary<StandardIdentityAffiliationType, StandardIdentityAffiliationType>
+            AffiliationToAffiliationFrameMapping = new Dictionary<StandardIdentityAffiliationType, StandardIdentityAffiliationType>()
+        {
+            { StandardIdentityAffiliationType.Pending, StandardIdentityAffiliationType.Unknown },
+            { StandardIdentityAffiliationType.Unknown, StandardIdentityAffiliationType.Unknown },
+            { StandardIdentityAffiliationType.Assumed_Friend, StandardIdentityAffiliationType.Friend },
+            { StandardIdentityAffiliationType.Friend, StandardIdentityAffiliationType.Friend },
+            { StandardIdentityAffiliationType.Neutral, StandardIdentityAffiliationType.Neutral },            
+            { StandardIdentityAffiliationType.Suspect_Joker, StandardIdentityAffiliationType.Hostile },
+            { StandardIdentityAffiliationType.Hostile, StandardIdentityAffiliationType.Hostile },
+            { StandardIdentityAffiliationType.Invalid, StandardIdentityAffiliationType.Unknown },
+            { StandardIdentityAffiliationType.NotSet, StandardIdentityAffiliationType.Unknown }
+        };
+
+        // Decoder _0 - Unknown, _1 - Friend, _2 - Neutral, _3 - Hostile
+        public static Dictionary<StandardIdentityAffiliationType, string> AffiliationFrameToSuffixName 
+            = new Dictionary<StandardIdentityAffiliationType, string>()
+        {
+            { StandardIdentityAffiliationType.Pending, "_0" },
+            { StandardIdentityAffiliationType.Unknown, "_0" },
+            { StandardIdentityAffiliationType.Assumed_Friend, "_1" },
+            { StandardIdentityAffiliationType.Friend, "_1" },
+            { StandardIdentityAffiliationType.Neutral, "_2" },
+            { StandardIdentityAffiliationType.Suspect_Joker, "_3" },
+            { StandardIdentityAffiliationType.Hostile, "_3" },
+            { StandardIdentityAffiliationType.Invalid, "_0" },
+            { StandardIdentityAffiliationType.NotSet, "_0" }
+        };
 
         public class EnumHelper
         {

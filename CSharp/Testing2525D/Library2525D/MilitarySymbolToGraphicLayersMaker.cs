@@ -22,12 +22,15 @@ namespace Library2525D
     /// These strings represent the paths to the set of images/layers that *should*
     /// represent that Symbol Id
     /// For convenience, it take a MilitarySymbol object and sets the GraphicLayers to these strings
+    /// (NOTE: a TODO should be to remove this MilitarySymbol dependency, this was just done
+    ///  for rapid prototyping, isn't needed, & will prevent this class from being easily reused - 
+    ///  although there are so many other dependencies on the classes in this assembly,
+    ///  one more probably won't hurt)
     /// </summary>
     public class MilitarySymbolToGraphicLayersMaker
     {
         // IMPORTANT: If you don't have the expected SVG Files, in the expected folder format
         //            then this class will not do anything.
-        // The incomplete SVG snapshot: "2525D_SVG_PNG_062013" was used.
         // The assumed/expected Folder structure:
         // {ImageFilesHome} <--- SEE DEFINITION BELOW
         //  |- Echelon
@@ -48,9 +51,10 @@ namespace Library2525D
         // If you don't want to use the default: 
         // 1) You must uncomment & set this to the location on your machine &
         // 2) Change imageFilesHome default/TODO below
-        private static readonly string ALTERNATE_PATH = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]";
+        private static readonly string ALTERNATE_PATH = 
+                        @"[!!!!!!!!!!!SET_THIS_FOLDER_IF_DESIRED!!!!!!!!!!!]";
 
-        // Allow this property to be set externally
+        // Allow this property to be set externally at runtime (if desired/needed)
         public static string ImageFilesHome
         {
             get { return imageFilesHome; }
@@ -101,7 +105,9 @@ namespace Library2525D
             return sb.ToString();
         }
 
-        // e.g. MainIconNameWithFolder = Appendices\Air\01110000.svg
+        // MainIconNameWithFolder
+        // Appendices\{SymbolSetTypeName}\SymbolSetType + EntityCode 
+        // e.g. Appendices\Air\01110000.svg ==> { 01 } + { 110000 }
         public static string GetMainIconNameWithFolder(ref MilitarySymbol milSymbol)
         {
             StringBuilder sb = new StringBuilder();
@@ -127,7 +133,22 @@ namespace Library2525D
             string mainIconNameWithoutImageFilesHome = GetMainIconNameWithFolder(ref milSymbol);
             sb.Append(mainIconNameWithoutImageFilesHome);
 
-            return sb.ToString();
+            string mainIconNameFullPath = sb.ToString();
+
+            // WORKAROUND/TRICKY: some symbols have wacky _0, _1, _2, _3 thing instead of base version
+            // Method: Find the frame from the affiliation & add _0, _1, _2, _3 accordingly
+            if (!System.IO.File.Exists(mainIconNameFullPath))
+            {
+                string newFrameSuffix =
+                    TypeUtilities.AffiliationFrameToSuffixName[milSymbol.Id.Affiliation] + ImageSuffix;
+
+                string subMainIconName = mainIconNameFullPath;
+                subMainIconName = subMainIconName.Replace(ImageSuffix, newFrameSuffix);
+                if (System.IO.File.Exists(subMainIconName)) // if the other file/version exists, use that one
+                    mainIconNameFullPath = subMainIconName;
+            }
+
+            return mainIconNameFullPath;
         }
 
         public static string GetModfierIconName(SymbolSetType symbolSet, int modifierNumber, int modifierCodeInt)
@@ -309,7 +330,7 @@ namespace Library2525D
             sb.Append(affiliationString);
 
             // map the actual symbolSet to the supported/availble frame
-            SymbolSetType mappedSymbolSet = TypeUtilities.SymbolSetToFrameType[symbolSet];
+            SymbolSetType mappedSymbolSet = TypeUtilities.SymbolSetToFrameMapping[symbolSet];
 
             string mappedSymbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(mappedSymbolSet, 2);
             sb.Append(mappedSymbolSetString);
@@ -350,7 +371,7 @@ namespace Library2525D
             milSymbol.GraphicLayers.Clear();
 
             //////////////////////////////////////////////////////////////////////////
-            // 
+            // Assembly the layers
 
             // Start with the Frame
             if (TypeUtilities.HasFrame(milSymbol.Id.SymbolSet))
@@ -372,26 +393,9 @@ namespace Library2525D
 
             //////////////////////////////////////////////////////////////////////////
             // Main Icon Layer
-            // Appendices\{SymbolSetTypeName}\SymbolSetType + EntityCode 
-            StringBuilder sb = new StringBuilder();
+            string mainIconNameFullPath = GetMainIconNameWithFullPath(ref milSymbol);
 
-            sb.Clear();
-            sb.Append(ImageFilesHome);
-
-            string mainIconNameWithoutImageFilesHome = GetMainIconNameWithFolder(ref milSymbol);
-            sb.Append(mainIconNameWithoutImageFilesHome);
-
-            string mainIconNameWithFolder = sb.ToString();
-            // WORKAROUND/TRICKY: some symbols have wacky _0, _1, _2, _3 thing instead of base version
-            if (!System.IO.File.Exists(mainIconNameWithFolder))
-            {
-                string subMainIconName = mainIconNameWithFolder;
-                subMainIconName = subMainIconName.Replace(@".svg", @"_0.svg");
-                if (System.IO.File.Exists(subMainIconName)) // if the other file exists, use that one
-                    mainIconNameWithFolder = subMainIconName;
-            }
-
-            milSymbol.GraphicLayers.Add(mainIconNameWithFolder);
+            milSymbol.GraphicLayers.Add(mainIconNameFullPath);
             //////////////////////////////////////////////////////////////////////////
 
             //////////////////////////////////////////////////////////////////////////
@@ -408,6 +412,8 @@ namespace Library2525D
 
             if (!skipRemainingLayers)
             {
+                StringBuilder sb = new StringBuilder();
+
                 // Center/Main Icon Modifiers: { # = 1 | 2 }
                 // Appendices\{SymbolSetTypeName}\Mod{#}\{SymbolSetType} + {ModifierCode} + {#}
 
