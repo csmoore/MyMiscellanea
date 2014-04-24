@@ -59,6 +59,7 @@ namespace Library2525D
 
     public enum SymbolSetType // (Digits 5 & 6)
     {
+        Unknown = 00, 
         Air = 01,
         Air_Missile = 02,
         Space = 05,
@@ -213,8 +214,47 @@ namespace Library2525D
             return hasFrame;
         }
 
+        public static Dictionary<SymbolSetType, SymbolSetType> SymbolSetToFrameType = new Dictionary<SymbolSetType, SymbolSetType>()
+        {  
+            { SymbolSetType.Unknown, SymbolSetType.Unknown },
+            { SymbolSetType.NotSet, SymbolSetType.Unknown },
+
+            { SymbolSetType.Air, SymbolSetType.Air },
+            { SymbolSetType.Air_Missile, SymbolSetType.Air },
+
+            { SymbolSetType.Space, SymbolSetType.Space },
+            { SymbolSetType.Space_Missile, SymbolSetType.Space },
+
+            { SymbolSetType.Land_Unit, SymbolSetType.Land_Unit },
+            { SymbolSetType.Land_Civilian_Unit_Organization, SymbolSetType.Land_Unit },
+            { SymbolSetType.Land_Equipment, SymbolSetType.Sea_Surface },
+            { SymbolSetType.Land_Installation, SymbolSetType.Land_Installation },
+
+            { SymbolSetType.Control_Measures, SymbolSetType.NotSet },
+
+            { SymbolSetType.Cyberspace, SymbolSetType.Sea_Surface },
+
+            { SymbolSetType.Atmospheric, SymbolSetType.NotSet },
+            { SymbolSetType.Oceanographic, SymbolSetType.NotSet },
+            { SymbolSetType.Meteorological_Space, SymbolSetType.NotSet },
+
+            { SymbolSetType.Sea_Surface, SymbolSetType.Sea_Surface },
+            { SymbolSetType.Sea_Subsurface, SymbolSetType.Sea_Subsurface },
+            { SymbolSetType.Mine_Warfare, SymbolSetType.Sea_Subsurface },
+
+            { SymbolSetType.Activities,  SymbolSetType.Activities }, 
+
+            { SymbolSetType.Signals_Intelligence_Space, SymbolSetType.Space },
+            { SymbolSetType.Signals_Intelligence_Air, SymbolSetType.Air },
+            { SymbolSetType.Signals_Intelligence_Land, SymbolSetType.Sea_Surface },
+            { SymbolSetType.Signals_Intelligence_Surface, SymbolSetType.Sea_Surface },
+            { SymbolSetType.Signals_Intelligence_Subsurface,  SymbolSetType.Sea_Subsurface }
+        }; // end SymbolSetToFrameType
+
         public static Dictionary<SymbolSetType, string> SymbolSetToFolderName = new Dictionary<SymbolSetType, string>()
-        {             
+        {
+            { SymbolSetType.Unknown, "" },
+            { SymbolSetType.NotSet, "" }, 
             { SymbolSetType.Air, "Air" },
             { SymbolSetType.Air_Missile, "Air" },
 

@@ -33,7 +33,7 @@ namespace Library2525D
         //       refactor/cleanse later - I know that this is just a big, complicated ball
         //       of query/lookup code, but hopefully some of the methods make sense for the
         //       the types of things you need to query about mil-symbols i.e.:
-        //       get{Distinct}Modifiers, get{Distinct}Modifiers, etc.
+        //       get{Distinct}Modifiers, get{Distinct}Entities, get{Type}Code etc.
 
         public SymbolLookup()
         {

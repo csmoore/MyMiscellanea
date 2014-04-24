@@ -21,14 +21,13 @@ namespace Library2525D
     class Program
     {
         // TODO: SET THESE TO DESIRED VALUES IF USING STYLE EXPORT
-        const bool FORMAT_IS_STYLE_CSV = true;
+        const bool FORMAT_IS_STYLE_CSV = false;
         const string POINT_SIZE_STRING = "32";
         const int MAX_STYLE_LENGTH = 255;
-        const bool IMAGE_FORMAT_IS_EMF = false;
-        const string IMAGES_HOME = 
-            @"{Symbols_Root}";
-
-        const bool INCLUDE_NOTES = false;
+        const bool IMAGE_FORMAT_IS_EMF = true;
+        const bool INCLUDE_NOTES = true;
+        const string IMAGES_HOME =
+            @"C:\MyFiles\Esri\MilitaryFeatures2525D\SymbolsApril32014\2525D_EMF";
 
         /// <summary>
         /// This command line app, just returns types and values that it knows about
@@ -231,6 +230,13 @@ namespace Library2525D
 
                 // Copying so making ref below useless, but had to do this because of use of iterator/ref
                 MilitarySymbol currentMilSymbol = matchSymbol;
+
+                // IMPORTANT: SKIPPING ALL POINTS CURRENTLY
+                if (currentMilSymbol.Shape != ShapeType.Point)
+                {
+                    System.Diagnostics.Trace.WriteLine("Skipping export of non-point: Name=" + matchSymbol.Id.Name);
+                    continue;
+                }
 
                 sbNotes.Clear();
 

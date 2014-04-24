@@ -40,12 +40,14 @@ namespace Library2525D
         //     |- Land
         // (etc.)
 
-        // IMPORTANT: defaults to {exe folder}\Data\2525D_SVG_Images
+        // IMPORTANT: defaults to {exe folder}\Data\2525D_SVG_Images (mainly for deployment)
         private static readonly string DEFAULT_PATH = 
             System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\2525D_SVG_Images");
 
         // TODO/IMPORTANT: 
-        // You must uncomment & set this to the location on your machine if you don't want to use the default
+        // If you don't want to use the default: 
+        // 1) You must uncomment & set this to the location on your machine &
+        // 2) Change imageFilesHome default/TODO below
         private static readonly string ALTERNATE_PATH = @"[!!!!!!!!!!!SET_THIS_FOLDER_!!!!!!!!!!!]";
 
         // Allow this property to be set externally
@@ -227,6 +229,112 @@ namespace Library2525D
             return modifierIconNameWithFolder;
         }
 
+        // Echelon/Mobility Modifier Icon
+        // = StandardIdentityAffiliationType + SymbolSet + 
+        //        HeadquartersTaskForceDummyType + EchelonMobilityType
+        // "Amplifier (Echelon): Uses SIDC pos 3-6 and 8-10"
+        // ex. Friend, Team Crew = 0310011 
+        //      --> 03 (Friend) + 10 (Ground Unit) + 0 (HQ/TF) + 11 (Echelon = Team/Crew)
+        //
+        public static string GetEchelonIconNameWithFolder(
+            StandardIdentityAffiliationType affiliation,
+            SymbolSetType symbolSet,
+            HeadquartersTaskForceDummyType hqTfDummy,
+            EchelonMobilityType echelonMobility)
+        {
+            if (echelonMobility == EchelonMobilityType.NoEchelonMobility)
+                return string.Empty;
+
+            string affiliationString = "03";
+            // TODO: (currently only Friend supported/available), activate below when available
+            //     TypeUtilities.EnumHelper.getEnumValAsString(affiliation, 2);
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Echelon");
+            sb.Append(System.IO.Path.DirectorySeparatorChar);
+            sb.Append(affiliationString);
+
+            // TODO: symbolSet + hqTfDummy (currently only Ground, no HqTf available)
+            // we will need to set this later when the svgs are fully populated 
+            sb.Append("100"); // <--- symbolSet + hqTfDummy (not currently used - only 1 version of these svgs) 
+
+            sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(echelonMobility, 2));
+            sb.Append(ImageSuffix);
+
+            return sb.ToString();
+        }
+
+        // same as ImageFilesHome + GetModfierIconNameWithFolder
+        public static string GetEchelonIconNameWithFullPath(
+            StandardIdentityAffiliationType affiliation,
+            SymbolSetType symbolSet,
+            HeadquartersTaskForceDummyType hqTfDummy,
+            EchelonMobilityType echelonMobility)
+        {
+            if (echelonMobility == EchelonMobilityType.NoEchelonMobility)
+                return string.Empty;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append(ImageFilesHome);
+
+            string modifierIconNameWithoutImageFilesHome =
+                GetEchelonIconNameWithFolder(affiliation, symbolSet, hqTfDummy, echelonMobility);
+
+            sb.Append(modifierIconNameWithoutImageFilesHome);
+
+            return sb.ToString();
+        }
+
+        // Frame Icon
+        // StandardIdentityAffiliationType + SymbolSetType
+        // IMPORTANT: StandardIdentityAffiliationType must be in 
+        // { Unknown, Space, Air,Land_Unit, Land_Installation, 
+        //   Sea_Surface, Subsurface, Activity } 
+        // See: TypeUtilities.SymbolSetToFrameType for mapping
+        // ex. 0520
+        public static string GetFrameIconNameWithFolder(
+                        StandardIdentityRealExerciseSimType realExerciseSim,
+                        StandardIdentityAffiliationType affiliation,
+                        SymbolSetType symbolSet)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            // TODO: exercise/sim frames - 
+            // StandardIdentityRealExerciseSimType (just add "Sim" "Exercise")
+
+            sb.Append("Frames");
+            sb.Append(System.IO.Path.DirectorySeparatorChar);
+
+            string affiliationString = TypeUtilities.EnumHelper.getEnumValAsString(affiliation, 2);
+            sb.Append(affiliationString);
+
+            // map the actual symbolSet to the supported/availble frame
+            SymbolSetType mappedSymbolSet = TypeUtilities.SymbolSetToFrameType[symbolSet];
+
+            string mappedSymbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(mappedSymbolSet, 2);
+            sb.Append(mappedSymbolSetString);
+
+            sb.Append(ImageSuffix);
+
+            return sb.ToString();
+        }
+
+        public static string GetFrameIconNameWithFullPath(
+                        StandardIdentityRealExerciseSimType realExerciseSim,
+                        StandardIdentityAffiliationType affiliation,
+                        SymbolSetType symbolSet)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(ImageFilesHome);
+
+            string frameIconNameWithoutImageFilesHome =
+                GetFrameIconNameWithFolder(realExerciseSim, affiliation, symbolSet);
+
+            sb.Append(frameIconNameWithoutImageFilesHome);
+
+            return sb.ToString();
+        }
+
         public static bool SetMilitarySymbolGraphicLayers(ref MilitarySymbol milSymbol)
         {
             if (!System.IO.Directory.Exists(ImageFilesHome))
@@ -242,36 +350,30 @@ namespace Library2525D
             milSymbol.GraphicLayers.Clear();
 
             //////////////////////////////////////////////////////////////////////////
-            // Frame Layer 
-            // = StandardIdentityAffiliationType + SymbolSetType
-            // ex. 0520
-            StringBuilder sb = new StringBuilder();
+            // 
 
-            // Note: affiliationString reused below
-            string affiliationString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.Affiliation, 2);
-
+            // Start with the Frame
             if (TypeUtilities.HasFrame(milSymbol.Id.SymbolSet))
             {
-                sb.Append(ImageFilesHome);
-                sb.Append("Frames");
-                sb.Append(System.IO.Path.DirectorySeparatorChar);
+                //sb.Clear();
+                //sb.Append(ImageFilesHome);
 
-                sb.Append(affiliationString);
+                string frameIconNameWithFullPath =
+                    GetFrameIconNameWithFullPath(
+                        milSymbol.Id.StandardIdentity,
+                        milSymbol.Id.Affiliation,
+                        milSymbol.Id.SymbolSet);
 
-                string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2);
-                sb.Append(symbolSetString);
+                milSymbol.GraphicLayers.Add(frameIconNameWithFullPath);            
 
-                // TODO: exercise/sim frames
-
-                sb.Append(ImageSuffix);
-
-                milSymbol.GraphicLayers.Add(sb.ToString());
+                milSymbol.GraphicLayers.Add(frameIconNameWithFullPath);
             }
             //////////////////////////////////////////////////////////////////////////
 
             //////////////////////////////////////////////////////////////////////////
             // Main Icon Layer
             // Appendices\{SymbolSetTypeName}\SymbolSetType + EntityCode 
+            StringBuilder sb = new StringBuilder();
 
             sb.Clear();
             sb.Append(ImageFilesHome);
@@ -316,9 +418,8 @@ namespace Library2525D
                     sb.Clear();
                     sb.Append(ImageFilesHome);
 
-                    string modifierIconNameWithFolder =
-                        MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
-                            ref milSymbol, 1);
+                    string modifierIconNameWithFolder = 
+                        GetModfierIconNameWithFolder(ref milSymbol, 1);
 
                     sb.Append(modifierIconNameWithFolder);
                     milSymbol.GraphicLayers.Add(sb.ToString());
@@ -331,30 +432,28 @@ namespace Library2525D
                     sb.Clear();
                     sb.Append(ImageFilesHome);
 
-                    string modifierIconNameWithFolder =
-                        MilitarySymbolToGraphicLayersMaker.GetModfierIconNameWithFolder(
-                            ref milSymbol, 2);
+                    string modifierIconNameWithFolder = 
+                        GetModfierIconNameWithFolder(ref milSymbol, 2);
 
                     sb.Append(modifierIconNameWithFolder);
                     milSymbol.GraphicLayers.Add(sb.ToString());
                 }
 
                 // Echelon Modifier
-
-                // = StandardIdentityAffiliationType + "100" (not sure what this is) + EchelonMobilityType
-                // ex. Friend Team_Crew = 0310011
-
                 if (milSymbol.Id.EchelonMobility != EchelonMobilityType.NoEchelonMobility)
                 {
                     sb.Clear();
                     sb.Append(ImageFilesHome);
-                    sb.Append("Echelon");
-                    sb.Append(System.IO.Path.DirectorySeparatorChar);
-                    sb.Append(affiliationString);
-                    sb.Append("100");
-                    sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.EchelonMobility, 2));
-                    sb.Append(ImageSuffix);
-                    milSymbol.GraphicLayers.Add(sb.ToString());
+
+                    string echelonIconNameWithFullPath =
+                        GetEchelonIconNameWithFullPath(
+                            milSymbol.Id.Affiliation,
+                            milSymbol.Id.SymbolSet,
+                            milSymbol.Id.HeadquartersTaskForceDummy,
+                            milSymbol.Id.EchelonMobility);
+
+                    if (echelonIconNameWithFullPath.Length > 0)
+                        milSymbol.GraphicLayers.Add(echelonIconNameWithFullPath);
                 }
 
                 // Headquarters/TF/FD Modifier
