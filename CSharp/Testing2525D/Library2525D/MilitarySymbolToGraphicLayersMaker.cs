@@ -94,15 +94,73 @@ namespace Library2525D
             return sb.ToString();
         }
 
-        public static string GetMainIconName(ref MilitarySymbol milSymbol)
+        public static string GetMainIconName(SymbolSetType symbolSet, string fullEntityCode)
         {
+            if (fullEntityCode.Length != 6)
+            {
+
+                return "00000000";
+            }
+
             StringBuilder sb = new StringBuilder();
 
-            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(milSymbol.Id.SymbolSet, 2);
+            string symbolSetString = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet);
             sb.Append(symbolSetString);
-            sb.Append(milSymbol.Id.FullEntityCode);
+            sb.Append(fullEntityCode);
 
             return sb.ToString();
+        }
+
+        public static string GetMainIconName(ref MilitarySymbol milSymbol)
+        {
+            string mainIcon = GetMainIconName(milSymbol.Id.SymbolSet, milSymbol.Id.FullEntityCode);
+
+            if (milSymbol.Id.SymbolSet == SymbolSetType.Land_Unit)
+            {
+                // HACK (and a big one)
+                // 
+                // TODO1: move this ugly code out of here
+                // TODO2: see if there is any other way
+                // To support special case: "TABLE D-V.  Land unit icons – special entity subtypes"
+                // These are the Land unit–special entity subtypes defined:
+                // HEADQUARTERS ELEMENT - 10xxxx95
+                // DIVISION AND BELOW SUPPORT - 10xxxx96 (NOTE: None of these exist currently)
+                // CORPS SUPPORT - 10xxxx97
+                // THEATER/ECHELONS ABOVE CORPS SUPPORT -  - 10xxxx98
+                if (!string.IsNullOrEmpty(milSymbol.Id.Name))
+                {
+                    if (milSymbol.Id.Name.Contains(": Headquarters Element") ||
+                        milSymbol.Id.Name.Contains(" Support"))
+                    {
+                        // then we *might* need this case
+                        string subEntityCode = milSymbol.Id.FullEntityCode.Substring(0, 4) + "00";
+
+                        if (milSymbol.Id.Name.Contains(": Headquarters Element"))
+                        {
+                            mainIcon = GetMainIconName(milSymbol.Id.SymbolSet, subEntityCode);
+                            string hackSpecialEntityLayer = ImageFilesHome + @"Appendices\Land\10xxxx95.svg";
+                            milSymbol.GraphicLayers.Add(hackSpecialEntityLayer);
+                        }
+                        // NOTE: There are no Division Support Ones
+                        else
+                            if (milSymbol.Id.Name.Contains(": Corps Support"))
+                            {
+                                mainIcon = GetMainIconName(milSymbol.Id.SymbolSet, subEntityCode);
+                                string hackSpecialEntityLayer = ImageFilesHome + @"Appendices\Land\10xxxx97.svg";
+                                milSymbol.GraphicLayers.Add(hackSpecialEntityLayer);
+                            }
+                            else
+                                if (milSymbol.Id.Name.Contains(" Above Corps Support"))
+                                {
+                                    mainIcon = GetMainIconName(milSymbol.Id.SymbolSet, subEntityCode);
+                                    string hackSpecialEntityLayer = ImageFilesHome + @"Appendices\Land\10xxxx98.svg";
+                                    milSymbol.GraphicLayers.Add(hackSpecialEntityLayer);
+                                }
+                    }
+                }
+            }
+
+            return mainIcon;
         }
 
         // MainIconNameWithFolder
