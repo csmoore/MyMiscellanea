@@ -56,10 +56,10 @@
     <Content Include="Data\LegacyMappingTable.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\SampleEntityTable.csv">
+    <Content Include="Data\All_Entities.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\SampleModifierTable.csv">
+    <Content Include="Data\All_Modifiers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

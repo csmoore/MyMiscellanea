@@ -495,13 +495,13 @@ namespace Library2525D
         {
             string basePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
 
-            string csvEntityTableFileName = "SampleEntityTable.csv";
+            string csvEntityTableFileName = "All_Entities.csv";
             string csvEntityTableFullPath = System.IO.Path.Combine(basePath, csvEntityTableFileName);
             CsvToTableMaker csvTableEntity = new CsvToTableMaker();
             csvTableEntity.LoadTable(csvEntityTableFullPath);
             entityTable = csvTableEntity.Table;
 
-            string csvModifierTableFileName = "SampleModifierTable.csv";
+            string csvModifierTableFileName = "All_Modifiers.csv";
             string csvModifierTableFullPath = System.IO.Path.Combine(basePath, csvModifierTableFileName);
             CsvToTableMaker csvTableModifier = new CsvToTableMaker();
             csvTableModifier.LoadTable(csvModifierTableFullPath);
