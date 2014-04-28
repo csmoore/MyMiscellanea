@@ -400,6 +400,15 @@ namespace Library2525D
                 return (Enum)enumValues.GetValue(index);
             }
 
+            static public string getStringFromEnum(Enum theEnum)
+            {
+                string enumString = theEnum.ToString();
+
+                string enumStringNoUnderScores = enumString.Replace('_', ' ');
+
+                return enumStringNoUnderScores;                
+            }
+
             static public Enum getEnumFromString(System.Type type, string enumString)
             {
                 int index = 0;

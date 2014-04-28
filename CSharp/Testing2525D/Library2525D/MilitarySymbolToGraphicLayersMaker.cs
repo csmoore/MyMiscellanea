@@ -458,8 +458,6 @@ namespace Library2525D
                         milSymbol.Id.SymbolSet);
 
                 milSymbol.GraphicLayers.Add(frameIconNameWithFullPath);            
-
-                milSymbol.GraphicLayers.Add(frameIconNameWithFullPath);
             }
             //////////////////////////////////////////////////////////////////////////
 

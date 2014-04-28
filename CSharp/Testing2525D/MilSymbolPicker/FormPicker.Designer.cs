@@ -48,7 +48,6 @@
             this.labSidcSecond10 = new System.Windows.Forms.Label();
             this.cbLayers = new System.Windows.Forms.ComboBox();
             this.butNextCol2 = new System.Windows.Forms.Button();
-            this.labTags = new System.Windows.Forms.Label();
             this.butNextCol3 = new System.Windows.Forms.Button();
             this.labCol3 = new System.Windows.Forms.Label();
             this.butBackCol3 = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@
             this.button32 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.gbTags = new System.Windows.Forms.GroupBox();
+            this.tbTags = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbTags.SuspendLayout();
@@ -266,16 +266,6 @@
             this.butNextCol2.UseVisualStyleBackColor = true;
             this.butNextCol2.Click += new System.EventHandler(this.butNextCol2_Click);
             // 
-            // labTags
-            // 
-            this.labTags.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTags.Location = new System.Drawing.Point(3, 16);
-            this.labTags.Name = "labTags";
-            this.labTags.Size = new System.Drawing.Size(717, 59);
-            this.labTags.TabIndex = 16;
-            this.labTags.Text = "Selected Symbol Properties";
-            // 
             // butNextCol3
             // 
             this.butNextCol3.Location = new System.Drawing.Point(363, 340);
@@ -358,7 +348,7 @@
             // 
             // gbTags
             // 
-            this.gbTags.Controls.Add(this.labTags);
+            this.gbTags.Controls.Add(this.tbTags);
             this.gbTags.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbTags.Location = new System.Drawing.Point(0, 385);
             this.gbTags.Name = "gbTags";
@@ -366,6 +356,18 @@
             this.gbTags.TabIndex = 27;
             this.gbTags.TabStop = false;
             this.gbTags.Text = "Symbol Tags";
+            // 
+            // tbTags
+            // 
+            this.tbTags.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTags.Location = new System.Drawing.Point(3, 16);
+            this.tbTags.Multiline = true;
+            this.tbTags.Name = "tbTags";
+            this.tbTags.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbTags.Size = new System.Drawing.Size(717, 59);
+            this.tbTags.TabIndex = 17;
+            this.tbTags.Text = "Selected Symbol Properties";
             // 
             // FormPicker
             // 
@@ -406,6 +408,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbTags.ResumeLayout(false);
+            this.gbTags.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,7 +436,6 @@
         private System.Windows.Forms.Label labSidcSecond10;
         private System.Windows.Forms.ComboBox cbLayers;
         private System.Windows.Forms.Button butNextCol2;
-        private System.Windows.Forms.Label labTags;
         private System.Windows.Forms.Button butNextCol3;
         private System.Windows.Forms.Label labCol3;
         private System.Windows.Forms.Button butBackCol3;
@@ -443,6 +445,7 @@
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.GroupBox gbTags;
+        private System.Windows.Forms.TextBox tbTags;
     }
 }
 

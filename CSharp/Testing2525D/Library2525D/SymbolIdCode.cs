@@ -72,7 +72,10 @@ namespace Library2525D
         // It just allows a readable form of this to be set like:
         // "SymbolSet : Entity : EntityType : EntitySubType : Modifier1 : Modifier2"
         // "Air : Military : Fixed Wing : Bomber : Light"
-        // TODO: Find a better way to have this set automatically (maybe by moving to MilitarySymbol)
+        // TODO: Find a better way to have this set automatically 
+        // The probem is that only the SymbolLookup class knows how to lookup the Names from the 
+        // codes (which it does in SymbolLookup.CreateSymbolFromStringProperties)
+        // so we would need to add a (circular) dependency (& that probably isn't a good idea)
         public string Name
         {
             get
@@ -85,7 +88,10 @@ namespace Library2525D
 
                 // HACK: TODO: fix - remove any empy " : "
                 if (!string.IsNullOrEmpty(name))
+                {
+                    name = name.Replace(" :  :  : ", " : ");
                     name = name.Replace(" :  : ", " : ");
+                }
             }
         }
         protected string name = null;
@@ -309,7 +315,7 @@ namespace Library2525D
                         tags.Add(this.Affiliation.ToString());
 
                 if (this.SymbolSet != SymbolSetType.NotSet)
-                    tags.Add(this.SymbolSet.ToString());
+                    tags.Add(TypeUtilities.EnumHelper.getStringFromEnum(this.SymbolSet));
 
                 // TOTAL HACK: TODO: FIX
                 if (!MilitarySymbol.FormatTagsForStyleFiles)

@@ -110,6 +110,8 @@ namespace MilSymbolPicker
         {
             bool changedState = (previousPane != currentPane);
 
+            bool goingBackwards = (currentPane < previousPane); 
+
             if (changedState)
             {
                 System.Diagnostics.Trace.WriteLine("New Pane State: " + currentPane 
@@ -173,8 +175,12 @@ namespace MilSymbolPicker
 
                     if (currentColValues.Count == 0)
                     {
-                        // Advance to the next pane if this is empty
-                        currentPane++;
+                        // Advance to the next/previous pane if this is empty
+                        if (goingBackwards)
+                            currentPane--;
+                        else
+                            currentPane++;
+
                         button31.Visible = true;
                         button31.Enabled = true; // just in case no values so PerformClick will work 
                         button31.Text = string.Empty;
@@ -209,8 +215,12 @@ namespace MilSymbolPicker
 
                     if (currentColValues.Count == 0)
                     {
-                        // Advance to the next pane if this is empty
-                        currentPane++;
+                        // Advance to the next/previous pane if this is empty
+                        if (goingBackwards)
+                            currentPane--;
+                        else
+                            currentPane++;
+
                         button31.Visible = true;
                         button31.Enabled = true; // just in case no values so PerformClick will work 
                         button31.Text = string.Empty;
@@ -266,6 +276,9 @@ namespace MilSymbolPicker
 
         void setSymbolState(string valueSelected)
         {
+            // TODO: Figure out a way to set this consistent naming scheme better
+            string symbolSetName = currentSymbol.Id.SymbolSet.ToString().Replace("_", " ");
+
             if (string.IsNullOrEmpty(valueSelected))
             {
                 // this is a special state (i.e. hack) to simulate a button press, to force 
@@ -306,7 +319,9 @@ namespace MilSymbolPicker
                 {
                     currentEntityName = valueSelected;
 
-                    currentSymbol.Id.Name = currentEntityName;
+                    currentSymbol.Id.Name = symbolSetName + TypeUtilities.NameSeparator + 
+                        currentEntityName;
+
                     string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet, currentEntityName);
 
                     currentSymbol.Id.FullEntityCode = entityCode;
@@ -324,7 +339,8 @@ namespace MilSymbolPicker
                 {
                     currentEntityTypeName = valueSelected;
 
-                    currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator + currentEntityTypeName;
+                    currentSymbol.Id.Name = symbolSetName + TypeUtilities.NameSeparator + 
+                        currentEntityName + TypeUtilities.NameSeparator + currentEntityTypeName;
 
                     string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet,
                         currentEntityName, currentEntityTypeName);
@@ -344,8 +360,9 @@ namespace MilSymbolPicker
                 {
                     currentEntitySubTypeName = valueSelected;
 
-                    currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator
-                        + currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName;
+                    currentSymbol.Id.Name = symbolSetName + TypeUtilities.NameSeparator + 
+                        currentEntityName + TypeUtilities.NameSeparator +
+                        currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName;
 
                     string entityCode = symbolLookup.GetEntityCode(currentSymbol.Id.SymbolSet,
                         currentEntityName, currentEntityTypeName, currentEntitySubTypeName);
@@ -359,9 +376,10 @@ namespace MilSymbolPicker
             {
                 currentModifier1Name = valueSelected;
 
-                currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator
-                    + currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName
-                    + TypeUtilities.NameSeparator + currentModifier1Name;
+                currentSymbol.Id.Name = symbolSetName + TypeUtilities.NameSeparator + 
+                    currentEntityName + TypeUtilities.NameSeparator +
+                    currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName +
+                    TypeUtilities.NameSeparator + "Mod1-" + currentModifier1Name;
 
                 string modifier1Code = symbolLookup.GetModifierCodeFromName(
                     currentSymbol.Id.SymbolSet, currentModifier1Name);
@@ -374,10 +392,11 @@ namespace MilSymbolPicker
             {
                 currentModifier2Name = valueSelected;
 
-                currentSymbol.Id.Name = currentEntityName + TypeUtilities.NameSeparator
-                    + currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName
-                    + TypeUtilities.NameSeparator + currentModifier1Name
-                    + TypeUtilities.NameSeparator + currentModifier2Name;
+                currentSymbol.Id.Name = symbolSetName + TypeUtilities.NameSeparator + 
+                    currentEntityName + TypeUtilities.NameSeparator +
+                    currentEntityTypeName + TypeUtilities.NameSeparator + currentEntitySubTypeName +
+                    TypeUtilities.NameSeparator + "Mod1-" + currentModifier1Name +
+                    TypeUtilities.NameSeparator + "Mod2-" + currentModifier2Name;
 
                 string modifier2Code = symbolLookup.GetModifierCodeFromName(
                     currentSymbol.Id.SymbolSet, currentModifier2Name);
@@ -581,7 +600,7 @@ namespace MilSymbolPicker
                 tagBuilder.Append(";");
             }
 
-            this.labTags.Text = tagBuilder.ToString();
+            this.tbTags.Text = tagBuilder.ToString();
         }
 
         private void buttonPane_Click(object sender, EventArgs e)
@@ -629,10 +648,8 @@ namespace MilSymbolPicker
                 return;
             }
 
-            currentColumn = 2;
-
-            currentPane = PaneSequenceType.SymbolSetPane;
-
+            // Go back one pane
+            currentPane--;
             SetPaneState();
         }
 
