@@ -39,6 +39,38 @@ namespace Library2525D
         {
         }
 
+
+        public static string GetWellFormedName(SymbolSetType symbolSet, string entityPart,
+            string entityTypePart, string entitySubTypePart)
+        {
+            string symbolSetName = symbolSet.ToString().Replace("_", " ");
+
+            StringBuilder nameBuilder = new StringBuilder();
+
+            if (!string.IsNullOrEmpty(symbolSetName) && symbolSetName.Length > 0)
+                nameBuilder.Append(symbolSetName);
+
+            if (!string.IsNullOrEmpty(entityPart) && entityPart.Length > 0)
+            {
+                nameBuilder.Append(TypeUtilities.NameSeparator);
+                nameBuilder.Append(entityPart);
+            }
+
+            if (!string.IsNullOrEmpty(entityTypePart) && entityTypePart.Length > 0)
+            {
+                nameBuilder.Append(TypeUtilities.NameSeparator);
+                nameBuilder.Append(entityTypePart);
+            }
+
+            if (!string.IsNullOrEmpty(entitySubTypePart) && entitySubTypePart.Length > 0)
+            {
+                nameBuilder.Append(TypeUtilities.NameSeparator);
+                nameBuilder.Append(entitySubTypePart);
+            }
+
+            return nameBuilder.ToString();
+        }
+
         /// <summary>
         /// Search based on the one or more attributes supplied
         /// </summary>
@@ -131,22 +163,25 @@ namespace Library2525D
             return symbolList;
         }
 
-        public string GetModifierCodeFromName(SymbolSetType symbolSet, string modifierNameString)
+        public string GetModifierCodeFromName(SymbolSetType symbolSet, int modifierNumber, 
+            string modifierNameString)
         {
             string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
             // assmumes that the names will be unique within a symbol set
             // if not, we will also need the modifier number as an input
+            string modifierToSearch = modifierNumber.ToString();
 
             var results = from row in ModifierTable.AsEnumerable()
                            where ((row.Field<string>("SymbolSet") == symbolSetToSearch)
-                                & (row.Field<string>("Name") == modifierNameString))
+                                & (row.Field<string>("Name") == modifierNameString)
+                                & (row.Field<string>("ModifierNumber") == modifierToSearch))
                            select row;
 
             int resultCount = results.Count();
             if (resultCount < 1)
             {
-                System.Diagnostics.Trace.WriteLine("Modifier Name note found: " + modifierNameString);
+                System.Diagnostics.Trace.WriteLine("Modifier Name not found: " + modifierNameString);
                 return string.Empty;
             }
 
@@ -179,7 +214,7 @@ namespace Library2525D
             int resultCount = results.Count();
             if (resultCount < 1)
             {
-                System.Diagnostics.Trace.WriteLine("Modifier Name note found: " + modifierNameString);
+                System.Diagnostics.Trace.WriteLine("Modifier Name not found: " + modifierNameString);
                 return string.Empty;
             }
 
@@ -323,7 +358,7 @@ namespace Library2525D
             int resultCount = results.Count();
             if (resultCount < 1)
             {
-                System.Diagnostics.Trace.WriteLine("Entity Name note found: " + entityNameString);
+                System.Diagnostics.Trace.WriteLine("Entity Name not found: " + entityNameString);
                 return string.Empty;
             }
 
@@ -359,7 +394,7 @@ namespace Library2525D
 
             if (resultCount < 1)
             {
-                System.Diagnostics.Trace.WriteLine("Entity Name note found: " + entityName);
+                System.Diagnostics.Trace.WriteLine("Entity Name not found: " + entityName);
                 return null;
             }
 
@@ -418,32 +453,7 @@ namespace Library2525D
             sidc.SymbolSetAsString = symbolSetString;
             sidc.FullEntityCode = entityCode;
 
-            string symbolSetName = symbolSet.ToString().Replace("_", " ");
-
-            StringBuilder nameBuilder = new StringBuilder();
-
-            if (!string.IsNullOrEmpty(symbolSetString) && symbolSetString.Length > 0)
-                nameBuilder.Append(symbolSetName);
-
-            if (!string.IsNullOrEmpty(entityPart) && entityPart.Length > 0)
-            {
-                nameBuilder.Append(TypeUtilities.NameSeparator);
-                nameBuilder.Append(entityPart);
-            }
-
-            if (!string.IsNullOrEmpty(entityTypePart) && entityTypePart.Length > 0)
-            {
-                nameBuilder.Append(TypeUtilities.NameSeparator);
-                nameBuilder.Append(entityTypePart);
-            }
-
-            if (!string.IsNullOrEmpty(entitySubTypePart) && entitySubTypePart.Length > 0)
-            {
-                nameBuilder.Append(TypeUtilities.NameSeparator);
-                nameBuilder.Append(entitySubTypePart);
-            }
-
-            sidc.Name = nameBuilder.ToString();
+            sidc.Name = GetWellFormedName(symbolSet, entityPart, entityTypePart, entitySubTypePart);
 
             retSymbol.Id = sidc;
             retSymbol.Shape = (ShapeType)TypeUtilities.EnumHelper.getEnumFromString(typeof(ShapeType), geoType);

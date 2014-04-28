@@ -382,7 +382,7 @@ namespace MilSymbolPicker
                     TypeUtilities.NameSeparator + "Mod1-" + currentModifier1Name;
 
                 string modifier1Code = symbolLookup.GetModifierCodeFromName(
-                    currentSymbol.Id.SymbolSet, currentModifier1Name);
+                    currentSymbol.Id.SymbolSet, 1, currentModifier1Name);
 
                 currentSymbol.Id.FirstModifier = modifier1Code;
 
@@ -399,7 +399,7 @@ namespace MilSymbolPicker
                     TypeUtilities.NameSeparator + "Mod2-" + currentModifier2Name;
 
                 string modifier2Code = symbolLookup.GetModifierCodeFromName(
-                    currentSymbol.Id.SymbolSet, currentModifier2Name);
+                    currentSymbol.Id.SymbolSet, 2, currentModifier2Name);
 
                 currentSymbol.Id.SecondModifier = modifier2Code;
 

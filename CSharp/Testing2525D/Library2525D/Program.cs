@@ -472,7 +472,7 @@ namespace Library2525D
 
             string modifierName = "Government";
 
-            string modifierCode = symbolLookup.GetModifierCodeFromName(SymbolSetType.Air, modifierName);
+            string modifierCode = symbolLookup.GetModifierCodeFromName(SymbolSetType.Air, 1, modifierName);
 
         }
     }
