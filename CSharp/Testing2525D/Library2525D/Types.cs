@@ -249,7 +249,9 @@ namespace Library2525D
             { SymbolSetType.Signals_Intelligence_Air, SymbolSetType.Air },
             { SymbolSetType.Signals_Intelligence_Land, SymbolSetType.Sea_Surface },
             { SymbolSetType.Signals_Intelligence_Surface, SymbolSetType.Sea_Surface },
-            { SymbolSetType.Signals_Intelligence_Subsurface,  SymbolSetType.Sea_Subsurface }
+            { SymbolSetType.Signals_Intelligence_Subsurface,  SymbolSetType.Sea_Subsurface },
+
+            { SymbolSetType.Special_Cases, SymbolSetType.Unknown }
         }; // end SymbolSetToFrameType
 
         public static Dictionary<SymbolSetType, string> SymbolSetToFolderName = new Dictionary<SymbolSetType, string>()
@@ -285,7 +287,9 @@ namespace Library2525D
             { SymbolSetType.Signals_Intelligence_Air, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Land, "SigInt" },
             { SymbolSetType.Signals_Intelligence_Surface, "SigInt" },
-            { SymbolSetType.Signals_Intelligence_Subsurface, "SigInt" }
+            { SymbolSetType.Signals_Intelligence_Subsurface, "SigInt" },
+
+            { SymbolSetType.Special_Cases, "" }
         }; //  end SymbolSetToFolderName dictionary declaration
 
         public static Dictionary<StandardIdentityAffiliationType, StandardIdentityAffiliationType>
