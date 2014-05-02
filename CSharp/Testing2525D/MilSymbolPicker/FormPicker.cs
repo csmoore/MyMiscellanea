@@ -79,7 +79,7 @@ namespace MilSymbolPicker
             symbolLookup.Initialize();
 
             if (!symbolLookup.Initialized)
-                MessageBox.Show("Symbol Search will not work: Could not initialize the Symbol Lookup");
+                MessageBox.Show(@"Symbol Search will not work: Could not initialize the Symbol Lookup (Do Data\*.csv files exist? Are they locked/open anywhere else?)");
 
             if (!System.IO.Directory.Exists(MilitarySymbolToGraphicLayersMaker.ImageFilesHome))
                 MessageBox.Show("Images will not work: could not find folder: " + MilitarySymbolToGraphicLayersMaker.ImageFilesHome);
@@ -680,6 +680,13 @@ namespace MilSymbolPicker
                 Image saveImage = this.pbPreview.Image;
                 saveImage.Save(saveImageFile.FileName);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            currentPane = PaneSequenceType.AffiliationPane;
+
+            SetPaneState();
         }
     }
 }

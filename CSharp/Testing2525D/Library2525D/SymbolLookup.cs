@@ -81,6 +81,9 @@ namespace Library2525D
         {
             List<MilitarySymbol> symbolList = new List<MilitarySymbol>();
 
+            if (EntityTable == null)
+                return symbolList; // nothing
+
             string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
             var results = from row in EntityTable.AsEnumerable()
@@ -166,6 +169,9 @@ namespace Library2525D
         public string GetModifierCodeFromName(SymbolSetType symbolSet, int modifierNumber, 
             string modifierNameString)
         {
+            if (ModifierTable == null)
+                return string.Empty;
+
             string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
             // assmumes that the names will be unique within a symbol set
@@ -201,6 +207,9 @@ namespace Library2525D
         public string GetModifierCategoryFromName(SymbolSetType symbolSet, string modifierNameString,
             int modfierNumber = 1)
         {
+            if (ModifierTable == null)
+                return string.Empty;
+
             string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
             string modifierToSearch = modfierNumber.ToString();
@@ -235,6 +244,9 @@ namespace Library2525D
         {
             List<string> distinctResultStrings = new List<string>();
 
+            if (ModifierTable == null)
+                return distinctResultStrings; // nothing
+
             string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
             string modifierToSearch = modfierNumber.ToString();
@@ -258,6 +270,9 @@ namespace Library2525D
             string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
             List<string> distinctResultStrings = new List<string>();
+
+            if (EntityTable == null)
+                return distinctResultStrings; // nothing
 
             // TODO: remove/refactor redundant code below
 
@@ -331,6 +346,8 @@ namespace Library2525D
         public string GetEntityCode(SymbolSetType symbolSet, string entityNameString, 
             string entityTypeNameString = "", string entitySubTypeNameString = "")
         {
+            if (EntityTable == null)
+                return string.Empty;
 
             string symbolSetToSearch = TypeUtilities.EnumHelper.getEnumValAsString(symbolSet, 2);
 
@@ -384,6 +401,9 @@ namespace Library2525D
                         SymbolSetType symbolSet = SymbolSetType.NotSet,
                         StandardIdentityAffiliationType affiliation = StandardIdentityAffiliationType.Unknown)
         {
+            if (EntityTable == null)
+                return null;
+
             var results = from row in EntityTable.AsEnumerable()
                           where ((row.Field<string>("EntitySubType").Contains(entityName)
                             | (row.Field<string>("EntitySubType").Contains(entityName)

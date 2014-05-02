@@ -31,13 +31,31 @@ namespace Library2525D
 
         }
 
+        // Somewhat hack-ish - needed check for when file is locked or can't be opened
+        // (e.g. because of open/being viewed in Excel)
+        public bool IsFileOpenable(string filePath)
+        {
+            try
+            {
+                using (File.Open(filePath, FileMode.Open)) { }
+            }
+            catch (IOException ex)
+            {
+                System.Diagnostics.Trace.WriteLine("ERROR: " + " Message: " + ex.Message + 
+                    " Could not open file : " + filePath);
+                return false;
+            }
+
+            return true;
+        }
+
         public bool LoadTable(string csvFile)
         {
             bool success = false;
 
-            if (!File.Exists(csvFile))
+            if (!File.Exists(csvFile) || !(IsFileOpenable(csvFile)))
                 return false;
-
+           
             if (table != null)
             {
                 System.Diagnostics.Trace.WriteLine(
