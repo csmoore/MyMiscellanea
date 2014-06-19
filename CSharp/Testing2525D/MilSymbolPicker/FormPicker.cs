@@ -47,9 +47,10 @@ namespace MilSymbolPicker
         string currentEntityName = string.Empty;
         string currentEntityTypeName = string.Empty;
         string currentEntitySubTypeName = string.Empty;
-        string currentEntityEchelonMobilityName = string.Empty;
         string currentModifier1Name = string.Empty;
         string currentModifier2Name = string.Empty;
+        string currentEchelonMobilityName = string.Empty;
+        string currentHqTfFdName = string.Empty;
 
         string NOT_SET = "NONE/NOT SET";
 
@@ -66,8 +67,9 @@ namespace MilSymbolPicker
             Modifier1Pane       = 6,
             Modifier2Pane       = 7,
             EchelonMobilityPane = 8,
+            HqTfFdPane          = 9,
 
-            StartOver = 9,
+            StartOver = 10,  // Important: needs to be exactly 1 more than last for navigation to work
         }
 
         PaneSequenceType previousPane = PaneSequenceType.NotSet;
@@ -188,7 +190,7 @@ namespace MilSymbolPicker
                     }
                     else
                     {
-                        currentColValues.Add(NOT_SET);
+                        currentColValues.Insert(0, NOT_SET); // add as first element
                     }
 
                     currentColRowIndex = 0;
@@ -228,7 +230,7 @@ namespace MilSymbolPicker
                     }
                     else
                     {
-                        currentColValues.Add(NOT_SET);
+                        currentColValues.Insert(0, NOT_SET); // Add as first element
                     }
 
                     currentColRowIndex = 0;
@@ -245,6 +247,21 @@ namespace MilSymbolPicker
                     this.labCol3.Visible = true;
 
                     currentColValues = TypeUtilities.EnumHelper.getEnumValuesAsStrings(typeof(EchelonMobilityType));
+
+                    currentColRowIndex = 0;
+
+                    currentColumn = 3;
+                    enableColumnButtons(3, true);
+                    setColumnValues();
+                    enableColumnButtons(1, false);
+                    enableColumnButtons(2, false);
+                }
+                else if (currentPane == PaneSequenceType.HqTfFdPane)
+                {
+                    this.labCol3.Text = "HQ/TF/FD";
+                    this.labCol3.Visible = true;
+
+                    currentColValues = TypeUtilities.EnumHelper.getEnumValuesAsStrings(typeof(HeadquartersTaskForceDummyType));
 
                     currentColRowIndex = 0;
 
@@ -407,14 +424,27 @@ namespace MilSymbolPicker
             }
             else if (currentPane == PaneSequenceType.EchelonMobilityPane)
             {
-                currentEntityEchelonMobilityName = valueSelected;
+                currentEchelonMobilityName = valueSelected;
 
                 EchelonMobilityType echelonMobilitySelection =
                     (EchelonMobilityType)
                     TypeUtilities.EnumHelper.getEnumFromString(
-                        typeof(EchelonMobilityType), currentEntityEchelonMobilityName);
+                        typeof(EchelonMobilityType), currentEchelonMobilityName);
 
                 currentSymbol.Id.EchelonMobility = echelonMobilitySelection;
+
+                currentPane = PaneSequenceType.HqTfFdPane;
+            }
+            else if (currentPane == PaneSequenceType.HqTfFdPane)
+            {
+                currentHqTfFdName = valueSelected;
+
+                HeadquartersTaskForceDummyType hqTfFdSelection =
+                    (HeadquartersTaskForceDummyType)
+                    TypeUtilities.EnumHelper.getEnumFromString(
+                        typeof(HeadquartersTaskForceDummyType), currentHqTfFdName);
+
+                currentSymbol.Id.HeadquartersTaskForceDummy = hqTfFdSelection;
 
                 currentPane = PaneSequenceType.StartOver;
             }
@@ -440,9 +470,10 @@ namespace MilSymbolPicker
             currentEntityName = string.Empty;
             currentEntityTypeName = string.Empty;
             currentEntitySubTypeName = string.Empty;
-            currentEntityEchelonMobilityName = string.Empty;
             currentModifier1Name = string.Empty;
             currentModifier2Name = string.Empty;
+            currentEchelonMobilityName = string.Empty;
+            currentHqTfFdName = string.Empty;
 
             StandardIdentityAffiliationType affil = currentSymbol.Id.Affiliation;
 

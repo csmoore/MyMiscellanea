@@ -1,48 +1,48 @@
 SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 01,Military,,,110000,Point
-01,Military,Fixed Wing,,110100,Point
-01,Military,Fixed Wing,Medical Evacuation (MEDEVAC),110101,Point
-01,Military,Fixed Wing,Attack/Strike,110102,Point
-01,Military,Fixed Wing,Bomber,110103,Point
-01,Military,Fixed Wing,Fighter,110104,Point
-01,Military,Fixed Wing,Fighter/Bomber,110105,Point
-01,Military,Fixed Wing,Cargo,110107,Point
-01,Military,Fixed Wing,Electronic Combat (EC)/Jammer,110108,Point
-01,Military,Fixed Wing,Tanker,110109,Point
-01,Military,Fixed Wing,Patrol,110110,Point
-01,Military,Fixed Wing,Reconnaissance,110111,Point
-01,Military,Fixed Wing,Trainer,110112,Point
-01,Military,Fixed Wing,Utility,110113,Point
-01,Military,Fixed Wing,VSTOL,110114,Point
-01,Military,Fixed Wing,Airborne Command Post (ACP),110115,Point
-01,Military,Fixed Wing,Airborne Early Warning (AEW),110116,Point
-01,Military,Fixed Wing,Antisurface Warfare,110117,Point
-01,Military,Fixed Wing,Antisubmarine Warfare,110118,Point
-01,Military,Fixed Wing,Communications,110119,Point
-01,Military,Fixed Wing,Combat Search and Rescue (CSAR),110120,Point
-01,Military,Fixed Wing,Electronic Support (ES),110121,Point
-01,Military,Fixed Wing,Government,110122,Point
-01,Military,Fixed Wing,Mine Countermeasures (MCM),110123,Point
-01,Military,Fixed Wing,Personnel Recovery,110124,Point
-01,Military,Fixed Wing,Search and Rescue,110125,Point
-01,Military,Fixed Wing,Special Operations Forces,110126,Point
-01,Military,Fixed Wing,Ultra Light,110127,Point
-01,Military,Fixed Wing,Photographic Reconnaissance,110128,Point
-01,Military,Fixed Wing,Very Important Person (VIP),110129,Point
-01,Military,Fixed Wing,Suppression of Enemy Air Defense,110130,Point
-01,Military,Fixed Wing,Passenger,110131,Point
-01,Military,Fixed Wing,Escort,110132,Point
-01,Military,Fixed Wing,Electronic Attack (EA),110133,Point
-01,Military,Rotary Wing,,110200,Point
-01,Military,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,110300,Point
+01,Military,Fixed-Wing,,110100,Point
+01,Military,Fixed-Wing,Medical Evacuation (MEDEVAC),110101,Point
+01,Military,Fixed-Wing,Attack/Strike,110102,Point
+01,Military,Fixed-Wing,Bomber,110103,Point
+01,Military,Fixed-Wing,Fighter,110104,Point
+01,Military,Fixed-Wing,Fighter/Bomber,110105,Point
+01,Military,Fixed-Wing,Cargo,110107,Point
+01,Military,Fixed-Wing,Electronic Combat (EC)/Jammer,110108,Point
+01,Military,Fixed-Wing,Tanker,110109,Point
+01,Military,Fixed-Wing,Patrol,110110,Point
+01,Military,Fixed-Wing,Reconnaissance,110111,Point
+01,Military,Fixed-Wing,Trainer,110112,Point
+01,Military,Fixed-Wing,Utility,110113,Point
+01,Military,Fixed-Wing,VSTOL,110114,Point
+01,Military,Fixed-Wing,Airborne Command Post (ACP),110115,Point
+01,Military,Fixed-Wing,Airborne Early Warning (AEW),110116,Point
+01,Military,Fixed-Wing,Antisurface Warfare,110117,Point
+01,Military,Fixed-Wing,Antisubmarine Warfare,110118,Point
+01,Military,Fixed-Wing,Communications,110119,Point
+01,Military,Fixed-Wing,Combat Search and Rescue (CSAR),110120,Point
+01,Military,Fixed-Wing,Electronic Support (ES),110121,Point
+01,Military,Fixed-Wing,Government,110122,Point
+01,Military,Fixed-Wing,Mine Countermeasures (MCM),110123,Point
+01,Military,Fixed-Wing,Personnel Recovery,110124,Point
+01,Military,Fixed-Wing,Search and Rescue,110125,Point
+01,Military,Fixed-Wing,Special Operations Forces,110126,Point
+01,Military,Fixed-Wing,Ultra Light,110127,Point
+01,Military,Fixed-Wing,Photographic Reconnaissance,110128,Point
+01,Military,Fixed-Wing,Very Important Person (VIP),110129,Point
+01,Military,Fixed-Wing,Suppression of Enemy Air Defense,110130,Point
+01,Military,Fixed-Wing,Passenger,110131,Point
+01,Military,Fixed-Wing,Escort,110132,Point
+01,Military,Fixed-Wing,Electronic Attack (EA),110133,Point
+01,Military,Rotary-Wing,,110200,Point
+01,Military,Unmanned Aircraft (UA)/Unmanned Aerial Vehicle (UAV)/Unmanned Aircraft System (UAS)/Remote Piloted Vehicle (RPV),,110300,Point
 01,Military,Vertical-Takeoff UAV (VT-UAV),,110400,Point
 01,Military,Lighter Than Air,,110500,Point
 01,Military,Airship,,110600,Point
-01,Military,Tethered Lighter than Air,,110700,Point
+01,Military,Tethered Lighter Than Air,,110700,Point
 01,Civilian,,,120000,Point
 01,Civilian,Fixed Wing,,120100,Point
 01,Civilian,Rotary Wing,,120200,Point
-01,Civilian,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remotely Piloted Vehicle (RPV),,120300,Point
+01,Civilian,Unmanned Aircraft (UA) / Unmanned Aerial Vehicle (UAV) / Unmanned Aircraft System (UAS) / Remote Piloted Vehicle (RPV),,120300,Point
 01,Civilian,Lighter Than Air,,120400,Point
 01,Civilian,Airship,,120500,Point
 01,Civilian,Tethered Lighter than Air,,120600,Point
@@ -57,7 +57,7 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 05,Military,Planet Lander,,110300,Point
 05,Military,Orbiter Shuttle,,110400,Point
 05,Military,Capsule,,110500,Point
-05,Military,Satellite General,,110600,Point
+05,Military,Satellite- General,,110600,Point
 05,Military,Satellite,,110700,Point
 05,Military,Antisatellite Weapon,,110800,Point
 05,Military,Astronomical Satellite,,110900,Point
@@ -85,11 +85,11 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 05,Civilian,Tethered Satellite,,121100,Point
 05,Civilian,Weather Satellite,,121200,Point
 05,Manual Track,,,130000,Point
-06,Space Missile,,,110000,Point
+06,Missile,,,110000,Point
 10,Command and Control,,,110000,Point
 10,Command and Control,Broadcast Transmitter Antennae,,110100,Point
-10,Command and Control,Civil Affairs ,,110200,Point
-10,Command and Control,Civil-Military Cooperation ,,110300,Point
+10,Command and Control,Civil Affairs,,110200,Point
+10,Command and Control,Civil-Military Cooperation,,110300,Point
 10,Command and Control,Information Operations,,110400,Point
 10,Command and Control,Liaison,,110500,Point
 10,Command and Control,Military Information Support Operations (MISO),,110600,Point
@@ -101,44 +101,32 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Command and Control,Signal,Radio,111001,Point
 10,Command and Control,Signal,Radio Relay,111002,Point
 10,Command and Control,Signal,Teletype,111003,Point
-10,Command and Control,Signal,Tactical Satellite  ,111004,Point
+10,Command and Control,Signal,Tactical Satellite,111004,Point
 10,Command and Control,Signal,Video Imagery (Combat Camera),111005,Point
-10,Command and Control,Signal,Headquarters Element,111095,Point
-10,Command and Control,Signal,Corps Support ,111097,Point
-10,Command and Control,Signal,Theatre/Echelons Above Corps Support,111098,Point
 10,Command and Control,Tactical Satellite,,111100,Point
 10,Command and Control,Video Imagery (Combat Camera),,111200,Point
-10,Movement and Maneuver,,,120000,Point
 10,Movement and Maneuver,Air Assault with Organic Lift,,120100,Point
 10,Movement and Maneuver,Air Traffic Services/Airfield Operations,,120200,Point
 10,Movement and Maneuver,Amphibious,,120300,Point
 10,Movement and Maneuver,Antitank/Antiarmor,,120400,Point
 10,Movement and Maneuver,Antitank/Antiarmor,Armored,120401,Point
 10,Movement and Maneuver,Antitank/Antiarmor,Motorized,120402,Point
-10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/ Tracked,,120500,Point
-10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/ Tracked,Reconnaissance/Cavalry/Scout,120501,Point
-10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/ Tracked,Amphibious,120502,Point
-10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/ Tracked,Headquarters Element,120595,Point
+10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/Tracked,,120500,Point
+10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/Tracked,Reconnaissance/Cavalry/Scout,120501,Point
+10,Movement and Maneuver,Armor/Armored/Mechanized/Self-Propelled/Tracked,Amphibious,120502,Point
 10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,,120600,Point
 10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,Reconnaissance,120601,Point
-10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,Headquarters Element,120695,Point
-10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,Corps Support,120697,Point
-10,Movement and Maneuver,Army Aviation/Aviation Rotary Wing,Theatre/Echelons Above Corps Support,120698,Point
 10,Movement and Maneuver,Aviation Composite,,120700,Point
-10,Movement and Maneuver,Aviation Composite,Headquarters Element,120795,Point
 10,Movement and Maneuver,Aviation Fixed Wing,,120800,Point
 10,Movement and Maneuver,Aviation Fixed Wing,Reconnaissance,120801,Point
-10,Movement and Maneuver,Aviation Fixed Wing,Headquarters Element,120895,Point
 10,Movement and Maneuver,Combat,,120900,Point
 10,Movement and Maneuver,Combined Arms,,121000,Point
-10,Movement and Maneuver,Combined Arms,Headquarters Element,121095,Point
 10,Movement and Maneuver,Infantry,,121100,Point
 10,Movement and Maneuver,Infantry,Amphibious,121101,Point
 10,Movement and Maneuver,Infantry,Armored/Mechanized/Tracked,121102,Point
-10,Movement and Maneuver,Infantry,Main Gun System ,121103,Point
-10,Movement and Maneuver,Infantry,Motorized ,121104,Point
+10,Movement and Maneuver,Infantry,Main Gun System,121103,Point
+10,Movement and Maneuver,Infantry,Motorized,121104,Point
 10,Movement and Maneuver,Infantry,Infantry Fighting Vehicle,121105,Point
-10,Movement and Maneuver,Infantry,Headquarters Element ,121195,Point
 10,Movement and Maneuver,Observer,,121200,Point
 10,Movement and Maneuver,Reconnaissance/Cavalry/Scout,,121300,Point
 10,Movement and Maneuver,Reconnaissance/Cavalry/Scout,Reconnaissance and Surveillance,121301,Point
@@ -149,7 +137,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Movement and Maneuver,Sniper,,121500,Point
 10,Movement and Maneuver,Surveillance,,121600,Point
 10,Movement and Maneuver,Special Forces,,121700,Point
-10,Movement and Maneuver,Special Forces,Headquarters Element,121795,Point
 10,Movement and Maneuver,Special Operations Forces (SOF),,121800,Point
 10,Movement and Maneuver,Special Operations Forces (SOF),Fixed Wing MISO,121801,Point
 10,Movement and Maneuver,Special Operations Forces (SOF),Ground,121802,Point
@@ -157,16 +144,13 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Movement and Maneuver,Special Operations Forces (SOF),Special SSNR,121804,Point
 10,Movement and Maneuver,Special Operations Forces (SOF),Underwater Demolition Team,121805,Point
 10,Movement and Maneuver,Unmanned Aerial Systems,,121900,Point
-10,Fires,,,130000,Point
 10,Fires,Air Defense,,130100,Point
 10,Fires,Air Defense,Main Gun System,130101,Point
 10,Fires,Air Defense,Missile,130102,Point
-10,Fires,Air Defense,Headquarters Element,130195,Point
 10,Fires,Air/Land Naval Gunfire Liaison,,130200,Point
 10,Fires,Field Artillery,,130300,Point
 10,Fires,Field Artillery,Self-propelled,130301,Point
-10,Fires,Field Artillery,Target Acquition,130302,Point
-10,Fires,Field Artillery,Headquarters Element,130395,Point
+10,Fires,Field Artillery,Target Acquisition,130302,Point
 10,Fires,Field Artillery Observer,,130400,Point
 10,Fires,Joint Fire Support,,130500,Point
 10,Fires,Meteorological,,130600,Point
@@ -176,16 +160,13 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Fires,Mortar,Self-Propelled Wheeled,130802,Point
 10,Fires,Mortar,Towed,130803,Point
 10,Fires,Survey,,130900,Point
-10,Protection,,,140000,Point
 10,Protection,Chemical Biological Radiological Nuclear Defense,,140100,Point
 10,Protection,Chemical Biological Radiological Nuclear Defense,Mechanized,140101,Point
 10,Protection,Chemical Biological Radiological Nuclear Defense,Motorized,140102,Point
 10,Protection,Chemical Biological Radiological Nuclear Defense,Reconnaissance,140103,Point
 10,Protection,Chemical Biological Radiological Nuclear Defense,Reconnaissance Armored,140104,Point
-10,Protection,Chemical Biological Radiological Nuclear Defense,Reconnaissance Equiped,140105,Point
-10,Protection,Chemical Biological Radiological Nuclear Defense,Headquarters Element,140195,Point
+10,Protection,Chemical Biological Radiological Nuclear Defense,Reconnaissance Equipped,140105,Point
 10,Protection,Combat Support (Maneuver Enhancement),,140200,Point
-10,Protection,Combat Support (Maneuver Enhancement),Headquarters Element,140295,Point
 10,Protection,Criminal Investigation Division,,140300,Point
 10,Protection,Diving,,140400,Point
 10,Protection,Dog,,140500,Point
@@ -194,13 +175,11 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Protection,Engineer,Mechanized,140701,Point
 10,Protection,Engineer,Motorized,140702,Point
 10,Protection,Engineer,Reconnaissance,140703,Point
-10,Protection,Engineer,Headquarters Element,140795,Point
 10,Protection,Explosive Ordnance Disposal (EOD),,140800,Point
 10,Protection,Field Camp Construction,,140900,Point
 10,Protection,Fire Fighting/Fire Protection,,141000,Point
 10,Protection,Geospatial Support/Geospatial Information Support,,141100,Point
 10,Protection,Military Police,,141200,Point
-10,Protection,Military Police,Headquarters Element,141295,Point
 10,Protection,Mine,,141300,Point
 10,Protection,Mine Clearing,,141400,Point
 10,Protection,Mine Launching,,141500,Point
@@ -212,7 +191,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Protection,Security Police (Air),,141900,Point
 10,Protection,Shore Patrol,,142000,Point
 10,Protection,Topographic,,142100,Point
-10,Intelligence,,,150000,Point
 10,Intelligence,Analysis,,150100,Point
 10,Intelligence,Counterintelligence,,150200,Point
 10,Intelligence,Direction Finding,,150300,Point
@@ -228,36 +206,22 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Intelligence,Jamming,,150800,Point
 10,Intelligence,Joint Intelligence Center,,150900,Point
 10,Intelligence,Military Intelligence,,151000,Point
-10,Intelligence,Military Intelligence,Headquarters Element,151095,Point
 10,Intelligence,Search,,151100,Point
 10,Intelligence,Sensor,,151200,Point
-10,Sustainment,Sensor,,160000,Point
-10,Sustainment,Sensor,Headquarters Element ,160095,Point
-10,Sustainment,Sensor,Corps Support ,160097,Point
-10,Sustainment,Sensor,Theatre/Echelons Above Corps Support,160098,Point
+10,Sustainment,,,160000,Point
 10,Sustainment,Administrative,,160100,Point
-10,Sustainment,Administrative,Corps Support,160197,Point
-10,Sustainment,Administrative,Theatre/Echelons Above Corps Support,160198,Point
 10,Sustainment,All Classes of Supply,,160200,Point
-10,Sustainment,Airport of Debarkation/Airport of Embarkation ,,160300,Point
+10,Sustainment,Airport of Debarkation/Airport of Embarkation,,160300,Point
 10,Sustainment,Ammunition,,160400,Point
 10,Sustainment,Band,,160500,Point
 10,Sustainment,Combat Service Support,,160600,Point
 10,Sustainment,Finance,,160700,Point
-10,Sustainment,Finance,Corps Support,160797,Point
-10,Sustainment,Finance,Theatre/Echelons Above Corps Support,160798,Point
 10,Sustainment,Judge Advocate General,,160800,Point
 10,Sustainment,Labor,,160900,Point
 10,Sustainment,Laundry/Bath,,161000,Point
 10,Sustainment,Maintenance,,161100,Point
-10,Sustainment,Maintenance,Headquarters Element ,161195,Point
-10,Sustainment,Maintenance,Corps Support ,161197,Point
-10,Sustainment,Maintenance,Theatre/Echelons Above Corps Support,161198,Point
 10,Sustainment,Material,,161200,Point
 10,Sustainment,Medical,,161300,Point
-10,Sustainment,Medical,Headquarters Element ,161395,Point
-10,Sustainment,Medical,Corps Support ,161397,Point
-10,Sustainment,Medical,Theatre/Echelons Above Corps Support,161398,Point
 10,Sustainment,Medical Treatment Facility,,161400,Point
 10,Sustainment,Morale Welfare and Recreation,,161500,Point
 10,Sustainment,Mortuary Affairs/Graves Registration,,161600,Point
@@ -268,31 +232,19 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Sustainment,NATO Supply Class IV,,162100,Point
 10,Sustainment,NATO Supply Class V,,162200,Point
 10,Sustainment,Ordnance,,162300,Point
-10,Sustainment,Ordnance,Headquarters Element ,162395,Point
-10,Sustainment,Ordnance,Corps Support ,162397,Point
-10,Sustainment,Ordnance,Theatre/Echelons Above Corps Support,162398,Point
 10,Sustainment,Personnel Services,,162400,Point
-10,Sustainment,Personnel Services,Headquarters Element,162495,Point
 10,Sustainment,Petroleum Oil and Lubricants,,162500,Point
 10,Sustainment,Pipeline,,162600,Point
 10,Sustainment,Postal,,162700,Point
 10,Sustainment,Public Affairs/Public Information,,162800,Point
 10,Sustainment,Quartermaster,,162900,Point
-10,Sustainment,Quartermaster,Headquarters Element ,162995,Point
-10,Sustainment,Quartermaster,Corps Support ,162997,Point
-10,Sustainment,Quartermaster,Theatre/Echelons Above Corps Support,162998,Point
 10,Sustainment,Railhead,,163000,Point
 10,Sustainment,Religious Support,,163100,Point
 10,Sustainment,Replacement Holding Unit,,163200,Point
-10,Sustainment,Sea Port of Debarkation/Sea Port of Embarkation ,,163300,Point
+10,Sustainment,Sea Port of Debarkation/Sea Port of Embarkation,,163300,Point
 10,Sustainment,Supply,,163400,Point
 10,Sustainment,Joint Information Bureau,,163500,Point
-10,Sustainment,Joint Information Bureau,Corps Support ,163597,Point
-10,Sustainment,Joint Information Bureau,Theatre/Echelons Above Corps Support,163598,Point
 10,Sustainment,Transportation,,163600,Point
-10,Sustainment,Transportation,Headquarters Element ,163695,Point
-10,Sustainment,Transportation,Corps Support ,163697,Point
-10,Sustainment,Transportation,Theatre/Echelons Above Corps Support,163698,Point
 10,Sustainment,US Supply Class I,,163700,Point
 10,Sustainment,US Supply Class II,,163800,Point
 10,Sustainment,US Supply Class III,,163900,Point
@@ -306,14 +258,12 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Sustainment,Water,,164700,Point
 10,Sustainment,Water Purification,,164800,Point
 10,Sustainment,Broadcast,,164900,Point
-10,Naval ,,,170000,Point
-10,Naval ,Naval,,170100,Point
-10,Named Headquarters,Named Headquarters,,180000,Point
+10,Naval,Naval,,170100,Point
 10,Named Headquarters,Allied Command Europe Rapid Reaction Corps (ARRC),,180100,Point
 10,Named Headquarters,Allied Command Operations,,180200,Point
 10,Named Headquarters,International Security Assistance Force (ISAF),,180300,Point
 10,Named Headquarters,Multinational (MN),,180400,Point
-10,Emergency Operation,Multinational (MN),,190000,Point
+10,Emergency Operation,,,190000,Point
 10,Law Enforcement,,,200000,Point
 10,Law Enforcement,Bureau of Alcohol Tobacco Firearms and Explosives (ATF) (Department of Justice),,200100,Point
 10,Law Enforcement,Border Patrol,,200200,Point
@@ -330,7 +280,7 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 10,Law Enforcement,Internal Security Force,,201300,Point
 11,Civilian,,,110000,Point
 11,Civilian,Environmental Protection,,110100,Point
-11,Civilian,Governmental Organization,,110200,Point
+11,Civilian,Government Organization,,110200,Point
 11,Civilian,Individual,,110300,Point
 11,Civilian,Organization or Group,,110400,Point
 11,Civilian,Killing Victim,,110500,Point
@@ -339,93 +289,93 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 11,Civilian,Spy,,110800,Point
 11,Civilian,Composite Loss,,110900,Point
 11,Civilian,Emergency Medical Operation,,111000,Point
-15,Weapons/Weapons System,,,110000,Point
-15,Weapons/Weapons System,Rifle,,110100,Point
-15,Weapons/Weapons System,Rifle,Single Shot Rifle,110101,Point
-15,Weapons/Weapons System,Rifle,Semiautomatic Rifle,110102,Point
-15,Weapons/Weapons System,Rifle,Automatic Rifle,110103,Point
-15,Weapons/Weapons System,Machine Gun,,110200,Point
-15,Weapons/Weapons System,Machine Gun,Light ,110201,Point
-15,Weapons/Weapons System,Machine Gun,Medium ,110202,Point
-15,Weapons/Weapons System,Machine Gun,Heavy,110203,Point
-15,Weapons/Weapons System,Grenade Launcher,,110300,Point
-15,Weapons/Weapons System,Grenade Launcher,Light,110301,Point
-15,Weapons/Weapons System,Grenade Launcher,Medium,110302,Point
-15,Weapons/Weapons System,Grenade Launcher,Heavy,110303,Point
-15,Weapons/Weapons System,Flame Thrower,,110400,Point
-15,Weapons/Weapons System,Air Defense Gun,,110500,Point
-15,Weapons/Weapons System,Air Defense Gun,Light,110501,Point
-15,Weapons/Weapons System,Air Defense Gun,Medium,110502,Point
-15,Weapons/Weapons System,Air Defense Gun,Heavy,110503,Point
-15,Weapons/Weapons System,Antitank Gun,,110600,Point
-15,Weapons/Weapons System,Antitank Gun,Light,110601,Point
-15,Weapons/Weapons System,Antitank Gun,Medium,110602,Point
-15,Weapons/Weapons System,Antitank Gun,Heavy,110603,Point
-15,Weapons/Weapons System,Direct Fire Gun,,110700,Point
-15,Weapons/Weapons System,Direct Fire Gun,Light,110701,Point
-15,Weapons/Weapons System,Direct Fire Gun,Medium,110702,Point
-15,Weapons/Weapons System,Direct Fire Gun,Heavy,110703,Point
-15,Weapons/Weapons System,Recoilless Gun,,110800,Point
-15,Weapons/Weapons System,Recoilless Gun,Light,110801,Point
-15,Weapons/Weapons System,Recoilless Gun,Medium,110802,Point
-15,Weapons/Weapons System,Recoilless Gun,Heavy,110803,Point
-15,Weapons/Weapons System,Howitzer,,110900,Point
-15,Weapons/Weapons System,Howitzer,Light,110901,Point
-15,Weapons/Weapons System,Howitzer,Medium,110902,Point
-15,Weapons/Weapons System,Howitzer,Heavy,110903,Point
-15,Weapons/Weapons System,Missile Launcher,,111000,Point
-15,Weapons/Weapons System,Missile Launcher,Light,111001,Point
-15,Weapons/Weapons System,Missile Launcher,Medium,111002,Point
-15,Weapons/Weapons System,Missile Launcher,Heavy,111003,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,,111100,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Light,111101,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Light-TLAR,111102,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Light-TELAR,111103,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Medium,111104,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Medium-TLAR,111105,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Medium-TELAR,111106,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Heavy,111107,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Heavy-TLAR,111108,Point
-15,Weapons/Weapons System,Air Defense Missile Launcher,Heavy-TELAR,111109,Point
-15,Weapons/Weapons System,Antitank Missile Launcher,,111200,Point
-15,Weapons/Weapons System,Antitank Missile Launcher,Light,111201,Point
-15,Weapons/Weapons System,Antitank Missile Launcher,Medium,111202,Point
-15,Weapons/Weapons System,Antitank Missile Launcher,Heavy,111203,Point
-15,Weapons/Weapons System,Surface-to-Surface Missile Launcher,,111300,Point
-15,Weapons/Weapons System,Surface-to-Surface Missile Launcher,Light,111301,Point
-15,Weapons/Weapons System,Surface-to-Surface Missile Launcher,Medium,111302,Point
-15,Weapons/Weapons System,Surface-to-Surface Missile Launcher,Heavy,111303,Point
-15,Weapons/Weapons System,Mortar,,111400,Point
-15,Weapons/Weapons System,Mortar,Light,111401,Point
-15,Weapons/Weapons System,Mortar,Medium,111402,Point
-15,Weapons/Weapons System,Mortar,Heavy,111403,Point
-15,Weapons/Weapons System,Single Rocket Launcher,,111500,Point
-15,Weapons/Weapons System,Single Rocket Launcher,Light,111501,Point
-15,Weapons/Weapons System,Single Rocket Launcher,Medium,111502,Point
-15,Weapons/Weapons System,Single Rocket Launcher,Heavy,111503,Point
-15,Weapons/Weapons System,Multiple Rocket Launcher,,111600,Point
-15,Weapons/Weapons System,Multiple Rocket Launcher,Light,111601,Point
-15,Weapons/Weapons System,Multiple Rocket Launcher,Medium,111602,Point
-15,Weapons/Weapons System,Multiple Rocket Launcher,Heavy,111603,Point
-15,Weapons/Weapons System,Antitank Rocket Launcher,,111701,Point
-15,Weapons/Weapons System,Antitank Rocket Launcher,Light,111701,Point
-15,Weapons/Weapons System,Antitank Rocket Launcher,Medium,111702,Point
-15,Weapons/Weapons System,Antitank Rocket Launcher,Heavy,111703,Point
-15,Weapons/Weapons System,Nonlethal Weapon,,111800,Point
-15,Weapons/Weapons System,Taser,,111900,Point
-15,Weapons/Weapons System,Water Cannon,,112000,Point
+15,Weapon/Weapon System,,,110000,Point
+15,Weapon/Weapon System,Rifle,,110100,Point
+15,Weapon/Weapon System,Rifle,Single Shot Rifle,110101,Point
+15,Weapon/Weapon System,Rifle,Semiautomatic Rifle,110102,Point
+15,Weapon/Weapon System,Rifle,Automatic Rifle,110103,Point
+15,Weapon/Weapon System,Machine Gun,,110200,Point
+15,Weapon/Weapon System,Machine Gun,Light,110201,Point
+15,Weapon/Weapon System,Machine Gun,Medium,110202,Point
+15,Weapon/Weapon System,Machine Gun,Heavy,110203,Point
+15,Weapon/Weapon System,Grenade Launcher,,110300,Point
+15,Weapon/Weapon System,Grenade Launcher,Light,110301,Point
+15,Weapon/Weapon System,Grenade Launcher,Medium,110302,Point
+15,Weapon/Weapon System,Grenade Launcher,Heavy,110303,Point
+15,Weapon/Weapon System,Flame Thrower,,110400,Point
+15,Weapon/Weapon System,Air Defense Gun,,110500,Point
+15,Weapon/Weapon System,Air Defense Gun,Light,110501,Point
+15,Weapon/Weapon System,Air Defense Gun,Medium,110502,Point
+15,Weapon/Weapon System,Air Defense Gun,Heavy,110503,Point
+15,Weapon/Weapon System,Antitank Gun,,110600,Point
+15,Weapon/Weapon System,Antitank Gun,Light,110601,Point
+15,Weapon/Weapon System,Antitank Gun,Medium,110602,Point
+15,Weapon/Weapon System,Antitank Gun,Heavy,110603,Point
+15,Weapon/Weapon System,Direct Fire Gun,,110700,Point
+15,Weapon/Weapon System,Direct Fire Gun,Light,110701,Point
+15,Weapon/Weapon System,Direct Fire Gun,Medium,110702,Point
+15,Weapon/Weapon System,Direct Fire Gun,Heavy,110703,Point
+15,Weapon/Weapon System,Recoilless Gun,,110800,Point
+15,Weapon/Weapon System,Recoilless Gun,Light,110801,Point
+15,Weapon/Weapon System,Recoilless Gun,Medium,110802,Point
+15,Weapon/Weapon System,Recoilless Gun,Heavy,110803,Point
+15,Weapon/Weapon System,Howitzer,,110900,Point
+15,Weapon/Weapon System,Howitzer,Light,110901,Point
+15,Weapon/Weapon System,Howitzer,Medium,110902,Point
+15,Weapon/Weapon System,Howitzer,Heavy,110903,Point
+15,Weapon/Weapon System,Missile Launcher,,111000,Point
+15,Weapon/Weapon System,Missile Launcher,Light,111001,Point
+15,Weapon/Weapon System,Missile Launcher,Medium,111002,Point
+15,Weapon/Weapon System,Missile Launcher,Heavy,111003,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,,111100,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Light,111101,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Light- Light Transporter-Launcher and Radar (TLAR),111102,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Light- Light Tactical Landing Approach Radar (TELAR),111103,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Medium,111104,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Medium- TLAR,111105,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Medium- TELAR Air Defense Missile Launcher,111106,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Heavy,111107,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Heavy- TLAR,111108,Point
+15,Weapon/Weapon System,Air Defense Missile Launcher,Heavy- TELAR,111109,Point
+15,Weapon/Weapon System,Antitank Missile Launcher,,111200,Point
+15,Weapon/Weapon System,Antitank Missile Launcher,Light,111201,Point
+15,Weapon/Weapon System,Antitank Missile Launcher,Medium,111202,Point
+15,Weapon/Weapon System,Antitank Missile Launcher,Heavy,111203,Point
+15,Weapon/Weapon System,Surface-to-Surface Missile Launcher,,111300,Point
+15,Weapon/Weapon System,Surface-to-Surface Missile Launcher,Light,111301,Point
+15,Weapon/Weapon System,Surface-to-Surface Missile Launcher,Medium,111302,Point
+15,Weapon/Weapon System,Surface-to-Surface Missile Launcher,Heavy,111303,Point
+15,Weapon/Weapon System,Mortar,,111400,Point
+15,Weapon/Weapon System,Mortar,Light,111401,Point
+15,Weapon/Weapon System,Mortar,Medium,111402,Point
+15,Weapon/Weapon System,Mortar,Heavy,111403,Point
+15,Weapon/Weapon System,Single Rocket Launcher,,111500,Point
+15,Weapon/Weapon System,Single Rocket Launcher,Light,111501,Point
+15,Weapon/Weapon System,Single Rocket Launcher,Medium,111502,Point
+15,Weapon/Weapon System,Single Rocket Launcher,Heavy,111503,Point
+15,Weapon/Weapon System,Multiple Rocket Launcher,,111600,Point
+15,Weapon/Weapon System,Multiple Rocket Launcher,Light,111601,Point
+15,Weapon/Weapon System,Multiple Rocket Launcher,Medium,111602,Point
+15,Weapon/Weapon System,Multiple Rocket Launcher,Heavy,111603,Point
+15,Weapon/Weapon System,Antitank Rocket Launcher,,111700,Point
+15,Weapon/Weapon System,Antitank Rocket Launcher,Light,111701,Point
+15,Weapon/Weapon System,Antitank Rocket Launcher,Medium,111702,Point
+15,Weapon/Weapon System,Antitank Rocket Launcher,Heavy,111703,Point
+15,Weapon/Weapon System,Nonlethal Weapon,,111800,Point
+15,Weapon/Weapon System,Taser,,111900,Point
+15,Weapon/Weapon System,Water Cannon,,112000,Point
 15,Vehicle,,,120000,Point
-15,Vehicle,Armored,,120100,Point
-15,Vehicle,Armored,Armored Fighting Vehicle,120101,Point
-15,Vehicle,Armored,Armored Fighting Vehicle Command and Control,120102,Point
-15,Vehicle,Armored,Armored Personnel Carrier,120103,Point
-15,Vehicle,Armored,Armored Personnel Carrier Ambulance,120104,Point
-15,Vehicle,Armored,Armored Protected Vehicle,120105,Point
-15,Vehicle,Armored,Armored Protected Vehicle Recovery,120106,Point
-15,Vehicle,Armored,Armored Protected Vehicle Medical Evacuation,120107,Point
-15,Vehicle,Armored,Armored Personnel Carrier-Recovery,120108,Point
-15,Vehicle,Armored,Combat Service Support Vehicle,120109,Point
-15,Vehicle,Armored,Light Wheeled Armored Vehicle,120110,Point
+15,Vehicle,Armored Vehicle,,120100,Point
+15,Vehicle,Armored Vehicle,Armored Fighting Vehicle,120101,Point
+15,Vehicle,Armored Vehicle,Armored Fighting Vehicle Command and Control,120102,Point
+15,Vehicle,Armored Vehicle,Armored Personnel Carrier,120103,Point
+15,Vehicle,Armored Vehicle,Armored Personnel Carrier Ambulance,120104,Point
+15,Vehicle,Armored Vehicle,Armored Protected Vehicle,120105,Point
+15,Vehicle,Armored Vehicle,Armored Protected Vehicle Recovery,120106,Point
+15,Vehicle,Armored Vehicle,Armored Protected Vehicle Medical Evacuation,120107,Point
+15,Vehicle,Armored Vehicle,Armored Personnel Carrier-Recovery,120108,Point
+15,Vehicle,Armored Vehicle,Combat Service Support Vehicle,120109,Point
+15,Vehicle,Armored Vehicle,Light Wheeled Armored Vehicle,120110,Point
 15,Vehicle,Tank,,120200,Point
 15,Vehicle,Tank,Light,120201,Point
 15,Vehicle,Tank,Medium,120202,Point
@@ -449,9 +399,9 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 15,Engineer Vehicles and Equipment,Mine Clearing Equipment,Trailer Mounted,130901,Point
 15,Engineer Vehicles and Equipment,Mine Clearing Equipment,Mine Clearing Equipment on Tank Chassis,130902,Point
 15,Engineer Vehicles and Equipment,Mine Laying Equipment,,131000,Point
-15,Engineer Vehicles and Equipment,,Mine Laying Equipment on Utility Vehicle,131001,Point
-15,Engineer Vehicles and Equipment,,Armored Carrier with Volcano,131002,Point
-15,Engineer Vehicles and Equipment,,Truck Mounted with Volcano,131003,Point
+15,Engineer Vehicles and Equipment,Mine Laying Equipment,Mine Laying Equipment on Utility Vehicle,131001,Point
+15,Engineer Vehicles and Equipment,Mine Laying Equipment,Armored Carrier with Volcano,131002,Point
+15,Engineer Vehicles and Equipment,Mine Laying Equipment,Truck Mounted with Volcano,131003,Point
 15,Engineer Vehicles and Equipment,Dozer,,131100,Point
 15,Engineer Vehicles and Equipment,Dozer,Dozer-Armored,131101,Point
 15,Engineer Vehicles and Equipment,Armored Assault,,131200,Point
@@ -530,7 +480,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 15,Missile Support,Crane/Loading Device,,190300,Point
 15,Missile Support,Propellant Transporter,,190400,Point
 15,Missile Support,Warhead Transporter,,190500,Point
-15,Other Equipment,,,200000,Point
 15,Other Equipment,Antennae,,200100,Point
 15,Other Equipment,Bomb,,200200,Point
 15,Other Equipment,Booby Trap,,200300,Point
@@ -547,13 +496,11 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 15,Other Equipment,Unit Deployment Shipments,,201400,Point
 15,Other Equipment,Emergency Medical Operation,,201500,Point
 15,Other Equipment,Emergency Medical Operation,Medical Evacuation Helicopter,201501,Point
-15,Land Mines,,,210000,Point
 15,Land Mines,Land Mine,,210100,Point
-15,Land Mines,Antipersonnel Land mine (APL),,210200,Point
+15,Land Mines,Antipersonnel Land Mine (APL),,210200,Point
 15,Land Mines,Antitank Mine,,210300,Point
 15,Land Mines,Improvised Explosives Device (IED),,210400,Point
 15,Land Mines,Less than lethal,,210500,Point
-15,Sensors,,,220000,Point
 15,Sensors,Sensor,,220100,Point
 15,Sensors,Sensor Emplaced,,220200,Point
 15,Sensors,Radar,,220300,Point
@@ -561,47 +508,46 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 15,Emergency Operation,Ambulance,,230100,Point
 15,Emergency Operation,Fire Fighting/Fire Protection,,230200,Point
 15,Manual Track,,,240000,Point
-20,Military/Civilian,,,110000,Point
-20,Military/Civilian,Aircraft Production/Assembly,,110100,Point
-20,Military/Civilian,Ammunition and Explosives/Assembly,,110200,Point
-20,Military/Civilian,Ammunition Cache,,110300,Point
-20,Military/Civilian,Armament Production,,110400,Point
-20,Military/Civilian,Black List Location,,110500,Point
-20,Military/Civilian,Chemical-Biological-Radiological and Nuclear (CBRN),,110600,Point
-20,Military/Civilian,Engineering Equipment Production,,110700,Point
-20,Military/Civilian,Engineering Equipment Production,Bridge,110701,Point
-20,Military/Civilian,Equipment Manufacture,,110800,Point
-20,Military/Civilian,Government Leadership,,110900,Point
-20,Military/Civilian,Gray List Location,,111000,Point
-20,Military/Civilian,Mass Grave Site,,111100,Point
-20,Military/Civilian,Materiel,,111200,Point
-20,Military/Civilian,Mine,,111300,Point
-20,Military/Civilian,Missile and Space System Production,,111400,Point
-20,Military/Civilian,Nuclear (Non CBRN Defense),,111500,Point
-20,Military/Civilian,Printed Media,,111600,Point
-20,Military/Civilian,Safe House,,111700,Point
-20,Military/Civilian,White List Location,,111800,Point
-20,Military/Civilian,Tented Camp,,111900,Point
-20,Military/Civilian,Tented Camp,Displaced Persons/ Refugee/Evacuees Camp,111901,Point
-20,Military/Civilian,Tented Camp,Training Camp,111902,Point
-20,Military/Civilian,Warehouse/Storage Facility,,112000,Point
-20,Military/Civilian,Law  Enforcement,,112100,Point
-20,Military/Civilian,Law  Enforcement,Bureau of Alcohol-Tobacco-Firearms and Explosives (ATF) (Department of Justice),112101,Point
-20,Military/Civilian,Law  Enforcement,Border Patrol,112102,Point
-20,Military/Civilian,Law  Enforcement,Customs Service,112103,Point
-20,Military/Civilian,Law  Enforcement,Drug Enforcement Administration (DEA),112104,Point
-20,Military/Civilian,Law  Enforcement,Department of Justice (DOJ),112105,Point
-20,Military/Civilian,Law  Enforcement,Federal Bureau of Investigation (FBI),112106,Point
-20,Military/Civilian,Law  Enforcement,Police,112107,Point
-20,Military/Civilian,Law  Enforcement,Prison,112108,Point
-20,Military/Civilian,Law  Enforcement,United States Secret Service (USSS),112109,Point
-20,Military/Civilian,Law  Enforcement,Transportation Security Administration (TSA),112110,Point
-20,Military/Civilian,Law  Enforcement,Coast Guard,112111,Point
-20,Military/Civilian,Law  Enforcement,US Marshals Service,112112,Point
-20,Military/Civilian,Emergency Operation,,112200,Point
-20,Military/Civilian,Emergency Operation,Fire Station,112201,Point
-20,Military/Civilian,Emergency Operation,Emergency Medical Operation,112202,Point
-20,Infrastructure,Emergency Operation,,120000,Point
+20,Installation,,,110000,Point
+20,Installation,Aircraft Production/Assembly,,110100,Point
+20,Installation,Ammunition and Explosives/Assembly,,110200,Point
+20,Installation,Ammunition Cache,,110300,Point
+20,Installation,Armament Production,,110400,Point
+20,Installation,Black List Location,,110500,Point
+20,Installation,Chemical-Biological-Radiological and Nuclear (CBRN),,110600,Point
+20,Installation,Engineering Equipment Production,,110700,Point
+20,Installation,Engineering Equipment Production,Bridge,110701,Point
+20,Installation,Equipment Manufacture,,110800,Point
+20,Installation,Government Leadership,,110900,Point
+20,Installation,Gray List Location,,111000,Point
+20,Installation,Mass Grave Site,,111100,Point
+20,Installation,Materiel,,111200,Point
+20,Installation,Mine,,111300,Point
+20,Installation,Missile and Space System Production,,111400,Point
+20,Installation,Nuclear (Non CBRN Defense),,111500,Point
+20,Installation,Printed Media,,111600,Point
+20,Installation,Safe House,,111700,Point
+20,Installation,White List Location,,111800,Point
+20,Installation,Tented Camp,,111900,Point
+20,Installation,Tented Camp,Displaced Persons / Refugee / Evacuees Camp,111901,Point
+20,Installation,Tented Camp,Training Camp,111902,Point
+20,Installation,Warehouse/Storage Facility,,112000,Point
+20,Installation,Law Enforcement,,112100,Point
+20,Installation,Law Enforcement,Bureau of Alcohol-Tobacco-Firearms and Explosives (ATF) (Department of Justice),112101,Point
+20,Installation,Law Enforcement,Border Patrol,112102,Point
+20,Installation,Law Enforcement,Customs Service,112103,Point
+20,Installation,Law Enforcement,Drug Enforcement Administration (DEA),112104,Point
+20,Installation,Law Enforcement,Department of Justice (DOJ),112105,Point
+20,Installation,Law Enforcement,Federal Bureau of Investigation (FBI),112106,Point
+20,Installation,Law Enforcement,Police,112107,Point
+20,Installation,Law Enforcement,Prison,112108,Point
+20,Installation,Law Enforcement,United States Secret Service (USSS),112109,Point
+20,Installation,Law Enforcement,Transportation Security Administration (TSA),112110,Point
+20,Installation,Law Enforcement,Coast Guard,112111,Point
+20,Installation,Law Enforcement,US Marshals Service,112112,Point
+20,Installation,Emergency Operation,,112200,Point
+20,Installation,Emergency Operation,Fire Station,112201,Point
+20,Installation,Emergency Operation,Emergency Medical Operation,112202,Point
 20,Infrastructure,Agriculture and Food Infrastructure,,120100,Point
 20,Infrastructure,Agriculture and Food Infrastructure,Agriculture Laboratory,120101,Point
 20,Infrastructure,Agriculture and Food Infrastructure,Animal Feedlot,120102,Point
@@ -611,14 +557,14 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 20,Infrastructure,Agriculture and Food Infrastructure,Food Production Center,120106,Point
 20,Infrastructure,Agriculture and Food Infrastructure,Food Retail,120107,Point
 20,Infrastructure,Agriculture and Food Infrastructure,Grain Storage,120108,Point
-20,Infrastructure,Banking Finance and Insurance  Infrastructure,,120200,Point
-20,Infrastructure,Banking Finance and Insurance  Infrastructure,ATM,120201,Point
-20,Infrastructure,Banking Finance and Insurance  Infrastructure,Bank,120202,Point
-20,Infrastructure,Banking Finance and Insurance  Infrastructure,Bullion Storage,120203,Point
-20,Infrastructure,Banking Finance and Insurance  Infrastructure,Economic Infrastructure Asset,120204,Point
-20,Infrastructure,Banking Finance and Insurance  Infrastructure,Federal Reserve Bank,120205,Point
-20,Infrastructure,Banking Finance and Insurance  Infrastructure,Financial Exchange,120206,Point
-20,Infrastructure,Banking Finance and Insurance  Infrastructure,Financial Services-Other,120207,Point
+20,Infrastructure,Banking- Finance- and Insurance Infrastructure,,120200,Point
+20,Infrastructure,Banking- Finance- and Insurance Infrastructure,ATM,120201,Point
+20,Infrastructure,Banking- Finance- and Insurance Infrastructure,Bank,120202,Point
+20,Infrastructure,Banking- Finance- and Insurance Infrastructure,Bullion Storage,120203,Point
+20,Infrastructure,Banking- Finance- and Insurance Infrastructure,Economic Infrastructure Asset,120204,Point
+20,Infrastructure,Banking- Finance- and Insurance Infrastructure,Federal Reserve Bank,120205,Point
+20,Infrastructure,Banking- Finance- and Insurance Infrastructure,Financial Exchange,120206,Point
+20,Infrastructure,Banking- Finance- and Insurance Infrastructure,Financial Services-Other,120207,Point
 20,Infrastructure,Commercial Infrastructure,,120300,Point
 20,Infrastructure,Commercial Infrastructure,Chemical Plant,120301,Point
 20,Infrastructure,Commercial Infrastructure,Firearms Manufacturer,120302,Point
@@ -641,7 +587,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 20,Infrastructure,Energy Facility Infrastructure,Petroleum/Gas/Oil,120505,Point
 20,Infrastructure,Energy Facility Infrastructure,Propane Facility,120506,Point
 20,Infrastructure,Government Site Infrastructure,,120600,Point
-20,Infrastructure,Medical Infrastructure,,120700,Point
 20,Infrastructure,Medical Infrastructure,Medical,120701,Point
 20,Infrastructure,Medical Infrastructure,Medical Treatment Facility (Hospital),120702,Point
 20,Infrastructure,Military Infrastructure,,120800,Point
@@ -689,19 +634,16 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 20,Infrastructure,Water Supply Infrastructure,Wastewater Treatment Facility,121409,Point
 20,Infrastructure,Water Supply Infrastructure,Water,121410,Point
 20,Infrastructure,Water Supply Infrastructure,Water Treatment,121411,Point
-25,Command and Control Lines,,,110000,Line
 25,Command and Control Lines,Boundary,,110100,Line
 25,Command and Control Lines,Boundary,Lateral,110101,Line
 25,Command and Control Lines,Boundary,Forward,110102,Line
 25,Command and Control Lines,Boundary,Rear,110103,Line
 25,Command and Control Lines,Light Line,,110200,Line
-25,Command and Control Areas,,,120000,Area
 25,Command and Control Areas,Area of Operations,,120100,Area
 25,Command and Control Areas,Named Area of Interest,,120200,Area
 25,Command and Control Areas,Targeted Area of Interest,,120300,Area
-25,Command and Control Areas,Airfield Zone,,120400,Area
-25,Command and Control Points,,,130000,Point
-25,Command and Control Points,Unspecified Control Point,,130100,Point
+25,Command and Control Areas,Airfield Zone,,120400,Point
+25,Command and Control Points,Action Point (General),,130100,Point
 25,Command and Control Points,Amnesty Point,,130200,Point
 25,Command and Control Points,Checkpoint,,130300,Point
 25,Command and Control Points,Center of Main Effort,,130400,Point
@@ -710,22 +652,19 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Command and Control Points,Decision Point,,130700,Point
 25,Command and Control Points,Distress Call,,130800,Point
 25,Command and Control Points,Entry Control Point,,130900,Point
-25,Command and Control Points,Fly-To-Point,,131000,Point
-25,Command and Control Points,Fly-To-Point,Sonobuoy,131001,Point
-25,Command and Control Points,Fly-To-Point,Weapon,131002,Point
-25,Command and Control Points,Fly-To-Point,Normal,131003,Point
+25,Command and Control Points,Fly-To-Point,Fly-To-Point (Sonobuoy),131001,Point
+25,Command and Control Points,Fly-To-Point,Fly-To-Point (Weapon),131002,Point
+25,Command and Control Points,Fly-To-Point,Fly-To-Point (Normal),131003,Point
 25,Command and Control Points,Linkup Point,,131100,Point
 25,Command and Control Points,Passage Point,,131200,Point
 25,Command and Control Points,Point of Interest,,131300,Point
-25,Command and Control Points,Point of Interest,Launch Event,131301,Point
+25,Command and Control Points,Point of Interest,Launch Event (Point of Interest),131301,Point
 25,Command and Control Points,Rally Point,,131400,Point
 25,Command and Control Points,Release Point,,131500,Point
 25,Command and Control Points,Start Point,,131600,Point
 25,Command and Control Points,Special Point,,131700,Point
 25,Command and Control Points,Waypoint,,131800,Point
 25,Command and Control Points,Airfield,,131900,Point
-25,Maneuver Lines,,,140000,Line
-25,Maneuver Lines,Forward Line of Troops,,140100,Line
 25,Maneuver Lines,Forward Line of Troops,Friendly Present,140101,Line
 25,Maneuver Lines,Forward Line of Troops,Friendly Planned or on Order,140102,Line
 25,Maneuver Lines,Forward Line of Troops,Enemy Known,140103,Line
@@ -735,10 +674,9 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Maneuver Lines,Forward Edge of the Battle Area,,140400,Line
 25,Maneuver Lines,Forward Edge of the Battle Area,Proposed or On Order,140401,Line
 25,Maneuver Lines,Principle Direction of Fire,,140500,Line
-25,Maneuver Lines,Direction of Attack,,140600,Line
 25,Maneuver Lines,Direction of Attack,Friendly Aviation,140601,Line
-25,Maneuver Lines,Direction of Attack,Friendly Main Attack /Decisive,140602,Line
-25,Maneuver Lines,Direction of Attack,Friendly Supporting Attack,140603,Line
+25,Maneuver Lines,Direction of Attack,Friendly Direction of Main Attack,140602,Line
+25,Maneuver Lines,Direction of Attack,Friendly Direction of Supporting Attack,140603,Line
 25,Maneuver Lines,Direction of Attack,Friendly Planned or On Order,140604,Line
 25,Maneuver Lines,Direction of Attack,Feint,140605,Line
 25,Maneuver Lines,Direction of Attack,Enemy Confirmed,140606,Line
@@ -749,23 +687,20 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Maneuver Lines,Line of Departure,,141000,Line
 25,Maneuver Lines,Line of Departure/Line of Contact,,141100,Line
 25,Maneuver Lines,Probable Line of Deployment,,141200,Line
-25,Maneuver Lines,Airhead Line,,141300,Line
+25,Maneuver Lines,Airhead Line,,141300,Area
 25,Maneuver Lines,Bridgehead Line,,141400,Line
 25,Maneuver Lines,Holding Line,,141500,Line
 25,Maneuver Lines,Release Line,,141600,Line
 25,Maneuver Lines,Ambush,,141700,Line
-25,Maneuver Areas,,,150000,Area
-25,Maneuver Areas,Area,,150100,Area
 25,Maneuver Areas,Area,Friendly,150101,Area
 25,Maneuver Areas,Area,Friendly Planned or On Order,150102,Area
 25,Maneuver Areas,Area,Enemy Known or Confirmed,150103,Area
 25,Maneuver Areas,Area,Enemy Suspected,150104,Area
 25,Maneuver Areas,Assembly Area,,150200,Area
 25,Maneuver Areas,Occupied Assembly Area,,150300,Area
-25,Maneuver Areas,Occupied Assembly Area,Offset Unit,150301,Area
-25,Maneuver Areas,Occupied Assembly Area,Offset Units,150302,Area
-25,Maneuver Areas,Proposed or On Order,,150400,Area
-25,Maneuver Areas,Action Area,,150500,Area
+25,Maneuver Areas,Occupied Assembly Area,Occupied Assembly Area w/ Offset Unit,150301,Area
+25,Maneuver Areas,Occupied Assembly Area,Occupied Assembly Area w/ Offset Units,150302,Area
+25,Maneuver Areas,Proposed or On Order Assembly Area,,150400,Area
 25,Maneuver Areas,Action Area,Joint Tactical Action Area (JTAA),150501,Area
 25,Maneuver Areas,Action Area,Submarine Action Area (SAA),150502,Area
 25,Maneuver Areas,Action Area,Submarine-Generated Action Area (SGAA),150503,Area
@@ -776,42 +711,38 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Maneuver Areas,Fortified Area,,151000,Area
 25,Maneuver Areas,Limited Access Area,,151100,Area
 25,Maneuver Areas,Battle Position,,151200,Area
-25,Maneuver Areas,Battle Position,Planned,151201,Area
-25,Maneuver Areas,Battle Position,Prepared (P) but not Occupied,151202,Area
+25,Maneuver Areas,Battle Position,Battle Position - Planned,151201,Area
+25,Maneuver Areas,Battle Position,Battle Position - Prepared (P) but not Occupied,151202,Area
 25,Maneuver Areas,Battle Position,Strong Point,151203,Area
-25,Maneuver Areas,Battle Position,Contain,151204,Area
-25,Maneuver Areas,Battle Position,Retain,151205,Area
+25,Maneuver Areas,Battle Position,Contain,151204,Line
+25,Maneuver Areas,Battle Position,Retain,151205,Line
 25,Maneuver Areas,Engagement Area (EA),,151300,Area
-25,Maneuver Areas,Axis of Advance,,151400,Area
-25,Maneuver Areas,Axis of Advance,Friendly Airborne/Aviation,151401,Area
-25,Maneuver Areas,Axis of Advance,Attack Helicopter,151402,Area
-25,Maneuver Areas,Axis of Advance,Main Attack,151403,Area
-25,Maneuver Areas,Axis of Advance,Supporting Attack ,151404,Area
-25,Maneuver Areas,Axis of Advance,Supporting Attack Planned or On Order,151405,Area
-25,Maneuver Areas,Axis of Advance,Feint,151406,Area
-25,Maneuver Areas,Axis of Advance,Enemy Confirmed,151407,Area
-25,Maneuver Areas,Axis of Advance,Enemy Templated or Suspected,151408,Area
+25,Maneuver Areas,Axis of Advance,Friendly Airborne/Aviation,151401,Line
+25,Maneuver Areas,Axis of Advance,Attack Helicopter,151402,Line
+25,Maneuver Areas,Axis of Advance,Main Attack,151403,Line
+25,Maneuver Areas,Axis of Advance,Supporting Attack,151404,Line
+25,Maneuver Areas,Axis of Advance,Supporting Attack Planned or On Order,151405,Line
+25,Maneuver Areas,Axis of Advance,Feint,151406,Line
+25,Maneuver Areas,Axis of Advance,Enemy Confirmed,151407,Line
+25,Maneuver Areas,Axis of Advance,Enemy Templated or Suspected,151408,Line
 25,Maneuver Areas,Assault Position,,151500,Area
 25,Maneuver Areas,Attack Position,,151600,Area
 25,Maneuver Areas,Objective,,151700,Area
-25,Maneuver Areas,Encirclement,,151800,Area
 25,Maneuver Areas,Encirclement,Friendly,151801,Area
 25,Maneuver Areas,Encirclement,Enemy,151802,Area
 25,Maneuver Areas,Penetration Box,,151900,Area
 25,Maneuver Areas,Attack by Fire Position,,152000,Area
-25,Maneuver Areas,Support by Fire,,152100,Area
-25,Maneuver Areas,Search Area/Reconnaissance Area,,152200,Area
-25,Maneuver Points,,,160000,Point
-25,Maneuver Points,Observation Post/Outpost (unspecified),,160100,Point
-25,Maneuver Points,Observation Post/Outpost (specified),,160200,Point
-25,Maneuver Points,Observation Post/Outpost (specified),Reconnaissance Outpost,160201,Point
-25,Maneuver Points,Observation Post/Outpost (specified),Forward Observer Outpost,160202,Point
-25,Maneuver Points,Observation Post/Outpost (specified),CBRN Observation Outpost,160203,Point
-25,Maneuver Points,Observation Post/Outpost (specified),Sensor Outpost /Listening Post,160204,Point
-25,Maneuver Points,Observation Post/Outpost (specified),Combat Outpost,160205,Point
+25,Maneuver Areas,Support by Fire,,152100,Line
+25,Maneuver Areas,Search Area/Reconnaissance Area,,152200,Line
+25,Maneuver Points,Observation Post/Outpost (Unspecified),,160100,Point
+25,Maneuver Points,Observation Post/Outpost (Specified),,160200,Point
+25,Maneuver Points,Observation Post/Outpost (Specified),Reconnaissance Outpost,160201,Point
+25,Maneuver Points,Observation Post/Outpost (Specified),Forward Observer Outpost,160202,Point
+25,Maneuver Points,Observation Post/Outpost (Specified),CBRN Observation Outpost,160203,Point
+25,Maneuver Points,Observation Post/Outpost (Specified),Sensor Outpost/Listening Post,160204,Point
+25,Maneuver Points,Observation Post/Outpost (Specified),Combat Outpost,160205,Point
 25,Maneuver Points,Target Reference Point,,160300,Point
 25,Maneuver Points,Point of Departure,,160400,Point
-25,Airspace Control (Corridors) Areas,,,170000,Area
 25,Airspace Control (Corridors) Areas,Air Corridor,,170100,Area
 25,Airspace Control (Corridors) Areas,Air Corridor,With Multiple Segments,170101,Area
 25,Airspace Control (Corridors) Areas,Low Level Transit Route,,170200,Area
@@ -846,7 +777,7 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Airspace Control Points,Strike Initial Point,,181000,Point
 25,Airspace Control Points,Replemenshment Station,,181100,Point
 25,Airspace Control Points,Tanking,,181200,Point
-25,Airspace Control Points,Antisubmarine Warfare-Rotary Wing,,181300,Point
+25,Airspace Control Points,Antisubmarine Warfare- Rotary Wing,,181300,Point
 25,Airspace Control Points,SUCAP - Fixed Wing,,181400,Point
 25,Airspace Control Points,SUCAP - Rotary Wing,,181500,Point
 25,Airspace Control Points,MIW - Fixed Wing,,181600,Point
@@ -859,13 +790,9 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Airspace Control Points,Orbit - Figure Eight,,182300,Point
 25,Airspace Control Points,Orbit - Race Track,,182400,Point
 25,Airspace Control Points,Orbit - Random Closed,,182500,Point
-25,Airspace Control Lines,,,190000,Line
 25,Airspace Control Lines,Identification Friend or Foe Off Line,,190100,Line
 25,Airspace Control Lines,Identification Friend or Foe On Line,,190200,Line
-25,Maritime Control Areas,,,200000,Area
-25,Maritime Control Areas,Launch Area,,200100,Area
 25,Maritime Control Areas,Launch Area,Ellipse/Circle,200101,Area
-25,Maritime Control Areas,Defended Area,,200200,Area
 25,Maritime Control Areas,Defended Area,Ellipse/Circle,200201,Area
 25,Maritime Control Areas,Defended Area,Rectangle,200202,Area
 25,Maritime Control Areas,No Attack (NOTACK) Zone,,200300,Area
@@ -875,7 +802,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Maritime Control Areas,Active Maneuver Area,,200500,Area
 25,Maritime Control Areas,Cued Acquisition Doctrine,,200600,Area
 25,Maritime Control Areas,Radar Search Doctrine,,200700,Area
-25,Maritime Control Points,,,210000,Point
 25,Maritime Control Points,Plan Ship,,210100,Point
 25,Maritime Control Points,Aim Point,,210200,Point
 25,Maritime Control Points,Defended Asset,,210300,Point
@@ -932,7 +858,7 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Maritime Control Points,Sonobuoy,Vertical Line Array Directional Frequency Analysis and Recording (DIFAR),213515,Point
 25,Maritime Control Points,Reference Point,,213600,Point
 25,Maritime Control Points,Special Point,,213700,Point
-25,Maritime Control Points,Navigational Reference Point(Points),,213800,Point
+25,Maritime Control Points,Navigational Reference Point,,213800,Point
 25,Maritime Control Points,Data Link Reference Point,,213900,Point
 25,Maritime Control Points,Forward Observer / Spotter Position,,214000,Point
 25,Maritime Control Points,Vital Area Center,,214100,Point
@@ -978,16 +904,15 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Maritime Control Points,Ditched Aircraft/Downed Aircraft,,218100,Point
 25,Maritime Control Points,Person in Water/Bailout,,218200,Point
 25,Maritime Control Points,Iceberg,,218300,Point
-25,Maritime Control Points,Navigational,,218400,Point
+25,Maritime Control Points,Navigational,,218400,Line
 25,Maritime Control Points,Oil Rig,,218500,Point
 25,Maritime Control Points,Sea Mine-Like,,218600,Point
 25,Maritime Control Points,Bottom Return/Non-Mine Like Bottom Object (NOMBO),,218700,Point
 25,Maritime Control Points,Bottom Return/Non-Mine Like Bottom Object (NOMBO)/Installation Manmade,,218800,Point
-25,Maritime Control Points,Bottom Return/Non-Mine Like Bottom Object (NOMBO)/Installation Manmade,Marine Life,218900,Point
-25,Maritime Control Points,Bottom Return/Non-Mine Like Bottom Object (NOMBO)/Installation Manmade,Sea Anomaly (Wake-Current-Knuckle),219000,Point
-25,Maritime Control Points,Bottom Return/Non-Mine Like Bottom Object (NOMBO)/Installation Manmade,Bottom Return/Non-MILCO-Wreck-Dangerous,219100,Point
-25,Maritime Control Points,Bottom Return/Non-Mine Like Bottom Object (NOMBO)/Installation Manmade,Bottom Return/Non-MILCO-Wreck-Non Dangerous,219200,Point
-25,Maritime Control Lines,,,220000,Line
+25,Maritime Control Points,Marine Life,,218900,Point
+25,Maritime Control Points,Sea Anomaly (Wake-Current-Knuckle),,219000,Point
+25,Maritime Control Points,Bottom Return/Non-MILCO-Wreck-Dangerous,,219100,Point
+25,Maritime Control Points,Bottom Return/Non-MILCO-Wreck-Non Dangerous,,219200,Point
 25,Maritime Control Lines,Bearing Line,,220100,Line
 25,Maritime Control Lines,Bearing Line,Electronic,220101,Line
 25,Maritime Control Lines,Bearing Line,Electronic Warfare (EW),220102,Line
@@ -997,147 +922,119 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Maritime Control Lines,Bearing Line,Electro-Optical Intercept,220106,Line
 25,Maritime Control Lines,Bearing Line,Jammer,220107,Line
 25,Maritime Control Lines,Bearing Line,Radio Direction Finder (RDF),220108,Line
-25,Deception,,,230000,Line
 25,Deception,Decoy/Dummy,,230100,Line
 25,Deception,Decoy/Dummy/Feint,,230200,Line
-25,Fires Areas,,,240000,Area
-25,Fires Areas,Airspace Coordination Area,,240100,Area
+25,Fires Areas,Airspace Coordination Area,,240100,Point
 25,Fires Areas,Airspace Coordination Area,Irregular,240101,Area
 25,Fires Areas,Airspace Coordination Area,Rectangular,240102,Area
 25,Fires Areas,Airspace Coordination Area,Circular,240103,Area
-25,Fires Areas,Free Fire Area,,240200,Area
 25,Fires Areas,Free Fire Area,Irregular,240201,Area
 25,Fires Areas,Free Fire Area,Rectangular,240202,Area
 25,Fires Areas,Free Fire Area,Circular,240203,Area
-25,Fires Areas,No Fire Area,,240300,Area
 25,Fires Areas,No Fire Area,Irregular,240301,Area
 25,Fires Areas,No Fire Area,Rectangular,240302,Area
 25,Fires Areas,No Fire Area,Circular,240303,Area
-25,Fires Areas,Restricted Fire Area,,240400,Area
 25,Fires Areas,Restricted Fire Area,Irregular,240401,Area
 25,Fires Areas,Restricted Fire Area,Rectangular,240402,Area
 25,Fires Areas,Restricted Fire Area,Circular,240403,Area
-25,Fires Areas,Position Area For Artillery (PAA),,240500,Area
 25,Fires Areas,Position Area For Artillery (PAA),Rectangular,240501,Area
 25,Fires Areas,Position Area For Artillery (PAA),Circular,240502,Area
-25,Fires Areas,Point Targets,,240600,Area
-25,Fires Areas,Point Targets,Point or Single Target,240601,Area
-25,Fires Areas,Point Targets,Nuclear Target,240602,Area
-25,Fires Areas,Point Targets,Target-Recorded,240603,Area
-25,Fires Areas,Linear Targets,,240700,Area
-25,Fires Areas,Linear Targets,Linear Target,240701,Area
-25,Fires Areas,Linear Targets,Linear Smoke Target,240702,Area
-25,Fires Areas,Linear Targets,Final Protective Fire (FPF),240703,Area
-25,Fires Areas,Area Targets,,240800,Area
+25,Fires Areas,Point Targets,Point or Single Target,240601,Point
+25,Fires Areas,Point Targets,Nuclear Target,240602,Point
+25,Fires Areas,Point Targets,Target-Recorded,240603,Point
+25,Fires Areas,Linear Targets,Linear Target,240701,Line
+25,Fires Areas,Linear Targets,Linear Smoke Target,240702,Line
+25,Fires Areas,Linear Targets,Final Protective Fire (FPF),240703,Line
 25,Fires Areas,Area Targets,Area Target,240801,Area
 25,Fires Areas,Area Targets,Rectangular Target,240802,Area
 25,Fires Areas,Area Targets,Circular Target,240803,Area
 25,Fires Areas,Area Targets,Rectangular Target - Single Target,240804,Area
 25,Fires Areas,Area Targets,Series of Targets,240805,Area
-25,Fires Areas,Area Targets,Group of Targets,240806,Area
-25,Fires Areas,Area Targets,Smoke Target,240807,Area
-25,Fires Areas,Area Targets,Smoke Planned or On Order,240808,Area
-25,Fires Areas,Area Targets,Bomb Area,240809,Area
-25,Fires Areas,Fire Support Station,,240900,Area
-25,Fires Areas,Fire Support Area,,241000,Area
+25,Fires Areas,Area Targets,Smoke Target,240806,Area
+25,Fires Areas,Area Targets,Smoke Planned or On Order,240807,Area
+25,Fires Areas,Area Targets,Bomb Area,240808,Area
+25,Fires Areas,Fire Support Station,,240900,Point
 25,Fires Areas,Fire Support Area,Irregular,241001,Area
 25,Fires Areas,Fire Support Area,Rectangular,241002,Area
 25,Fires Areas,Fire Support Area,Circular,241003,Area
-25,Fires Areas,Artillery Target Intelligence Zone,,241100,Area
 25,Fires Areas,Artillery Target Intelligence Zone,Irregular,241101,Area
 25,Fires Areas,Artillery Target Intelligence Zone,Rectangular,241102,Area
 25,Fires Areas,Artillery Target Intelligence Zone,Circular,241103,Area
-25,Fires Areas,Call for Fire Area,,241200,Area
 25,Fires Areas,Call for Fire Area,Irregular,241201,Area
 25,Fires Areas,Call for Fire Area,Rectangular,241202,Area
 25,Fires Areas,Call for Fire Area,Circular,241203,Area
-25,Fires Areas,Censor Area,,241300,Area
-25,Fires Areas,Censor Area,Irregular,241301,Area
-25,Fires Areas,Censor Area,Rectangular,241302,Area
-25,Fires Areas,Censor Area,Circular,241303,Area
-25,Fires Areas,Critical Friendly Area,,241400,Area
-25,Fires Areas,Critical Friendly Area,Irregular,241401,Area
-25,Fires Areas,Critical Friendly Area,Rectangular,241402,Area
-25,Fires Areas,Critical Friendly Area,Circular,241403,Area
-25,Fires Areas,Dead Space Area,,241500,Area
+25,Fires Areas,Censor Zone,Irregular,241301,Area
+25,Fires Areas,Censor Zone,Rectangular,241302,Area
+25,Fires Areas,Censor Zone,Circular,241303,Area
+25,Fires Areas,Critical Friendly Zone,Irregular,241401,Area
+25,Fires Areas,Critical Friendly Zone,Rectangular,241402,Area
+25,Fires Areas,Critical Friendly Zone,Circular,241403,Area
 25,Fires Areas,Dead Space Area,Irregular,241501,Area
 25,Fires Areas,Dead Space Area,Rectangular,241502,Area
 25,Fires Areas,Dead Space Area,Circular,241503,Area
-25,Fires Areas,Sensor Area,,241600,Area
-25,Fires Areas,Sensor Area,Irregular,241601,Area
-25,Fires Areas,Sensor Area,Rectangular,241602,Area
-25,Fires Areas,Sensor Area,Circular,241603,Area
-25,Fires Areas,Target Build-up Area,,241700,Area
+25,Fires Areas,Sensor Zone,Irregular,241601,Area
+25,Fires Areas,Sensor Zone,Rectangular,241602,Area
+25,Fires Areas,Sensor Zone,Circular,241603,Area
 25,Fires Areas,Target Build-up Area,Irregular,241701,Area
 25,Fires Areas,Target Build-up Area,Rectangular,241702,Area
 25,Fires Areas,Target Build-up Area,Circular,241703,Area
-25,Fires Areas,Target Value Area,,241800,Area
 25,Fires Areas,Target Value Area,Irregular,241801,Area
 25,Fires Areas,Target Value Area,Rectangular,241802,Area
 25,Fires Areas,Target Value Area,Circular,241803,Area
-25,Fires Areas,Zone of Responsibility,,241900,Area
-25,Fires Areas,Zone of Responsibility,Irregular,241901,Area
-25,Fires Areas,Zone of Responsibility,Rectangular,241902,Area
-25,Fires Areas,Zone of Responsibility,Circular,241903,Area
+25,Fires Areas,Zone of Responsibility,Irregular,241901,Point
+25,Fires Areas,Zone of Responsibility,Rectangular,241902,Point
+25,Fires Areas,Zone of Responsibility,Circular,241903,Point
 25,Fires Areas,Terminally Guided Munition Footprint (TGMF),,242000,Area
 25,Fires Areas,Weapon/Sensor Range fan-Circular,,242100,Area
 25,Fires Areas,Weapon/Sensor Range fan-Sector,,242200,Area
-25,Fires Areas,Kill Box,,242300,Area
 25,Fires Areas,Kill Box,Irregular-Blue,242301,Area
 25,Fires Areas,Kill Box,Rectangular-Blue,242302,Area
 25,Fires Areas,Kill Box,Circular-Blue,242303,Area
 25,Fires Areas,Kill Box,Irregular-Purple,242304,Area
 25,Fires Areas,Kill Box,Rectangular-Purple,242305,Area
 25,Fires Areas,Kill Box,Circular-Purple,242306,Area
-25,Fires Points,,,250000,Point
 25,Fires Points,Firing Point,,250100,Point
 25,Fires Points,Hide Point,,250200,Point
 25,Fires Points,Launch Point,,250300,Point
 25,Fires Points,Reload Point,,250400,Point
 25,Fires Points,Survey Control Point,,250500,Point
-25,Fire Lines,,,260000,Line
 25,Fire Lines,Fire Support Coordination Line (FSCL),,260100,Line
 25,Fire Lines,Coordinated Fire Line (CFL),,260200,Line
 25,Fire Lines,No Fire Line,,260300,Line
-25,Fire Lines,Restrictive Fire Line,,260400,Line
-25,Fire Lines,Battlefield Coordination Line,,260500,Line
+25,Fire Lines,Battlefield Coordination Line,,260400,Line
+25,Fire Lines,Restrictive Fire Line,,260500,Line
 25,Fire Lines,Munition Flight Path,,260600,Line
-25,Protection Areas,,,270000,Area
 25,Protection Areas,Obstacle Belt,,270100,Area
 25,Protection Areas,Obstacle Zone,,270200,Area
 25,Protection Areas,Obstacle Free Zone,,270300,Area
 25,Protection Areas,Obstacle Restricted Zone,,270400,Area
-25,Protection Areas,Obstacle Effects,,270500,Area
-25,Protection Areas,Block,,270501,Area
-25,Protection Areas,Disrupt,,270502,Area
-25,Protection Areas,Fix,,270503,Area
-25,Protection Areas,Turn,,270504,Area
-25,Protection Areas,Obstacle Bypass,,270600,Area
-25,Protection Areas,Obstacle Bypass,Easy,270601,Area
-25,Protection Areas,Obstacle Bypass,Difficult,270602,Area
-25,Protection Areas,Obstacle Bypass,Impossible,270603,Area
-25,Protection Areas,Minefield,,270700,Area
+25,Protection Areas,Obstacle Effects,Block,270501,Line
+25,Protection Areas,Obstacle Effects,Disrupt,270502,Line
+25,Protection Areas,Obstacle Effects,Fix,270503,Line
+25,Protection Areas,Obstacle Effects,Turn,270504,Line
+25,Protection Areas,Obstacle Bypass,Easy,270601,Line
+25,Protection Areas,Obstacle Bypass,Difficult,270602,Line
+25,Protection Areas,Obstacle Bypass,Impossible,270603,Line
 25,Protection Areas,Minefield,Completed,270701,Area
 25,Protection Areas,Minefield,Planned,270702,Area
 25,Protection Areas,Minefield,Known Enemy,270703,Area
 25,Protection Areas,Minefield,Suspected or Templated Enemy,270704,Area
 25,Protection Areas,Minefield,Dummy,270705,Area
-25,Protection Areas,Minefield,Dummy. Dymanic,270706,Area
+25,Protection Areas,Minefield,Dummy Minefield- Dymanic,270706,Area
 25,Protection Areas,Minefield,Dynamic Depiction,270707,Area
 25,Protection Areas,Mined Area,,270800,Area
 25,Protection Areas,Decoy Mined Area,,270900,Area
 25,Protection Areas,Decoy Mined Area,Fenced,270901,Area
 25,Protection Areas,Unexploded Explosive Ordnance (UXO) Area,,271000,Area
 25,Protection Areas,Bridge or Gap,,271100,Area
-25,Protection Areas,Roadblocks-Craters and Blown Bridges,,271200,Area
-25,Protection Areas,Roadblocks-Craters and Blown Bridges,Planned,271201,Area
-25,Protection Areas,Roadblocks-Craters and Blown Bridges,Explosives-State of Readiness 1 (Safe),271202,Area
-25,Protection Areas,Roadblocks-Craters and Blown Bridges,Explosives-State of Readiness 2 (armed but passable),271203,Area
-25,Protection Areas,Roadblocks-Craters and Blown Bridges,Roadblock Complete (Executed),271204,Area
+25,Protection Areas,Roadblocks- Craters and Blown Bridges,Planned,271201,Line
+25,Protection Areas,Roadblocks- Craters and Blown Bridges,Explosives-State of Readiness 1 (Safe),271202,Line
+25,Protection Areas,Roadblocks- Craters and Blown Bridges,Explosives-State of Readiness 2 (armed but passable),271203,Line
+25,Protection Areas,Roadblocks- Craters and Blown Bridges,Roadblock Complete (Executed),271204,Area
 25,Protection Areas,Assault Crossing,,271300,Area
-25,Protection Areas,Bridge,,271400,Area
-25,Protection Areas,Ford Easy,,271500,Area
-25,Protection Areas,Ford Difficult,,271600,Area
+25,Protection Areas,Bridge,,271400,Line
+25,Protection Areas,Ford Easy,,271500,Line
+25,Protection Areas,Ford Difficult,,271600,Line
 25,Protection Areas,Biological Contaminated Area,,271700,Area
 25,Protection Areas,Biological Contaminated Area,Toxic Industrial Material,271701,Area
 25,Protection Areas,Chemical Contaminated Area,,271800,Area
@@ -1147,12 +1044,11 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Protection Areas,Radiological Contaminated Area,Toxic Industrial Material,272001,Area
 25,Protection Areas,Minimum Safe Distance Zone,,272100,Area
 25,Protection Areas,Radiation Dose Rate Contour Lines,,272200,Area
-25,Protection Points,,,280000,Point
-25,Protection Points,Abatis,,280100,Point
+25,Protection Points,Abatis,,280100,Line
 25,Protection Points,Antipersonnel Mine,,280200,Point
 25,Protection Points,Antipersonnel Mine,Antipersonnel Mine with Directional Effects,280201,Point
 25,Protection Points,Antitank Mine,,280300,Point
-25,Protection Points,Antitank Mine with Handling Device,,280400,Point
+25,Protection Points,Antitank Mine with Anti-handling Device,,280400,Point
 25,Protection Points,Wide Area Antitank Mine,,280500,Point
 25,Protection Points,Unspecified Mine,,280600,Point
 25,Protection Points,Booby Trap,,280700,Point
@@ -1179,22 +1075,17 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Protection Points,General Decontamination Point/Site,Main Equipment,281807,Point
 25,Protection Points,General Decontamination Point/Site,Forward Troop,281808,Point
 25,Protection Points,General Decontamination Point/Site,Wounded Personnel,281809,Point
-25,Protection Points,Tetrahedrons-Dragons Teeth-and Other Similar Obstacles,,281900,Point
-25,Protection Points,Tetrahedrons-Dragons Teeth-and Other Similar Obstacles,Fixed and Prefabricated,281901,Point
-25,Protection Points,Tetrahedrons-Dragons Teeth-and Other Similar Obstacles,Movable,281902,Point
-25,Protection Points,Tetrahedrons-Dragons Teeth-and Other Similar Obstacles,Movable and Prefabricated,281903,Point
-25,Protection Points,Vertical Obstructions,,282000,Point
+25,Protection Points,Tetrahedrons- Dragons Teeth- and Other Similar Obstacles,Fixed and Prefabricated,281901,Point
+25,Protection Points,Tetrahedrons- Dragons Teeth- and Other Similar Obstacles,Movable,281902,Point
+25,Protection Points,Tetrahedrons- Dragons Teeth- and Other Similar Obstacles,Movable and Prefabricated,281903,Point
 25,Protection Points,Vertical Obstructions,Tower-Low,282001,Point
 25,Protection Points,Vertical Obstructions,Tower-High,282002,Point
-25,Protection Points,Vertical Obstructions,Overhead Wire,282003,Point
-25,Protection Lines,,,290000,Line
+25,Protection Points,Vertical Obstructions,Overhead Wire,282003,Line
 25,Protection Lines,Obstacle Line,,290100,Line
-25,Protection Lines,Antitank Obstacles,,290200,Line
 25,Protection Lines,Antitank Obstacles,Under Construction,290201,Line
 25,Protection Lines,Antitank Obstacles,Completed,290202,Line
 25,Protection Lines,Antitank Obstacles,Reinforced-with Antitank Mines,290203,Line
 25,Protection Lines,Antitank Obstacles,Antitank Wall,290204,Line
-25,Protection Lines,Wire Obstacles,,290300,Line
 25,Protection Lines,Wire Obstacles,Unspecified Wire,290301,Line
 25,Protection Lines,Wire Obstacles,Single Fence Wire,290302,Line
 25,Protection Lines,Wire Obstacles,Double Fence Wire,290303,Line
@@ -1211,20 +1102,17 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Protection Lines,Raft Site,,290800,Line
 25,Protection Lines,Fortified Line,,290900,Line
 25,Protection Lines,Fortified Position,,291000,Line
-25,Intelligence Lines,,,300000,Line
 25,Intelligence Lines,Intelligence Coordination Line,,300100,Line
-25,Sustainment Areas,,,310000,Area
 25,Sustainment Areas,Detainee Holding Area,,310100,Area
-25,Sustainment Areas,Enemy Prisoner or War Holding Area,,310200,Area
+25,Sustainment Areas,Enemy Prisoner of War Holding Area,,310200,Area
 25,Sustainment Areas,Forward Arming and Refueling Point,,310300,Area
 25,Sustainment Areas,Refugee Holding Area,,310400,Area
 25,Sustainment Areas,Regimental Support Area,,310500,Area
 25,Sustainment Areas,Brigade Support Area,,310600,Area
 25,Sustainment Areas,Division Support Area,,310700,Area
-25,Sustainment Points,,,320000,Point
 25,Sustainment Points,Ambulance Exchange Point,,320100,Point
 25,Sustainment Points,Ammunition Supply Point,,320200,Point
-25,Sustainment Points,Ammunition Transfer Point,,320310,Point
+25,Sustainment Points,Ammunition Transfer Point,,320300,Point
 25,Sustainment Points,Cannibalization Point,,320400,Point
 25,Sustainment Points,Casualty Collection Point,,320500,Point
 25,Sustainment Points,Civilian Collection Point,,320600,Point
@@ -1232,12 +1120,12 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Sustainment Points,Enemy Prisoner of War Collection Point,,320800,Point
 25,Sustainment Points,Logistics Release Point,,320900,Point
 25,Sustainment Points,Maintenance Collection Point (MCP),,321000,Point
-25,Sustainment Points,Medical Evacuation Point (MEDEVAC) Pick-Up Point,,321100,Point
+25,Sustainment Points,Medical Evacuation (MEDEVAC) Pick-up Point,,321100,Point
 25,Sustainment Points,Rearm-Refuel and Resupply Point (R3P),,321200,Point
 25,Sustainment Points,Refuel on the Move (ROM) Point,,321300,Point
 25,Sustainment Points,Traffic Control Post (TCP),,321400,Point
 25,Sustainment Points,Trailer Transfer Point (TTP),,321500,Point
-25,Sustainment Points,Unit Maintenance Collection Point (UNCP),,321600,Point
+25,Sustainment Points,Unit Maintenance Collection Point (UMCP),,321600,Point
 25,Sustainment Points,General Supply Point,,321700,Point
 25,Sustainment Points,General Supply Point,NATO Class I Supply Point,321701,Point
 25,Sustainment Points,General Supply Point,NATO Class II Supply Point,321702,Point
@@ -1256,7 +1144,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Sustainment Points,General Supply Point,US Class IX Supply Point,321715,Point
 25,Sustainment Points,General Supply Point,US Class X Supply Point,321716,Point
 25,Sustainment Points,Medical Supply Point,,321800,Point
-25,Sustainment Lines,,,330000,Line
 25,Sustainment Lines,Moving Convoy,,330100,Line
 25,Sustainment Lines,Halted Convoy,,330200,Line
 25,Sustainment Lines,Main Supply Route,,330300,Line
@@ -1267,7 +1154,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Sustainment Lines,Alternate Supply Route,One Way Traffic,330401,Line
 25,Sustainment Lines,Alternate Supply Route,Two Way Traffic,330402,Line
 25,Sustainment Lines,Alternate Supply Route,Alternating Traffic,330403,Line
-25,Mission Tasks,,,340000,Line
 25,Mission Tasks,Block,,340100,Line
 25,Mission Tasks,Breach,,340200,Line
 25,Mission Tasks,Bypass,,340300,Line
@@ -1277,19 +1163,18 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 25,Mission Tasks,Counterattack by Fire,,340700,Line
 25,Mission Tasks,Delay,,340800,Line
 25,Mission Tasks,Destroy,,340900,Line
-25,Mission Tasks,(BLANK?/ERROR?),,341000,Line
-25,Mission Tasks,,,341100,Line
+25,Mission Tasks,Disrupt,,341000,Line
+25,Mission Tasks,Fix,,341100,Line
 25,Mission Tasks,Follow and Assume,,341200,Line
 25,Mission Tasks,Follow and Support,,341300,Line
 25,Mission Tasks,Interdict,,341400,Line
 25,Mission Tasks,Isolate,,341500,Line
-25,Mission Tasks,Neutralize,,341600,Line
+25,Mission Tasks,Neutralize,,341600,Point
 25,Mission Tasks,Occupy,,341700,Line
 25,Mission Tasks,Penetrate,,341800,Line
 25,Mission Tasks,Relief in Place (RIP),,341900,Line
 25,Mission Tasks,Retire/Retirement,,342000,Line
 25,Mission Tasks,Secure,,342100,Line
-25,Mission Tasks,Security,,342200,Line
 25,Mission Tasks,Security,Cover,342201,Line
 25,Mission Tasks,Security,Guard,342202,Line
 25,Mission Tasks,Security,Screen,342203,Line
@@ -1299,32 +1184,32 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 30,Military,,,110000,Point
 30,Military Combatant,,,120000,Point
 30,Military Combatant,Carrier,,120100,Point
-30,Military Combatant,Surface Combatant-Line,,120200,Point
-30,Military Combatant,Surface Combatant-Line,Battleship,120201,Point
-30,Military Combatant,Surface Combatant-Line,Cruiser,120202,Point
-30,Military Combatant,Surface Combatant-Line,Destroyer,120203,Point
-30,Military Combatant,Surface Combatant-Line,Frigate,120204,Point
-30,Military Combatant,Surface Combatant-Line,Corvette,120205,Point
-30,Military Combatant,Surface Combatant-Line,Littoral Combatant Ship,120206,Point
+30,Military Combatant,Surface Combatant- Line,,120200,Point
+30,Military Combatant,Surface Combatant- Line,Battleship,120201,Point
+30,Military Combatant,Surface Combatant- Line,Cruiser,120202,Point
+30,Military Combatant,Surface Combatant- Line,Destroyer,120203,Point
+30,Military Combatant,Surface Combatant- Line,Frigate,120204,Point
+30,Military Combatant,Surface Combatant- Line,Corvette,120205,Point
+30,Military Combatant,Surface Combatant- Line,Littoral Combatant Ship,120206,Point
 30,Military Combatant,Amphibious Warfare Ship,,120300,Point
 30,Military Combatant,Amphibious Warfare Ship,Amphibious Command Ship,120301,Point
-30,Military Combatant,Amphibious Warfare Ship,Amphibious Assault-Non-specified,120302,Point
-30,Military Combatant,Amphibious Warfare Ship,Amphibious Assault Ship-General,120303,Point
-30,Military Combatant,Amphibious Warfare Ship,Amphibious Assault Ship-Multipurpose,120304,Point
-30,Military Combatant,Amphibious Warfare Ship,Amphibious Assault Ship-Helicopter,120305,Point
+30,Military Combatant,Amphibious Warfare Ship,Amphibious Assault- Non-specified,120302,Point
+30,Military Combatant,Amphibious Warfare Ship,Amphibious Assault Ship- General,120303,Point
+30,Military Combatant,Amphibious Warfare Ship,Amphibious Assault Ship- Multipurpose,120304,Point
+30,Military Combatant,Amphibious Warfare Ship,Amphibious Assault Ship- Helicopter,120305,Point
 30,Military Combatant,Amphibious Warfare Ship,Amphibious Transport Dock,120306,Point
 30,Military Combatant,Amphibious Warfare Ship,Landing Ship,120307,Point
 30,Military Combatant,Amphibious Warfare Ship,Landing Craft,120308,Point
 30,Military Combatant,Mine Warfare Ship,,120400,Point
 30,Military Combatant,Mine Warfare Ship,Mine Layer,120401,Point
 30,Military Combatant,Mine Warfare Ship,Mine Sweeper,120402,Point
-30,Military Combatant,Mine Warfare Ship,Mine Sweeper-Drone,120403,Point
+30,Military Combatant,Mine Warfare Ship,Mine Sweeper- Drone,120403,Point
 30,Military Combatant,Mine Warfare Ship,Mine Hunter,120404,Point
 30,Military Combatant,Mine Warfare Ship,Mine Countermeasures,120405,Point
-30,Military Combatant,Mine Warfare Ship,Mine Countermeasures-Support Ship,120406,Point
+30,Military Combatant,Mine Warfare Ship,Mine Countermeasures- Support Ship,120406,Point
 30,Military Combatant,Patrol Boat,,120500,Point
-30,Military Combatant,Patrol Boat,Patrol Craft-Submarine Chaser/Escort-General,120501,Point
-30,Military Combatant,Patrol Boat,Patrol Ship-General,120502,Point
+30,Military Combatant,Patrol Boat,Patrol Craft- Submarine Chaser/Escort- General,120501,Point
+30,Military Combatant,Patrol Boat,Patrol Ship- General,120502,Point
 30,Military Combatant,Decoy,,120600,Point
 30,Military Combatant,Unmanned Surface Water Vehicle (USV),,120700,Point
 30,Military Combatant,Speedboat,,120800,Point
@@ -1336,30 +1221,30 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 30,Military Combatant,Navy Task Organization,Navy Task Group,121003,Point
 30,Military Combatant,Navy Task Organization,Navy Task Unit,121004,Point
 30,Military Combatant,Navy Task Organization,Convoy,121005,Point
-30,Military Combatant,Sea-Based X-Band Radar,,121100,Point
-30,Military Non Combatant,,,130000,Point
-30,Military Non Combatant,Auxiliary Ship,,130100,Point
-30,Military Non Combatant,Auxiliary Ship,Ammunition Ship,130101,Point
-30,Military Non Combatant,Auxiliary Ship,Naval Stores Ship,130102,Point
-30,Military Non Combatant,Auxiliary Ship,Auxiliary Flag Ship,130103,Point
-30,Military Non Combatant,Auxiliary Ship,Intelligence Collector,130104,Point
-30,Military Non Combatant,Auxiliary Ship,Oceanographic Research Ship,130105,Point
-30,Military Non Combatant,Auxiliary Ship,Survey Ship,130106,Point
-30,Military Non Combatant,Auxiliary Ship,Hospital Ship,130107,Point
-30,Military Non Combatant,Auxiliary Ship,Naval Cargo Ship,130108,Point
-30,Military Non Combatant,Auxiliary Ship,Combat Support Ship-Fast,130109,Point
-30,Military Non Combatant,Auxiliary Ship,Oiler-Replenishment,130110,Point
-30,Military Non Combatant,Auxiliary Ship,Repair Ship,130111,Point
-30,Military Non Combatant,Auxiliary Ship,Submarine Tender,130112,Point
-30,Military Non Combatant,Auxiliary Ship,Tug-Ocean Going,130113,Point
-30,Military Non Combatant,Service Craft/Yard,,130200,Point
-30,Military Non Combatant,Service Craft/Yard,Barge-not Self-Propelled,130201,Point
-30,Military Non Combatant,Service Craft/Yard,Barge-Self-Propelled,130202,Point
-30,Military Non Combatant,Service Craft/Yard,Tug-Harbor,130203,Point
-30,Military Non Combatant,Service Craft/Yard,Launch,130204,Point
+30,Military Combatant,Sea-Based X-Band (SBX) Radar,,121100,Point
+30,Military Noncombatant,,,130000,Point
+30,Military Noncombatant,Auxiliary Ship,,130100,Point
+30,Military Noncombatant,Auxiliary Ship,Ammunition Ship,130101,Point
+30,Military Noncombatant,Auxiliary Ship,Naval Stores Ship,130102,Point
+30,Military Noncombatant,Auxiliary Ship,Auxiliary Flag Ship,130103,Point
+30,Military Noncombatant,Auxiliary Ship,Intelligence Collector,130104,Point
+30,Military Noncombatant,Auxiliary Ship,Oceanographic Research Ship,130105,Point
+30,Military Noncombatant,Auxiliary Ship,Survey Ship,130106,Point
+30,Military Noncombatant,Auxiliary Ship,Hospital Ship,130107,Point
+30,Military Noncombatant,Auxiliary Ship,Naval Cargo Ship,130108,Point
+30,Military Noncombatant,Auxiliary Ship,Combat Support Ship- Fast,130109,Point
+30,Military Noncombatant,Auxiliary Ship,Oiler- Replenishment,130110,Point
+30,Military Noncombatant,Auxiliary Ship,Repair Ship,130111,Point
+30,Military Noncombatant,Auxiliary Ship,Submarine Tender,130112,Point
+30,Military Noncombatant,Auxiliary Ship,Tug- Ocean Going,130113,Point
+30,Military Noncombatant,Service Craft/Yard,,130200,Point
+30,Military Noncombatant,Service Craft/Yard,Barge- Not Self-Propelled,130201,Point
+30,Military Noncombatant,Service Craft/Yard,Barge- Self-Propelled,130202,Point
+30,Military Noncombatant,Service Craft/Yard,Tug- Harbor,130203,Point
+30,Military Noncombatant,Service Craft/Yard,Launch,130204,Point
 30,Civilian,,,140000,Point
 30,Civilian,Merchant Ship,,140100,Point
-30,Civilian,Merchant Ship,Cargo-General,140101,Point
+30,Civilian,Merchant Ship,Cargo- General,140101,Point
 30,Civilian,Merchant Ship,Container Ship,140102,Point
 30,Civilian,Merchant Ship,Dredge,140103,Point
 30,Civilian,Merchant Ship,Roll On/Roll Off,140104,Point
@@ -1369,21 +1254,21 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 30,Civilian,Merchant Ship,Lash Carrier (with Barges),140108,Point
 30,Civilian,Merchant Ship,Oiler/Tanker,140109,Point
 30,Civilian,Merchant Ship,Passenger,140110,Point
-30,Civilian,Merchant Ship,Tug-Ocean Going,140111,Point
+30,Civilian,Merchant Ship,Tug- Ocean Going,140111,Point
 30,Civilian,Merchant Ship,Tow,140112,Point
-30,Civilian,Merchant Ship,Transport Ship-Hazardous Material,140113,Point
-30,Civilian,Merchant Ship,Junk/DHOW,140114,Point
-30,Civilian,Merchant Ship,Barge-not Self-Propelled,140115,Point
+30,Civilian,Merchant Ship,Transport Ship- Hazardous Material,140113,Point
+30,Civilian,Merchant Ship,Junk/Dhow,140114,Point
+30,Civilian,Merchant Ship,Barge- Not Self-Propelled,140115,Point
 30,Civilian,Merchant Ship,Hospital Ship,140116,Point
 30,Civilian,Fishing Vessel,,140200,Point
 30,Civilian,Fishing Vessel,Drifter,140201,Point
 30,Civilian,Fishing Vessel,Trawler,140202,Point
 30,Civilian,Fishing Vessel,Dredger,140203,Point
 30,Civilian,Law Enforcement Vessel,,140300,Point
-30,Civilian,Leisure Craft-Sailing,,140400,Point
-30,Civilian,Leisure Craft-Motorized,,140500,Point
-30,Civilian,Leisure Craft-Motorized,Rigid-Hull Inflatable Boat (RHIB),140501,Point
-30,Civilian,Leisure Craft-Motorized,Speedboat,140502,Point
+30,Civilian,Leisure Craft- Sailing,,140400,Point
+30,Civilian,Leisure Craft- Motorized,,140500,Point
+30,Civilian,Leisure Craft- Motorized,Rigid-Hull Inflatable Boat (RHIB),140501,Point
+30,Civilian,Leisure Craft- Motorized,Speedboat,140502,Point
 30,Civilian,Jet Ski,,140600,Point
 30,Civilian,Unmanned Surface Water Vehicle (USV),,140700,Point
 30,Own Ship,,,150000,Point
@@ -1474,12 +1359,11 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 36,Non-Mine Mine-Like Object (NMLO)-General,Non-Mine Mine-Like Object-Floating,,190300,Point
 36,Environmental Report Location,,,200000,Point
 36,Dive Report Location,,,210000,Point
-40,Incident,,,110000,Point
 40,Incident,Criminal Activity Incident,,110100,Point
 40,Incident,Criminal Activity Incident,Arrest,110101,Point
 40,Incident,Criminal Activity Incident,Arson,110102,Point
 40,Incident,Criminal Activity Incident,Attempted Criminal Activity,110103,Point
-40,Incident,Criminal Activity Incident,Drive by Shooting,110104,Point
+40,Incident,Criminal Activity Incident,Drive-by Shooting,110104,Point
 40,Incident,Criminal Activity Incident,Drug Related,110105,Point
 40,Incident,Criminal Activity Incident,Extortion,110106,Point
 40,Incident,Criminal Activity Incident,Graffiti,110107,Point
@@ -1489,7 +1373,7 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 40,Incident,Criminal Activity Incident,Booby Trap,110111,Point
 40,Incident,Criminal Activity Incident,Home Eviction,110112,Point
 40,Incident,Criminal Activity Incident,Black Marketing,110113,Point
-40,Incident,Criminal Activity Incident,Vandalism/Loot/Ransack/Plunder,110114,Point
+40,Incident,Criminal Activity Incident,Vandalism / Loot / Ransack / Plunder,110114,Point
 40,Incident,Criminal Activity Incident,Jail Break,110115,Point
 40,Incident,Criminal Activity Incident,Robbery,110116,Point
 40,Incident,Criminal Activity Incident,Theft,110117,Point
@@ -1520,12 +1404,10 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 40,Incident,Explosion,Bomb Explosion,110606,Point
 40,Civil Disturbance,,,120000,Point
 40,Civil Disturbance,Demonstration,,120100,Point
-40,Operation,,,130000,Point
 40,Operation,Patrolling,,130100,Point
 40,Operation,Military Information Support Operation (MISO),,130200,Point
 40,Operation,Military Information Support Operation (MISO),TV and Radio Propaganda,130201,Point
 40,Operation,Foraging/Searching,,130300,Point
-40,Operation,Recruitment,,130400,Point
 40,Operation,Recruitment,Willing,130401,Point
 40,Operation,Recruitment,Coerced/Impressed,130402,Point
 40,Operation,Mine Laying,,130500,Point
@@ -1559,13 +1441,13 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 40,Operation,Law Enforcement Operation,,131500,Point
 40,Operation,Law Enforcement Operation,Bureau of Alcohol-Tobacco-Firearms and Explosives (ATF) (Department of Justice),131501,Point
 40,Operation,Law Enforcement Operation,Border Patrol,131502,Point
-40,Operation,Law Enforcement Operation,Custom Service,131503,Point
+40,Operation,Law Enforcement Operation,Customs Service,131503,Point
 40,Operation,Law Enforcement Operation,Drug Enforcement Administration (DEA),131504,Point
 40,Operation,Law Enforcement Operation,Department of Justice (DOJ),131505,Point
 40,Operation,Law Enforcement Operation,Federal Bureau of Investigation (FBI),131506,Point
 40,Operation,Law Enforcement Operation,Police,131507,Point
 40,Operation,Law Enforcement Operation,Prison,131508,Point
-40,Operation,Law Enforcement Operation,United States Secret Service(Treas) (USSS),131509,Point
+40,Operation,Law Enforcement Operation,United States Secret Service (USSS),131509,Point
 40,Operation,Law Enforcement Operation,Transportation Security Administration (TSA),131510,Point
 40,Operation,Law Enforcement Operation,Coast Guard,131511,Point
 40,Operation,Law Enforcement Operation,US Marshals Service,131512,Point
@@ -1579,7 +1461,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 40,Fire Event,School Fire,,140600,Point
 40,Fire Event,Special Needs Fire,,140700,Point
 40,Fire Event,Wild Fire,,140800,Point
-40,Hazard Materials,,,150000,Point
 40,Hazard Materials,Hazard Materials Incident,,150100,Point
 40,Hazard Materials,Hazard Materials Incident,Chemical Agent,150101,Point
 40,Hazard Materials,Hazard Materials Incident,Corrosive Material,150102,Point
@@ -1622,21 +1503,18 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 40,Natural Event,Infestation,Microbial,170303,Point
 40,Natural Event,Infestation,Reptile,170304,Point
 40,Natural Event,Infestation,Rodent,170305,Point
-40,Individual,,,180000,Point
 40,Individual,Religious Leader,,180100,Point
 40,Individual,Speaker,,180200,Point
-45,Pressure Systems,,,110000,Point
 45,Pressure Systems,Low Pressure Center,,110100,Point
 45,Pressure Systems,Low Pressure Center,Cyclone Center,110101,Point
 45,Pressure Systems,Low Pressure Center,Tropopause Low,110102,Point
 45,Pressure Systems,High Pressure Center,,110200,Point
 45,Pressure Systems,High Pressure Center,Anticyclone Center,110201,Point
-45,Pressure Systems,High Pressure Center,Tropopause High,110102,Point
-45,Pressure Systems,Frontal Systems,,110300,Line
+45,Pressure Systems,High Pressure Center,Tropopause High,110202,Point
 45,Pressure Systems,Frontal Systems,Cold Front,110301,Line
 45,Pressure Systems,Frontal Systems,Upper Cold Front,110302,Line
-45,Pressure Systems,Frontal Systems,Cold Frontogenesis,110203,Line
-45,Pressure Systems,Frontal Systems,Cold Frontolysis,110104,Line
+45,Pressure Systems,Frontal Systems,Cold Frontogenesis,110303,Line
+45,Pressure Systems,Frontal Systems,Cold Frontolysis,110304,Line
 45,Pressure Systems,Frontal Systems,Warm Front,110305,Line
 45,Pressure Systems,Frontal Systems,Upper Warm Front,110306,Line
 45,Pressure Systems,Frontal Systems,Warm Frontogenesis,110307,Line
@@ -1648,7 +1526,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 45,Pressure Systems,Frontal Systems,Upper Stationary Front,110313,Line
 45,Pressure Systems,Frontal Systems,Stationary Frontogenesis,110314,Line
 45,Pressure Systems,Frontal Systems,Stationary Frontolysis,110315,Line
-45,Pressure Systems,Lines,,110400,Line
 45,Pressure Systems,Lines,Trough Axis,110401,Line
 45,Pressure Systems,Lines,Upper Trough Axis,110402,Line
 45,Pressure Systems,Lines,Ridge Axis,110403,Line
@@ -1658,7 +1535,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 45,Pressure Systems,Lines,Inter-Tropical Convergence Zone,110407,Line
 45,Pressure Systems,Lines,Convergence Line,110408,Line
 45,Pressure Systems,Lines,Inter-Tropical Discontinuity,110409,Line
-45,Pressure Systems,Pressure Tendency,,110500,Point
 45,Pressure Systems,Pressure Tendency,Rise Then Fall Higher,110501,Point
 45,Pressure Systems,Pressure Tendency,Rise Then Steady,110502,Point
 45,Pressure Systems,Pressure Tendency,Rise,110503,Point
@@ -1668,126 +1544,103 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 45,Pressure Systems,Pressure Tendency,Fall Then Steady,110507,Point
 45,Pressure Systems,Pressure Tendency,Fall,110508,Point
 45,Pressure Systems,Pressure Tendency,Rise Then Fall Lower,110509,Point
-45,Turbulence,,,120000,Unknown
-45,Turbulence,Light,,120100,Unknown
-45,Turbulence,Moderate,,120200,Unknown
-45,Turbulence,Severe,,120300,Unknown
-45,Turbulence,Extreme,,120400,Unknown
-45,Turbulence,Mountain Waves,,120500,Unknown
-45,Icing,,,130000,Unknown
-45,Icing,Clear Icing,,130100,Unknown
-45,Icing,Clear Icing,Light,130101,Unknown
-45,Icing,Clear Icing,Moderate,130102,Unknown
-45,Icing,Clear Icing,Severe,130103,Unknown
-45,Icing,Rime Icing,,130200,Unknown
-45,Icing,Rime Icing,Light,130201,Unknown
-45,Icing,Rime Icing,Moderate,130202,Unknown
-45,Icing,Rime Icing,Severe,130203,Unknown
-45,Icing,Mixed Icing,,130300,Unknown
-45,Icing,Mixed Icing,Light,130301,Unknown
-45,Icing,Mixed Icing,Moderate,130302,Unknown
-45,Icing,Mixed Icing,Severe,130303,Unknown
-45,Winds,,,140000,Unknown
-45,Winds,Calm Winds,,140100,Unknown
-45,Winds,Wind Plot,,140200,Unknown
-45,Winds,Jet Stream,,140300,Unknown
-45,Winds,Stream Line,,140400,Unknown
-45,Cloud Cover,,,150000,Unknown
-45,Cloud Cover,Cloud Coverage Symbols,,150100,Unknown
-45,Cloud Cover,Cloud Coverage Symbols,Clear Sky,150101,Unknown
-45,Cloud Cover,Cloud Coverage Symbols,Few Coverage,150102,Unknown
-45,Cloud Cover,Cloud Coverage Symbols,Scattered Coverage,150103,Unknown
-45,Cloud Cover,Cloud Coverage Symbols,Broken Coverage,150104,Unknown
-45,Cloud Cover,Cloud Coverage Symbols,Overcast Coverage,150105,Unknown
-45,Cloud Cover,Cloud Coverage Symbols,Sky Totally or Partially Obscured,150106,Unknown
-45,Weather Symbols,,,160000,Unknown
-45,Weather Symbols,Rain,,160100,Unknown
-45,Weather Symbols,Rain,Intermittent Light,160101,Unknown
-45,Weather Symbols,Rain,Continuous Light,160102,Unknown
-45,Weather Symbols,Rain,Intermittent Moderate,160103,Unknown
-45,Weather Symbols,Rain,Intermittent Moderate/Continuous Moderate,160104,Unknown
-45,Weather Symbols,Rain,Intermittent Heavy,160105,Unknown
-45,Weather Symbols,Rain,Intermittent Heavy/Continuous Heavy,160106,Unknown
-45,Weather Symbols,Freezing Rain,,160200,Unknown
-45,Weather Symbols,Freezing Rain,Light,160201,Unknown
-45,Weather Symbols,Freezing Rain,Moderate/Heavy,160202,Unknown
-45,Weather Symbols,Rain Showers,,160300,Unknown
-45,Weather Symbols,Rain Showers,Light,160301,Unknown
-45,Weather Symbols,Rain Showers,Moderate/Heavy,160302,Unknown
-45,Weather Symbols,Rain Showers,Torrential,160303,Unknown
-45,Weather Symbols,Drizzle,,160400,Unknown
-45,Weather Symbols,Drizzle,Intermittent Light,160401,Unknown
-45,Weather Symbols,Drizzle,Intermittent Light/ Continuous Light,160402,Unknown
-45,Weather Symbols,Drizzle,Intermittent Moderate,160403,Unknown
-45,Weather Symbols,Drizzle,Intermittent Moderate /Continuous Moderate,160404,Unknown
-45,Weather Symbols,Drizzle,Intermittent Heavy,160405,Unknown
-45,Weather Symbols,Drizzle,Intermittent Heavy /Continuous Heavy,160406,Unknown
-45,Weather Symbols,Freezing Drizzle,,160500,Unknown
-45,Weather Symbols,Freezing Drizzle,Light,160501,Unknown
-45,Weather Symbols,Freezing Drizzle,Moderate/Heavy,160502,Unknown
-45,Weather Symbols,Rain and Snow Mixed,,160600,Unknown
-45,Weather Symbols,Rain and Snow Mixed,Rain or Drizzle and Snow - Light,160601,Unknown
-45,Weather Symbols,Rain and Snow Mixed,Rain or Drizzle and Snow - Moderate/Heavy,160502,Unknown
-45,Weather Symbols,Rain and Snow Mixed,Rain and Snow Showers - Light,160503,Unknown
-45,Weather Symbols,Rain and Snow Mixed,Rain and Snow Showers - Moderate/Heavy,160504,Unknown
-45,Weather Symbols,Snow,,160700,Unknown
-45,Weather Symbols,Snow,Intermittent Light,160701,Unknown
-45,Weather Symbols,Snow,Intermittent Light/Continuous Light,160702,Unknown
-45,Weather Symbols,Snow,Intermittent Moderate,160703,Unknown
-45,Weather Symbols,Snow,Intermittent Moderate /Continuous Moderate,160704,Unknown
-45,Weather Symbols,Snow,Intermittent Heavy,160705,Unknown
-45,Weather Symbols,Snow,Intermittent Heavy /Continuous Heavy,160706,Unknown
-45,Weather Symbols,Snow,Blowing Snow - Light/Moderate,160707,Unknown
-45,Weather Symbols,Snow,Blowing Snow - Heavy,160708,Unknown
-45,Weather Symbols,Snow Grains,,160800,Unknown
-45,Weather Symbols,Snow Showers,,160900,Unknown
-45,Weather Symbols,Snow Showers,Light,160901,Unknown
-45,Weather Symbols,Snow Showers,Moderate/Heavy,160902,Unknown
-45,Weather Symbols,Hail,,161000,Unknown
-45,Weather Symbols,Hail,Light not Associated with Thunder,161001,Unknown
-45,Weather Symbols,Hail,Moderate/Heavy not Associated with Thunder,161002,Unknown
-45,Weather Symbols,Ice Crystals (Diamond Dust),,161100,Unknown
-45,Weather Symbols,Ice Pellets (Sleet),,161200,Unknown
-45,Weather Symbols,Ice Pellets (Sleet),Light,161201,Unknown
-45,Weather Symbols,Ice Pellets (Sleet),Moderate,161202,Unknown
-45,Weather Symbols,Ice Pellets (Sleet),Heavy,161203,Unknown
-45,Weather Symbols,Inversion,,161300,Unknown
-45,Weather Symbols,Storms,,161400,Unknown
-45,Weather Symbols,Storms,Thunderstorm - No Precipitation,161401,Unknown
-45,Weather Symbols,Storms,Thunderstorm Light to Moderate with Rain/Snow - No Hail,161402,Unknown
-45,Weather Symbols,Storms,Thunderstorm Heavy with Rain/Snow -  No Hail,161403,Unknown
-45,Weather Symbols,Storms,Thunderstorm Light to Moderate - With Hail,161404,Unknown
-45,Weather Symbols,Storms,Thunderstorm Heavy - With Hail,161405,Unknown
-45,Weather Symbols,Storms,Funnel Cloud (Tornado/Waterspout),161406,Unknown
-45,Weather Symbols,Storms,Squall,161407,Unknown
-45,Weather Symbols,Storms,Lightning,161408,Unknown
-45,Weather Symbols,Fog,,161500,Unknown
-45,Weather Symbols,Fog,Shallow Patches,161501,Unknown
-45,Weather Symbols,Fog,Shallow Continuous,161502,Unknown
-45,Weather Symbols,Fog,Patchy,161503,Unknown
-45,Weather Symbols,Fog,Sky Visible,161504,Unknown
-45,Weather Symbols,Fog,Sky Obscured,161505,Unknown
-45,Weather Symbols,Fog,Freezing-Sky Visible,161506,Unknown
-45,Weather Symbols,Fog,Freezing-Sky Obscured,161507,Unknown
-45,Weather Symbols,Mist,,161600,Unknown
-45,Weather Symbols,Smoke,,161700,Unknown
-45,Weather Symbols,Haze,,161800,Unknown
-45,Weather Symbols,Dust or Sand,,161900,Unknown
-45,Weather Symbols,Dust or Sand,Light to Moderate,161901,Unknown
-45,Weather Symbols,Dust or Sand,Severe,161902,Unknown
-45,Weather Symbols,Dust or Sand,Dust Devil,161903,Unknown
-45,Weather Symbols,Dust or Sand,Blowing Dust or Sand,161904,Unknown
-45,Weather Symbols,Tropical Storm Systems,,162000,Unknown
-45,Weather Symbols,Tropical Storm Systems,Tropical Depression,162001,Unknown
-45,Weather Symbols,Tropical Storm Systems,Tropical Storm,162002,Unknown
-45,Weather Symbols,Tropical Storm Systems,Hurricane/Typhoon,162003,Unknown
-45,Weather Symbols,Tropical Storm Systems,Tropical Storm Wind Areas and Date/Time Labels,162004,Unknown
-45,Weather Symbols,Volcanic Eruption,,162100,Unknown
-45,Weather Symbols,Volcanic Eruption,Volcanic Ash,162101,Unknown
-45,Weather Symbols,Tropopause Level,,162200,Unknown
-45,Weather Symbols,Freezing Level,,162300,Unknown
-45,Weather Symbols,Precipitation of Unknown Type and Intensity,,162400,Unknown
-45,Bounded Areas of Weather,,,170000,Area
+45,Turbulence,Light,,120100,Point
+45,Turbulence,Moderate,,120200,Point
+45,Turbulence,Severe,,120300,Point
+45,Turbulence,Extreme,,120400,Point
+45,Turbulence,Mountain Waves,,120500,Point
+45,Icing,Clear Icing,Light,130101,Point
+45,Icing,Clear Icing,Moderate,130102,Point
+45,Icing,Clear Icing,Severe,130103,Point
+45,Icing,Rime Icing,Light,130201,Point
+45,Icing,Rime Icing,Moderate,130202,Point
+45,Icing,Rime Icing,Severe,130203,Point
+45,Icing,Mixed Icing,Light,130301,Point
+45,Icing,Mixed Icing,Moderate,130302,Point
+45,Icing,Mixed Icing,Severe,130303,Point
+45,Winds,Calm Winds,,140100,Point
+45,Winds,Wind Plot,,140200,Point
+45,Winds,Jet Stream,,140300,Line
+45,Winds,Stream Line,,140400,Line
+45,Cloud Cover,Cloud Coverage Symbols,Clear Sky,150101,Point
+45,Cloud Cover,Cloud Coverage Symbols,Few Coverage,150102,Point
+45,Cloud Cover,Cloud Coverage Symbols,Scattered Coverage,150103,Point
+45,Cloud Cover,Cloud Coverage Symbols,Broken Coverage,150104,Point
+45,Cloud Cover,Cloud Coverage Symbols,Overcast Coverage,150105,Point
+45,Cloud Cover,Cloud Coverage Symbols,Sky Totally or Partially Obscured,150106,Point
+45,Weather Symbols,Rain,Intermittent Light,160101,Point
+45,Weather Symbols,Rain,Continuous Light,160102,Point
+45,Weather Symbols,Rain,Intermittent Moderate,160103,Point
+45,Weather Symbols,Rain,Intermittent Moderate/Continuous Moderate,160104,Point
+45,Weather Symbols,Rain,Intermittent Heavy,160105,Point
+45,Weather Symbols,Rain,Intermittent Heavy/Continuous Heavy,160106,Point
+45,Weather Symbols,Freezing Rain,Light,160201,Point
+45,Weather Symbols,Freezing Rain,Moderate/Heavy,160202,Point
+45,Weather Symbols,Rain Showers,Light,160301,Point
+45,Weather Symbols,Rain Showers,Moderate/Heavy,160302,Point
+45,Weather Symbols,Rain Showers,Torrential,160303,Point
+45,Weather Symbols,Drizzle,Intermittent Light,160401,Point
+45,Weather Symbols,Drizzle,Intermittent Light/Continuous Light,160402,Point
+45,Weather Symbols,Drizzle,Intermittent Moderate,160403,Point
+45,Weather Symbols,Drizzle,Intermittent Moderate/Continuous Moderate,160404,Point
+45,Weather Symbols,Drizzle,Intermittent Heavy,160405,Point
+45,Weather Symbols,Drizzle,Intermittent Heavy/Continuous Heavy,160406,Point
+45,Weather Symbols,Freezing Drizzle,Light,160501,Point
+45,Weather Symbols,Freezing Drizzle,Moderate/Heavy,160502,Point
+45,Weather Symbols,Rain and Snow Mixed,Rain or Drizzle and Snow - Light,160601,Point
+45,Weather Symbols,Rain and Snow Mixed,Rain or Drizzle and Snow - Moderate/Heavy,160602,Point
+45,Weather Symbols,Rain and Snow Mixed,Rain and Snow Showers - Light,160603,Point
+45,Weather Symbols,Rain and Snow Mixed,Rain and Snow Showers - Moderate/Heavy,160604,Point
+45,Weather Symbols,Snow,,160700,Point
+45,Weather Symbols,Snow,Intermittent Light,160701,Point
+45,Weather Symbols,Snow,Intermittent Light/Continuous Light,160702,Point
+45,Weather Symbols,Snow,Intermittent Moderate,160703,Point
+45,Weather Symbols,Snow,Intermittent Moderate/Continuous Moderate,160704,Point
+45,Weather Symbols,Snow,Intermittent Heavy,160705,Point
+45,Weather Symbols,Snow,Intermittent Heavy/Continuous Heavy,160706,Point
+45,Weather Symbols,Snow,Blowing Snow - Light/Moderate,160707,Point
+45,Weather Symbols,Snow,Blowing Snow - Heavy,160708,Point
+45,Weather Symbols,Snow Grains,,160800,Point
+45,Weather Symbols,Snow Showers,Light,160901,Point
+45,Weather Symbols,Snow Showers,Moderate/Heavy,160902,Point
+45,Weather Symbols,Hail,Light not Associated with Thunder,161001,Point
+45,Weather Symbols,Hail,Moderate/Heavy not Associated with Thunder,161002,Point
+45,Weather Symbols,Ice Crystals (Diamond Dust),,161100,Point
+45,Weather Symbols,Ice Pellets (Sleet),Light,161201,Point
+45,Weather Symbols,Ice Pellets (Sleet),Moderate,161202,Point
+45,Weather Symbols,Ice Pellets (Sleet),Heavy,161203,Point
+45,Weather Symbols,Inversion,,161300,Point
+45,Weather Symbols,Storms,Thunderstorm - No Precipitation,161401,Point
+45,Weather Symbols,Storms,Thunderstorm Light to Moderate with Rain/Snow - No Hail,161402,Point
+45,Weather Symbols,Storms,Thunderstorm Heavy with Rain/Snow - No Hail,161403,Point
+45,Weather Symbols,Storms,Thunderstorm Light to Moderate - With Hail,161404,Point
+45,Weather Symbols,Storms,Thunderstorm Heavy - With Hail,161405,Point
+45,Weather Symbols,Storms,Funnel Cloud (Tornado/Waterspout),161406,Point
+45,Weather Symbols,Storms,Squall,161407,Point
+45,Weather Symbols,Storms,Lightning,161408,Point
+45,Weather Symbols,Fog,Shallow Patches,161501,Point
+45,Weather Symbols,Fog,Shallow Continuous,161502,Point
+45,Weather Symbols,Fog,Patchy,161503,Point
+45,Weather Symbols,Fog,Sky Visible,161504,Point
+45,Weather Symbols,Fog,Sky Obscured,161505,Point
+45,Weather Symbols,Fog,Freezing-Sky Visible,161506,Point
+45,Weather Symbols,Fog,Freezing-Sky Obscured,161507,Point
+45,Weather Symbols,Mist,,161600,Point
+45,Weather Symbols,Smoke,,161700,Point
+45,Weather Symbols,Haze,,161800,Point
+45,Weather Symbols,Dust or Sand,Light to Moderate,161901,Point
+45,Weather Symbols,Dust or Sand,Severe,161902,Point
+45,Weather Symbols,Dust or Sand,Dust Devil,161903,Point
+45,Weather Symbols,Dust or Sand,Blowing Dust or Sand,161904,Point
+45,Weather Symbols,Tropical Storm Systems,Tropical Depression,162001,Point
+45,Weather Symbols,Tropical Storm Systems,Tropical Storm,162002,Point
+45,Weather Symbols,Tropical Storm Systems,Hurricane/Typhoon,162003,Point
+45,Weather Symbols,Tropical Storm Systems,Tropical Storm Wind Areas and Date/Time Labels,162004,Area
+45,Weather Symbols,Volcanic Eruption,,162100,Point
+45,Weather Symbols,Volcanic Eruption,Volcanic Ash,162101,Point
+45,Weather Symbols,Tropopause Level,,162200,Point
+45,Weather Symbols,Freezing Level,,162300,Point
+45,Weather Symbols,Precipitation of Unknown Type and Intensity,,162400,Point
 45,Bounded Areas of Weather,Instrument Flight Rule (IFR),,170100,Area
 45,Bounded Areas of Weather,Marginal Visual Flight Rule (MVFR),,170200,Area
 45,Bounded Areas of Weather,Turbulence,,170300,Area
@@ -1799,270 +1652,235 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 45,Bounded Areas of Weather,Fog,,170800,Area
 45,Bounded Areas of Weather,Dust or Sand,,170900,Area
 45,Bounded Areas of Weather,Operator-Defined Freeform,,171000,Area
-45,Isopleths,,,180000,Unknown
-45,Isopleths,Isobar - Surface,,180100,Unknown
-45,Isopleths,Contour - Upper Air,,180200,Unknown
-45,Isopleths,Isotherm,,180300,Unknown
-45,Isopleths,Isotach,,180400,Unknown
-45,Isopleths,Isodrosotherm,,180500,Unknown
-45,Isopleths,Thickness,,180600,Unknown
-45,Isopleths,Operator-Defined Freeform,,180700,Unknown
-45,State of the Ground,,,190000,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,,190100,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Dry Without Cracks or Appreciable Dust or Loose Sand,190101,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Moist,190102,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Wet-Standing Water in Small or Large Pools,190103,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Flooded,190104,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Frozen,190105,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Glaze (Thin Ice) on Ground,190106,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Loose Dry Dust or Sand not Covering Ground Completely,190107,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Thin Loose Dry Dust or Sand not Covering Ground Completely,190108,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Moderate/Thick Loose Dry Dust or Sand not Covering Ground Completely,190109,Unknown
-45,State of the Ground,Without Snow or Measurable Ice Cover,Extremely Dry with Cracks,190110,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,,190200,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Predominately Ice Covered,190201,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Compact or Wet Snow (with or without Ice) Covering Less Than One-Half of Ground,190202,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Compact or Wet Snow (with or without Ice) Covering  at Least One-Half of Ground-but Ground not Completely Covered,190203,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Even Layer of Compact or Wet Snow Covering Ground Completely,190204,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Uneven Layer of Compact or Wet Snow Covering Ground Completely,190205,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Loose Dry Snow Covering Less Than One-Half of Ground,190206,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Loose Dry Snow Covering at Least One-Half of Ground-but Ground not Completely Covered,190207,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Even Layer of Loose Dry Snow Covering Ground Completely,190208,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Uneven Layer of Loose Dry Snow Covering Ground Completely,190209,Unknown
-45,State of the Ground,With Snow or Measurable Ice Cover,Snow Covering Ground Completely-Deep Drifts,190210,Unknown
-46,Ice Systems,,,110000,Unknown
-46,Ice Systems,Icebergs,,110100,Unknown
-46,Ice Systems,Icebergs,Many Icebergs,110101,Unknown
-46,Ice Systems,Icebergs,Belts and Strips,110102,Unknown
-46,Ice Systems,Icebergs,General,110103,Unknown
-46,Ice Systems,Icebergs,Many Icebergs - General,110104,Unknown
-46,Ice Systems,Icebergs,Bergy Bit,110105,Unknown
-46,Ice Systems,Icebergs,Many Bergy Bits,110106,Unknown
-46,Ice Systems,Icebergs,Growler,110107,Unknown
-46,Ice Systems,Icebergs,Many Growlers,110108,Unknown
-46,Ice Systems,Icebergs,Floeberg,110109,Unknown
-46,Ice Systems,Icebergs,Ice Island,110110,Unknown
-46,Ice Systems,Ice Concentration,,110200,Unknown
-46,Ice Systems,Ice Concentration,Bergy Water,110201,Unknown
-46,Ice Systems,Ice Concentration,Water with Radar Targets,110202,Unknown
-46,Ice Systems,Ice Concentration,Ice Free,110203,Unknown
-46,Ice Systems,Dynamic Processes,,110300,Unknown
-46,Ice Systems,Dynamic Processes,Convergence,110301,Unknown
-46,Ice Systems,Dynamic Processes,Divergence,110302,Unknown
-46,Ice Systems,Dynamic Processes,Shearing or Shear Zone,110303,Unknown
-46,Ice Systems,Dynamic Processes,Ice Drift (Direction),110304,Unknown
-46,Ice Systems,Sea Ice,,110400,Unknown
-46,Ice Systems,Sea Ice,Ice Thickness (Observed),110401,Unknown
-46,Ice Systems,Sea Ice,Ice Thickness (Estimated),110402,Unknown
-46,Ice Systems,Sea Ice,Melt Puddles or Flooded Ice,110403,Unknown
-46,Ice Systems,Limits,,110500,Unknown
-46,Ice Systems,Limits,Limits of Visual Observation,110501,Unknown
-46,Ice Systems,Limits,Limits of Under Cast,110502,Unknown
-46,Ice Systems,Limits,Limits of Radar Observation,110503,Unknown
-46,Ice Systems,Limits,Observed Ice Edge or Boundary,110504,Unknown
-46,Ice Systems,Limits,Estimated Ice Edge or Boundary,110505,Unknown
-46,Ice Systems,Limits,Ice Edge or Boundary From Radar,110506,Unknown
-46,Ice Systems,Openings in the Ice,,110600,Unknown
-46,Ice Systems,Openings in the Ice,Cracks,110601,Unknown
-46,Ice Systems,Openings in the Ice,Cracks at a Specific Location,110602,Unknown
-46,Ice Systems,Openings in the Ice,Lead,110603,Unknown
-46,Ice Systems,Openings in the Ice,Frozen Lead,110604,Unknown
-46,Ice Systems,Snow Cover,,110700,Unknown
-46,Ice Systems,Snow Cover,Sastrugi (with Orientation),110701,Unknown
-46,Ice Systems,Topographical Features,,110800,Unknown
-46,Ice Systems,Topographical Features,Ridges or Hummocks,110801,Unknown
-46,Ice Systems,Topographical Features,Rafting,110802,Unknown
-46,Ice Systems,Topographical Features,Jammed Brash Barrier,110803,Unknown
-46,Hydrography,,,120000,Unknown
-46,Hydrography,Depth,,120100,Unknown
-46,Hydrography,Depth,Soundings,120101,Unknown
-46,Hydrography,Depth,Depth Curve,120102,Unknown
-46,Hydrography,Depth,Depth Contour,120103,Unknown
-46,Hydrography,Depth,Depth Area,120104,Unknown
-46,Hydrography,Coastal Hydrography,,120200,Unknown
-46,Hydrography,Coastal Hydrography,Coastline,120201,Unknown
-46,Hydrography,Coastal Hydrography,Island,120202,Unknown
-46,Hydrography,Coastal Hydrography,Beach,120203,Unknown
-46,Hydrography,Coastal Hydrography,Water,120204,Unknown
-46,Hydrography,Coastal Hydrography,Foreshore - Line,120205,Unknown
-46,Hydrography,Coastal Hydrography,Foreshore - Area,120206,Unknown
-46,Hydrography,Ports and Harbors,,120300,Unknown
-46,Hydrography,Ports and Harbors,Ports,120301,Unknown
-46,Hydrography,Ports and Harbors,Berths (Onshore),120302,Unknown
-46,Hydrography,Ports and Harbors,Berths (Anchor),120303,Unknown
-46,Hydrography,Ports and Harbors,Anchorage - Point,120304,Unknown
-46,Hydrography,Ports and Harbors,Anchorage - Line,120305,Unknown
-46,Hydrography,Ports and Harbors,Anchorage - Area,120306,Unknown
-46,Hydrography,Ports and Harbors,Call in Point,120307,Unknown
-46,Hydrography,Ports and Harbors,Pier/Wharf/Quay,120308,Unknown
-46,Hydrography,Ports and Harbors,Fishing Harbor - Point,120309,Unknown
-46,Hydrography,Ports and Harbors,Fish Weirs - Point,120310,Unknown
-46,Hydrography,Ports and Harbors,Fish Stakes - Point,120311,Unknown
-46,Hydrography,Ports and Harbors,Fish Traps - Area,120312,Unknown
-46,Hydrography,Ports and Harbors,Facilities,120313,Unknown
-46,Hydrography,Ports and Harbors,Drydock,120314,Unknown
-46,Hydrography,Ports and Harbors,Landing Place,120315,Unknown
-46,Hydrography,Ports and Harbors,Offshore Loading Facility - Point,120316,Unknown
-46,Hydrography,Ports and Harbors,Offshore Loading Facility - Line,120317,Unknown
-46,Hydrography,Ports and Harbors,Offshore Loading Facility - Area,120318,Unknown
-46,Hydrography,Ports and Harbors,Ramp - Above Water,120319,Unknown
-46,Hydrography,Ports and Harbors,Ramp - Below Water,120320,Unknown
-46,Hydrography,Ports and Harbors,Landing Ring,120321,Unknown
-46,Hydrography,Ports and Harbors,Ferry Crossing,120322,Unknown
-46,Hydrography,Ports and Harbors,Cable Ferry Crossing,120323,Unknown
-46,Hydrography,Ports and Harbors,Dolphin,120324,Unknown
-46,Hydrography,Ports and Harbors,Shoreline Protection,120325,Unknown
-46,Hydrography,Ports and Harbors,Breakwater/Groin/Jetty - Above Water,120326,Unknown
-46,Hydrography,Ports and Harbors,Breakwater/Groin/Jetty - Below Water,120327,Unknown
-46,Hydrography,Ports and Harbors,Seawall,120328,Unknown
-46,Hydrography,Aids to Navigation,,120400,Unknown
-46,Hydrography,Aids to Navigation,Beacon,120401,Unknown
-46,Hydrography,Aids to Navigation,Buoy Default,120402,Unknown
-46,Hydrography,Aids to Navigation,Marker,120403,Unknown
-46,Hydrography,Aids to Navigation,Perches/Stakes - Point,120404,Unknown
-46,Hydrography,Aids to Navigation,Perches/Stakes - Area,120405,Unknown
-46,Hydrography,Aids to Navigation,Light,120406,Unknown
-46,Hydrography,Aids to Navigation,Leading Line,120407,Unknown
-46,Hydrography,Aids to Navigation,Light Vessel/Light Ship,120408,Unknown
-46,Hydrography,Aids to Navigation,Lighthouse,120409,Unknown
-46,Hydrography,Dangers/Hazards,,120500,Unknown
-46,Hydrography,Dangers/Hazards,Rock Submerged,120501,Unknown
-46,Hydrography,Dangers/Hazards,Rock Awashed,120502,Unknown
-46,Hydrography,Dangers/Hazards,Underwater Danger/Hazard,120503,Unknown
-46,Hydrography,Dangers/Hazards,Foul Ground - Point,120504,Unknown
-46,Hydrography,Dangers/Hazards,Foul Ground - Area,120505,Unknown
-46,Hydrography,Dangers/Hazards,Kelp/Seaweed - Point,120506,Unknown
-46,Hydrography,Dangers/Hazards,Kelp/Seaweed - Area,120507,Unknown
-46,Hydrography,Dangers/Hazards,Snags/Stumps,120508,Unknown
-46,Hydrography,Dangers/Hazards,Wreck (Uncovers),120509,Unknown
-46,Hydrography,Dangers/Hazards,Wreck (Submerged),120510,Unknown
-46,Hydrography,Dangers/Hazards,Breakers,120511,Unknown
-46,Hydrography,Dangers/Hazards,Reef,120512,Unknown
-46,Hydrography,Dangers/Hazards,Eddies/Overfalls/Tide Rips,120513,Unknown
-46,Hydrography,Dangers/Hazards,Discolored Water,120514,Unknown
-46,Hydrography,Bottom Features,,120600,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Sand,120601,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Mud,120602,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Clay,120603,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Silt,120604,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Stones,120605,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Gravel,120606,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Pebbles,120607,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Cobbles,120608,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Rock,120609,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Coral,120610,Unknown
-46,Hydrography,Bottom Features,Bottom Characteristics  - Shell,120611,Unknown
-46,Hydrography,Bottom Features,Qualifying Terms - Fine,120612,Unknown
-46,Hydrography,Bottom Features,Qualifying Terms - Medium,120613,Unknown
-46,Hydrography,Bottom Features,Qualifying Terms - Coarse,120614,Unknown
-46,Hydrography,Tide and Current,,120700,Unknown
-46,Hydrography,Tide and Current,Water Turbulence,120701,Unknown
-46,Hydrography,Tide and Current,Current Flow - Ebb,120702,Unknown
-46,Hydrography,Tide and Current,Current Flow - Flood,120703,Unknown
-46,Hydrography,Tide and Current,Tide Data Point,120704,Unknown
-46,Hydrography,Tide and Current,Tide Gauge,120705,Unknown
-46,Oceanography,,,130000,Unknown
-46,Oceanography,Bioluminescence,,130100,Unknown
-46,Oceanography,Bioluminescence,Visual Detection Ratio (VDR) Level 1-2,130101,Unknown
-46,Oceanography,Bioluminescence,VDR Level 2-3,130102,Unknown
-46,Oceanography,Bioluminescence,VDR Level 3-4,130103,Unknown
-46,Oceanography,Bioluminescence,VDR Level 4-5,130104,Unknown
-46,Oceanography,Bioluminescence,VDR Level 5-6,130105,Unknown
-46,Oceanography,Bioluminescence,VDR Level 6-7,130106,Unknown
-46,Oceanography,Bioluminescence,VDR Level 7-8,130107,Unknown
-46,Oceanography,Bioluminescence,VDR Level 8-9,130108,Unknown
-46,Oceanography,Bioluminescence,VDR Level 9-10,130109,Unknown
-46,Oceanography,Beach Slope,,130200,Unknown
-46,Oceanography,Beach Slope,Flat,130201,Unknown
-46,Oceanography,Beach Slope,Gentle,130202,Unknown
-46,Oceanography,Beach Slope,Moderate,130203,Unknown
-46,Oceanography,Beach Slope,Steep,130204,Unknown
-46,Geophysics/Acoustics,,,140000,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,,140100,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Solid Rock,140101,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Clay,140102,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Coarse Sand,140103,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Coarse Sand,140104,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Medium Sand,140105,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Fine Sand,140106,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Fine Sand,140107,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Fine Silt,140108,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Fine Silt,140109,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Medium Silt,140110,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Coarse Silt,140111,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Boulders,140112,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Cobbles-Oyster Shells,140113,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Pebbles-Shells,140114,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Sand and Shells,140115,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediment - Land,140116,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediment - No Data,140117,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Smooth,140118,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Moderate,140119,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Rough,140120,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - Low,140121,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - Medium,140122,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - High,140123,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - 0%,140124,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - 0-10%,140125,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - 10-20%,140126,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - 20-75%,140127,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial  - >75%,140128,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category A,140129,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category B,140130,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category C,140131,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A1,140132,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A2,140133,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A3,140134,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B1,140135,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B2,140136,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B3,140137,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C1,140138,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C2,140139,Unknown
-46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C3,140140,Unknown
-46,Limits,,,150000,Unknown
-46,Limits,Maritime Limit Boundary,,150100,Unknown
-46,Limits,Maritime Area,,150200,Unknown
-46,Limits,Restricted Area,,150300,Unknown
-46,Limits,Swept Area,,150400,Unknown
-46,Limits,Training Area,,150500,Unknown
-46,Limits,Operator-Defined,,150600,Unknown
-46,Man-Made Structures,,,160000,Unknown
-46,Man-Made Structures,Submarine Cable,,160100,Unknown
-46,Man-Made Structures,Submerged Crib,,160200,Unknown
-46,Man-Made Structures,Canal,,160300,Unknown
-46,Man-Made Structures,Ford,,160400,Unknown
-46,Man-Made Structures,Lock,,160500,Unknown
-46,Man-Made Structures,Oil/Gas Rig,,160600,Unknown
-46,Man-Made Structures,Oil/Gas Rig Field,,160700,Unknown
-46,Man-Made Structures,Pipelines/Pipe,,160800,Unknown
-46,Man-Made Structures,Pile/Piling/Post,,160900,Unknown
-47,Space,,,110000,Point
-50,Signal Intercept,,,110000,Point
+45,Isopleths,Isobar - Surface,,180100,Line
+45,Isopleths,Contour - Upper Air,,180200,Line
+45,Isopleths,Isotherm,,180300,Line
+45,Isopleths,Isotach,,180400,Line
+45,Isopleths,Isodrosotherm,,180500,Line
+45,Isopleths,Thickness,,180600,Line
+45,Isopleths,Operator-Defined Freeform,,180700,Line
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Dry Without Cracks or Appreciable Dust or Loose Sand,190101,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Moist,190102,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Wet-Standing Water in Small or Large Pools,190103,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Flooded,190104,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Surface Frozen,190105,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Glaze (Thin Ice) on Ground,190106,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Loose Dry Dust or Sand not Covering Ground Completely,190107,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Thin Loose Dry Dust or Sand Covering Ground Completely,190108,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Moderate/Thick Loose Dry Dust or Sand Covering Ground Completely,190109,Point
+45,State of the Ground,Without Snow or Measurable Ice Cover,Extremely Dry with Cracks,190110,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Predominately Ice Covered,190201,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Compact or Wet Snow (with or without Ice) Covering Less Than One-Half of Ground,190202,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Compact or Wet Snow (with or without Ice) Covering  at Least One-Half of Ground-but Ground not Completely Covered,190203,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Even Layer of Compact or Wet Snow Covering Ground Completely,190204,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Uneven Layer of Compact or Wet Snow Covering Ground Completely,190205,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Loose Dry Snow Covering Less Than One-Half of Ground,190206,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Loose Dry Snow Covering at Least One-Half of Ground-but Ground not Completely Covered,190207,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Even Layer of Loose Dry Snow Covering Ground Completely,190208,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Uneven Layer of Loose Dry Snow Covering Ground Completely,190209,Point
+45,State of the Ground,With Snow or Measurable Ice Cover,Snow Covering Ground Completely-Deep Drifts,190210,Point
+46,Ice Systems,Icebergs,Many Icebergs,110101,Point
+46,Ice Systems,Icebergs,Belts and Strips,110102,Point
+46,Ice Systems,Icebergs,General,110103,Point
+46,Ice Systems,Icebergs,Many Icebergs - General,110104,Point
+46,Ice Systems,Icebergs,Bergy Bit,110105,Point
+46,Ice Systems,Icebergs,Many Bergy Bits,110106,Point
+46,Ice Systems,Icebergs,Growler,110107,Point
+46,Ice Systems,Icebergs,Many Growlers,110108,Point
+46,Ice Systems,Icebergs,Floeberg,110109,Point
+46,Ice Systems,Icebergs,Ice Island,110110,Point
+46,Ice Systems,Ice Concentration,Bergy Water,110201,Point
+46,Ice Systems,Ice Concentration,Water with Radar Targets,110202,Point
+46,Ice Systems,Ice Concentration,Ice Free,110203,Point
+46,Ice Systems,Dynamic Processes,Convergence,110301,Point
+46,Ice Systems,Dynamic Processes,Divergence,110302,Point
+46,Ice Systems,Dynamic Processes,Shearing or Shear Zone,110303,Point
+46,Ice Systems,Dynamic Processes,Ice Drift (Direction),110304,Point
+46,Ice Systems,Sea Ice,,110400,Point
+46,Ice Systems,Sea Ice,Ice Thickness (Observed),110401,Point
+46,Ice Systems,Sea Ice,Ice Thickness (Estimated),110402,Point
+46,Ice Systems,Sea Ice,Melt Puddles or Flooded Ice,110403,Point
+46,Ice Systems,Limits,Limits of Visual Observation,110501,Line
+46,Ice Systems,Limits,Limits of Under Cast,110502,Line
+46,Ice Systems,Limits,Limits of Radar Observation,110503,Line
+46,Ice Systems,Limits,Observed Ice Edge or Boundary,110504,Line
+46,Ice Systems,Limits,Estimated Ice Edge or Boundary,110505,Line
+46,Ice Systems,Limits,Ice Edge or Boundary From Radar,110506,Line
+46,Ice Systems,Openings in the Ice,,110600,Line
+46,Ice Systems,Openings in the Ice,Cracks,110601,Line
+46,Ice Systems,Openings in the Ice,Cracks at a Specific Location,110602,Line
+46,Ice Systems,Openings in the Ice,Lead,110603,Line
+46,Ice Systems,Openings in the Ice,Frozen Lead,110604,Line
+46,Ice Systems,Snow Cover,,110700,Point
+46,Ice Systems,Snow Cover,Sastrugi (with Orientation),110701,Point
+46,Ice Systems,Topographical Features,Ridges or Hummocks,110801,Point
+46,Ice Systems,Topographical Features,Rafting,110802,Point
+46,Ice Systems,Topographical Features,Jammed Brash Barrier,110803,Point
+46,Hydrography,Depth,Soundings,120101,Point
+46,Hydrography,Depth,Depth Curve,120102,Line
+46,Hydrography,Depth,Depth Contour,120103,Line
+46,Hydrography,Depth,Depth Area,120104,Area
+46,Hydrography,Coastal Hydrography,Coastline,120201,Line
+46,Hydrography,Coastal Hydrography,Island,120202,Area
+46,Hydrography,Coastal Hydrography,Beach,120203,Area
+46,Hydrography,Coastal Hydrography,Water,120204,Area
+46,Hydrography,Coastal Hydrography,Foreshore - Line,120205,Line
+46,Hydrography,Coastal Hydrography,Foreshore - Area,120206,Area
+46,Hydrography,Ports and Harbors,Berths (Onshore),120302,Point
+46,Hydrography,Ports and Harbors,Berths (Anchor),120303,Point
+46,Hydrography,Ports and Harbors,Anchorage - Point,120304,Point
+46,Hydrography,Ports and Harbors,Anchorage - Line,120305,Line
+46,Hydrography,Ports and Harbors,Anchorage - Area,120306,Area
+46,Hydrography,Ports and Harbors,Call in Point,120307,Point
+46,Hydrography,Ports and Harbors,Pier/Wharf/Quay,120308,Line
+46,Hydrography,Ports and Harbors,Fishing Harbor - Point,120309,Point
+46,Hydrography,Ports and Harbors,Fish Weirs - Point,120310,Point
+46,Hydrography,Ports and Harbors,Fish Stakes - Point,120311,Point
+46,Hydrography,Ports and Harbors,Fish Traps - Area,120312,Area
+46,Hydrography,Ports and Harbors,Drydock,120314,Area
+46,Hydrography,Ports and Harbors,Landing Place,120315,Point
+46,Hydrography,Ports and Harbors,Offshore Loading Facility - Point,120316,Point
+46,Hydrography,Ports and Harbors,Offshore Loading Facility - Line,120317,Line
+46,Hydrography,Ports and Harbors,Offshore Loading Facility - Area,120318,Area
+46,Hydrography,Ports and Harbors,Ramp - Above Water,120319,Line
+46,Hydrography,Ports and Harbors,Ramp - Below Water,120320,Line
+46,Hydrography,Ports and Harbors,Landing Ring,120321,Point
+46,Hydrography,Ports and Harbors,Ferry Crossing,120322,Point
+46,Hydrography,Ports and Harbors,Cable Ferry Crossing,120323,Point
+46,Hydrography,Ports and Harbors,Dolphin,120324,Point
+46,Hydrography,Ports and Harbors,Shoreline Protection,120325,Point
+46,Hydrography,Ports and Harbors,Breakwater/Groin/Jetty - Above Water,120326,Line
+46,Hydrography,Ports and Harbors,Breakwater/Groin/Jetty - Below Water,120327,Line
+46,Hydrography,Ports and Harbors,Seawall,120328,Line
+46,Hydrography,Aids to Navigation,Beacon,120401,Point
+46,Hydrography,Aids to Navigation,Buoy Default,120402,Point
+46,Hydrography,Aids to Navigation,Marker,120403,Point
+46,Hydrography,Aids to Navigation,Perches/Stakes - Point,120404,Point
+46,Hydrography,Aids to Navigation,Perches/Stakes - Area,120405,Area
+46,Hydrography,Aids to Navigation,Light,120406,Point
+46,Hydrography,Aids to Navigation,Leading Line,120407,Line
+46,Hydrography,Aids to Navigation,Light Vessel/Light Ship,120408,Point
+46,Hydrography,Aids to Navigation,Lighthouse,120409,Point
+46,Hydrography,Dangers/Hazards,Rock Submerged,120501,Point
+46,Hydrography,Dangers/Hazards,Rock Awashed,120502,Point
+46,Hydrography,Dangers/Hazards,Underwater Danger/Hazard,120503,Area
+46,Hydrography,Dangers/Hazards,Foul Ground - Point,120504,Point
+46,Hydrography,Dangers/Hazards,Foul Ground - Area,120505,Area
+46,Hydrography,Dangers/Hazards,Kelp/Seaweed - Point,120506,Point
+46,Hydrography,Dangers/Hazards,Kelp/Seaweed - Area,120507,Area
+46,Hydrography,Dangers/Hazards,Snags/Stumps,120508,Point
+46,Hydrography,Dangers/Hazards,Wreck (Uncovers),120509,Point
+46,Hydrography,Dangers/Hazards,Wreck (Submerged),120510,Point
+46,Hydrography,Dangers/Hazards,Breakers,120511,Line
+46,Hydrography,Dangers/Hazards,Reef,120512,Line
+46,Hydrography,Dangers/Hazards,Eddies/Overfalls/Tide Rips,120513,Point
+46,Hydrography,Dangers/Hazards,Discolored Water,120514,Area
+46,Hydrography,Bottom Features,Bottom Characteristics - Sand,120601,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Mud,120602,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Clay,120603,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Silt,120604,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Stones,120605,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Gravel,120606,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Pebbles,120607,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Cobbles,120608,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Rock,120609,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Coral,120610,Point
+46,Hydrography,Bottom Features,Bottom Characteristics - Shell,120611,Point
+46,Hydrography,Bottom Features,Qualifying Terms - Fine,120612,Point
+46,Hydrography,Bottom Features,Qualifying Terms - Medium,120613,Point
+46,Hydrography,Bottom Features,Qualifying Terms - Coarse,120614,Point
+46,Hydrography,Tide and Current,Water Turbulence,120701,Point
+46,Hydrography,Tide and Current,Current Flow - Ebb,120702,Line
+46,Hydrography,Tide and Current,Current Flow - Flood,120703,Line
+46,Hydrography,Tide and Current,Tide Data Point,120704,Point
+46,Hydrography,Tide and Current,Tide Gauge,120705,Point
+46,Oceanography,Bioluminescence,Visual Detection Ratio (VDR) Level 1-2,130101,Area
+46,Oceanography,Bioluminescence,VDR Level 2-3,130102,Area
+46,Oceanography,Bioluminescence,VDR Level 3-4,130103,Area
+46,Oceanography,Bioluminescence,VDR Level 4-5,130104,Area
+46,Oceanography,Bioluminescence,VDR Level 5-6,130105,Area
+46,Oceanography,Bioluminescence,VDR Level 6-7,130106,Area
+46,Oceanography,Bioluminescence,VDR Level 7-8,130107,Area
+46,Oceanography,Bioluminescence,VDR Level 8-9,130108,Area
+46,Oceanography,Bioluminescence,VDR Level 9-10,130109,Area
+46,Oceanography,Beach Slope,Flat,130201,Area
+46,Oceanography,Beach Slope,Gentle,130202,Area
+46,Oceanography,Beach Slope,Moderate,130203,Area
+46,Oceanography,Beach Slope,Steep,130204,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Solid Rock,140101,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Clay,140102,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Coarse Sand,140103,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Coarse Sand,140104,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Medium Sand,140105,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Fine Sand,140106,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Fine Sand,140107,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Very Fine Silt,140108,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Fine Silt,140109,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Medium Silt,140110,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Coarse Silt,140111,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Boulders,140112,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Cobbles-Oyster Shells,140113,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Pebbles-Shells,140114,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediments - Sand and Shells,140115,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediment - Land,140116,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Sediment - No Data,140117,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Smooth,140118,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Moderate,140119,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Bottom Roughness - Rough,140120,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - Low,140121,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - Medium,140122,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Clutter (Bottom) - High,140123,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial - 0%,140124,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial - 0-10%,140125,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial - 10-20%,140126,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial - 20-75%,140127,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,Impact Burial - >75%,140128,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category A,140129,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category B,140130,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Category C,140131,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A1,140132,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A2,140133,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type A3,140134,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B1,140135,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B2,140136,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type B3,140137,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C1,140138,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C2,140139,Area
+46,Geophysics/Acoustics,Mine Warfare (MIW) Bottom Descriptors,MIW Bottom Type C3,140140,Area
+46,Limits,Maritime Limit Boundary,,150100,Line
+46,Limits,Maritime Area,,150200,Area
+46,Limits,Restricted Area,,150300,Line
+46,Limits,Swept Area,,150400,Area
+46,Limits,Training Area,,150500,Area
+46,Limits,Operator-Defined,,150600,Area
+46,Man-Made Structures,Submarine Cable,,160100,Line
+46,Man-Made Structures,Submerged Crib,,160200,Area
+46,Man-Made Structures,Canal,,160300,Line
+46,Man-Made Structures,Ford,,160400,Point
+46,Man-Made Structures,Lock,,160500,Point
+46,Man-Made Structures,Oil/Gas Rig,,160600,Point
+46,Man-Made Structures,Oil/Gas Rig Field,,160700,Area
+46,Man-Made Structures,Pipelines/Pipe,,160800,Line
+46,Man-Made Structures,Pile/Piling/Post,,160900,Point
 50,Signal Intercept,Communications,,110100,Point
 50,Signal Intercept,Jammer,,110200,Point
 50,Signal Intercept,Radar,,110300,Point
-51,Signal Intercept,,,110000,Point
 51,Signal Intercept,Communications,,110100,Point
 51,Signal Intercept,Jammer,,110200,Point
 51,Signal Intercept,Radar,,110300,Point
-52,Signal Intercept,,,110000,Point
 52,Signal Intercept,Communications,,110100,Point
 52,Signal Intercept,Jammer,,110200,Point
 52,Signal Intercept,Radar,,110300,Point
-53,Signal Intercept,,,110000,Point
 53,Signal Intercept,Communications,,110100,Point
 53,Signal Intercept,Jammer,,110200,Point
 53,Signal Intercept,Radar,,110300,Point
-54,Signal Intercept,,,110000,Point
 54,Signal Intercept,Communications,,110100,Point
 54,Signal Intercept,Jammer,,110200,Point
 54,Signal Intercept,Radar,,110300,Point
-60,Botnet,,,110000,Point
 60,Botnet,Command and Control (C2),,110100,Point
 60,Botnet,Herder,,110200,Point
 60,Botnet,Callback Domain,,110300,Point
 60,Botnet,Zombie,,110400,Point
-60,Infection,,,120000,Point
 60,Infection,Advanced Persistent Threat (APT),,120100,Point
 60,Infection,Advanced Persistent Threat (APT),APT with C2,120101,Point
 60,Infection,Advanced Persistent Threat (APT),APT with Self Propagation,120102,Point
@@ -2073,12 +1891,10 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 60,Infection,Non-Advanced Persistent Threat (NAPT),NAPT with Self Propagation,120202,Point
 60,Infection,Non-Advanced Persistent Threat (NAPT),NAPT with C2 and Self Propagation,120203,Point
 60,Infection,Non-Advanced Persistent Threat (NAPT),NAPT Other,120204,Point
-60,Health and Status,,,130000,Point
 60,Health and Status,Normal,,130100,Point
 60,Health and Status,Network Outage,,130200,Point
 60,Health and Status,Unknown,,130300,Point
 60,Health and Status,Impaired,,130400,Point
-60,Device Type,,,140000,Point
 60,Device Type,Core Router,,140100,Point
 60,Device Type,Router,,140200,Point
 60,Device Type,Cross Domain Solution,,140300,Point
@@ -2091,7 +1907,6 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 60,Device Type,Switch,,141000,Point
 60,Device Type,Host,,141100,Point
 60,Device Type,Virtual Private Network (VPN),,141200,Point
-60,Device Domain,,,150000,Point
 60,Device Domain,Department of Defense (DoD),,150100,Point
 60,Device Domain,Government,,150200,Point
 60,Device Domain,Contractor,,150300,Point
@@ -2107,3 +1922,4 @@ SymbolSet,Entity,EntityType,EntitySubType,Code,GeometryType
 60,Effect,Network Outage,,160700,Point
 60,Effect,Service Outage,,160800,Point
 60,Effect,Device Outage,,160900,Point
+98,Invalid Symbol,,,100000,Point

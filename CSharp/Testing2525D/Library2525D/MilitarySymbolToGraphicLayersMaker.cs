@@ -110,6 +110,7 @@ namespace Library2525D
             return sb.ToString();
         }
 
+        // This hack is no longer needed, but keeping code here, for when/in case this needs put back in
         // returns string.Empty to indicate that hack isn't needed
         private static string CheckForSpecialEntitySubtypeHackIcon(ref MilitarySymbol milSymbol)
         {
@@ -162,17 +163,6 @@ namespace Library2525D
         public static string GetMainIconName(ref MilitarySymbol milSymbol)
         {
             string mainIcon = GetMainIconName(milSymbol.Id.SymbolSet, milSymbol.Id.FullEntityCode);
-
-            if (milSymbol.Id.SymbolSet == SymbolSetType.Land_Unit)
-            {
-                // Hack only needed for Land Unit
-                string hackIcon = CheckForSpecialEntitySubtypeHackIcon(ref milSymbol);
-
-                if (!string.IsNullOrEmpty(hackIcon))
-                {
-                    mainIcon = hackIcon;
-                }
-            }
 
             return mainIcon;
         }
@@ -322,34 +312,38 @@ namespace Library2525D
             return modifierIconNameWithFolder;
         }
 
-        // Echelon/Mobility Modifier Icon
-        // = StandardIdentityAffiliationType + SymbolSet + 
-        //        HeadquartersTaskForceDummyType + EchelonMobilityType
-        // "Amplifier (Echelon): Uses SIDC pos 3-6 and 8-10"
-        // ex. Friend, Team Crew = 0310011 
-        //      --> 03 (Friend) + 10 (Ground Unit) + 0 (HQ/TF) + 11 (Echelon = Team/Crew)
+        // Echelon/Mobility/Towed Array Amplifier Icon
+        // = StandardIdentityAffiliationType + EchelonMobilityType
+        // "Amplifier (Echelon): Uses SIDC positions 4 and 9-10."
+        // ex. Friend, Team Crew = 311 
+        //      --> 3 (Friend) + 11 (Echelon = Team/Crew)
         //
         public static string GetEchelonIconNameWithFolder(
-            StandardIdentityAffiliationType affiliation,
             SymbolSetType symbolSet,
-            HeadquartersTaskForceDummyType hqTfDummy,
+            StandardIdentityAffiliationType affiliation,
             EchelonMobilityType echelonMobility)
         {
             if (echelonMobility == EchelonMobilityType.NoEchelonMobility)
                 return string.Empty;
 
-            string affiliationString = "03";
-            // TODO: (currently only Friend supported/available), activate below when available
-            //     TypeUtilities.EnumHelper.getEnumValAsString(affiliation, 2);
-
             StringBuilder sb = new StringBuilder();
-            sb.Append("Echelon");
-            sb.Append(System.IO.Path.DirectorySeparatorChar);
-            sb.Append(affiliationString);
+            if (echelonMobility < EchelonMobilityType.Wheeled_Limited_Cross_Country)
+            {
+                sb.Append("Echelon");
+            }
+            else
+            {
+                sb.Append("Amplifier");
+            }
 
-            // TODO: symbolSet + hqTfDummy (currently only Ground, no HqTf available)
-            // we will need to set this later when the svgs are fully populated 
-            sb.Append("100"); // <--- symbolSet + hqTfDummy (not currently used - only 1 version of these svgs) 
+            sb.Append(System.IO.Path.DirectorySeparatorChar);
+
+            StandardIdentityAffiliationType mappedAffiliation =
+                    TypeUtilities.AffiliationToAffiliationFrameMapping[affiliation];
+
+            string affiliationString = 
+                TypeUtilities.EnumHelper.getEnumValAsString(mappedAffiliation, 1);
+            sb.Append(affiliationString); 
 
             sb.Append(TypeUtilities.EnumHelper.getEnumValAsString(echelonMobility, 2));
             sb.Append(ImageSuffix);
@@ -357,11 +351,10 @@ namespace Library2525D
             return sb.ToString();
         }
 
-        // same as ImageFilesHome + GetModfierIconNameWithFolder
+        // same as ImageFilesHome + GetEchelonIconNameWithFolder
         public static string GetEchelonIconNameWithFullPath(
-            StandardIdentityAffiliationType affiliation,
             SymbolSetType symbolSet,
-            HeadquartersTaskForceDummyType hqTfDummy,
+            StandardIdentityAffiliationType affiliation,
             EchelonMobilityType echelonMobility)
         {
             if (echelonMobility == EchelonMobilityType.NoEchelonMobility)
@@ -370,10 +363,68 @@ namespace Library2525D
             StringBuilder sb = new StringBuilder();
             sb.Append(ImageFilesHome);
 
-            string modifierIconNameWithoutImageFilesHome =
-                GetEchelonIconNameWithFolder(affiliation, symbolSet, hqTfDummy, echelonMobility);
+            string echelonIconNameWithoutImageFilesHome =
+                GetEchelonIconNameWithFolder(symbolSet, affiliation, echelonMobility);
 
-            sb.Append(modifierIconNameWithoutImageFilesHome);
+            sb.Append(echelonIconNameWithoutImageFilesHome);
+
+            return sb.ToString();
+        }
+
+        // Headquarters(HQ)/Task Force(TF)/Feint/Dummy(FD) HQ/TF/FD Amplifier Icon
+        // = StandardIdentityAffiliationType + SymbolSetType + HeadquartersTaskForceDummyType
+        // Uses SIDC positions 4-6 and position 8
+        // ex. Friend(3), Land_Unit (10), Feint_Dummy (1) = 3101
+        //      --> 3 (Friend) + Land_Unit (10) + 1 (Feint_Dummy)
+        //
+        public static string GetHqTfFdIconNameWithFolder(
+            SymbolSetType symbolSet,
+            StandardIdentityAffiliationType affiliation,
+            HeadquartersTaskForceDummyType hqTfFd)
+        {
+            if (hqTfFd == HeadquartersTaskForceDummyType.NoHQTFDummyModifier)
+                return string.Empty;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("HQTFFD");
+            sb.Append(System.IO.Path.DirectorySeparatorChar);
+
+            StandardIdentityAffiliationType mappedAffiliation =
+                    TypeUtilities.AffiliationToAffiliationFrameMapping[affiliation];
+
+            string affiliationValueString =
+                TypeUtilities.EnumHelper.getEnumValAsString(mappedAffiliation, 1);
+            sb.Append(affiliationValueString);
+
+            // map the actual symbolSet to the supported/availble frame
+            SymbolSetType mappedSymbolSet = TypeUtilities.SymbolSetToFrameMapping[symbolSet];
+
+            string mappedSymbolSetValueString = TypeUtilities.EnumHelper.getEnumValAsString(mappedSymbolSet, 2);
+            sb.Append(mappedSymbolSetValueString);
+
+            string hqTfFdValueString = TypeUtilities.EnumHelper.getEnumValAsString(hqTfFd, 1);
+            sb.Append(hqTfFdValueString);
+            sb.Append(ImageSuffix);
+
+            return sb.ToString();
+        }
+
+        // same as ImageFilesHome + GetHqTfFdIconNameWithFolder
+        public static string GetHqTfFdIconNameWithFullPath(
+            SymbolSetType symbolSet,
+            StandardIdentityAffiliationType affiliation,
+            HeadquartersTaskForceDummyType hqTfFd)
+        {
+            if (hqTfFd == HeadquartersTaskForceDummyType.NoHQTFDummyModifier)
+                return string.Empty;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append(ImageFilesHome);
+
+            string hqTfFdIconNameWithoutImageFilesHome =
+                GetHqTfFdIconNameWithFolder(symbolSet, affiliation, hqTfFd);
+
+            sb.Append(hqTfFdIconNameWithoutImageFilesHome);
 
             return sb.ToString();
         }
@@ -515,17 +566,13 @@ namespace Library2525D
                     milSymbol.GraphicLayers.Add(sb.ToString());
                 }
 
-                // Echelon Modifier
+                // Echelon/Mobility Modifier
                 if (milSymbol.Id.EchelonMobility != EchelonMobilityType.NoEchelonMobility)
                 {
-                    sb.Clear();
-                    sb.Append(ImageFilesHome);
-
                     string echelonIconNameWithFullPath =
                         GetEchelonIconNameWithFullPath(
-                            milSymbol.Id.Affiliation,
                             milSymbol.Id.SymbolSet,
-                            milSymbol.Id.HeadquartersTaskForceDummy,
+                            milSymbol.Id.Affiliation,
                             milSymbol.Id.EchelonMobility);
 
                     if (echelonIconNameWithFullPath.Length > 0)
@@ -533,10 +580,21 @@ namespace Library2525D
                 }
 
                 // Headquarters/TF/FD Modifier
+                if (milSymbol.Id.HeadquartersTaskForceDummy !=  
+                    HeadquartersTaskForceDummyType.NoHQTFDummyModifier)
+                {
+                    string hqTfFdIconNameWithFullPath =
+                        GetHqTfFdIconNameWithFullPath(
+                            milSymbol.Id.SymbolSet,
+                            milSymbol.Id.Affiliation,
+                            milSymbol.Id.HeadquartersTaskForceDummy);
 
-                // TODO
+                    if (hqTfFdIconNameWithFullPath.Length > 0)
+                        milSymbol.GraphicLayers.Add(hqTfFdIconNameWithFullPath);
+                }
 
-                // Other?
+                // Other? ex. "Land unit icons – special entity subtypes"
+
             } // end skipRemainingLayers
 
             //TODO: look at the layers to see if any do not exist:
