@@ -2,6 +2,11 @@
 
 This is just a prototype project so I could learn 2525D and test/validate the data provided in the standard. It includes a test app to draw the symbols. 
 
+*This repo/solution is not actively maintained and has been retired*
+
+**An updated repo is now at https://github.com/csmoore/military-symbols-dotnet**
+
+
 ![Image of Military Features Data](Screenshot.jpg)
 
 ## Features
